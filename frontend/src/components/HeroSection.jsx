@@ -130,7 +130,7 @@ const HeroSection = () => {
           onClick={() => setIsVideoOpen(true)}
         >
           {/* Glassmorphism Card */}
-          <div className="relative w-64 lg:w-72 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl shadow-black/20 transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
+          <div className="relative w-72 lg:w-80 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl shadow-black/20 transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
             {/* Video Thumbnail */}
             <div className="relative aspect-video">
               <img
@@ -153,12 +153,6 @@ const HeroSection = () => {
                   <Play className="h-6 w-6 text-[#8B2F5F] ml-1" fill="#8B2F5F" />
                 </motion.div>
               </div>
-            </div>
-            
-            {/* Card Content */}
-            <div className="p-4">
-              <p className="text-white font-medium text-sm mb-1">Unser Studio</p>
-              <p className="text-white/60 text-xs">Video ansehen · 2:30 Min</p>
             </div>
             
             {/* Decorative Glow */}
