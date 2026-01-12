@@ -1,9 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "buildCommand": "cd frontend && yarn build",
-  "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && yarn install",
-  "framework": null
-}
