@@ -20,22 +20,22 @@ const HeroSection = () => {
           <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
             <div className="flex items-center gap-1">
               <Star className="h-4 w-4 fill-[#C4A77D] text-[#C4A77D]" />
-              <span className="text-sm font-semibold text-[#2B2B2B]">4.9/5</span>
+              <span className="text-sm font-semibold text-white drop-shadow-md">4.9/5</span>
             </div>
-            <span className="text-[#666666] text-sm">|</span>
-            <span className="text-sm text-[#666666]">1329+ Ratings</span>
+            <span className="text-white/80 text-sm drop-shadow-md">|</span>
+            <span className="text-sm text-white/80 drop-shadow-md">1329+ Ratings</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2B2B2B] leading-[1.1] mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-lg">
             Make your
             <br />
             health{' '}
-            <span className="italic font-light text-[#8B7355]">your priority</span>
+            <span className="italic font-light text-[#C4A77D]">your priority</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-[#555555] mb-10 max-w-lg mx-auto lg:mx-0">
+          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-lg mx-auto lg:mx-0 drop-shadow-md">
             Your massage therapy for holistic health. Now available in your city.
           </p>
 
@@ -46,7 +46,7 @@ const HeroSection = () => {
             </Button>
             <Button
               variant="outline"
-              className="border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white text-base px-8 py-6 rounded-full font-medium"
+              className="border-white bg-white/10 text-white hover:bg-white hover:text-[#2B2B2B] text-base px-8 py-6 rounded-full font-medium backdrop-blur-sm"
             >
               View Memberships
             </Button>
