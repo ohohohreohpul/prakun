@@ -29,6 +29,12 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 - [x] Gutscheine buttons linked to external shop
 - [x] Gift Voucher section with €49, €62, €92, €114 amounts
 - [x] Wellness Pakete & Extras section (renamed from gift cards)
+- [x] Über uns (About) page
+- [x] Kontakt (Contact) page with form and Google Maps
+- [x] SEO meta tags, Open Graph, Twitter Cards
+- [x] Structured data (Schema.org - LocalBusiness, Service)
+- [x] sitemap.xml and robots.txt
+- [x] Google Analytics & Search Console placeholders
 
 ## Tech Stack
 - Frontend: React + Tailwind CSS + framer-motion
@@ -49,6 +55,15 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 - Mobile hamburger menu moved to right side
 - **NEW: Gift Voucher Section** - Premium dark design with €49, €62, €92, €114 amounts
 - **Renamed:** Gift cards carousel → "Wellness Pakete & Extras" section
+- **NEW: Über uns page** (`/ueber-uns`) - Company story, stats, values
+- **NEW: Kontakt page** (`/kontakt`) - Contact form, Google Maps, info cards
+- **SEO Improvements:**
+  - Comprehensive meta tags (title, description, keywords)
+  - Open Graph & Twitter Card meta tags
+  - Structured data (Schema.org LocalBusiness & Service)
+  - sitemap.xml with all pages
+  - robots.txt
+  - Google Analytics & Search Console placeholders ready
 
 ### December 2025
 - Full site clone and rebrand completed
@@ -91,10 +106,15 @@ All content is currently MOCKED via `/app/frontend/src/data/mockData.js`
 - `/app/frontend/src/components/BookingPage.jsx` - Planity booking page
 - `/app/frontend/src/components/GiftVoucherSection.jsx` - Gift voucher amounts (€49-€114)
 - `/app/frontend/src/components/GiftBestsellers.jsx` - Wellness packages carousel
+- `/app/frontend/src/components/AboutPage.jsx` - Über uns page
+- `/app/frontend/src/components/ContactPage.jsx` - Kontakt page
 - `/app/frontend/src/data/mockData.js` - All content/data
 - `/app/frontend/src/components/Header.jsx` - Navigation/mega menu
 - `/app/frontend/src/components/ServicePage.jsx` - Service page template
 - `/app/frontend/src/components/HeroSection.jsx` - Hero with video
 - `/app/frontend/src/components/Testimonials.jsx` - Testimonials grid
 - `/app/frontend/src/components/StudioLocations.jsx` - Studio card
-- `/app/frontend/src/App.js` - Routes including /buchen
+- `/app/frontend/src/App.js` - Routes including /buchen, /ueber-uns, /kontakt
+- `/app/frontend/public/index.html` - SEO meta tags, structured data
+- `/app/frontend/public/sitemap.xml` - XML sitemap for search engines
+- `/app/frontend/public/robots.txt` - Crawler directives
