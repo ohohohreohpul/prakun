@@ -218,18 +218,22 @@ const ServicePage = () => {
                     ))}
                   </div>
 
-                  <Button className="w-full group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 mb-4">
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      <Calendar className="h-5 w-5" />
-                      Jetzt Termin buchen
-                    </span>
-                    <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                  </Button>
+                  <Link to="/buchen">
+                    <Button className="w-full group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 mb-4">
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        <Calendar className="h-5 w-5" />
+                        Jetzt Termin buchen
+                      </span>
+                      <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                    </Button>
+                  </Link>
 
-                  <Button variant="outline" className="w-full border-2 border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white py-6 rounded-full transition-all duration-300">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Telefonisch buchen
-                  </Button>
+                  <a href={`tel:${studio.phone}`}>
+                    <Button variant="outline" className="w-full border-2 border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white py-6 rounded-full transition-all duration-300">
+                      <Phone className="h-5 w-5 mr-2" />
+                      Telefonisch buchen
+                    </Button>
+                  </a>
 
                   {/* Contact Info */}
                   <div className="mt-6 pt-6 border-t border-[#E5E2DD]">
@@ -344,13 +348,15 @@ const ServicePage = () => {
             <p className="text-lg text-[#666666] mb-8 max-w-2xl mx-auto">
               Buchen Sie jetzt Ihre {service.title} bei Prakun Thai Massage und gönnen Sie sich die Entspannung, die Sie verdienen.
             </p>
-            <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-lg px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
-              <span className="relative z-10 flex items-center gap-2">
-                Termin buchen
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-            </Button>
+            <Link to="/buchen">
+              <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-lg px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
+                <span className="relative z-10 flex items-center gap-2">
+                  Termin buchen
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
