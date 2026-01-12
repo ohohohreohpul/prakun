@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
+import { ChevronDown } from 'lucide-react';
 import { faqItems } from '../data/mockData';
 import {
   Accordion,
@@ -15,19 +15,19 @@ const FAQSection = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Side - Contact Info */}
           <div>
-            <p className="text-[#C4A77D] text-sm tracking-wider uppercase mb-3">Support & FAQ's</p>
+            <p className="text-[#8B2F5F] text-sm tracking-wider uppercase mb-3">HILFE & FAQ</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-6">
-              How can we help you?
+              Wie können wir Ihnen helfen?
             </h2>
             <p className="text-[#666666] mb-6 leading-relaxed">
-              If you have any questions, please contact our Customer Support. Monday - Friday 08:00 to 18:00.
+              Bei Fragen steht Ihnen unser Team gerne zur Verfügung. Montag - Sonntag von 10:00 bis 20:00 Uhr.
             </p>
-            <p className="text-[#666666] mb-2">The best way to contact us is via:</p>
+            <p className="text-[#666666] mb-2">Kontaktieren Sie uns per E-Mail:</p>
             <a
-              href="mailto:contact@newsoul.de"
-              className="text-[#2B2B2B] font-medium hover:text-[#8B7355] transition-colors"
+              href="mailto:info@prakunmassage.de"
+              className="text-[#8B2F5F] font-medium hover:underline"
             >
-              contact@newsoul.de
+              info@prakunmassage.de
             </a>
           </div>
 
