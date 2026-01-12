@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   const textColorClass = isScrolled || isMegaMenuOpen || isResourcesOpen 
-    ? 'text-[#2B2B2B]' 
+    ? 'text-white' 
     : 'text-white';
 
   return (
