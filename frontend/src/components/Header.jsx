@@ -172,7 +172,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <motion.button
             whileTap={{ scale: 0.9 }}
-            className={`lg:hidden p-2 rounded-full transition-colors ${isScrolled ? 'text-[#2B2B2B] hover:bg-black/5' : 'text-white hover:bg-white/10'}`}
+            className="lg:hidden p-2 rounded-full transition-colors text-white hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
