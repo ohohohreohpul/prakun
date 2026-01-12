@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Star, MapPin, Clock, Phone, ArrowRight } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { studio } from '../data/mockData';
 import { Button } from './ui/button';
 
