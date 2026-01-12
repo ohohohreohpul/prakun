@@ -34,7 +34,7 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 - [x] SEO meta tags, Open Graph, Twitter Cards
 - [x] Structured data (Schema.org - LocalBusiness, Service)
 - [x] sitemap.xml and robots.txt
-- [x] Google Analytics & Search Console placeholders
+- [x] Leistungen (Services overview) page with all massages
 
 ## Tech Stack
 - Frontend: React + Tailwind CSS + framer-motion
@@ -57,7 +57,8 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 - **Renamed:** Gift cards carousel → "Wellness Pakete & Extras" section
 - **NEW: Über uns page** (`/ueber-uns`) - Company story, stats, values
 - **NEW: Kontakt page** (`/kontakt`) - Contact form, Google Maps, info cards
-- **SEO Improvements:**
+- **NEW: Leistungen page** (`/leistungen`) - All services overview with categories
+- "Pakete entdecken" button now links to `/buchen`
   - Comprehensive meta tags (title, description, keywords)
   - Open Graph & Twitter Card meta tags
   - Structured data (Schema.org LocalBusiness & Service)
