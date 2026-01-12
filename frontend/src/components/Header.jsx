@@ -141,7 +141,7 @@ const Header = () => {
           </motion.div>
 
           {/* Right Navigation - Buttons */}
-          <div className="hidden lg:flex items-center gap-3 flex-1 justify-end">
+          <div className="hidden lg:flex items-center gap-3 w-[200px] justify-end">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
