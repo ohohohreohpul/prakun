@@ -21,8 +21,8 @@ const ServiceCards = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <p className="text-[#666666] text-sm md:text-base max-w-3xl mx-auto">
-            Proven massage techniques, sustainable studios and unparalleled customer experience. Only at{' '}
-            <span className="font-semibold text-[#2B2B2B]">new:</span> soul.
+            Traditionelle Techniken, erfahrene Therapeuten und höchste Qualität. Nur bei{' '}
+            <span className="font-semibold text-[#8B2F5F]">Prakun Thai Massage</span>.
           </p>
         </div>
 
@@ -63,22 +63,20 @@ const ServiceCards = () => {
                       e.target.src = 'https://customer-assets.emergentagent.com/job_ac9fa09c-ab26-447d-aeb4-5da562c35d15/artifacts/sg5qkt1c_default-fallback-image.png';
                     }}
                   />
-                  {service.isNew && (
-                    <span className="absolute top-2 right-2 bg-[#E55B7A] text-white text-xs font-medium px-2 py-0.5 rounded">
-                      NEW
-                    </span>
-                  )}
-                  {service.isTest && (
-                    <div className="absolute inset-0 bg-[#2B2B2B]/60 flex items-center justify-center">
+                  {service.isViewAll && (
+                    <div className="absolute inset-0 bg-[#8B2F5F]/80 flex items-center justify-center">
                       <span className="text-white text-sm font-medium text-center px-2">
-                        Find your perfect massage
+                        Alle Massagen ansehen
                       </span>
                     </div>
                   )}
                 </div>
-                <p className="mt-3 text-sm font-medium text-[#2B2B2B] text-center group-hover:text-[#8B7355] transition-colors">
+                <p className="mt-3 text-sm font-medium text-[#2B2B2B] text-center group-hover:text-[#8B2F5F] transition-colors">
                   {service.title}
                 </p>
+                {service.price && (
+                  <p className="text-xs text-[#666666] text-center">{service.price}</p>
+                )}
               </a>
             ))}
           </div>

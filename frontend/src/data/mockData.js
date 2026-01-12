@@ -1,186 +1,142 @@
-// Mock data for New Soul website clone
+// Mock data for Prakun Thai Massage website
 
 export const services = [
   {
     id: 1,
-    title: "Signature Massage",
+    title: "Traditionelle Thai Massage",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=350&fit=crop",
-    link: "/signature-massage"
+    link: "/traditionelle-thai-massage",
+    price: "ab 47 €"
   },
   {
     id: 2,
-    title: "Deep Tissue Massage",
+    title: "Aromaöl-Massage",
     image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400&h=350&fit=crop",
-    link: "/deep-tissue-massage"
+    link: "/aromaoel-massage",
+    price: "ab 36 €"
   },
   {
     id: 3,
-    title: "Brazilian Lymphatic Drainage",
+    title: "Hot Stone Massage",
     image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400&h=350&fit=crop",
-    link: "/brazilian-lymphatic-drainage"
+    link: "/hot-stone-massage",
+    price: "ab 55 €"
   },
   {
     id: 4,
-    title: "Sports Massage",
+    title: "Kräuterstempel-Massage",
     image: "https://images.unsplash.com/photo-1639162906614-0603b0ae95fd?w=400&h=350&fit=crop",
-    link: "/sports-massage"
+    link: "/kraeuterstempel-massage",
+    price: "ab 75 €"
   },
   {
     id: 5,
-    title: "Stress Recovery Massage",
+    title: "Lomi Lomi Massage",
     image: "https://images.unsplash.com/photo-1741522509438-a120c0bb5e88?w=400&h=350&fit=crop",
-    link: "/stress-recovery-massage"
+    link: "/lomi-lomi-massage",
+    price: "ab 72 €"
   },
   {
     id: 6,
-    title: "Prenatal Massage",
+    title: "Schwangerschaftsmassage",
     image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=350&fit=crop",
-    link: "/prenatal-massage"
+    link: "/schwangerschaftsmassage",
+    price: "ab 50 €"
   },
   {
     id: 7,
-    title: "Massage for Two",
+    title: "Abhyanga Ayurveda",
     image: "https://images.unsplash.com/photo-1562839938-ef837ead7478?w=400&h=350&fit=crop",
-    link: "/couples-massage"
+    link: "/abhyanga-ayurveda",
+    price: "ab 42 €"
   },
   {
     id: 8,
-    title: "Infraredlight Therapy",
+    title: "Bambus-Massage",
     image: "https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=400&h=350&fit=crop",
-    link: "/red-light-therapy",
-    isNew: true
+    link: "/bambus-massage",
+    price: "ab 55 €"
   },
   {
     id: 9,
-    title: "Assisted Stretching",
+    title: "Aromakerzen-Massage",
     image: "https://images.unsplash.com/photo-1635545999375-057ee4013deb?w=400&h=350&fit=crop",
-    link: "/stretching",
-    isNew: true
+    link: "/aromakerzen-massage",
+    price: "ab 37 €"
   },
   {
     id: 10,
-    title: "Take a quick test",
+    title: "Alle Massagen",
     image: "https://images.unsplash.com/photo-1532926381893-7542290edf1d?w=400&h=350&fit=crop",
-    link: "/massage-finder",
-    isTest: true
+    link: "/alle-massagen",
+    isViewAll: true
   }
 ];
 
 export const benefits = [
   {
     id: 1,
-    title: "Studios where you feel home",
-    description: "A minimalist ambience of warm light and earthy tones awaits you. Health at your fingertips.",
+    title: "Erfahrung seit 2012",
+    description: "Über 12 Jahre professionelle Thai-Massage Erfahrung im Herzen von Hamburg. Qualität, der Sie vertrauen können.",
     image: "https://images.unsplash.com/photo-1583417657209-d3dd44dc9c09?w=564&h=720&fit=crop"
   },
   {
     id: 2,
-    title: "Easy online booking",
-    description: "We offer convenient online booking and massage preferences tailored to your needs. Just a few taps away.",
+    title: "Einfache Online-Buchung",
+    description: "Buchen Sie Ihren Termin bequem online. In wenigen Klicks zu Ihrer wohlverdienten Auszeit.",
     image: "https://images.unsplash.com/photo-1529290130-4ca3753253ae?w=564&h=720&fit=crop"
   },
   {
     id: 3,
-    title: "The best therapists",
-    description: "Our highly trained massage therapists have one goal: to make you feel reborn after the massage.",
+    title: "Zertifizierte Therapeuten",
+    description: "Unsere ausgebildeten Masseure kombinieren traditionelle Techniken mit modernem Fachwissen.",
     image: "https://images.pexels.com/photos/7598359/pexels-photo-7598359.jpeg?w=564&h=720&fit=crop"
   },
   {
     id: 4,
-    title: "Our unique treatment concept",
-    description: "Massage is much more than just relaxation. It reduces stress, gives you peace at night and stimulates mental vitality.",
+    title: "Wärme, Respekt & Sorgfalt",
+    description: "Jede Behandlung wird mit Hingabe durchgeführt – für Ihr körperliches und seelisches Wohlbefinden.",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=564&h=720&fit=crop"
   },
   {
     id: 5,
-    title: "Superior massage beds",
-    description: "Relax on our award-winning, comfortable and heated massage loungers. Made in Germany!",
+    title: "Zentrale Lage",
+    description: "Direkt am Winterhuder Weg – einfach erreichbar mit öffentlichen Verkehrsmitteln.",
     image: "https://images.pexels.com/photos/35546238/pexels-photo-35546238.jpeg?w=564&h=720&fit=crop"
   }
 ];
 
-export const studios = [
-  {
-    id: 1,
-    city: "Berlin",
-    name: "Studio Prenzlauer Berg",
-    address: "Lottumstraße 15",
-    nextAvailable: "Mo, 12. January",
-    rating: 4.9,
-    image: "https://images.unsplash.com/photo-1583417657209-d3dd44dc9c09?w=750&h=500&fit=crop",
-    code: "BER-LOT"
-  },
-  {
-    id: 2,
-    city: "München",
-    name: "Studio Schwabing-West",
-    address: "Infanteriestraße 14",
-    nextAvailable: "Mo, 12. January",
-    rating: 4.8,
-    image: "https://images.unsplash.com/photo-1529290130-4ca3753253ae?w=750&h=500&fit=crop",
-    code: "MUC-INF"
-  },
-  {
-    id: 3,
-    city: "Köln",
-    name: "Studio Lindenthal",
-    address: "Classen-Kappelmann-Straße 32",
-    nextAvailable: "Mo, 12. January",
-    rating: 4.9,
-    image: "https://images.pexels.com/photos/7598359/pexels-photo-7598359.jpeg?w=750&h=500&fit=crop",
-    code: "CGN-CLA"
-  },
-  {
-    id: 4,
-    city: "Berlin",
-    name: "Studio Charlottenburg",
-    address: "Wilmersdorfer Straße 60 (Hinterhof)",
-    nextAvailable: "Mo, 12. January",
-    rating: 4.9,
-    image: "https://images.unsplash.com/photo-1583417657209-d3dd44dc9c09?w=750&h=500&fit=crop",
-    code: "BER-WIL"
-  },
-  {
-    id: 5,
-    city: "Hamburg",
-    name: "Studio Eppendorf",
-    address: "Eppendorfer Landstraße 107",
-    nextAvailable: "Mo, 12. January",
-    rating: 5.0,
-    image: "https://images.unsplash.com/photo-1529290130-4ca3753253ae?w=750&h=500&fit=crop",
-    code: "HAM-EPP"
-  },
-  {
-    id: 6,
-    city: "Berlin",
-    name: "Studio Winsviertel",
-    address: "Winsstraße 53",
-    nextAvailable: "Mo, 12. January",
-    rating: 4.9,
-    image: "https://images.pexels.com/photos/7598359/pexels-photo-7598359.jpeg?w=750&h=500&fit=crop",
-    code: "BER-WIN"
-  }
-];
+export const studio = {
+  name: "Prakun Thai Massage",
+  address: "Winterhuder Weg 24",
+  city: "22085 Hamburg",
+  email: "info@prakunmassage.de",
+  phone: "+49 40 123 456",
+  hours: "Mo-So: 10:00 - 20:00",
+  rating: 4.9,
+  reviewCount: "200+",
+  image: "https://images.unsplash.com/photo-1583417657209-d3dd44dc9c09?w=750&h=500&fit=crop"
+};
 
 export const testimonials = [
   {
     id: 1,
-    text: "Uncomplicated booking system, pleasant atmosphere and really great massage! The price-performance ratio is unbeatable. I would love to come back.",
-    author: "Anonym",
+    text: "Wunderbare Erfahrung! Die Massage hat meine Migräne und Nackenschmerzen deutlich gelindert. Sehr freundliches Personal und entspannte Atmosphäre.",
+    author: "Maria S.",
     source: "Google",
     rating: 5
   },
   {
     id: 2,
-    text: "Until now, I thought nothing could compare to a Thai massage. Today I was proven otherwise with a fantastic massage from Ronny!",
-    author: "Lisa M",
+    text: "Die 90-Minuten Thai-Massage war absolut fantastisch. Endlich fühle ich mich wieder entspannt und voller Energie. Sehr empfehlenswert!",
+    author: "Thomas K.",
     source: "Google",
     rating: 5
   },
   {
     id: 3,
-    text: "I am still very impressed by the treatment I received and I had no idea beforehand what level you can take wellness/massages to.",
-    author: "Johanna R.",
+    text: "Seit Jahren komme ich hierher und bin jedes Mal begeistert. Professionelle Behandlung, faire Preise und immer ein gutes Gefühl danach.",
+    author: "Sandra M.",
     source: "Google",
     rating: 5
   }
@@ -189,122 +145,96 @@ export const testimonials = [
 export const giftProducts = [
   {
     id: 1,
-    title: "Massage Gift Card",
-    price: "79,00",
+    title: "Massage Gutschein",
+    price: "ab 36,00",
     image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=640&h=820&fit=crop",
-    link: "/massage-gift-card"
+    link: "/gutschein"
   },
   {
     id: 2,
-    title: "Membership Gift Card",
-    price: "79,00",
+    title: "Wellness Paket",
+    price: "ab 89,00",
     image: "https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=640&h=820&fit=crop",
-    link: "/membership-gift-card"
+    link: "/wellness-paket"
   },
   {
     id: 3,
-    title: "Mom-to-Be Wellness Bundle",
-    price: "259,00",
+    title: "Zeit zu Zweit",
+    price: "ab 120,00",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=640&h=820&fit=crop",
-    link: "/mom-to-be-wellness-bundle",
+    link: "/zeit-zu-zweit",
     isNew: true
   },
   {
     id: 4,
-    title: "Peak Performance Bundle",
-    price: "259,00",
+    title: "Premium Verwöhnpaket",
+    price: "ab 150,00",
     image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=640&h=820&fit=crop",
-    link: "/peak-performance-bundle",
+    link: "/premium-paket",
     isNew: true
   },
   {
     id: 5,
-    title: "Glow & Sculpt Bundle",
-    price: "289,00",
+    title: "Hot Stone Paket",
+    price: "ab 99,00",
     image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=640&h=820&fit=crop",
-    link: "/glow-and-sculpt-bundle"
+    link: "/hot-stone-paket"
   },
   {
     id: 6,
-    title: "Recovery+ Bundle",
-    price: "124,00",
+    title: "Ayurveda Erlebnis",
+    price: "ab 85,00",
     image: "https://images.unsplash.com/photo-1639162906614-0603b0ae95fd?w=640&h=820&fit=crop",
-    link: "/red-light-therapy-bundle"
-  },
-  {
-    id: 7,
-    title: "Infrared Light Bundle",
-    price: "35,00",
-    image: "https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=640&h=820&fit=crop",
-    link: "/rlt-giftcard"
-  },
-  {
-    id: 8,
-    title: "Assisted Stretching Bundle",
-    price: "35,00",
-    image: "https://images.unsplash.com/photo-1635545999375-057ee4013deb?w=640&h=820&fit=crop",
-    link: "/stretching-giftcard"
+    link: "/ayurveda-paket"
   }
 ];
 
 export const faqItems = [
   {
     id: 1,
-    question: "How can I book a massage?",
-    answer: "You can easily book a massage online through our website. Simply click 'Book now', select your preferred studio location, service type, date, and time. The entire process takes less than a minute."
+    question: "Wie kann ich einen Termin buchen?",
+    answer: "Sie können ganz einfach online über unsere Website buchen. Klicken Sie auf 'Termin buchen', wählen Sie Ihre gewünschte Massage, Datum und Uhrzeit. Der gesamte Vorgang dauert weniger als eine Minute."
   },
   {
     id: 2,
-    question: "Who will treat me?",
-    answer: "Our team consists of highly trained and certified massage therapists with years of experience. Each therapist specializes in specific techniques to ensure you receive the best possible treatment."
+    question: "Welche Massage ist die richtige für mich?",
+    answer: "Das hängt von Ihren Bedürfnissen ab. Bei Verspannungen empfehlen wir die Traditionelle Thai Massage, zur Entspannung die Aromaöl-Massage, und bei Muskelschmerzen die Hot Stone Massage. Gerne beraten wir Sie persönlich."
   },
   {
     id: 3,
-    question: "How much does a treatment cost?",
-    answer: "Our treatments start from €69. Prices vary depending on the type of massage and duration. Members enjoy up to 50% discount on regular bookings."
+    question: "Was kosten die Behandlungen?",
+    answer: "Unsere Preise beginnen ab 35€ für Teilkörper-Massagen. Die Preise variieren je nach Massageart und Dauer. Alle Preise finden Sie auf unserer Leistungsseite."
   },
   {
     id: 4,
-    question: "Where are your studios?",
-    answer: "We have studios in Berlin (Prenzlauer Berg, Charlottenburg, Winsviertel, Friedrichshain, Mitte), München (Schwabing-West, Glockenbach, Bogenhausen), Köln (Lindenthal), Hamburg (Eppendorf), and Düsseldorf (City Center)."
+    question: "Wo befindet sich das Studio?",
+    answer: "Wir befinden uns zentral in Hamburg am Winterhuder Weg 24, 22085 Hamburg. Sie erreichen uns bequem mit öffentlichen Verkehrsmitteln."
   },
   {
     id: 5,
-    question: "Can I cancel a booking?",
-    answer: "Yes, you can cancel your booking up to 24 hours before the appointment without any charges. Cancellations within 24 hours may incur a cancellation fee."
+    question: "Kann ich einen Termin stornieren?",
+    answer: "Ja, Sie können Ihren Termin bis zu 24 Stunden vorher kostenlos stornieren. Bei kurzfristigen Stornierungen bitten wir um Verständnis, dass eine Gebühr anfallen kann."
   }
 ];
 
 export const navigationLinks = {
   main: [
-    { label: "Memberships", href: "/membership" },
-    { label: "Careers", href: "/careers" },
-    { label: "Products", href: "/products" },
-    { label: "Gift Cards", href: "/gift-cards" }
+    { label: "Leistungen", href: "/leistungen" },
+    { label: "Gutscheine", href: "/gutscheine" },
+    { label: "Über uns", href: "/ueber-uns" },
+    { label: "Kontakt", href: "/kontakt" }
   ],
-  company: [
-    { label: "About", href: "/about" },
-    { label: "Careers", href: "/careers" },
-    { label: "Franchise", href: "/franchise" },
-    { label: "Responsibility & Inclusion", href: "/responsibility" },
-    { label: "Ambassador Program", href: "/ambassador" },
-    { label: "Presskit", href: "/presskit" },
-    { label: "Gift Finder", href: "/gift-finder" }
-  ],
-  studios: [
-    { label: "Berlin", href: "/studios/berlin" },
-    { label: "Berlin I Prenzlauer Berg", href: "/studios/berlin-prenzlauer-berg" },
-    { label: "Berlin I Charlottenburg", href: "/studios/berlin-charlottenburg" },
-    { label: "Berlin I Winsviertel", href: "/studios/berlin-winsviertel" },
-    { label: "Berlin I Friedrichshain", href: "/studios/berlin-friedrichshain" },
-    { label: "Hamburg I Eppendorf", href: "/studios/hamburg-eppendorf" },
-    { label: "München I Schwabing-West", href: "/studios/munich-schwabing" },
-    { label: "Köln I Lindenthal", href: "/studios/cologne-lindenthal" }
+  services: [
+    { label: "Wellness Massage", href: "/wellness-massage" },
+    { label: "Thailändische Massage", href: "/thai-massage" },
+    { label: "Ayurveda Massage", href: "/ayurveda-massage" },
+    { label: "Hot Stone Massage", href: "/hot-stone" },
+    { label: "Schwangerschaftsmassage", href: "/schwangerschaft" },
+    { label: "Wellness Pakete", href: "/pakete" }
   ],
   legal: [
-    { label: "Imprint", href: "/imprint" },
-    { label: "Legal Information", href: "/legal" },
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms and conditions", href: "/terms" }
+    { label: "Impressum", href: "/impressum" },
+    { label: "Datenschutz", href: "/datenschutz" },
+    { label: "AGB", href: "/agb" }
   ]
 };

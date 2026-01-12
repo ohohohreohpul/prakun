@@ -21,8 +21,8 @@ const BenefitsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-12">
-          Relaxation.{' '}
-          <span className="font-bold">In the heart of the city.</span>
+          Entspannung.{' '}
+          <span className="font-bold">Im Herzen von Hamburg.</span>
         </h2>
 
         {/* Benefits Cards Carousel */}
@@ -62,7 +62,7 @@ const BenefitsSection = () => {
                     }}
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-[#2B2B2B] mb-2 group-hover:text-[#8B7355] transition-colors">
+                <h3 className="text-lg font-semibold text-[#2B2B2B] mb-2 group-hover:text-[#8B2F5F] transition-colors">
                   {benefit.title}
                 </h3>
                 <p className="text-sm text-[#666666] leading-relaxed">
@@ -75,8 +75,8 @@ const BenefitsSection = () => {
 
         {/* CTA Button */}
         <div className="mt-12 text-center">
-          <Button className="bg-[#2B2B2B] hover:bg-[#3B3B3B] text-white text-base px-8 py-6 rounded-full">
-            Book a massage
+          <Button className="bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full">
+            Jetzt Termin buchen
           </Button>
         </div>
       </div>

@@ -23,32 +23,31 @@ const HeroSection = () => {
               <span className="text-sm font-semibold text-white drop-shadow-md">4.9/5</span>
             </div>
             <span className="text-white/80 text-sm drop-shadow-md">|</span>
-            <span className="text-sm text-white/80 drop-shadow-md">1329+ Ratings</span>
+            <span className="text-sm text-white/80 drop-shadow-md">200+ Bewertungen</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight drop-shadow-lg">
-            Make your
+            Weil Sie mehr verdienen
             <br />
-            health{' '}
-            <span className="italic font-light text-[#C4A77D]">your priority</span>
+            <span className="italic font-light text-[#C4A77D]">als nur eine Pause.</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-lg mx-auto lg:mx-0 drop-shadow-md">
-            Your massage therapy for holistic health. Now available in your city.
+            Professionelle Thai-Massage im Herzen von Hamburg. Massagen mit Wirkung seit 2012.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button className="bg-[#2B2B2B] hover:bg-[#3B3B3B] text-white text-base px-8 py-6 rounded-full font-medium">
-              Book now
+            <Button className="bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full font-medium">
+              Termin buchen
             </Button>
             <Button
               variant="outline"
               className="border-white bg-white/10 text-white hover:bg-white hover:text-[#2B2B2B] text-base px-8 py-6 rounded-full font-medium backdrop-blur-sm"
             >
-              View Memberships
+              Gutscheine kaufen
             </Button>
           </div>
         </div>
