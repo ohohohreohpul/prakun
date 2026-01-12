@@ -101,18 +101,26 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <Button 
-              className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/40 hover:-translate-y-1"
+            <Link to="/buchen">
+              <Button 
+                className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/40 hover:-translate-y-1"
+              >
+                <span className="relative z-10">Termin buchen</span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              </Button>
+            </Link>
+            <a 
+              href="https://shop.prakunthaimassage.de/hamburg" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <span className="relative z-10">Termin buchen</span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-            </Button>
-            <Button
-              variant="outline"
-              className="group border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#2B2B2B] text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
-            >
-              Gutscheine kaufen
-            </Button>
+              <Button
+                variant="outline"
+                className="group border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#2B2B2B] text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
+              >
+                Gutscheine kaufen
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>
