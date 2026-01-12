@@ -140,12 +140,14 @@ const Header = () => {
             </Link>
           </motion.div>
 
-          {/* Right Navigation - Buttons */}
-          <div className="hidden lg:flex items-center gap-3 justify-end">
+          {/* Right Navigation - Buttons (Desktop) & Mobile Menu Button */}
+          <div className="flex items-center gap-3 justify-end">
+            {/* Desktop Buttons */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              className="hidden lg:block"
             >
               <Link to="/gutscheine">
                 <Button
@@ -160,6 +162,7 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              className="hidden lg:block"
             >
               <Button
                 className="relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30 hover:-translate-y-0.5"
@@ -167,16 +170,16 @@ const Header = () => {
                 <span className="relative z-10">Termin buchen</span>
               </Button>
             </motion.div>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            className="lg:hidden p-2 rounded-full transition-colors text-white hover:bg-white/10"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </motion.button>
+            {/* Mobile Menu Button */}
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              className="lg:hidden p-2 rounded-full transition-colors text-white hover:bg-white/10"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </motion.button>
+          </div>
         </div>
       </div>
 
