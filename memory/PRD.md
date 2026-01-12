@@ -27,6 +27,8 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 - [x] Booking page with Planity widget integration
 - [x] All booking buttons linked to /buchen
 - [x] Gutscheine buttons linked to external shop
+- [x] Gift Voucher section with €49, €62, €92, €114 amounts
+- [x] Wellness Pakete & Extras section (renamed from gift cards)
 
 ## Tech Stack
 - Frontend: React + Tailwind CSS + framer-motion
@@ -45,6 +47,8 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 - Replaced sauna/pool images with massage/wellness images
 - Fixed header logo centering using CSS grid
 - Mobile hamburger menu moved to right side
+- **NEW: Gift Voucher Section** - Premium dark design with €49, €62, €92, €114 amounts
+- **Renamed:** Gift cards carousel → "Wellness Pakete & Extras" section
 
 ### December 2025
 - Full site clone and rebrand completed
@@ -85,6 +89,8 @@ All content is currently MOCKED via `/app/frontend/src/data/mockData.js`
 
 ## Files of Reference
 - `/app/frontend/src/components/BookingPage.jsx` - Planity booking page
+- `/app/frontend/src/components/GiftVoucherSection.jsx` - Gift voucher amounts (€49-€114)
+- `/app/frontend/src/components/GiftBestsellers.jsx` - Wellness packages carousel
 - `/app/frontend/src/data/mockData.js` - All content/data
 - `/app/frontend/src/components/Header.jsx` - Navigation/mega menu
 - `/app/frontend/src/components/ServicePage.jsx` - Service page template
