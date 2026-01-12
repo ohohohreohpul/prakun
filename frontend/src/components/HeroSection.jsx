@@ -11,9 +11,7 @@ const HeroSection = () => {
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1696841212541-449ca29397cc?w=1920&h=1080&fit=crop')`,
         }}
-      >
-        <div className="absolute inset-0 bg-[#F7F6F4]/75" />
-      </div>
+      />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
