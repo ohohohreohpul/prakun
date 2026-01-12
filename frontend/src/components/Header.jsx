@@ -149,14 +149,18 @@ const Header = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="hidden lg:block"
             >
-              <Link to="/gutscheine">
+              <a 
+                href="https://shop.prakunthaimassage.de/hamburg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   className="text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 border-white/50 text-white hover:bg-white hover:text-[#2B2B2B] hover:border-white"
                 >
                   Gutscheine
                 </Button>
-              </Link>
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
@@ -164,11 +168,13 @@ const Header = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="hidden lg:block"
             >
-              <Button
-                className="relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30 hover:-translate-y-0.5"
-              >
-                <span className="relative z-10">Termin buchen</span>
-              </Button>
+              <Link to="/buchen">
+                <Button
+                  className="relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30 hover:-translate-y-0.5"
+                >
+                  <span className="relative z-10">Termin buchen</span>
+                </Button>
+              </Link>
             </motion.div>
 
             {/* Mobile Menu Button */}
