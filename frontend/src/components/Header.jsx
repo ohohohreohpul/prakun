@@ -129,7 +129,7 @@ const Header = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex justify-center"
+            className="lg:flex lg:justify-center"
           >
             <Link to="/" className="flex items-center">
               <img 
