@@ -643,47 +643,47 @@ export const testimonials = [
 export const giftProducts = [
   {
     id: 1,
-    title: "Massage Gutschein",
-    price: "ab 36,00",
+    title: "Aromaöl Ganzkörper",
+    price: "60,00",
     image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=640&h=820&fit=crop",
-    link: "/gutschein"
+    link: "/buchen"
   },
   {
     id: 2,
     title: "Wellness Paket",
-    price: "ab 89,00",
+    price: "89,00",
     image: "https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=640&h=820&fit=crop",
-    link: "/wellness-paket"
+    link: "/buchen"
   },
   {
     id: 3,
-    title: "Zeit zu Zweit",
-    price: "ab 120,00",
+    title: "Paar-Massage",
+    price: "120,00",
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=640&h=820&fit=crop",
-    link: "/zeit-zu-zweit",
+    link: "/buchen",
     isNew: true
   },
   {
     id: 4,
     title: "Premium Verwöhnpaket",
-    price: "ab 150,00",
+    price: "150,00",
     image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=640&h=820&fit=crop",
-    link: "/premium-paket",
+    link: "/buchen",
     isNew: true
   },
   {
     id: 5,
     title: "Hot Stone Paket",
-    price: "ab 99,00",
+    price: "99,00",
     image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=640&h=820&fit=crop",
-    link: "/hot-stone-paket"
+    link: "/buchen"
   },
   {
     id: 6,
-    title: "Ayurveda Erlebnis",
-    price: "ab 85,00",
-    image: "https://images.unsplash.com/photo-1639162906614-0603b0ae95fd?w=640&h=820&fit=crop",
-    link: "/ayurveda-paket"
+    title: "Kräuterstempel Massage",
+    price: "85,00",
+    image: "https://images.unsplash.com/photo-1591343395082-e120087004b4?w=640&h=820&fit=crop",
+    link: "/buchen"
   }
 ];
 
