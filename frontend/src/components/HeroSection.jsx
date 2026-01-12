@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ChevronDown, Play, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
 const HeroSection = () => {
