@@ -9,8 +9,9 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-  const megaMenuRef = useRef(null);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const megaMenuTimeoutRef = useRef(null);
+  const resourcesTimeoutRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,9 +22,8 @@ const Header = () => {
   }, []);
 
   const handleMegaMenuEnter = () => {
-    if (megaMenuTimeoutRef.current) {
-      clearTimeout(megaMenuTimeoutRef.current);
-    }
+    if (megaMenuTimeoutRef.current) clearTimeout(megaMenuTimeoutRef.current);
+    setIsResourcesOpen(false);
     setIsMegaMenuOpen(true);
   };
 
@@ -33,13 +33,29 @@ const Header = () => {
     }, 150);
   };
 
+  const handleResourcesEnter = () => {
+    if (resourcesTimeoutRef.current) clearTimeout(resourcesTimeoutRef.current);
+    setIsMegaMenuOpen(false);
+    setIsResourcesOpen(true);
+  };
+
+  const handleResourcesLeave = () => {
+    resourcesTimeoutRef.current = setTimeout(() => {
+      setIsResourcesOpen(false);
+    }, 150);
+  };
+
+  const textColorClass = isScrolled || isMegaMenuOpen || isResourcesOpen 
+    ? 'text-[#2B2B2B]' 
+    : 'text-white';
+
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled || isMegaMenuOpen
+        isScrolled || isMegaMenuOpen || isResourcesOpen
           ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-black/5 border-b border-white/20' 
           : 'bg-transparent'
       }`}
@@ -47,75 +63,114 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Left Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {/* Mega Menu Trigger */}
+          <nav className="hidden lg:flex items-center space-x-8 flex-1">
+            {/* Mega Menu Trigger - Leistungen */}
             <div
               className="relative"
               onMouseEnter={handleMegaMenuEnter}
               onMouseLeave={handleMegaMenuLeave}
             >
               <button
-                className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:text-[#8B2F5F] ${
-                  isScrolled || isMegaMenuOpen ? 'text-[#2B2B2B]' : 'text-white'
-                }`}
+                className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:text-[#8B2F5F] ${textColorClass}`}
               >
                 Leistungen
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
               </button>
             </div>
             
-            {['Gutscheine', 'Über uns', 'Kontakt'].map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+            {/* Ressourcen Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={handleResourcesEnter}
+              onMouseLeave={handleResourcesLeave}
+            >
+              <button
+                className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:text-[#8B2F5F] ${textColorClass}`}
               >
-                <Link
-                  to={`/${item.toLowerCase().replace(' ', '-').replace('ü', 'ue')}`}
-                  className={`relative text-sm font-medium transition-all duration-300 hover:text-[#8B2F5F] group ${
-                    isScrolled || isMegaMenuOpen ? 'text-[#2B2B2B]' : 'text-white'
-                  }`}
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#8B2F5F] transition-all duration-300 group-hover:w-full" />
-                </Link>
-              </motion.div>
-            ))}
+                Ressourcen
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isResourcesOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Ressourcen Dropdown Menu */}
+              <AnimatePresence>
+                {isResourcesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-xl rounded-xl shadow-xl shadow-black/10 border border-gray-100 overflow-hidden"
+                    onMouseEnter={handleResourcesEnter}
+                    onMouseLeave={handleResourcesLeave}
+                  >
+                    <div className="py-2">
+                      <Link
+                        to="/ueber-uns"
+                        className="flex items-center gap-3 px-4 py-3 text-sm text-[#2B2B2B] hover:bg-[#8B2F5F]/5 hover:text-[#8B2F5F] transition-colors"
+                        onClick={() => setIsResourcesOpen(false)}
+                      >
+                        Über uns
+                      </Link>
+                      <Link
+                        to="/kontakt"
+                        className="flex items-center gap-3 px-4 py-3 text-sm text-[#2B2B2B] hover:bg-[#8B2F5F]/5 hover:text-[#8B2F5F] transition-colors"
+                        onClick={() => setIsResourcesOpen(false)}
+                      >
+                        Kontakt
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </nav>
 
-          {/* Logo */}
+          {/* Centered Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="absolute left-1/2 -translate-x-1/2"
           >
             <Link to="/" className="flex items-center">
               <img 
                 src="https://customer-assets.emergentagent.com/job_newsoul-replica/artifacts/7xzy0yki_604e73fc94532bf2c5ad6522_logoo-p-500-1.png" 
                 alt="Prakun Thai Massage" 
-                className={`h-12 md:h-14 transition-all duration-300 ${!(isScrolled || isMegaMenuOpen) ? 'brightness-0 invert' : ''}`}
+                className={`h-9 md:h-10 transition-all duration-300 ${!(isScrolled || isMegaMenuOpen || isResourcesOpen) ? 'brightness-0 invert' : ''}`}
               />
             </Link>
           </motion.div>
 
-          {/* Right Navigation */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Right Navigation - Buttons */}
+          <div className="hidden lg:flex items-center gap-3 flex-1 justify-end">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Link to="/gutscheine">
+                <Button
+                  variant="outline"
+                  className={`text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 ${
+                    isScrolled || isMegaMenuOpen || isResourcesOpen
+                      ? 'border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white'
+                      : 'border-white text-white hover:bg-white hover:text-[#2B2B2B]'
+                  }`}
+                >
+                  Gutscheine
+                </Button>
+              </Link>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Button
-                className="relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-sm px-6 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30 hover:-translate-y-0.5"
+                className="relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30 hover:-translate-y-0.5"
               >
                 <span className="relative z-10">Termin buchen</span>
               </Button>
             </motion.div>
-            <button className={`flex items-center text-sm font-medium hover:text-[#8B2F5F] transition-colors ${
-              isScrolled || isMegaMenuOpen ? 'text-[#2B2B2B]' : 'text-white'
-            }`}>
-              DE <ChevronDown className="ml-1 h-4 w-4" />
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,7 +188,6 @@ const Header = () => {
       <AnimatePresence>
         {isMegaMenuOpen && (
           <motion.div
-            ref={megaMenuRef}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -311,21 +365,38 @@ const Header = () => {
 
               <hr className="border-[#E5E2DD]" />
 
-              {/* Other Links */}
-              {['Gutscheine', 'Über uns', 'Kontakt'].map((item) => (
+              {/* Ressourcen */}
+              <div>
+                <h3 className="text-xs font-bold text-[#8B2F5F] uppercase tracking-wider mb-3">Ressourcen</h3>
                 <Link
-                  key={item}
-                  to={`/${item.toLowerCase().replace(' ', '-')}`}
+                  to="/ueber-uns"
                   className="block text-[#2B2B2B] font-medium py-2 hover:text-[#8B2F5F] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item}
+                  Über uns
                 </Link>
-              ))}
+                <Link
+                  to="/kontakt"
+                  className="block text-[#2B2B2B] font-medium py-2 hover:text-[#8B2F5F] transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Kontakt
+                </Link>
+              </div>
 
-              <Button className="w-full bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white rounded-full">
-                Termin buchen
-              </Button>
+              <hr className="border-[#E5E2DD]" />
+
+              {/* Buttons */}
+              <div className="flex gap-3">
+                <Link to="/gutscheine" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="outline" className="w-full border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white rounded-full">
+                    Gutscheine
+                  </Button>
+                </Link>
+                <Button className="flex-1 bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white rounded-full">
+                  Termin buchen
+                </Button>
+              </div>
             </div>
           </motion.div>
         )}
