@@ -20,6 +20,7 @@ import BookingPage from "./components/BookingPage";
 import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
 import ServicesPage from "./components/ServicesPage";
+import MonthlyOfferPopup from "./components/MonthlyOfferPopup";
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
         <FAQSection />
       </main>
       <Footer />
+      <MonthlyOfferPopup />
     </div>
   );
 };
