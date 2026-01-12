@@ -23,14 +23,28 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 - [x] Clean video player UI (no title/duration)
 - [x] Symmetrical testimonials layout
 - [x] Removed external branding badge
+- [x] Responsive header (hamburger on right for mobile)
+- [x] Booking page with Planity widget integration
+- [x] All booking buttons linked to /buchen
+- [x] Gutscheine buttons linked to external shop
 
 ## Tech Stack
 - Frontend: React + Tailwind CSS + framer-motion
 - Backend: FastAPI (not yet integrated)
 - Database: MongoDB (not yet integrated)
 - Styling: Glassmorphism design pattern
+- External: Planity booking widget
 
 ## What's Been Implemented
+
+### January 2025
+- Created booking page (`/buchen`) with Planity widget embedded
+- All "Termin buchen" buttons now link to `/buchen`
+- All "Gutscheine" buttons link to `https://shop.prakunthaimassage.de/hamburg`
+- Fixed STANDORT card logo stretching issue
+- Replaced sauna/pool images with massage/wellness images
+- Fixed header logo centering using CSS grid
+- Mobile hamburger menu moved to right side
 
 ### December 2025
 - Full site clone and rebrand completed
@@ -47,6 +61,11 @@ Clone the website `https://newsoul.de/` and rebrand it for "Prakun Thai Massage"
 ## Data Strategy
 All content is currently MOCKED via `/app/frontend/src/data/mockData.js`
 
+## External Integrations
+- **Planity**: Booking widget embedded on `/buchen` page
+- **Framer Motion**: Used for animations
+- **YouTube**: Videos embedded for hero and testimonial sections
+
 ## Prioritized Backlog
 
 ### P0 (Critical)
@@ -55,20 +74,21 @@ All content is currently MOCKED via `/app/frontend/src/data/mockData.js`
 ### P1 (High Priority)
 - SEO keyword integration (awaiting user's keywords)
 - Backend API integration (when user requests)
-- Database models for services/bookings
 
 ### P2 (Medium Priority)
 - Contact form with email integration
-- Online booking system
-- Gift voucher e-commerce
+- Database models for services/bookings
 
 ## Known Limitations
 - YouTube videos show "unavailable" in sandboxed test environments (works on deployed site)
 - All data is mocked - no backend persistence yet
 
 ## Files of Reference
+- `/app/frontend/src/components/BookingPage.jsx` - Planity booking page
 - `/app/frontend/src/data/mockData.js` - All content/data
 - `/app/frontend/src/components/Header.jsx` - Navigation/mega menu
 - `/app/frontend/src/components/ServicePage.jsx` - Service page template
 - `/app/frontend/src/components/HeroSection.jsx` - Hero with video
 - `/app/frontend/src/components/Testimonials.jsx` - Testimonials grid
+- `/app/frontend/src/components/StudioLocations.jsx` - Studio card
+- `/app/frontend/src/App.js` - Routes including /buchen
