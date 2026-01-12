@@ -576,31 +576,31 @@ export const benefits = [
     id: 1,
     title: "Erfahrung seit 2012",
     description: "Über 12 Jahre professionelle Thai-Massage Erfahrung im Herzen von Hamburg. Qualität, der Sie vertrauen können.",
-    image: "https://images.unsplash.com/photo-1583417657209-d3dd44dc9c09?w=564&h=720&fit=crop"
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=564&h=720&fit=crop"
   },
   {
     id: 2,
     title: "Einfache Online-Buchung",
     description: "Buchen Sie Ihren Termin bequem online. In wenigen Klicks zu Ihrer wohlverdienten Auszeit.",
-    image: "https://images.unsplash.com/photo-1529290130-4ca3753253ae?w=564&h=720&fit=crop"
+    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=564&h=720&fit=crop"
   },
   {
     id: 3,
     title: "Zertifizierte Therapeuten",
     description: "Unsere ausgebildeten Masseure kombinieren traditionelle Techniken mit modernem Fachwissen.",
-    image: "https://images.pexels.com/photos/7598359/pexels-photo-7598359.jpeg?w=564&h=720&fit=crop"
+    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=564&h=720&fit=crop"
   },
   {
     id: 4,
     title: "Wärme, Respekt & Sorgfalt",
     description: "Jede Behandlung wird mit Hingabe durchgeführt – für Ihr körperliches und seelisches Wohlbefinden.",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=564&h=720&fit=crop"
+    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=564&h=720&fit=crop"
   },
   {
     id: 5,
     title: "Zentrale Lage",
     description: "Direkt am Winterhuder Weg – einfach erreichbar mit öffentlichen Verkehrsmitteln.",
-    image: "https://images.pexels.com/photos/35546238/pexels-photo-35546238.jpeg?w=564&h=720&fit=crop"
+    image: "https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=564&h=720&fit=crop"
   }
 ];
 
