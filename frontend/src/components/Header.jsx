@@ -188,7 +188,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-2xl shadow-black/10"
+            className="absolute top-full left-0 right-0 bg-[#1a1a1a]/95 backdrop-blur-xl border-b border-[#C4A77D]/30 shadow-2xl shadow-black/30"
             onMouseEnter={handleMegaMenuEnter}
             onMouseLeave={handleMegaMenuLeave}
           >
@@ -196,7 +196,7 @@ const Header = () => {
               <div className="grid grid-cols-4 gap-8">
                 {/* Wellness Massage */}
                 <div>
-                  <h3 className="text-sm font-bold text-[#8B2F5F] uppercase tracking-wider mb-4">
+                  <h3 className="text-sm font-bold text-[#C4A77D] uppercase tracking-wider mb-4">
                     Wellness Massage
                   </h3>
                   <ul className="space-y-2">
@@ -207,11 +207,11 @@ const Header = () => {
                         <li key={serviceId}>
                           <Link
                             to={`/massage/${service.slug}`}
-                            className="group flex items-center justify-between py-1.5 text-[#2B2B2B] hover:text-[#8B2F5F] transition-colors"
+                            className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
                             <span className="text-sm">{service.title}</span>
-                            <span className="text-xs text-[#666666] group-hover:text-[#8B2F5F]">
+                            <span className="text-xs text-white/50 group-hover:text-[#C4A77D]">
                               ab {service.priceFrom}€
                             </span>
                           </Link>
@@ -223,7 +223,7 @@ const Header = () => {
 
                 {/* Thai Massage */}
                 <div>
-                  <h3 className="text-sm font-bold text-[#8B2F5F] uppercase tracking-wider mb-4">
+                  <h3 className="text-sm font-bold text-[#C4A77D] uppercase tracking-wider mb-4">
                     Thailändische Massage
                   </h3>
                   <ul className="space-y-2">
@@ -234,7 +234,7 @@ const Header = () => {
                         <li key={serviceId}>
                           <Link
                             to={`/massage/${service.slug}`}
-                            className="group flex items-center justify-between py-1.5 text-[#2B2B2B] hover:text-[#8B2F5F] transition-colors"
+                            className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
                             <span className="text-sm flex items-center gap-2">
@@ -243,7 +243,7 @@ const Header = () => {
                                 <span className="text-[10px] bg-[#8B2F5F] text-white px-1.5 py-0.5 rounded-full">NEU</span>
                               )}
                             </span>
-                            <span className="text-xs text-[#666666] group-hover:text-[#8B2F5F]">
+                            <span className="text-xs text-white/50 group-hover:text-[#C4A77D]">
                               ab {service.priceFrom}€
                             </span>
                           </Link>
@@ -255,7 +255,7 @@ const Header = () => {
 
                 {/* Ayurveda */}
                 <div>
-                  <h3 className="text-sm font-bold text-[#8B2F5F] uppercase tracking-wider mb-4">
+                  <h3 className="text-sm font-bold text-[#C4A77D] uppercase tracking-wider mb-4">
                     Ayurveda Massage
                   </h3>
                   <ul className="space-y-2">
@@ -266,11 +266,11 @@ const Header = () => {
                         <li key={serviceId}>
                           <Link
                             to={`/massage/${service.slug}`}
-                            className="group flex items-center justify-between py-1.5 text-[#2B2B2B] hover:text-[#8B2F5F] transition-colors"
+                            className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
                             <span className="text-sm">{service.title}</span>
-                            <span className="text-xs text-[#666666] group-hover:text-[#8B2F5F]">
+                            <span className="text-xs text-white/50 group-hover:text-[#C4A77D]">
                               ab {service.priceFrom}€
                             </span>
                           </Link>
@@ -281,7 +281,7 @@ const Header = () => {
                 </div>
 
                 {/* Featured Service / CTA */}
-                <div className="bg-[#F7F6F4] rounded-2xl p-6">
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="relative rounded-xl overflow-hidden mb-4 aspect-[4/3]">
                     <img
                       src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400&h=300&fit=crop"
@@ -296,12 +296,12 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-sm text-[#666666] mb-4">
+                  <p className="text-sm text-white/60 mb-4">
                     Tiefenwärme durch Lavasteine für maximale Entspannung.
                   </p>
                   <Link
                     to="/massage/hot-stone-massage"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-[#8B2F5F] hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#C4A77D] hover:text-white hover:gap-3 transition-all"
                     onClick={() => setIsMegaMenuOpen(false)}
                   >
                     Mehr erfahren <ChevronRight className="h-4 w-4" />
@@ -310,17 +310,17 @@ const Header = () => {
               </div>
 
               {/* Bottom Bar */}
-              <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+              <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
                 <Link
                   to="/leistungen"
-                  className="text-sm font-medium text-[#8B2F5F] hover:underline"
+                  className="text-sm font-medium text-[#C4A77D] hover:text-white transition-colors"
                   onClick={() => setIsMegaMenuOpen(false)}
                 >
                   Alle Leistungen ansehen →
                 </Link>
                 <div className="flex items-center gap-6">
-                  <span className="text-sm text-[#666666]">Fragen? Rufen Sie uns an:</span>
-                  <a href="tel:+4940123456" className="text-sm font-medium text-[#2B2B2B] hover:text-[#8B2F5F]">
+                  <span className="text-sm text-white/50">Fragen? Rufen Sie uns an:</span>
+                  <a href="tel:+4940123456" className="text-sm font-medium text-white hover:text-[#C4A77D] transition-colors">
                     +49 40 123 456
                   </a>
                 </div>
