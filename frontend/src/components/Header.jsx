@@ -143,8 +143,8 @@ const Header = () => {
           {/* Right Navigation - Buttons */}
           <div className="hidden lg:flex items-center gap-3 flex-1 justify-end">
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Link to="/gutscheine">
@@ -157,8 +157,8 @@ const Header = () => {
               </Link>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Button
