@@ -12,7 +12,7 @@ const HeroSection = () => {
           backgroundImage: `url('https://images.unsplash.com/photo-1696841212541-449ca29397cc?w=1920&h=1080&fit=crop')`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F7F6F4]/90 via-[#F7F6F4]/60 to-transparent" />
+        <div className="absolute inset-0 bg-[#F7F6F4]/75" />
       </div>
 
       {/* Content */}
