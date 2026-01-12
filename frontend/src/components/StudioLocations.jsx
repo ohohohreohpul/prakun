@@ -78,7 +78,7 @@ const StudioLocations = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     src="https://customer-assets.emergentagent.com/job_newsoul-replica/artifacts/0gkkkubd_pklogo.png" 
                     alt="Prakun Logo" 
-                    className="h-16 mb-6"
+                    className="h-12 w-auto object-contain mb-6"
                   />
                   
                   <div className="space-y-5 mb-8">

@@ -613,7 +613,7 @@ export const studio = {
   hours: "Mo-So: 10:00 - 20:00",
   rating: 4.9,
   reviewCount: "200+",
-  image: "https://images.unsplash.com/photo-1583417657209-d3dd44dc9c09?w=750&h=500&fit=crop"
+  image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=750&h=500&fit=crop"
 };
 
 export const testimonials = [
