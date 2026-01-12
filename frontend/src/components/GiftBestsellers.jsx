@@ -32,9 +32,9 @@ const GiftBestsellers = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <p className="text-[#C4A77D] text-sm tracking-wider uppercase mb-3">SELECTED FOR YOU</p>
+          <p className="text-[#8B2F5F] text-sm tracking-wider uppercase mb-3">GESCHENKIDEEN</p>
           <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B]">
-            Our Gift Bestsellers
+            Unsere Gutscheine & Pakete
           </h2>
         </div>
 
@@ -85,16 +85,16 @@ const GiftBestsellers = () => {
                     }}
                   />
                   {product.isNew && (
-                    <span className="absolute top-3 right-3 bg-[#E55B7A] text-white text-xs font-medium px-2 py-1 rounded">
-                      NEW
+                    <span className="absolute top-3 right-3 bg-[#8B2F5F] text-white text-xs font-medium px-2 py-1 rounded">
+                      NEU
                     </span>
                   )}
                 </div>
-                <h3 className="text-base font-semibold text-[#2B2B2B] mb-1 group-hover:text-[#8B7355] transition-colors">
+                <h3 className="text-base font-semibold text-[#2B2B2B] mb-1 group-hover:text-[#8B2F5F] transition-colors">
                   {product.title}
                 </h3>
                 <p className="text-sm text-[#666666]">
-                  <span className="font-semibold text-[#2B2B2B]">From {product.price} €</span> incl. VAT
+                  <span className="font-semibold text-[#2B2B2B]">{product.price} €</span> inkl. MwSt.
                 </p>
               </a>
             ))}
@@ -103,14 +103,14 @@ const GiftBestsellers = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-20">
-          <Button className="bg-[#2B2B2B] hover:bg-[#3B3B3B] text-white text-base px-6 py-5 rounded-full">
-            All gifts for friends & family
+          <Button className="bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-6 py-5 rounded-full">
+            Alle Gutscheine ansehen
           </Button>
           <Button
             variant="outline"
             className="border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white text-base px-6 py-5 rounded-full"
           >
-            View our corporate gift cards
+            Firmen-Gutscheine
           </Button>
         </div>
       </div>
