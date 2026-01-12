@@ -22,7 +22,7 @@ const BenefitsSection = () => {
         {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-12">
           Relaxation.{' '}
-          <span className="font-semibold">In the heart of the city.</span>
+          <span className="font-bold">In the heart of the city.</span>
         </h2>
 
         {/* Benefits Cards Carousel */}
