@@ -19,6 +19,7 @@ import ServicePage from "./components/ServicePage";
 import BookingPage from "./components/BookingPage";
 import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
+import ServicesPage from "./components/ServicesPage";
 
 const Home = () => {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="/buchen" element={<BookingPage />} />
           <Route path="/ueber-uns" element={<AboutPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
+          <Route path="/leistungen" element={<ServicesPage />} />
           <Route path="/*" element={<Home />} />
         </Routes>
       </BrowserRouter>
