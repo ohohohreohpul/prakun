@@ -17,6 +17,8 @@ import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 import ServicePage from "./components/ServicePage";
 import BookingPage from "./components/BookingPage";
+import AboutPage from "./components/AboutPage";
+import ContactPage from "./components/ContactPage";
 
 const Home = () => {
   return (
@@ -47,6 +49,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/massage/:slug" element={<ServicePage />} />
           <Route path="/buchen" element={<BookingPage />} />
+          <Route path="/ueber-uns" element={<AboutPage />} />
+          <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/*" element={<Home />} />
         </Routes>
       </BrowserRouter>
