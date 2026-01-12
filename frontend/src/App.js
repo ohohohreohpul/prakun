@@ -14,6 +14,7 @@ import Testimonials from "./components/Testimonials";
 import GiftBestsellers from "./components/GiftBestsellers";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
+import ServicePage from "./components/ServicePage";
 
 const Home = () => {
   return (
@@ -41,6 +42,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/massage/:slug" element={<ServicePage />} />
           <Route path="/*" element={<Home />} />
         </Routes>
       </BrowserRouter>
