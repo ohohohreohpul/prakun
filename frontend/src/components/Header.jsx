@@ -135,7 +135,7 @@ const Header = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_newsoul-replica/artifacts/7xzy0yki_604e73fc94532bf2c5ad6522_logoo-p-500-1.png" 
                 alt="Prakun Thai Massage" 
-                className={`h-9 md:h-10 transition-all duration-300 ${!(isScrolled || isMegaMenuOpen || isResourcesOpen) ? 'brightness-0 invert' : ''}`}
+                className="h-9 md:h-10 transition-all duration-300 brightness-0 invert"
               />
             </Link>
           </motion.div>
