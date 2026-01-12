@@ -393,14 +393,22 @@ const Header = () => {
 
               {/* Buttons */}
               <div className="flex gap-3">
-                <Link to="/gutscheine" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
+                <a 
+                  href="https://shop.prakunthaimassage.de/hamburg" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   <Button variant="outline" className="w-full border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white rounded-full">
                     Gutscheine
                   </Button>
+                </a>
+                <Link to="/buchen" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white rounded-full">
+                    Termin buchen
+                  </Button>
                 </Link>
-                <Button className="flex-1 bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white rounded-full">
-                  Termin buchen
-                </Button>
               </div>
             </div>
           </motion.div>
