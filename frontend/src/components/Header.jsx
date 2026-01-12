@@ -150,11 +150,7 @@ const Header = () => {
               <Link to="/gutscheine">
                 <Button
                   variant="outline"
-                  className={`text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 ${
-                    isScrolled || isMegaMenuOpen || isResourcesOpen
-                      ? 'border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white'
-                      : 'border-white text-white hover:bg-white hover:text-[#2B2B2B]'
-                  }`}
+                  className="text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 border-white/50 text-white hover:bg-white hover:text-[#2B2B2B] hover:border-white"
                 >
                   Gutscheine
                 </Button>
