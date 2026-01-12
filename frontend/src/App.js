@@ -12,6 +12,7 @@ import StudioLocations from "./components/StudioLocations";
 import LymphaticSection from "./components/LymphaticSection";
 import Testimonials from "./components/Testimonials";
 import GiftBestsellers from "./components/GiftBestsellers";
+import GiftVoucherSection from "./components/GiftVoucherSection";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 import ServicePage from "./components/ServicePage";
@@ -29,6 +30,7 @@ const Home = () => {
         <StudioLocations />
         <LymphaticSection />
         <Testimonials />
+        <GiftVoucherSection />
         <GiftBestsellers />
         <FAQSection />
       </main>
