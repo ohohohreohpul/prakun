@@ -1,9 +1,11 @@
-import React from 'react';
-import { Star, ChevronDown } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { Star, ChevronDown, Play, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/button';
 
 const HeroSection = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Parallax Effect */}
@@ -113,6 +115,95 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Floating Video Card - Bottom Right */}
+      <motion.div
+        initial={{ opacity: 0, y: 50, x: 50 }}
+        animate={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 0.8, delay: 1.2 }}
+        className="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 z-20 hidden md:block"
+      >
+        <motion.div
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+          className="relative group cursor-pointer"
+          onClick={() => setIsVideoOpen(true)}
+        >
+          {/* Glassmorphism Card */}
+          <div className="relative w-64 lg:w-72 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl shadow-black/20 transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl">
+            {/* Video Thumbnail */}
+            <div className="relative aspect-video">
+              <img
+                src="https://img.youtube.com/vi/nqk8C9vqN_E/maxresdefault.jpg"
+                alt="Studio Tour"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.src = 'https://img.youtube.com/vi/nqk8C9vqN_E/hqdefault.jpg';
+                }}
+              />
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+              
+              {/* Play Button */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:bg-white transition-colors"
+                >
+                  <Play className="h-6 w-6 text-[#8B2F5F] ml-1" fill="#8B2F5F" />
+                </motion.div>
+              </div>
+            </div>
+            
+            {/* Card Content */}
+            <div className="p-4">
+              <p className="text-white font-medium text-sm mb-1">Unser Studio</p>
+              <p className="text-white/60 text-xs">Video ansehen · 2:30 Min</p>
+            </div>
+            
+            {/* Decorative Glow */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#8B2F5F]/20 to-[#C4A77D]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            onClick={() => setIsVideoOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/nqk8C9vqN_E?autoplay=1&start=2"
+                title="Prakun Thai Massage Studio"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+              
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVideoOpen(false)}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Scroll Indicator */}
       <motion.div
