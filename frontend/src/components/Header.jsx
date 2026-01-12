@@ -99,21 +99,21 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-xl rounded-xl shadow-xl shadow-black/10 border border-gray-100 overflow-hidden"
+                    className="absolute top-full left-0 mt-2 w-48 bg-[#1a1a1a]/95 backdrop-blur-xl rounded-xl shadow-xl shadow-black/20 border border-[#C4A77D]/30 overflow-hidden"
                     onMouseEnter={handleResourcesEnter}
                     onMouseLeave={handleResourcesLeave}
                   >
                     <div className="py-2">
                       <Link
                         to="/ueber-uns"
-                        className="flex items-center gap-3 px-4 py-3 text-sm text-[#2B2B2B] hover:bg-[#8B2F5F]/5 hover:text-[#8B2F5F] transition-colors"
+                        className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
                         onClick={() => setIsResourcesOpen(false)}
                       >
                         Über uns
                       </Link>
                       <Link
                         to="/kontakt"
-                        className="flex items-center gap-3 px-4 py-3 text-sm text-[#2B2B2B] hover:bg-[#8B2F5F]/5 hover:text-[#8B2F5F] transition-colors"
+                        className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
                         onClick={() => setIsResourcesOpen(false)}
                       >
                         Kontakt
