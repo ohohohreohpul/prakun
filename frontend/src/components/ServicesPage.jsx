@@ -12,25 +12,25 @@ const serviceCategories = [
     id: 'thai',
     title: 'Thai Massage',
     description: 'Traditionelle Techniken aus Thailand',
-    services: ['traditionelle-thai-massage', 'thai-aromaoelmassage']
+    services: ['teilkoerpermassage', 'ganzkoerpermassage', 'thai-warrior-massage']
   },
   {
     id: 'wellness',
     title: 'Wellness Massage',
     description: 'Entspannung für Körper und Geist',
-    services: ['aromaoelmassage', 'hot-stone-massage', 'kraeuterstempel-massage']
+    services: ['aromaoel-massage', 'hot-stone-massage', 'kraeuterstempel-massage']
+  },
+  {
+    id: 'spezial',
+    title: 'Spezial Massagen',
+    description: 'Besondere Behandlungen für individuelle Bedürfnisse',
+    services: ['lomi-lomi-massage', 'ayurveda-abhyanga', 'bambus-massage']
   },
   {
     id: 'teilkoerper',
-    title: 'Teilkörper Massage',
+    title: 'Teilkörper & Gesicht',
     description: 'Gezielte Behandlung einzelner Bereiche',
-    services: ['rueckenmassage', 'fussmassage', 'kopfmassage']
-  },
-  {
-    id: 'special',
-    title: 'Spezial Angebote',
-    description: 'Besondere Erlebnisse',
-    services: ['paarmassage']
+    services: ['fussmassage', 'gesichtsmassage', 'schwangerschaftsmassage']
   }
 ];
 
