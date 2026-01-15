@@ -21,6 +21,9 @@ import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
 import ServicesPage from "./components/ServicesPage";
 import MonthlyOfferPopup from "./components/MonthlyOfferPopup";
+import FloatingPhoneBubble from "./components/FloatingPhoneBubble";
+import AdminLogin from "./components/AdminLogin";
+import AdminDashboard from "./components/AdminDashboard";
 
 const Home = () => {
   return (
