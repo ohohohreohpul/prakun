@@ -329,8 +329,8 @@ const Header = () => {
                 </Link>
                 <div className="flex items-center gap-6">
                   <span className="text-sm text-white/50">Fragen? Rufen Sie uns an:</span>
-                  <a href="tel:+4940123456" className="text-sm font-medium text-white hover:text-[#C4A77D] transition-colors">
-                    +49 40 123 456
+                  <a href="tel:04022697033" className="text-sm font-medium text-white hover:text-[#C4A77D] transition-colors">
+                    040 22697033
                   </a>
                 </div>
               </div>
