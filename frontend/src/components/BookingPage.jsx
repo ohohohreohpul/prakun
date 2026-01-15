@@ -92,8 +92,8 @@ const BookingPage = () => {
           >
             <p className="text-[#666666]">
               Fragen zur Buchung? Rufen Sie uns an:{' '}
-              <a href="tel:+4940123456" className="text-[#8B2F5F] font-medium hover:underline">
-                +49 40 123 456
+              <a href="tel:04022697033" className="text-[#8B2F5F] font-medium hover:underline">
+                040 22697033
               </a>
             </p>
           </motion.div>
