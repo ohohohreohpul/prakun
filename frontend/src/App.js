@@ -59,6 +59,8 @@ function App() {
           <Route path="/ueber-uns" element={<AboutPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/leistungen" element={<ServicesPage />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/*" element={<Home />} />
         </Routes>
       </BrowserRouter>
