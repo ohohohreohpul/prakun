@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefon",
-    lines: ["+49 40 123 456"],
-    link: "tel:+4940123456"
+    lines: ["040 22697033"],
+    link: "tel:04022697033"
   },
   {
     icon: Mail,
