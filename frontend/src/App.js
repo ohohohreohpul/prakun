@@ -43,6 +43,7 @@ const Home = () => {
       </main>
       <Footer />
       <MonthlyOfferPopup />
+      <FloatingPhoneBubble phoneNumber="040 22697033" />
     </div>
   );
 };
