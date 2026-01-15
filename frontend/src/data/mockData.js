@@ -609,7 +609,7 @@ export const studio = {
   address: "Winterhuder Weg 24",
   city: "22085 Hamburg",
   email: "info@prakunmassage.de",
-  phone: "+49 40 123 456",
+  phone: "040 22697033",
   hours: "Mo-So: 10:00 - 20:00",
   rating: 4.9,
   reviewCount: "200+",
