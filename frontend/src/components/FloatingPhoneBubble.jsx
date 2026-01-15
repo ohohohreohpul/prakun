@@ -1,69 +1,48 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, X } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Phone } from 'lucide-react';
 
 const FloatingPhoneBubble = ({ phoneNumber = "040 22697033" }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  
   const formattedPhone = phoneNumber.replace(/\s/g, '');
   
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.9 }}
-            className="absolute bottom-16 right-0 mb-2"
-          >
-            <div className="bg-white rounded-xl shadow-2xl p-4 min-w-[200px] border border-gray-100">
-              <p className="text-gray-600 text-sm mb-2">Jetzt anrufen:</p>
-              <a 
-                href={`tel:${formattedPhone}`}
-                className="text-lg font-semibold text-emerald-700 hover:text-emerald-800 transition-colors flex items-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                {phoneNumber}
-              </a>
-              <p className="text-xs text-gray-400 mt-2">Mo-So: 10:00 - 20:00</p>
-            </div>
-            <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white rotate-45 border-r border-b border-gray-100"></div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsExpanded(!isExpanded)}
-        className={`
-          w-14 h-14 rounded-full shadow-lg flex items-center justify-center
-          transition-all duration-300 cursor-pointer
-          ${isExpanded 
-            ? 'bg-gray-700 hover:bg-gray-800' 
-            : 'bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800'
-          }
-        `}
-        aria-label={isExpanded ? "Schließen" : "Anrufen"}
+      <motion.a
+        href={`tel:${formattedPhone}`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.05, y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ duration: 0.3 }}
+        className="
+          flex items-center gap-3 px-5 py-3
+          bg-gradient-to-r from-[#8B2F5F] to-[#6B1F4F]
+          backdrop-blur-xl
+          rounded-xl
+          shadow-lg shadow-[#8B2F5F]/30
+          border border-[#C4A77D]/30
+          cursor-pointer
+          group
+        "
       >
-        <motion.div
-          initial={false}
-          animate={{ rotate: isExpanded ? 90 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          {isExpanded ? (
-            <X className="w-6 h-6 text-white" />
-          ) : (
-            <Phone className="w-6 h-6 text-white" />
-          )}
-        </motion.div>
-      </motion.button>
+        {/* Phone Icon with gold accent */}
+        <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur flex items-center justify-center border border-[#C4A77D]/30">
+          <Phone className="w-5 h-5 text-[#C4A77D]" />
+        </div>
+        
+        {/* Text Content */}
+        <div className="flex flex-col">
+          <span className="text-[#C4A77D] text-xs font-medium uppercase tracking-wider">
+            Jetzt anrufen
+          </span>
+          <span className="text-white font-semibold text-lg group-hover:text-[#C4A77D] transition-colors">
+            {phoneNumber}
+          </span>
+        </div>
+      </motion.a>
       
-      {/* Pulse animation when not expanded */}
-      {!isExpanded && (
-        <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-20 pointer-events-none"></span>
-      )}
+      {/* Subtle glow effect */}
+      <div className="absolute inset-0 -z-10 rounded-xl bg-[#8B2F5F]/20 blur-xl opacity-50"></div>
     </div>
   );
 };
