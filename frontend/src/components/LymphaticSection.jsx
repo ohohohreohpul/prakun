@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
 const LymphaticSection = () => {
@@ -84,11 +83,11 @@ const LymphaticSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Link to="/buchen">
+          <a href="/buchen">
             <Button className="group relative overflow-hidden bg-white hover:bg-white/90 text-[#2B2B2B] text-base px-10 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1">
               <span className="relative z-10">Jetzt buchen</span>
             </Button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

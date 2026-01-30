@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdminDashboard from '../../components/AdminDashboard';
+
+const pageTitle = "Admin Dashboard - Prakun Thai Massage";
+const pageDescription = "Admin dashboard for Prakun Thai Massage Hamburg";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <AdminDashboard client:load />
+</BaseLayout>

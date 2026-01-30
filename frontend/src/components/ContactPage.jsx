@@ -1,7 +1,6 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import { Button } from './ui/button';
@@ -292,11 +291,11 @@ const ContactPage = () => {
             <p className="text-white/60 mb-8">
               Nutzen Sie unser Online-Buchungssystem für eine schnelle und unkomplizierte Terminvereinbarung.
             </p>
-            <Link to="/buchen">
+            <a href="/buchen">
               <Button className="group bg-[#C4A77D] hover:bg-[#B39A6E] text-[#1a1a1a] text-base px-8 py-6 rounded-full font-semibold transition-all duration-500 hover:shadow-xl hover:shadow-[#C4A77D]/30 hover:-translate-y-1">
                 <span>Online Termin buchen</span>
               </Button>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

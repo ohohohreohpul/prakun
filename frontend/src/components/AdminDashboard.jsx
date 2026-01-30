@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
 import { 
   Upload, Trash2, LogOut, Image, Settings, ChevronDown, ChevronRight, 
   Save, RefreshCw, Check, X, Phone, Mail, MapPin
@@ -14,7 +13,6 @@ const AdminDashboard = () => {
   const [uploading, setUploading] = useState({});
   const [message, setMessage] = useState({ type: '', text: '' });
   const [activeTab, setActiveTab] = useState('images');
-  const navigate = useNavigate();
 
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -40,7 +38,7 @@ const AdminDashboard = () => {
 
       if (categoriesRes.status === 401) {
         localStorage.removeItem('admin_token');
-        navigate('/admin');
+        window.location.href = '/admin';
         return;
       }
 
@@ -52,16 +50,16 @@ const AdminDashboard = () => {
     } finally {
       setLoading(false);
     }
-  }, [BACKEND_URL, getAuthHeaders, navigate]);
+  }, [BACKEND_URL, getAuthHeaders]);
 
   useEffect(() => {
     const token = localStorage.getItem('admin_token');
     if (!token) {
-      navigate('/admin');
+      window.location.href = '/admin';
       return;
     }
     fetchData();
-  }, [fetchData, navigate]);
+  }, [fetchData]);
 
   const getImageUrl = (category, itemId, imageType) => {
     const imageId = `${category}_${itemId}_${imageType}`;

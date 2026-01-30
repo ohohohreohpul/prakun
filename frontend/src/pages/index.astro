@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import ServiceCards from '../components/ServiceCards';
+import BenefitsSection from '../components/BenefitsSection';
+import MembershipSection from '../components/MembershipSection';
+import StudioLocations from '../components/StudioLocations';
+import LymphaticSection from '../components/LymphaticSection';
+import Testimonials from '../components/Testimonials';
+import GiftVoucherSection from '../components/GiftVoucherSection';
+import GiftBestsellers from '../components/GiftBestsellers';
+import FAQSection from '../components/FAQSection';
+import Footer from '../components/Footer';
+import MonthlyOfferPopup from '../components/MonthlyOfferPopup';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { localBusinessSchema } from '../lib/structuredData';
+
+const pageTitle = "Prakun Thai Massage Hamburg - Authentische Wellness & Entspannung";
+const pageDescription = "Erleben Sie authentische Thai-Massage in Hamburg. Professionelle Therapeuten, entspannende Atmosphäre und individuelle Behandlungen für Ihr Wohlbefinden.";
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Hamburg, Wellness Massage, Aromatherapie, Ganzkörpermassage, Hot Stone Massage, Ayurveda Hamburg, Schwangerschaftsmassage, Bamboo Massage, Kräuterstempel Massage"
+  structuredData={localBusinessSchema}
+>
+  <Header client:load />
+  <main>
+    <HeroSection client:load />
+    <ServiceCards client:visible />
+    <BenefitsSection client:visible />
+    <MembershipSection client:visible />
+    <StudioLocations client:visible />
+    <LymphaticSection client:visible />
+    <Testimonials client:visible />
+    <GiftVoucherSection client:visible />
+    <GiftBestsellers client:visible />
+    <FAQSection client:visible />
+  </main>
+  <Footer client:visible />
+  <MonthlyOfferPopup client:load />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

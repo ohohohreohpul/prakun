@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Clock, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import { Button } from './ui/button';
@@ -107,7 +106,7 @@ const ServicesPage = () => {
                       animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: (categoryIndex * 0.1) + (index * 0.05) }}
                     >
-                      <Link to={`/massage/${service.slug}`} className="group block h-full">
+                      <a href={`/massage/${service.slug}`} className="group block h-full">
                         <div className="bg-white rounded-2xl overflow-hidden shadow-lg shadow-black/5 border border-[#E5E2DD] h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                           {/* Image */}
                           <div className="relative h-48 overflow-hidden">
@@ -148,7 +147,7 @@ const ServicesPage = () => {
                             </div>
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </motion.div>
                   );
                 })}
@@ -174,17 +173,17 @@ const ServicesPage = () => {
               Rufen Sie uns an oder schreiben Sie uns – wir beraten Sie gerne und finden gemeinsam die perfekte Behandlung für Sie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/buchen">
+              <a href="/buchen">
                 <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
                   <span className="relative z-10">Jetzt Termin buchen</span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 </Button>
-              </Link>
-              <Link to="/kontakt">
+              </a>
+              <a href="/kontakt">
                 <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white hover:text-[#2B2B2B] text-base px-8 py-6 rounded-full transition-all duration-500 hover:-translate-y-1">
                   Beratung anfragen
                 </Button>
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

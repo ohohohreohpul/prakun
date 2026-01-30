@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import BookingPage from '../components/BookingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema } from '../lib/structuredData';
+
+const pageTitle = "Termin buchen - Prakun Thai Massage Hamburg | Online Buchung";
+const pageDescription = "Buchen Sie jetzt Ihren Termin bei Prakun Thai Massage Hamburg. Einfache Online-Buchung für Thai-Massage, Aromatherapie, Hot Stone und mehr.";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunmassage.de" },
+  { name: "Termin buchen", url: "https://prakunmassage.de/buchen" }
+]);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  structuredData={breadcrumb}
+>
+  <Header client:load />
+  <BookingPage client:visible />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

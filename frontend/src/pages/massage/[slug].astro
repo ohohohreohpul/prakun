@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import ServicePage from '../../components/ServicePage';
+import Footer from '../../components/Footer';
+import FloatingPhoneBubble from '../../components/FloatingPhoneBubble';
+import { createServiceSchema, breadcrumbSchema } from '../../lib/structuredData';
+import { servicesDetailed } from '../../data/mockData';
+
+export function getStaticPaths() {
+  const services = Object.values(servicesDetailed);
+
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+}
+
+const { service } = Astro.props;
+
+const pageTitle = `${service.title} Hamburg - Prakun Thai Massage | ${service.duration}`;
+const pageDescription = service.description;
+
+const serviceSchema = createServiceSchema({
+  title: service.title,
+  slug: service.slug,
+  description: service.description,
+  priceFrom: service.priceFrom,
+  duration: service.duration
+});
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunmassage.de" },
+  { name: "Leistungen", url: "https://prakunmassage.de/leistungen" },
+  { name: service.title, url: `https://prakunmassage.de/massage/${service.slug}` }
+]);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={`${service.title}, ${service.title} Hamburg, Thai Massage, Wellness, Entspannung`}
+  structuredData={[serviceSchema, breadcrumb]}
+>
+  <Header client:load />
+  <ServicePage client:visible slug={service.slug} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

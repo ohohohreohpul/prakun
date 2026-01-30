@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Heart, Award, Users, Clock, MapPin, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import { Button } from './ui/button';
@@ -207,17 +206,17 @@ const AboutPage = () => {
               Erleben Sie die heilende Kraft der Thai-Massage. Wir freuen uns darauf, Sie bei uns begrüßen zu dürfen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/buchen">
+              <a href="/buchen">
                 <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
                   <span className="relative z-10">Jetzt Termin buchen</span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 </Button>
-              </Link>
-              <Link to="/kontakt">
+              </a>
+              <a href="/kontakt">
                 <Button variant="outline" className="border-2 border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:-translate-y-1">
                   Kontakt aufnehmen
                 </Button>
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

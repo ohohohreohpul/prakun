@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Star, ChevronDown, Play, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
 const HeroSection = () => {
@@ -101,14 +100,14 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <Link to="/buchen">
-              <Button 
+            <a href="/buchen">
+              <Button
                 className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/40 hover:-translate-y-1"
               >
                 <span className="relative z-10">Termin buchen</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               </Button>
-            </Link>
+            </a>
             <a 
               href="https://shop.prakunthaimassage.de/hamburg" 
               target="_blank" 

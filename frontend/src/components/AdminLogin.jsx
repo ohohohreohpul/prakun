@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { Eye, EyeOff, Lock, User } from 'lucide-react';
 
 const AdminLogin = () => {
@@ -8,7 +7,6 @@ const AdminLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -31,7 +29,7 @@ const AdminLogin = () => {
       }
 
       localStorage.setItem('admin_token', data.access_token);
-      navigate('/admin/dashboard');
+      window.location.href = '/admin/dashboard';
     } catch (err) {
       setError(err.message);
     } finally {

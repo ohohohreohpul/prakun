@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './ui/button';
 import { servicesDetailed, serviceCategories } from '../data/mockData';
@@ -104,20 +103,20 @@ const Header = () => {
                     onMouseLeave={handleResourcesLeave}
                   >
                     <div className="py-2">
-                      <Link
-                        to="/ueber-uns"
+                      <a
+                        href="/ueber-uns"
                         className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
                         onClick={() => setIsResourcesOpen(false)}
                       >
                         Über uns
-                      </Link>
-                      <Link
-                        to="/kontakt"
+                      </a>
+                      <a
+                        href="/kontakt"
                         className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
                         onClick={() => setIsResourcesOpen(false)}
                       >
                         Kontakt
-                      </Link>
+                      </a>
                     </div>
                   </motion.div>
                 )}
@@ -131,13 +130,13 @@ const Header = () => {
             whileTap={{ scale: 0.95 }}
             className="lg:flex lg:justify-center"
           >
-            <Link to="/" className="flex items-center">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_newsoul-replica/artifacts/7xzy0yki_604e73fc94532bf2c5ad6522_logoo-p-500-1.png" 
-                alt="Prakun Thai Massage" 
+            <a href="/" className="flex items-center">
+              <img
+                src="https://customer-assets.emergentagent.com/job_newsoul-replica/artifacts/7xzy0yki_604e73fc94532bf2c5ad6522_logoo-p-500-1.png"
+                alt="Prakun Thai Massage"
                 className="h-9 md:h-10 transition-all duration-300 brightness-0 invert"
               />
-            </Link>
+            </a>
           </motion.div>
 
           {/* Right Navigation - Buttons (Desktop) & Mobile Menu Button */}
@@ -168,13 +167,13 @@ const Header = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="hidden lg:block"
             >
-              <Link to="/buchen">
+              <a href="/buchen">
                 <Button
                   className="relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30 hover:-translate-y-0.5"
                 >
                   <span className="relative z-10">Termin buchen</span>
                 </Button>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Mobile Menu Button */}
@@ -241,8 +240,8 @@ const Header = () => {
                       if (!service) return null;
                       return (
                         <li key={serviceId}>
-                          <Link
-                            to={`/massage/${service.slug}`}
+                          <a
+                            href={`/massage/${service.slug}`}
                             className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
@@ -255,7 +254,7 @@ const Header = () => {
                             <span className="text-xs text-white/50 group-hover:text-[#C4A77D]">
                               ab {service.priceFrom}€
                             </span>
-                          </Link>
+                          </a>
                         </li>
                       );
                     })}
@@ -308,25 +307,25 @@ const Header = () => {
                   <p className="text-sm text-white/60 mb-4">
                     Tiefenwärme durch Lavasteine für maximale Entspannung.
                   </p>
-                  <Link
-                    to="/massage/hot-stone-massage"
+                  <a
+                    href="/massage/hot-stone-massage"
                     className="inline-flex items-center gap-2 text-sm font-medium text-[#C4A77D] hover:text-white hover:gap-3 transition-all"
                     onClick={() => setIsMegaMenuOpen(false)}
                   >
                     Mehr erfahren <ChevronRight className="h-4 w-4" />
-                  </Link>
+                  </a>
                 </div>
               </div>
 
               {/* Bottom Bar */}
               <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
-                <Link
-                  to="/leistungen"
+                <a
+                  href="/leistungen"
                   className="text-sm font-medium text-[#C4A77D] hover:text-white transition-colors"
                   onClick={() => setIsMegaMenuOpen(false)}
                 >
                   Alle Leistungen ansehen →
-                </Link>
+                </a>
                 <div className="flex items-center gap-6">
                   <span className="text-sm text-white/50">Fragen? Rufen Sie uns an:</span>
                   <a href="tel:04022697033" className="text-sm font-medium text-white hover:text-[#C4A77D] transition-colors">
@@ -355,15 +354,15 @@ const Header = () => {
                 <h3 className="text-xs font-bold text-[#8B2F5F] uppercase tracking-wider mb-3">Leistungen</h3>
                 <div className="space-y-2">
                   {Object.values(servicesDetailed).slice(0, 8).map((service) => (
-                    <Link
+                    <a
                       key={service.id}
-                      to={`/massage/${service.slug}`}
+                      href={`/massage/${service.slug}`}
                       className="flex items-center justify-between py-2 text-[#2B2B2B] hover:text-[#8B2F5F] transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <span className="text-sm">{service.title}</span>
                       <span className="text-xs text-[#666666]">ab {service.priceFrom}€</span>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -373,20 +372,20 @@ const Header = () => {
               {/* Ressourcen */}
               <div>
                 <h3 className="text-xs font-bold text-[#8B2F5F] uppercase tracking-wider mb-3">Ressourcen</h3>
-                <Link
-                  to="/ueber-uns"
+                <a
+                  href="/ueber-uns"
                   className="block text-[#2B2B2B] font-medium py-2 hover:text-[#8B2F5F] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Über uns
-                </Link>
-                <Link
-                  to="/kontakt"
+                </a>
+                <a
+                  href="/kontakt"
                   className="block text-[#2B2B2B] font-medium py-2 hover:text-[#8B2F5F] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Kontakt
-                </Link>
+                </a>
               </div>
 
               <hr className="border-[#E5E2DD]" />
@@ -404,11 +403,11 @@ const Header = () => {
                     Gutscheine
                   </Button>
                 </a>
-                <Link to="/buchen" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="/buchen" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button className="w-full bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white rounded-full">
                     Termin buchen
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>

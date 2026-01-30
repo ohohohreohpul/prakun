@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import ContactPage from '../components/ContactPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema } from '../lib/structuredData';
+
+const pageTitle = "Kontakt - Prakun Thai Massage Hamburg | Jetzt Anfragen";
+const pageDescription = "Kontaktieren Sie Prakun Thai Massage Hamburg. Rufen Sie uns an unter 040 22697033 oder nutzen Sie unser Kontaktformular. Wir freuen uns auf Sie!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunmassage.de" },
+  { name: "Kontakt", url: "https://prakunmassage.de/kontakt" }
+]);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  structuredData={breadcrumb}
+>
+  <Header client:load />
+  <ContactPage client:visible />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { servicesDetailed } from '../data/mockData';
 
 // Featured services to display
@@ -63,13 +62,13 @@ const ServiceCards = () => {
             </h2>
           </div>
           
-          <Link 
-            to="/leistungen"
+          <a
+            href="/leistungen"
             className="hidden md:flex items-center gap-2 text-[#C4A77D] hover:text-white transition-colors mt-4 md:mt-0 group"
           >
             <span className="text-sm font-medium">Alle ansehen</span>
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </a>
         </motion.div>
 
         {/* Service Cards */}
@@ -110,7 +109,7 @@ const ServiceCards = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex-shrink-0 w-[280px] md:w-[320px] snap-start"
                 >
-                  <Link to={`/massage/${service.slug}`} className="group block">
+                  <a href={`/massage/${service.slug}`} className="group block">
                     <div className="relative rounded-2xl overflow-hidden bg-[#2a2a2a] border border-white/10 hover:border-[#C4A77D]/30 transition-all duration-500">
                       {/* Image */}
                       <div className="relative h-44 overflow-hidden">
@@ -155,7 +154,7 @@ const ServiceCards = () => {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
               );
             })}
@@ -167,7 +166,7 @@ const ServiceCards = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex-shrink-0 w-[280px] md:w-[320px] snap-start"
             >
-              <Link to="/leistungen" className="group block h-full">
+              <a href="/leistungen" className="group block h-full">
                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#8B2F5F] to-[#6B1F4F] border border-[#8B2F5F]/50 h-full min-h-[320px] flex flex-col items-center justify-center p-8 text-center hover:shadow-xl hover:shadow-[#8B2F5F]/20 transition-all duration-500">
                   <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <ArrowRight className="h-8 w-8 text-white" />
@@ -179,7 +178,7 @@ const ServiceCards = () => {
                     Entdecken Sie unser komplettes Angebot
                   </p>
                 </div>
-              </Link>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -191,13 +190,13 @@ const ServiceCards = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="md:hidden mt-6 text-center"
         >
-          <Link 
-            to="/leistungen"
+          <a
+            href="/leistungen"
             className="inline-flex items-center gap-2 text-[#C4A77D] hover:text-white transition-colors"
           >
             <span className="text-sm font-medium">Alle Massagen ansehen</span>
             <ArrowRight className="h-4 w-4" />
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

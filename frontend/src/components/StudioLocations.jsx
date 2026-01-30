@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Star, MapPin, Clock, Phone, ArrowRight } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { studio } from '../data/mockData';
 import { Button } from './ui/button';
 
@@ -103,7 +102,7 @@ const StudioLocations = () => {
                     ))}
                   </div>
 
-                  <Link to="/buchen">
+                  <a href="/buchen">
                     <Button className="group relative overflow-hidden w-full bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30">
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         Jetzt Termin buchen
@@ -111,7 +110,7 @@ const StudioLocations = () => {
                       </span>
                       <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                     </Button>
-                  </Link>
+                  </a>
                   
                   <p className="text-center text-sm text-[#666666] mt-4">
                     {studio.email}

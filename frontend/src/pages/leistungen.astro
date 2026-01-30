@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import ServicesPage from '../components/ServicesPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema } from '../lib/structuredData';
+
+const pageTitle = "Unsere Leistungen - Prakun Thai Massage Hamburg | Alle Massagen";
+const pageDescription = "Entdecken Sie alle Massage-Angebote bei Prakun Thai Massage Hamburg: Thai-Massage, Aromatherapie, Hot Stone, Ayurveda, Schwangerschaftsmassage und mehr.";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunmassage.de" },
+  { name: "Leistungen", url: "https://prakunmassage.de/leistungen" }
+]);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Hamburg, Wellness Massage, Aromatherapie, Hot Stone Massage, Ayurveda, Schwangerschaftsmassage, Bamboo Massage, Kräuterstempel, Lomi Lomi"
+  structuredData={breadcrumb}
+>
+  <Header client:load />
+  <ServicesPage client:visible />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

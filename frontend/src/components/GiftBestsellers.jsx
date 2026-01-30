@@ -1,7 +1,6 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Package } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { giftProducts } from '../data/mockData';
 import { Button } from './ui/button';
 
@@ -99,7 +98,7 @@ const GiftBestsellers = () => {
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className="flex-shrink-0 w-60 md:w-72 group snap-start cursor-pointer"
               >
-                <Link to="/buchen">
+                <a href="/buchen">
                   <div className="relative rounded-3xl overflow-hidden bg-[#E5E2DD] aspect-[3/4] mb-5 shadow-lg shadow-black/5 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-black/10">
                     <img
                       src={product.image}
@@ -135,7 +134,7 @@ const GiftBestsellers = () => {
                   <p className="text-sm text-[#666666]">
                     <span className="font-semibold text-[#2B2B2B]">ab {product.price} €</span> inkl. MwSt.
                   </p>
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -148,12 +147,12 @@ const GiftBestsellers = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-24"
         >
-          <Link to="/buchen">
+          <a href="/buchen">
             <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-5 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
               <span className="relative z-10">Paket buchen</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </Button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

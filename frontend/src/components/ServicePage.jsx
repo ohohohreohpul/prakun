@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useRef, useEffect } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { Star, Clock, Check, ArrowRight, ArrowLeft, Phone, Calendar, Heart } from 'lucide-react';
 import { Button } from './ui/button';
@@ -7,8 +6,9 @@ import { servicesDetailed, studio } from '../data/mockData';
 import Header from './Header';
 import Footer from './Footer';
 
-const ServicePage = () => {
-  const { slug } = useParams();
+const ServicePage = ({ slug }) => {
+  // Get slug from props passed by Astro page
+  const currentSlug = slug || window.location.pathname.split('/').filter(Boolean).pop();
   const service = servicesDetailed[slug];
   
   const heroRef = useRef(null);
@@ -32,7 +32,7 @@ const ServicePage = () => {
       <div className="min-h-screen bg-[#F7F6F4] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-[#2B2B2B] mb-4">Service nicht gefunden</h1>
-          <Link to="/" className="text-[#8B2F5F] hover:underline">Zurück zur Startseite</Link>
+          <a href="/" className="text-[#8B2F5F] hover:underline">Zurück zur Startseite</a>
         </div>
       </div>
     );
@@ -76,13 +76,13 @@ const ServicePage = () => {
               transition={{ duration: 0.6 }}
               className="mb-6"
             >
-              <Link 
-                to="/" 
+              <a
+                href="/"
                 className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors"
               >
                 <ArrowLeft className="h-4 w-4" />
                 Zurück zur Übersicht
-              </Link>
+              </a>
             </motion.div>
             
             {/* Category Badge */}
@@ -218,7 +218,7 @@ const ServicePage = () => {
                     ))}
                   </div>
 
-                  <Link to="/buchen">
+                  <a href="/buchen">
                     <Button className="w-full group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 mb-4">
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         <Calendar className="h-5 w-5" />
@@ -226,7 +226,7 @@ const ServicePage = () => {
                       </span>
                       <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                     </Button>
-                  </Link>
+                  </a>
 
                   <a href={`tel:${studio.phone}`}>
                     <Button variant="outline" className="w-full border-2 border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white py-6 rounded-full transition-all duration-300">
@@ -295,8 +295,8 @@ const ServicePage = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ y: -10 }}
                 >
-                  <Link 
-                    to={`/massage/${relService.slug}`}
+                  <a
+                    href={`/massage/${relService.slug}`}
                     className="group block bg-white/70 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-500"
                   >
                     <div className="relative h-48 overflow-hidden">
@@ -324,7 +324,7 @@ const ServicePage = () => {
                         <span className="text-sm text-[#666666]">{relService.duration}</span>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
             </div>
@@ -348,7 +348,7 @@ const ServicePage = () => {
             <p className="text-lg text-[#666666] mb-8 max-w-2xl mx-auto">
               Buchen Sie jetzt Ihre {service.title} bei Prakun Thai Massage und gönnen Sie sich die Entspannung, die Sie verdienen.
             </p>
-            <Link to="/buchen">
+            <a href="/buchen">
               <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-lg px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
                 <span className="relative z-10 flex items-center gap-2">
                   Termin buchen
@@ -356,7 +356,7 @@ const ServicePage = () => {
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               </Button>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

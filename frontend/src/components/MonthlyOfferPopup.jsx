@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Gift } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
 const MonthlyOfferPopup = () => {
@@ -152,12 +151,12 @@ const MonthlyOfferPopup = () => {
                   transition={{ delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center"
                 >
-                  <Link to="/buchen" onClick={handleClose}>
+                  <a href="/buchen" onClick={handleClose}>
                     <Button className="w-full sm:w-auto bg-white hover:bg-white/90 text-[#8B2F5F] font-semibold px-8 py-6 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:-translate-y-0.5">
                       <Calendar className="h-5 w-5 mr-2" />
                       Jetzt buchen
                     </Button>
-                  </Link>
+                  </a>
                   <a 
                     href="https://shop.prakunthaimassage.de/hamburg" 
                     target="_blank" 

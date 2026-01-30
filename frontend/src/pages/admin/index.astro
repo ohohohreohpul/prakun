@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdminLogin from '../../components/AdminLogin';
+
+const pageTitle = "Admin Login - Prakun Thai Massage";
+const pageDescription = "Admin login area for Prakun Thai Massage Hamburg";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <AdminLogin client:load />
+</BaseLayout>

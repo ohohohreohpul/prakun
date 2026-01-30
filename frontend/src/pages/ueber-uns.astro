@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import AboutPage from '../components/AboutPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema } from '../lib/structuredData';
+
+const pageTitle = "Über uns - Prakun Thai Massage Hamburg | Unsere Geschichte";
+const pageDescription = "Erfahren Sie mehr über Prakun Thai Massage Hamburg. Seit 2012 bieten wir authentische Thai-Massagen mit zertifizierten Therapeuten in entspannter Atmosphäre.";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunmassage.de" },
+  { name: "Über uns", url: "https://prakunmassage.de/ueber-uns" }
+]);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  structuredData={breadcrumb}
+>
+  <Header client:load />
+  <AboutPage client:visible />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
