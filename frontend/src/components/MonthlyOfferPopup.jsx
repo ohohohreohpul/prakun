@@ -111,18 +111,34 @@ const MonthlyOfferPopup = () => {
                   className="mb-6"
                 >
                   <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    60 Minuten Ganzkörpermassage
+                    60 Minuten
                   </h2>
                   <h3 className="text-3xl md:text-4xl font-bold text-white italic">
-                    nur 57€
+                    Aromaöl Massage
                   </h3>
+                </motion.div>
+
+                {/* Price */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.5, type: 'spring' }}
+                  className="mb-4"
+                >
+                  <p className="text-[#C4A77D] text-sm mb-1">nur</p>
+                  <div className="flex items-center justify-center gap-3">
+                    <span className="text-6xl md:text-7xl font-bold text-white">60€</span>
+                  </div>
+                  <p className="text-white/60 text-sm mt-2">
+                    statt <span className="line-through">65€</span>
+                  </p>
                 </motion.div>
 
                 {/* Note */}
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
+                  transition={{ delay: 0.6 }}
                   className="text-[#C4A77D]/80 text-xs mb-8"
                 >
                   (Nur Barzahlung oder PayPal)
@@ -132,7 +148,7 @@ const MonthlyOfferPopup = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
+                  transition={{ delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center"
                 >
                   <a href="/buchen" onClick={handleClose}>
@@ -161,7 +177,7 @@ const MonthlyOfferPopup = () => {
                 <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ delay: 0.7 }}
+                  transition={{ delay: 0.8 }}
                   onClick={handleClose}
                   className="mt-6 text-white/40 text-xs hover:text-white/60 transition-colors"
                 >
