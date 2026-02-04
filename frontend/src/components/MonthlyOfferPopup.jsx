@@ -100,7 +100,7 @@ const MonthlyOfferPopup = () => {
                   transition={{ delay: 0.3 }}
                   className="text-[#C4A77D] text-lg font-medium mb-2"
                 >
-                  Januar 2026
+                  Februar 2026
                 </motion.p>
 
                 {/* Main Offer */}
@@ -114,7 +114,7 @@ const MonthlyOfferPopup = () => {
                     60 Minuten
                   </h2>
                   <h3 className="text-3xl md:text-4xl font-bold text-white italic">
-                    Aromaöl Massage
+                    Ganzkörpermassage
                   </h3>
                 </motion.div>
 
@@ -127,7 +127,7 @@ const MonthlyOfferPopup = () => {
                 >
                   <p className="text-[#C4A77D] text-sm mb-1">nur</p>
                   <div className="flex items-center justify-center gap-3">
-                    <span className="text-6xl md:text-7xl font-bold text-white">60€</span>
+                    <span className="text-6xl md:text-7xl font-bold text-white">59€</span>
                   </div>
                   <p className="text-white/60 text-sm mt-2">
                     statt <span className="line-through">65€</span>
