@@ -3,8 +3,6 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { Star, Clock, Check, ArrowRight, ArrowLeft, Phone, Calendar, Heart } from 'lucide-react';
 import { Button } from './ui/button';
 import { servicesDetailed, studio } from '../data/mockData';
-import Header from './Header';
-import Footer from './Footer';
 
 const ServicePage = ({ slug }) => {
   // Get slug from props passed by Astro page
@@ -45,8 +43,6 @@ const ServicePage = ({ slug }) => {
 
   return (
     <div className="bg-[#F7F6F4] min-h-screen">
-      <Header />
-      
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-[70vh] min-h-[500px] overflow-hidden">
         <motion.div
@@ -360,8 +356,6 @@ const ServicePage = ({ slug }) => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
