@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Header from './Header';
-import Footer from './Footer';
 
 const BookingPage = () => {
   useEffect(() => {
@@ -37,8 +35,6 @@ const BookingPage = () => {
 
   return (
     <div className="bg-[#F7F6F4] min-h-screen">
-      <Header />
-      
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 bg-[#1a1a1a]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#8B2F5F]/20 to-transparent" />
@@ -134,8 +130,6 @@ const BookingPage = () => {
           color: #666666 !important;
         }
       `}</style>
-
-      <Footer />
     </div>
   );
 };

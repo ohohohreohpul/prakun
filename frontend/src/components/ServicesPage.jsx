@@ -1,8 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Clock, ArrowRight } from 'lucide-react';
-import Header from './Header';
-import Footer from './Footer';
 import { Button } from './ui/button';
 import { servicesDetailed } from '../data/mockData';
 
@@ -41,8 +39,6 @@ const ServicesPage = () => {
 
   return (
     <div className="bg-[#F7F6F4] min-h-screen">
-      <Header />
-      
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-24 pb-16 bg-[#1a1a1a]">
         <div className="absolute inset-0">
@@ -188,8 +184,6 @@ const ServicesPage = () => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

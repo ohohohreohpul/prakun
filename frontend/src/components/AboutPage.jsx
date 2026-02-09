@@ -1,8 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Heart, Award, Users, Clock, MapPin, Star } from 'lucide-react';
-import Header from './Header';
-import Footer from './Footer';
 import { Button } from './ui/button';
 
 const stats = [
@@ -41,8 +39,6 @@ const AboutPage = () => {
 
   return (
     <div className="bg-[#F7F6F4] min-h-screen">
-      <Header />
-      
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-24 pb-20 bg-[#1a1a1a] overflow-hidden">
         <div className="absolute inset-0">
@@ -221,8 +217,6 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

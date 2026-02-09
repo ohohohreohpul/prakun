@@ -1,8 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
-import Header from './Header';
-import Footer from './Footer';
 import { Button } from './ui/button';
 
 const contactInfo = [
@@ -61,8 +59,6 @@ const ContactPage = () => {
 
   return (
     <div className="bg-[#F7F6F4] min-h-screen">
-      <Header />
-      
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-24 pb-16 bg-[#1a1a1a]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#8B2F5F]/20 to-transparent" />
@@ -299,8 +295,6 @@ const ContactPage = () => {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

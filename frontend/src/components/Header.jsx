@@ -213,8 +213,8 @@ const Header = () => {
                       if (!service) return null;
                       return (
                         <li key={serviceId}>
-                          <Link
-                            to={`/massage/${service.slug}`}
+                          <a
+                            href={`/massage/${service.slug}`}
                             className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
@@ -222,7 +222,7 @@ const Header = () => {
                             <span className="text-xs text-white/50 group-hover:text-[#C4A77D]">
                               ab {service.priceFrom}€
                             </span>
-                          </Link>
+                          </a>
                         </li>
                       );
                     })}
@@ -272,8 +272,8 @@ const Header = () => {
                       if (!service) return null;
                       return (
                         <li key={serviceId}>
-                          <Link
-                            to={`/massage/${service.slug}`}
+                          <a
+                            href={`/massage/${service.slug}`}
                             className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
@@ -281,7 +281,7 @@ const Header = () => {
                             <span className="text-xs text-white/50 group-hover:text-[#C4A77D]">
                               ab {service.priceFrom}€
                             </span>
-                          </Link>
+                          </a>
                         </li>
                       );
                     })}
