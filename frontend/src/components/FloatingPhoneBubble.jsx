@@ -1,14 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone } from 'lucide-react';
+import { trackPhoneClick } from '../lib/analytics';
 
 const FloatingPhoneBubble = ({ phoneNumber = "040 22697033" }) => {
   const formattedPhone = phoneNumber.replace(/\s/g, '');
-  
+
+  const handlePhoneClick = () => {
+    trackPhoneClick('floating_bubble');
+  };
+
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <motion.a
         href={`tel:${formattedPhone}`}
+        onClick={handlePhoneClick}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 1.05, y: -2 }}

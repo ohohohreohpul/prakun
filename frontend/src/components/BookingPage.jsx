@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { trackBookingClick } from '../lib/analytics';
 
 const BookingPage = () => {
   useEffect(() => {
+    trackBookingClick('booking_page_view');
+
     // Initialize Planity widget
     const container = document.getElementById('planity-container');
     

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Gift, ArrowRight } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { Button } from './ui/button';
+import { trackGiftVoucherClick } from '../lib/analytics';
 
 const giftVoucherAmounts = [
   { id: 1, amount: 49, description: "Perfekt für eine Teilkörpermassage" },
@@ -13,6 +14,10 @@ const giftVoucherAmounts = [
 const GiftVoucherSection = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
+
+  const handleVoucherClick = (amount) => {
+    trackGiftVoucherClick();
+  };
 
   return (
     <section ref={sectionRef} className="relative py-24 md:py-32 overflow-hidden">
@@ -68,6 +73,7 @@ const GiftVoucherSection = () => {
               href="https://shop.prakunthaimassage.de/hamburg"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleVoucherClick(voucher.amount)}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -123,10 +129,11 @@ const GiftVoucherSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <a 
+          <a
             href="https://shop.prakunthaimassage.de/hamburg"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleVoucherClick}
           >
             <Button className="group bg-transparent hover:bg-[#C4A77D] text-[#C4A77D] hover:text-[#1a1a1a] border-2 border-[#C4A77D] text-base px-8 py-5 rounded-full transition-all duration-500 hover:-translate-y-1">
               <span className="flex items-center gap-2">

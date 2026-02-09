@@ -3,6 +3,7 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { Star, Clock, Check, ArrowRight, ArrowLeft, Phone, Calendar, Heart } from 'lucide-react';
 import { Button } from './ui/button';
 import { servicesDetailed, studio } from '../data/mockData';
+import { trackServiceView } from '../lib/analytics';
 
 const ServicePage = ({ slug }) => {
   // Get slug from props passed by Astro page
@@ -23,7 +24,10 @@ const ServicePage = ({ slug }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [slug]);
+    if (service) {
+      trackServiceView(service.title);
+    }
+  }, [slug, service]);
 
   if (!service) {
     return (
