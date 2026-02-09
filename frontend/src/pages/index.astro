@@ -14,17 +14,31 @@ import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 import MonthlyOfferPopup from '../components/MonthlyOfferPopup';
 import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
-import { localBusinessSchema } from '../lib/structuredData';
+import { localBusinessSchema, faqSchema, reviewSchema } from '../lib/structuredData';
+import { faqItems, testimonials } from '../data/mockData';
 
 const pageTitle = "Prakun Thai Massage Hamburg - Authentische Wellness & Entspannung";
 const pageDescription = "Erleben Sie authentische Thai-Massage in Hamburg. Professionelle Therapeuten, entspannende Atmosphäre und individuelle Behandlungen für Ihr Wohlbefinden.";
+
+const faqStructuredData = faqSchema(faqItems.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+})));
+
+const reviewStructuredData = reviewSchema(testimonials.map(t => ({
+  author: t.author,
+  rating: t.rating,
+  text: t.text
+})));
+
+const allStructuredData = [localBusinessSchema, faqStructuredData, reviewStructuredData];
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
   keywords="Thai Massage Hamburg, Wellness Massage, Aromatherapie, Ganzkörpermassage, Hot Stone Massage, Ayurveda Hamburg, Schwangerschaftsmassage, Bamboo Massage, Kräuterstempel Massage"
-  structuredData={localBusinessSchema}
+  structuredData={allStructuredData}
 >
   <Header client:load />
   <main>

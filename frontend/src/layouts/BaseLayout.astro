@@ -14,7 +14,7 @@ const {
   title,
   description,
   keywords = "Thai Massage Hamburg, Wellness Massage, Aromatherapie, Ganzkörpermassage, Hot Stone Massage, Ayurveda, Schwangerschaftsmassage",
-  ogImage = "https://prakunmassage.de/og-image.jpg",
+  ogImage = "https://prakunthaimassage.de/og-image.jpg",
   canonicalUrl,
   structuredData
 } = Astro.props;
@@ -62,7 +62,13 @@ const siteName = "Prakun Thai Massage Hamburg";
 
   <!-- Structured Data -->
   {structuredData && (
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    Array.isArray(structuredData) ? (
+      structuredData.map((data) => (
+        <script type="application/ld+json" set:html={JSON.stringify(data)} />
+      ))
+    ) : (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )
   )}
 
   <!-- Preconnect to external domains -->

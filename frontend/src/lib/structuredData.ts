@@ -2,9 +2,9 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Prakun Thai Massage Hamburg",
-  "image": "https://prakunmassage.de/og-image.jpg",
-  "@id": "https://prakunmassage.de",
-  "url": "https://prakunmassage.de",
+  "image": "https://prakunthaimassage.de/og-image.jpg",
+  "@id": "https://prakunthaimassage.de",
+  "url": "https://prakunthaimassage.de",
   "telephone": "+49-40-22697033",
   "priceRange": "€€",
   "address": {
@@ -58,10 +58,10 @@ export const createServiceSchema = (service: {
   "provider": {
     "@type": "LocalBusiness",
     "name": "Prakun Thai Massage Hamburg",
-    "url": "https://prakunmassage.de"
+    "url": "https://prakunthaimassage.de"
   },
   "description": service.description,
-  "url": `https://prakunmassage.de/massage/${service.slug}`,
+  "url": `https://prakunthaimassage.de/massage/${service.slug}`,
   "offers": {
     "@type": "Offer",
     "price": service.priceFrom,
@@ -77,5 +77,51 @@ export const breadcrumbSchema = (items: Array<{ name: string; url: string }>) =>
     "position": index + 1,
     "name": item.name,
     "item": item.url
+  }))
+});
+
+export const faqSchema = (faqs: Array<{ question: string; answer: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+});
+
+export const reviewSchema = (reviews: Array<{
+  author: string;
+  rating: number;
+  text: string;
+  date?: string;
+}>) => ({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Prakun Thai Massage Hamburg",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length,
+    "reviewCount": reviews.length,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "review": reviews.map((review, index) => ({
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": review.author
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": review.rating,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "reviewBody": review.text,
+    "datePublished": review.date || new Date().toISOString().split('T')[0]
   }))
 });
