@@ -100,7 +100,7 @@ const MonthlyOfferPopup = () => {
                   transition={{ delay: 0.3 }}
                   className="text-[#C4A77D] text-lg font-medium mb-2"
                 >
-                  Februar 2026
+                  März 2026
                 </motion.p>
 
                 {/* Main Offer */}
@@ -114,7 +114,7 @@ const MonthlyOfferPopup = () => {
                     60 Minuten
                   </h2>
                   <h3 className="text-3xl md:text-4xl font-bold text-white italic">
-                    Ayurveda Abhyanga
+                    Lomi Lomi Ganzkörpermassage
                   </h3>
                 </motion.div>
 
