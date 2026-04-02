@@ -114,7 +114,7 @@ const MonthlyOfferPopup = () => {
                     60 Minuten
                   </h2>
                   <h3 className="text-3xl md:text-4xl font-bold text-white italic">
-                    Lomi Lomi Ganzkörpermassage
+                    Hot Stone Massage
                   </h3>
                 </motion.div>
 
@@ -127,7 +127,7 @@ const MonthlyOfferPopup = () => {
                 >
                   <p className="text-[#C4A77D] text-sm mb-1">nur</p>
                   <div className="flex items-center justify-center gap-3">
-                    <span className="text-6xl md:text-7xl font-bold text-white">67€</span>
+                    <span className="text-6xl md:text-7xl font-bold text-white">65€</span>
                   </div>
                  
                 </motion.div>
