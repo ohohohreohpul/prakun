@@ -4,21 +4,23 @@ import Header from '../components/Header';
 import ContactPage from '../components/ContactPage';
 import Footer from '../components/Footer';
 import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
-import { breadcrumbSchema } from '../lib/structuredData';
+import { breadcrumbSchema, localBusinessSchema, organizationSchema } from '../lib/structuredData';
 
-const pageTitle = "Kontakt - Prakun Thai Massage Hamburg | Jetzt Anfragen";
-const pageDescription = "Kontaktieren Sie Prakun Thai Massage Hamburg. Rufen Sie uns an unter 040 22697033 oder nutzen Sie unser Kontaktformular. Wir freuen uns auf Sie!";
+const pageTitle = "Kontakt – Thai Massage Hamburg | Prakun Thai Massage Winterhude";
+const pageDescription = "Prakun Thai Massage Hamburg – Winterhuder Weg 24, 22085 Hamburg. Tel: 040 22697033. Täglich geöffnet 10–20 Uhr. Jetzt Termin anfragen oder online buchen!";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://prakunthaimassage.de" },
   { name: "Kontakt", url: "https://prakunthaimassage.de/kontakt" }
 ]);
+
+const allStructuredData = [localBusinessSchema, organizationSchema, breadcrumb];
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  structuredData={breadcrumb}
+  structuredData={allStructuredData}
 >
   <Header client:load />
   <ContactPage client:visible />

@@ -60,7 +60,7 @@ const AboutPage = () => {
               ÜBER UNS
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Willkommen bei{' '}
+              <span className="sr-only">Thai Massage Hamburg – </span>Willkommen bei{' '}
               <span className="italic font-light text-[#C4A77D]">Prakun</span>
             </h1>
             <p className="text-white/70 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">

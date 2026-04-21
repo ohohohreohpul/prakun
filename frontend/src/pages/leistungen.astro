@@ -4,22 +4,40 @@ import Header from '../components/Header';
 import ServicesPage from '../components/ServicesPage';
 import Footer from '../components/Footer';
 import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
-import { breadcrumbSchema } from '../lib/structuredData';
+import { breadcrumbSchema, serviceListSchema, localBusinessSchema } from '../lib/structuredData';
 
-const pageTitle = "Unsere Leistungen - Prakun Thai Massage Hamburg | Alle Massagen";
-const pageDescription = "Entdecken Sie alle Massage-Angebote bei Prakun Thai Massage Hamburg: Thai-Massage, Aromatherapie, Hot Stone, Ayurveda, Schwangerschaftsmassage und mehr.";
+const pageTitle = "Thai Massage Hamburg – Alle Angebote | Prakun Thai Massage";
+const pageDescription = "Alle Massagen bei Prakun Thai Massage Hamburg: Thai-Massage ab 49 €, Aromaöl ab 36 €, Hot Stone ab 55 €, Ayurveda, Schwangerschaftsmassage & mehr. In Winterhude – jetzt buchen!";
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://prakunthaimassage.de" },
   { name: "Leistungen", url: "https://prakunthaimassage.de/leistungen" }
 ]);
+
+const serviceList = serviceListSchema([
+  { title: "Teilkörpermassage", slug: "teilkoerpermassage", description: "Gezielte Entspannung für Nacken, Rücken oder Schultern. Ab 24 €, 20–60 Minuten." },
+  { title: "Ganzkörpermassage", slug: "ganzkoerpermassage", description: "Vollständige Entspannung von Kopf bis Fuß. Ab 49 €, 45–120 Minuten." },
+  { title: "Aromaöl-Massage", slug: "aromaoel-massage", description: "Duftende Pflegeöle für Körper und Seele. Ab 36 €, 30–120 Minuten." },
+  { title: "Aromakerzen-Massage", slug: "aromakerzen-massage", description: "Luxuriöse Wärme aus geschmolzenem Kerzenöl. Ab 37 €, 30–90 Minuten." },
+  { title: "Kräuterstempel-Massage", slug: "kraeuterstempel-massage", description: "Traditionelle Thai-Kräuter für tiefe Muskelentspannung. Ab 75 €." },
+  { title: "Hot Stone Massage", slug: "hot-stone-massage", description: "Warme Basaltsteine lösen tiefe Verspannungen. Ab 55 €." },
+  { title: "Bambus-Massage", slug: "bambus-massage", description: "Faszienbehandlung mit Bambusstäben. Ab 55 €." },
+  { title: "Lomi Lomi Nui Massage", slug: "lomi-lomi-massage", description: "Hawaiianische Heilmassage für Körper und Geist. Ab 72 €." },
+  { title: "Ayurveda Abhyanga", slug: "ayurveda-abhyanga", description: "Traditionelle ayurvedische Ganzkörpermassage mit Kräuterölen. Ab 65 €." },
+  { title: "Schwangerschaftsmassage", slug: "schwangerschaftsmassage", description: "Sanfte, sichere Massage speziell für werdende Mütter. Ab 55 €." },
+  { title: "Gesichtsmassage", slug: "gesichtsmassage", description: "Entspannende Behandlung für Gesicht, Kopf und Dekolleté. Ab 35 €." },
+  { title: "Fußmassage", slug: "fussmassage", description: "Reflexzonenmassage und Fußpflege für müde Beine. Ab 28 €." },
+  { title: "Thai Warrior Massage", slug: "thai-warrior-massage", description: "Intensive Tiefenmuskelbehandlung für Sportler und Aktive. Ab 85 €." },
+]);
+
+const allStructuredData = [localBusinessSchema, serviceList, breadcrumb];
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  keywords="Thai Massage Hamburg, Wellness Massage, Aromatherapie, Hot Stone Massage, Ayurveda, Schwangerschaftsmassage, Bamboo Massage, Kräuterstempel, Lomi Lomi"
-  structuredData={breadcrumb}
+  keywords="Thai Massage Hamburg, Ganzkörpermassage Hamburg, Aromaöl Massage Hamburg, Hot Stone Massage Hamburg, Ayurveda Massage Hamburg, Schwangerschaftsmassage Hamburg, Wellness Massage Winterhude, Massage Preise Hamburg"
+  structuredData={allStructuredData}
 >
   <Header client:load />
   <ServicesPage client:visible />

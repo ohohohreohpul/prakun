@@ -60,7 +60,7 @@ const ServicesPage = () => {
               UNSERE LEISTUNGEN
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Alle{' '}
+              <span className="sr-only">Thai Massage Hamburg – </span>Alle{' '}
               <span className="italic font-light text-[#C4A77D]">Massagen</span>
             </h1>
             <p className="text-white/70 max-w-2xl mx-auto text-lg">

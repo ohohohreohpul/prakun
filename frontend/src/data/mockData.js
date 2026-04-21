@@ -690,28 +690,63 @@ export const giftProducts = [
 export const faqItems = [
   {
     id: 1,
-    question: "Wie kann ich einen Termin buchen?",
-    answer: "Sie können ganz einfach online über unsere Website buchen. Klicken Sie auf 'Termin buchen', wählen Sie Ihre gewünschte Massage, Datum und Uhrzeit. Der gesamte Vorgang dauert weniger als eine Minute."
+    question: "Wie kann ich einen Termin bei Prakun Thai Massage Hamburg buchen?",
+    answer: "Sie können ganz einfach online über unsere Website buchen. Klicken Sie auf 'Termin buchen', wählen Sie Ihre gewünschte Massage, Datum und Uhrzeit. Der gesamte Vorgang dauert weniger als eine Minute. Alternativ erreichen Sie uns telefonisch unter 040 22697033."
   },
   {
     id: 2,
     question: "Welche Massage ist die richtige für mich?",
-    answer: "Das hängt von Ihren Bedürfnissen ab. Bei Verspannungen empfehlen wir die Traditionelle Thai Massage, zur Entspannung die Aromaöl-Massage, und bei Muskelschmerzen die Hot Stone Massage. Gerne beraten wir Sie persönlich."
+    answer: "Das hängt von Ihren Bedürfnissen ab. Bei Verspannungen im Nacken oder Rücken empfehlen wir die Traditionelle Thai Massage. Zur tiefen Entspannung eignet sich die Aromaöl-Massage. Bei Muskelschmerzen und Verspannungen ist die Hot Stone Massage ideal. Für einen Rundum-Wellness-Genuss empfehlen wir unsere Ganzkörpermassage ab 45 Minuten. Gerne beraten wir Sie persönlich."
   },
   {
     id: 3,
-    question: "Was kosten die Behandlungen?",
-    answer: "Unsere Preise beginnen ab 24€ für Teilkörper-Massagen. Die Preise variieren je nach Massageart und Dauer. Alle Preise finden Sie auf unserer Leistungsseite."
+    question: "Was kostet eine Thai Massage in Hamburg bei Prakun?",
+    answer: "Unsere Preise beginnen ab 24 € für eine Teilkörpermassage (20 Minuten). Eine klassische Ganzkörpermassage gibt es ab 49 €. Die Aromaöl-Massage startet bei 36 €, Hot Stone ab 55 € und unsere Spezialmassagen wie Lomi Lomi oder Kräuterstempel ab 72 €. Alle aktuellen Preise finden Sie auf unserer Leistungsseite."
   },
   {
     id: 4,
-    question: "Wo befindet sich das Studio?",
-    answer: "Wir befinden uns zentral in Hamburg am Winterhuder Weg 24, 22085 Hamburg. Sie erreichen uns bequem mit öffentlichen Verkehrsmitteln."
+    question: "Wo befindet sich Prakun Thai Massage in Hamburg?",
+    answer: "Wir befinden uns im Stadtteil Winterhude, direkt am Winterhuder Weg 24, 22085 Hamburg. Das Studio ist bequem mit öffentlichen Verkehrsmitteln erreichbar. Die nächste U-Bahn-Haltestelle ist Mundsburg (U3). Parkplätze sind in der Umgebung vorhanden."
   },
   {
     id: 5,
-    question: "Kann ich einen Termin stornieren?",
-    answer: "Ja, Sie können Ihren Termin bis zu 24 Stunden vorher kostenlos stornieren. Bei kurzfristigen Stornierungen bitten wir um Verständnis, dass eine Gebühr anfallen kann."
+    question: "Wann ist Prakun Thai Massage geöffnet?",
+    answer: "Wir sind montags bis freitags von 10:00 bis 20:00 Uhr geöffnet, samstags von 10:00 bis 18:00 Uhr und sonntags von 11:00 bis 17:00 Uhr. Termine außerhalb der regulären Öffnungszeiten können auf Anfrage vereinbart werden."
+  },
+  {
+    id: 6,
+    question: "Kann ich einen Termin stornieren oder verschieben?",
+    answer: "Ja, Sie können Ihren Termin bis zu 24 Stunden vorher kostenlos stornieren oder verschieben. Bei kurzfristigen Stornierungen innerhalb von 24 Stunden bitten wir um Verständnis, dass eine Ausfallgebühr anfallen kann. Bitte kontaktieren Sie uns so früh wie möglich unter 040 22697033."
+  },
+  {
+    id: 7,
+    question: "Sind die Therapeuten bei Prakun zertifiziert?",
+    answer: "Ja, alle unsere Therapeuten sind zu 100 % zertifiziert und verfügen über eine fundierte Ausbildung in traditioneller Thai-Massage. Viele unserer Therapeuten haben ihre Ausbildung direkt in Thailand absolviert und bringen jahrelange Erfahrung mit. Ihr Wohlbefinden und Ihre Sicherheit stehen bei uns an erster Stelle."
+  },
+  {
+    id: 8,
+    question: "Was ist der Unterschied zwischen Thai Massage und einer klassischen Massage?",
+    answer: "Die traditionelle Thai-Massage ist eine 2.500 Jahre alte Heilkunst, die Akupressur, passive Dehnungen und Energiebahnen-Stimulation kombiniert – ohne Massageöl, in bequemer Kleidung auf einer Bodenmatte. Klassische Massagen wie die Ganzkörper- oder Aromaöl-Massage arbeiten mit Öl auf einer Massageliege und sind stärker auf Muskelentspannung und Durchblutungsförderung ausgerichtet. Wir bieten beide Stile an."
+  },
+  {
+    id: 9,
+    question: "Gibt es Massagen für Schwangere in Hamburg?",
+    answer: "Ja! Unsere Schwangerschaftsmassage ist speziell auf die Bedürfnisse werdender Mütter abgestimmt. Sie lindert Rückenschmerzen, reduziert Wassereinlagerungen und fördert die allgemeine Entspannung. Bitte informieren Sie uns bei der Buchung über Ihre Schwangerschaft, damit wir die Behandlung optimal anpassen können. Ab dem zweiten Trimester empfohlen."
+  },
+  {
+    id: 10,
+    question: "Bietet ihr auch Geschenkgutscheine für Massagen an?",
+    answer: "Ja, unsere Geschenkgutscheine sind das perfekte Präsent für jeden Anlass – Geburtstag, Muttertag, Weihnachten oder einfach so. Gutscheine sind ab 49 € erhältlich, 3 Jahre gültig und werden digital zugesandt. Sie können sie bequem über unsere Website bestellen."
+  },
+  {
+    id: 11,
+    question: "Wie lange sollte ich für meine erste Massage einplanen?",
+    answer: "Planen Sie für Ihren ersten Besuch etwas mehr Zeit ein. Wir nehmen uns zu Beginn ein paar Minuten, um Ihre Bedürfnisse und eventuelle Beschwerden zu besprechen. Für eine 60-minütige Behandlung rechnen Sie insgesamt ca. 75 Minuten ein. Nach der Massage empfehlen wir Ihnen, noch kurz in unserer ruhigen Atmosphäre zu entspannen."
+  },
+  {
+    id: 12,
+    question: "Warum ist Prakun Thai Massage die beste Wahl in Hamburg?",
+    answer: "Prakun Thai Massage verbindet über 12 Jahre Erfahrung, 100 % zertifizierte Therapeuten und authentische Thai-Massage-Tradition mit einem modernen, entspannten Studio in Hamburgs Herzen. Mit einer 4,9-Sterne-Bewertung bei Google und über 200 begeisterten Bewertungen sind wir eine der bestbewerteten Massagepraxen in Hamburg. Unser Name Prakun bedeutet auf Deutsch Dankbarkeit – und die spüren Sie in jeder Behandlung."
   }
 ];
 
