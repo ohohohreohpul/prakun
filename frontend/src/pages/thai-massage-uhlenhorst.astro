@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Uhlenhorst",
+  slug: "uhlenhorst",
+  distance: "7 Minuten",
+  transport: "U3 Uhlandstraße",
+  heroImage: "https://images.unsplash.com/photo-1620733723572-11c53f73a416?w=1920&h=1080&fit=crop",
+  description: "Uhlenhorst liegt direkt an der Außenalster und gehört zu den begehrtesten Wohnadressen Hamburgs. Das ruhige, grüne Viertel mit seinen schönen Altbauten liegt nur 7 Minuten von Prakun Thai Massage entfernt – ideal für eine Auszeit nach einem Spaziergang an der Alster.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Uhlenhorst?", answer: "Ja! Prakun Thai Massage am Winterhuder Weg 24 ist nur 7 Minuten von Uhlenhorst entfernt – ideal für eine Massage nach dem Alsterspaziergang oder nach der Arbeit." },
+    { question: "Wie erreiche ich Prakun Thai Massage von Uhlenhorst?", answer: "Von Uhlenhorst aus nehmen Sie am besten die U3 Richtung Barmbek bis Mundsburg (1 Station), dann 5 Minuten zu Fuß. Oder genießen Sie einen gemütlichen Alsterspaziergang bis zu uns – ca. 15 Minuten." },
+    { question: "Welche Massage passt am besten nach einem langen Tag in Uhlenhorst?", answer: "Nach einem langen Tag empfehlen wir die Aromaöl-Massage (ab 36 €) oder die klassische Ganzkörpermassage (ab 49 €). Für maximale Entspannung: die 90-Minuten-Version ab 92 €." },
+    { question: "Bieten Sie auch Massagen zu zweit für Paare aus Uhlenhorst?", answer: "Ja! Wir bieten Paarmassagen auf Anfrage an. Zwei Behandlungsräume können gleichzeitig gebucht werden, ideal für ein Wellness-Erlebnis zu zweit. Kontaktieren Sie uns unter 040 22697033." },
+    { question: "Kann ich nach der Massage noch entspannen, bevor ich nach Uhlenhorst fahre?", answer: "Selbstverständlich! In unserem ruhigen Studio können Sie nach der Massage noch ein paar Minuten in entspannter Atmosphäre verweilen. Wir servieren Ihnen gern Wasser oder Kräutertee." },
+  ]
+};
+
+const pageTitle = "Thai Massage Uhlenhorst Hamburg – Prakun Thai Massage | 7 Min entfernt";
+const pageDescription = "Thai Massage nahe Uhlenhorst Hamburg – Prakun Thai Massage, nur 7 Minuten! Alster-nah entspannen: 4.9★, zertifiziert, ab 24 €. Täglich geöffnet. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Uhlenhorst", url: "https://prakunthaimassage.de/thai-massage-uhlenhorst" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Uhlenhorst, Massage Uhlenhorst Hamburg, Wellness Uhlenhorst, Massage Alster Hamburg, Thai Massage Außenalster"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

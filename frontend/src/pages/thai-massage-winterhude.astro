@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Winterhude",
+  slug: "winterhude",
+  distance: "5 Minuten",
+  transport: "U3 Mundsburg",
+  heroImage: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop",
+  description: "Winterhude ist eines der beliebtesten Stadtteile Hamburgs – direkt an der Alster, mit dem Stadtpark und dem lebhaften Mühlenkamp. Wer in Winterhude wohnt oder arbeitet, ist nur wenige Minuten von einer professionellen Thai-Massage bei Prakun entfernt.",
+  faq: [
+    { question: "Wie weit ist Prakun Thai Massage von Winterhude entfernt?", answer: "Unser Studio am Winterhuder Weg 24 liegt direkt im Stadtteil Winterhude – Sie sind buchstäblich in 5 Gehminuten vor Ort. Mit dem Fahrrad oder zu Fuß vom Stadtpark oder Mühlenkamp erreichen Sie uns in wenigen Minuten." },
+    { question: "Welche U-Bahn-Station ist nächste für Thai Massage in Winterhude?", answer: "Die nächste U-Bahn-Haltestelle ist Mundsburg (U3), von dort sind es nur ca. 5 Minuten zu Fuß zu unserem Studio. Alternativ erreichen Sie uns über die Buslinien in der Umgebung." },
+    { question: "Kann ich als Winterhude-Bewohner auch kurzfristig buchen?", answer: "Ja! Da wir direkt in Winterhude sind, haben wir oft auch kurzfristige Termine verfügbar. Rufen Sie uns einfach an unter 040 22697033 oder buchen Sie online – oft gibt es noch Plätze am gleichen Tag." },
+    { question: "Gibt es Stammkunden-Rabatte für Gäste aus Winterhude?", answer: "Ja, wir bieten unseren Stammgästen aus Winterhude und Umgebung spezielle Wellness-Pakete und Gutscheine an. Fragen Sie beim nächsten Besuch nach unseren aktuellen Angeboten oder melden Sie sich für unseren Newsletter an." },
+    { question: "Welche Massage empfehlen Sie für gestresste Büromenschen aus Winterhude?", answer: "Für Berufstätige, die nach einem langen Arbeitstag in Winterhude entspannen möchten, empfehlen wir die Ganzkörpermassage (60 Min, ab 62 €) oder bei gezielten Verspannungen die Teilkörpermassage (30 Min, ab 35 €) – perfekt auch in der Mittagspause." },
+  ]
+};
+
+const pageTitle = "Thai Massage Winterhude Hamburg – Prakun Thai Massage | ab 24 €";
+const pageDescription = "Thai Massage in Winterhude Hamburg – nur 5 Minuten entfernt! Prakun Thai Massage: zertifizierte Therapeuten, 4.9★, ab 24 €. Täglich geöffnet. Jetzt online buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Winterhude", url: "https://prakunthaimassage.de/thai-massage-winterhude" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Winterhude, Massage Winterhude Hamburg, Thai Massage Winterhude Preise, Massage Winterhude buchen, Wellness Winterhude Hamburg"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

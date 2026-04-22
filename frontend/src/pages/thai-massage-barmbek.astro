@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Barmbek",
+  slug: "barmbek",
+  distance: "8 Minuten",
+  transport: "U3 Barmbek",
+  heroImage: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&h=1080&fit=crop",
+  description: "Barmbek ist ein lebendiger Hamburger Stadtteil mit wachsender Wellness-Nachfrage. Ob Barmbek-Nord oder Barmbek-Süd – Prakun Thai Massage ist Ihr nächster Anlaufpunkt für professionelle Thai-Massagen, nur 8 Minuten von Barmbek entfernt.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Barmbek?", answer: "Ja! Prakun Thai Massage liegt nur 8 Minuten von Barmbek entfernt, am Winterhuder Weg 24 in Hamburg. Sie erreichen uns bequem mit der U3 (Haltestelle Mundsburg) oder mit dem Fahrrad." },
+    { question: "Wie komme ich von Barmbek zu Prakun Thai Massage?", answer: "Am schnellsten mit der U3 Richtung Mundsburg – von Barmbek aus sind das nur 2 Stationen. Zu Fuß oder mit dem Fahrrad dauert es ca. 15–20 Minuten. Parkplätze finden Sie auch in der Umgebung des Studios." },
+    { question: "Welche Massagen sind bei Barmbek-Bewohnern besonders beliebt?", answer: "Unsere Barmbek-Gäste buchen besonders gern die Ganzkörpermassage (ab 49 €) und die Aromaöl-Massage (ab 36 €). Für Sportler aus der Barmbek-Arena empfehlen wir die Thai Warrior Massage (ab 85 €)." },
+    { question: "Kann ich einen Gutschein für jemanden in Barmbek kaufen?", answer: "Natürlich! Unsere Massagegutscheine können Sie bequem online kaufen und digital verschenken – ideal für Freunde oder Familie in Barmbek. Gutscheine sind ab 49 € erhältlich und 3 Jahre gültig." },
+    { question: "Sind Abendtermine für Berufstätige aus Barmbek verfügbar?", answer: "Ja, wir sind montags bis freitags bis 20:00 Uhr geöffnet. Abendtermine ab 18:00 Uhr sind besonders bei Berufstätigen aus Barmbek beliebt – buchen Sie frühzeitig online, da diese schnell ausgebucht sind." },
+  ]
+};
+
+const pageTitle = "Thai Massage Barmbek Hamburg – Prakun Thai Massage | 8 Min entfernt";
+const pageDescription = "Thai Massage nah an Barmbek Hamburg – Prakun Thai Massage, nur 8 Minuten von Barmbek! 4.9★, zertifizierte Therapeuten, ab 24 €. Mo–Fr bis 20 Uhr. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Barmbek", url: "https://prakunthaimassage.de/thai-massage-barmbek" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Barmbek, Massage Barmbek Hamburg, Thai Massage Barmbek-Nord, Massage Barmbek buchen, Wellness Barmbek"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

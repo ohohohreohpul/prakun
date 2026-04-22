@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Alsterdorf",
+  slug: "alsterdorf",
+  distance: "12 Minuten",
+  transport: "U1 Alsterdorf",
+  heroImage: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=1080&fit=crop",
+  description: "Alsterdorf ist ein ruhiger, familienfreundlicher Stadtteil im Norden Hamburgs mit viel Grün und einer entspannten Atmosphäre. Für die Bewohner von Alsterdorf ist Prakun Thai Massage der ideale Ort zur Erholung – nur 12 Minuten entfernt.",
+  faq: [
+    { question: "Welche Thai Massage ist nah an Alsterdorf?", answer: "Prakun Thai Massage am Winterhuder Weg 24 ist die nächste Top-bewertete Thai-Massage für Alsterdorf-Bewohner – nur 12 Minuten entfernt mit der U1." },
+    { question: "Wie fahre ich von Alsterdorf zu Prakun Thai Massage?", answer: "Mit der U1 von Alsterdorf in Richtung Innenstadt bis Hudtwalckerstraße, dann kurzer Fußweg (ca. 10 Min). Alternativ mit dem Fahrrad entlang des Alsterlaufs – sehr angenehm!" },
+    { question: "Haben Sie Familienmassagen oder Angebote für Kinder aus Alsterdorf?", answer: "Wir bieten Massagen für Erwachsene an. Für Familien aus Alsterdorf eignen sich Gutscheine für Eltern als Geschenk hervorragend. Massage-Behandlungen sind ab 16 Jahren möglich." },
+    { question: "Welche Massage hilft bei Rückenschmerzen – für Alsterdorf-Pendler?", answer: "Für Pendler mit Rücken- und Nackenbeschwerden empfehlen wir die Teilkörpermassage (Rücken, Nacken, Schultern) ab 35 € oder die traditionelle Thai-Massage ab 49 €. Beide lösen gezielt Verspannungen durch langes Sitzen." },
+    { question: "Wie oft sollte ich als Alsterdorf-Bewohner zur Massage gehen?", answer: "Für optimale Wirkung empfehlen wir alle 2–4 Wochen eine Behandlung. Viele unserer Stammgäste aus Alsterdorf kommen monatlich und berichten von nachhaltig verbessertem Wohlbefinden und deutlich weniger Verspannungen." },
+  ]
+};
+
+const pageTitle = "Thai Massage Alsterdorf Hamburg – Prakun Thai Massage | 12 Min entfernt";
+const pageDescription = "Thai Massage nahe Alsterdorf Hamburg – Prakun Thai Massage, 12 Min mit der U1! 4.9★, zertifiziert, ab 24 €. Rücken, Nacken, Ganzkörper. Jetzt Termin buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Alsterdorf", url: "https://prakunthaimassage.de/thai-massage-alsterdorf" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Alsterdorf, Massage Alsterdorf Hamburg, Wellness Alsterdorf, Massage Hamburg Nord, Thai Massage U1 Hamburg"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

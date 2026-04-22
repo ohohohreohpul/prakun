@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Eppendorf",
+  slug: "eppendorf",
+  distance: "10 Minuten",
+  transport: "U1 Eppendorfer Baum",
+  heroImage: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&h=1080&fit=crop",
+  description: "Eppendorf ist einer der exklusivsten und grünsten Stadtteile Hamburgs – bekannt für das Universitätskrankenhaus, den Eppendorfer Park und eine anspruchsvolle Wohngemeinde. Wer in Eppendorf lebt, verdient auch die beste Thai-Massage der Stadt – und die findet sich nur 10 Minuten entfernt bei Prakun.",
+  faq: [
+    { question: "Wo finde ich eine gute Thai Massage in Eppendorf oder in der Nähe?", answer: "Die beste Thai-Massage in der Nähe von Eppendorf ist bei Prakun Thai Massage, nur 10 Minuten entfernt am Winterhuder Weg 24. Mit der U1 (Eppendorfer Baum) und einem kurzen Fußweg sind Sie schnell bei uns." },
+    { question: "Ist Prakun Thai Massage für Eppendorf-Bewohner gut erreichbar?", answer: "Sehr gut! Von Eppendorf aus erreichen Sie uns mit der U1 bis Mundsburg in wenigen Minuten. Alternativ ist die Fahrt mit dem Fahrrad entlang der Alster besonders schön – ca. 15 Minuten." },
+    { question: "Welche Premium-Massagen bieten Sie für anspruchsvolle Gäste aus Eppendorf?", answer: "Für unsere Gäste aus Eppendorf empfehlen wir besonders die Lomi Lomi Nui Massage (ab 72 €), die Aromakerzen-Massage (ab 37 €) oder unsere exklusiven Wellness-Pakete ab 60 €. Auch Paarmassagen sind sehr beliebt." },
+    { question: "Bieten Sie Massagen für medizinisches Personal aus dem UKE Eppendorf an?", answer: "Ja! Wir heißen medizinisches Personal und Pflegekräfte aus dem UKE besonders willkommen. Nach stressigen Schichten ist eine professionelle Thai-Massage ideal zur Regeneration. Fragen Sie nach unseren Spezialangeboten." },
+    { question: "Kann ich für meine Eltern in Eppendorf einen Massagegutschein kaufen?", answer: "Absolut! Unsere Massagegutscheine sind das ideale Geschenk für Eltern oder ältere Verwandte in Eppendorf. Sie sind digital erhältlich, 3 Jahre gültig und in jeder Menge personalisierbar." },
+  ]
+};
+
+const pageTitle = "Thai Massage Eppendorf Hamburg – Prakun Thai Massage | Premium Wellness";
+const pageDescription = "Thai Massage nahe Eppendorf Hamburg – Prakun Thai Massage, 10 Min von Eppendorf! Premium Wellness, 4.9★, zertifiziert. Lomi Lomi, Aromaöl, Hot Stone. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Eppendorf", url: "https://prakunthaimassage.de/thai-massage-eppendorf" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Eppendorf, Massage Eppendorf Hamburg, Wellness Eppendorf, Thai Massage UKE Hamburg, Massage Eppendorfer Baum"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
