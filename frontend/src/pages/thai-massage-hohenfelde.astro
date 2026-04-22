@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Hohenfelde",
+  slug: "hohenfelde",
+  distance: "8 Minuten",
+  transport: "U1 Mundsburg",
+  heroImage: "/neighborhood-hohenfelde.jpg",
+  description: "Hohenfelde ist ein ruhiger, grüner Stadtteil im Herzen Hamburgs – beliebt bei Familien und Berufspendlern gleichermaßen. Prakun Thai Massage liegt nur 8 Minuten von Hohenfelde entfernt am Winterhuder Weg und bietet authentische Thai-Massagen in einer einladenden, erholsamen Atmosphäre.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Hohenfelde?", answer: "Ja! Prakun Thai Massage befindet sich nur 8 Minuten von Hohenfelde entfernt, am Winterhuder Weg 24 in Hamburg. Sie erreichen uns bequem mit der U1 (Haltestelle Mundsburg) oder zu Fuß durch den Alsterpark." },
+    { question: "Wie komme ich von Hohenfelde zu Prakun Thai Massage?", answer: "Am einfachsten mit der U1 – von der Haltestelle Mundsburg sind es nur wenige Minuten zu Fuß zum Studio. Alternativ erreichen Sie uns in 10–12 Minuten mit dem Fahrrad oder zu Fuß entlang des Winterhuder Weges." },
+    { question: "Welche Massagen sind bei Hohenfelde-Bewohnern besonders beliebt?", answer: "Unsere Gäste aus Hohenfelde schätzen besonders die Traditionelle Thai-Massage (ab 49 €) und die entspannende Aromaöl-Massage (ab 36 €). Für einen intensiven Ausgleich nach einem langen Arbeitstag empfehlen wir die Hot-Stone-Massage." },
+    { question: "Kann ich einen Massagegutschein für jemanden in Hohenfelde kaufen?", answer: "Selbstverständlich! Unsere Massagegutscheine können Sie bequem online bestellen und digital versenden – ideal als Geschenk für Freunde oder Familie in Hohenfelde. Gutscheine sind ab 49 € erhältlich und 3 Jahre gültig." },
+    { question: "Sind Abendtermine für Berufstätige aus Hohenfelde verfügbar?", answer: "Ja, wir sind montags bis freitags bis 20:00 Uhr geöffnet. Abendtermine sind besonders gefragt – buchen Sie bitte frühzeitig online auf prakunthaimassage.de/buchen, um Ihren Wunschtermin zu sichern." },
+  ]
+};
+
+const pageTitle = "Thai Massage Hohenfelde Hamburg – Prakun Thai Massage | 8 Min entfernt";
+const pageDescription = "Thai Massage nah an Hohenfelde Hamburg – Prakun Thai Massage, nur 8 Minuten von Hohenfelde! 4.9★, zertifizierte Therapeuten, ab 24 €. Mo–Fr bis 20 Uhr. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Hohenfelde", url: "https://prakunthaimassage.de/thai-massage-hohenfelde" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Hohenfelde, Massage Hohenfelde Hamburg, Thai Massage Hamburg Hohenfelde, Wellness Hohenfelde, Massage Mundsburg"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
