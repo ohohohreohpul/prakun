@@ -61,14 +61,14 @@ const ContactPage = () => {
     <div className="bg-[#F7F6F4] min-h-screen">
       {/* Hero Section */}
       <section ref={heroRef} className="relative pt-24 pb-16 bg-[#1a1a1a]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3D1A6B]/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#7B2958]/20 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/20 text-[#C4A77D] text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/20 text-[#C4A77D] text-sm font-medium mb-4">
               KONTAKT
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -101,7 +101,7 @@ const ContactPage = () => {
                     className="block h-full"
                   >
                     <div className="bg-white rounded-2xl p-6 shadow-lg shadow-black/5 border border-[#E5E2DD] h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                      <item.icon className="h-8 w-8 text-[#3D1A6B] mb-4" />
+                      <item.icon className="h-8 w-8 text-[#7B2958] mb-4" />
                       <h3 className="font-bold text-[#2B2B2B] mb-2">{item.title}</h3>
                       {item.lines.map((line, i) => (
                         <p key={i} className="text-[#666666] text-sm">{line}</p>
@@ -110,7 +110,7 @@ const ContactPage = () => {
                   </a>
                 ) : (
                   <div className="bg-white rounded-2xl p-6 shadow-lg shadow-black/5 border border-[#E5E2DD] h-full">
-                    <item.icon className="h-8 w-8 text-[#3D1A6B] mb-4" />
+                    <item.icon className="h-8 w-8 text-[#7B2958] mb-4" />
                     <h3 className="font-bold text-[#2B2B2B] mb-2">{item.title}</h3>
                     {item.lines.map((line, i) => (
                       <p key={i} className="text-[#666666] text-sm">{line}</p>
@@ -151,7 +151,7 @@ const ContactPage = () => {
               {/* Address Overlay */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-[#3D1A6B] flex-shrink-0 mt-0.5" />
+                  <MapPin className="h-5 w-5 text-[#7B2958] flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="font-bold text-[#2B2B2B]">Prakun Thai Massage</p>
                     <p className="text-[#666666] text-sm">Winterhuder Weg 24, 22085 Hamburg</p>
@@ -195,7 +195,7 @@ const ContactPage = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#3D1A6B] focus:ring-2 focus:ring-[#3D1A6B]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#7B2958] focus:ring-2 focus:ring-[#7B2958]/20 outline-none transition-all"
                           placeholder="Ihr Name"
                         />
                       </div>
@@ -206,7 +206,7 @@ const ContactPage = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#3D1A6B] focus:ring-2 focus:ring-[#3D1A6B]/20 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#7B2958] focus:ring-2 focus:ring-[#7B2958]/20 outline-none transition-all"
                           placeholder="+49 ..."
                         />
                       </div>
@@ -220,7 +220,7 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#3D1A6B] focus:ring-2 focus:ring-[#3D1A6B]/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#7B2958] focus:ring-2 focus:ring-[#7B2958]/20 outline-none transition-all"
                         placeholder="ihre@email.de"
                       />
                     </div>
@@ -231,7 +231,7 @@ const ContactPage = () => {
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#3D1A6B] focus:ring-2 focus:ring-[#3D1A6B]/20 outline-none transition-all bg-white"
+                        className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#7B2958] focus:ring-2 focus:ring-[#7B2958]/20 outline-none transition-all bg-white"
                       >
                         <option value="">Bitte wählen...</option>
                         <option value="termin">Terminanfrage</option>
@@ -249,14 +249,14 @@ const ContactPage = () => {
                         onChange={handleChange}
                         required
                         rows={4}
-                        className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#3D1A6B] focus:ring-2 focus:ring-[#3D1A6B]/20 outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-xl border border-[#E5E2DD] focus:border-[#7B2958] focus:ring-2 focus:ring-[#7B2958]/20 outline-none transition-all resize-none"
                         placeholder="Ihre Nachricht..."
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="w-full group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#3D1A6B]/30"
+                      className="w-full group relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#7B2958]/30"
                     >
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         <Send className="h-5 w-5" />

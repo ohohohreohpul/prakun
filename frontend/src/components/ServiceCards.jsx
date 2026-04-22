@@ -39,7 +39,7 @@ const ServiceCards = () => {
       </div>
       
       {/* Decorative Glow */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#3D1A6B]/20 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#7B2958]/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#C4A77D]/10 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +167,7 @@ const ServiceCards = () => {
               className="flex-shrink-0 w-[280px] md:w-[320px] snap-start"
             >
               <a href="/leistungen" className="group block h-full">
-                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#3D1A6B] to-[#2D1050] border border-[#3D1A6B]/50 h-full min-h-[320px] flex flex-col items-center justify-center p-8 text-center hover:shadow-xl hover:shadow-[#3D1A6B]/20 transition-all duration-500">
+                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#7B2958] to-[#5C1E42] border border-[#7B2958]/50 h-full min-h-[320px] flex flex-col items-center justify-center p-8 text-center hover:shadow-xl hover:shadow-[#7B2958]/20 transition-all duration-500">
                   <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <ArrowRight className="h-8 w-8 text-white" />
                   </div>

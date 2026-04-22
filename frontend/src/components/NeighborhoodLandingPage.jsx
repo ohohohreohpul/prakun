@@ -109,7 +109,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             >
               <Button
                 asChild
-                className="bg-[#3D1A6B] hover:bg-[#7a2852] text-white px-8 py-6 text-base font-semibold rounded-xl"
+                className="bg-[#7B2958] hover:bg-[#7a2852] text-white px-8 py-6 text-base font-semibold rounded-xl"
               >
                 <a href="/buchen">Termin buchen</a>
               </Button>
@@ -139,12 +139,12 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/10 text-[#3D1A6B] text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/10 text-[#7B2958] text-sm font-medium mb-4">
                 Thai Massage in {name}
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1B2A4A] mb-6 leading-tight">
                 Die beste Thai-Massage{' '}
-                <span className="text-[#3D1A6B]">in der Nähe von {name}</span>
+                <span className="text-[#7B2958]">in der Nähe von {name}</span>
               </h2>
               <p className="text-[#4a4a4a] text-lg leading-relaxed mb-6">
                 {description}
@@ -163,7 +163,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
                   'Täglich 10–20 Uhr geöffnet',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-[#3D1A6B] mt-0.5 shrink-0" />
+                    <Check className="h-5 w-5 text-[#7B2958] mt-0.5 shrink-0" />
                     <span className="text-[#4a4a4a]">{item}</span>
                   </li>
                 ))}
@@ -182,7 +182,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
                 { value: '100%', label: 'Zertifiziert', sub: 'Alle Therapeuten' },
               ].map((stat) => (
                 <div key={stat.value} className="bg-[#F7F6F4] rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-bold text-[#3D1A6B] mb-1">{stat.value}</div>
+                  <div className="text-3xl font-bold text-[#7B2958] mb-1">{stat.value}</div>
                   <div className="font-semibold text-[#1B2A4A] text-sm">{stat.label}</div>
                   <div className="text-xs text-[#6a6a6a] mt-1">{stat.sub}</div>
                 </div>
@@ -199,7 +199,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/10 text-[#3D1A6B] text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/10 text-[#7B2958] text-sm font-medium mb-4">
               Unsere Angebote
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1B2A4A]">
@@ -217,16 +217,16 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
                 key={svc.slug}
                 href={`/massage/${svc.slug}`}
                 variants={fadeUp} initial="hidden" whileInView="visible" custom={i * 0.05} viewport={{ once: true }}
-                className="group bg-white rounded-2xl p-6 border border-[#E8E4DF] hover:border-[#3D1A6B]/40 hover:shadow-lg transition-all duration-300"
+                className="group bg-white rounded-2xl p-6 border border-[#E8E4DF] hover:border-[#7B2958]/40 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="font-bold text-[#1B2A4A] text-lg group-hover:text-[#3D1A6B] transition-colors">
+                  <h3 className="font-bold text-[#1B2A4A] text-lg group-hover:text-[#7B2958] transition-colors">
                     {svc.name}
                   </h3>
                   <ArrowRight className="h-4 w-4 text-[#C4A77D] opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="flex items-center gap-3 text-sm text-[#6a6a6a]">
-                  <span className="font-semibold text-[#3D1A6B] text-base">{svc.price}</span>
+                  <span className="font-semibold text-[#7B2958] text-base">{svc.price}</span>
                   <span>·</span>
                   <Clock className="h-3.5 w-3.5" />
                   <span>{svc.duration}</span>
@@ -239,7 +239,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="text-center mt-10"
           >
-            <Button asChild className="bg-[#3D1A6B] hover:bg-[#7a2852] text-white px-10 py-6 text-base font-semibold rounded-xl">
+            <Button asChild className="bg-[#7B2958] hover:bg-[#7a2852] text-white px-10 py-6 text-base font-semibold rounded-xl">
               <a href="/buchen">Jetzt Termin buchen</a>
             </Button>
           </motion.div>
@@ -297,7 +297,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/20 text-[#C4A77D] text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/20 text-[#C4A77D] text-sm font-medium mb-4">
               Häufige Fragen
             </span>
             <h2 className="text-3xl font-bold text-white">
@@ -317,7 +317,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section className="py-20 bg-gradient-to-br from-[#3D1A6B] to-[#2D1050] text-white text-center">
+      <section className="py-20 bg-gradient-to-br from-[#7B2958] to-[#5C1E42] text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <motion.h2
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
@@ -335,7 +335,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             variants={fadeUp} initial="hidden" whileInView="visible" custom={2} viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button asChild className="bg-white text-[#3D1A6B] hover:bg-white/90 px-10 py-6 text-base font-semibold rounded-xl">
+            <Button asChild className="bg-white text-[#7B2958] hover:bg-white/90 px-10 py-6 text-base font-semibold rounded-xl">
               <a href="/buchen">Jetzt buchen</a>
             </Button>
             <Button asChild variant="outline" className="border-white/40 text-white hover:bg-white/10 px-10 py-6 text-base rounded-xl">

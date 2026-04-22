@@ -12,7 +12,7 @@ const BookingPage = () => {
     if (container && !window.planityInitialized) {
       window.planity = {
         key: '-NKx60jJwMpeJjjW_s8g',
-        primaryColor: '#3D1A6B',
+        primaryColor: '#7B2958',
         container: container,
         options: {
           countryCode: 'DE',
@@ -40,14 +40,14 @@ const BookingPage = () => {
     <div className="bg-[#F7F6F4] min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 bg-[#1a1a1a]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3D1A6B]/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#7B2958]/20 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/20 text-[#C4A77D] text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/20 text-[#C4A77D] text-sm font-medium mb-4">
               ONLINE BUCHEN
             </span>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
@@ -75,7 +75,7 @@ const BookingPage = () => {
               {/* Loading state */}
               <div className="flex items-center justify-center h-[600px] text-[#666666]">
                 <div className="text-center">
-                  <div className="w-12 h-12 border-4 border-[#3D1A6B]/20 border-t-[#3D1A6B] rounded-full animate-spin mx-auto mb-4"></div>
+                  <div className="w-12 h-12 border-4 border-[#7B2958]/20 border-t-[#7B2958] rounded-full animate-spin mx-auto mb-4"></div>
                   <p>Buchungssystem wird geladen...</p>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const BookingPage = () => {
           >
             <p className="text-[#666666]">
               Fragen zur Buchung? Rufen Sie uns an:{' '}
-              <a href="tel:04022697033" className="text-[#3D1A6B] font-medium hover:underline">
+              <a href="tel:04022697033" className="text-[#7B2958] font-medium hover:underline">
                 040 22697033
               </a>
             </p>
@@ -110,17 +110,17 @@ const BookingPage = () => {
           }
         }
         #planitywl .planity_bookappointment-button-choose {
-          background-color: #3D1A6B !important;
+          background-color: #7B2958 !important;
           border-radius: 9999px !important;
         }
         #planitywl .planity_bookappointment-button-choose:hover {
-          background-color: #2D1050 !important;
+          background-color: #5C1E42 !important;
         }
         .planity_ui_appointment_background > div:nth-child(2) {
           padding: 10px;
         }
         .planity-gift-voucher-button-choose {
-          background-color: #3D1A6B !important;
+          background-color: #7B2958 !important;
           border-radius: 9999px !important;
         }
         #planitywl > div:nth-child(2) > div:nth-child(2) > div > div > div > div > h2 {

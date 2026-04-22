@@ -56,7 +56,7 @@ const AboutPage = () => {
             animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/20 text-[#C4A77D] text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/20 text-[#C4A77D] text-sm font-medium mb-4">
               ÜBER UNS
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -106,7 +106,7 @@ const AboutPage = () => {
                 />
               </div>
               {/* Decorative Element */}
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#3D1A6B]/10 rounded-3xl -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#7B2958]/10 rounded-3xl -z-10" />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#C4A77D]/10 rounded-3xl -z-10" />
             </motion.div>
 
@@ -116,12 +116,12 @@ const AboutPage = () => {
               animate={isStoryInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/10 text-[#3D1A6B] text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/10 text-[#7B2958] text-sm font-medium mb-4">
                 UNSERE GESCHICHTE
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-6">
                 Tradition trifft{' '}
-                <span className="italic font-light text-[#3D1A6B]">Moderne</span>
+                <span className="italic font-light text-[#7B2958]">Moderne</span>
               </h2>
               <div className="space-y-4 text-[#666666] leading-relaxed">
                 <p>
@@ -139,7 +139,7 @@ const AboutPage = () => {
               </div>
 
               <div className="flex items-center gap-4 mt-8 p-4 bg-[#F7F6F4] rounded-2xl border border-[#E5E2DD]">
-                <MapPin className="h-10 w-10 text-[#3D1A6B] flex-shrink-0" />
+                <MapPin className="h-10 w-10 text-[#7B2958] flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-[#2B2B2B]">Winterhuder Weg 24</p>
                   <p className="text-[#666666] text-sm">22085 Hamburg</p>
@@ -203,7 +203,7 @@ const AboutPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/buchen">
-                <Button className="group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#3D1A6B]/30 hover:-translate-y-1">
+                <Button className="group relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#7B2958]/30 hover:-translate-y-1">
                   <span className="relative z-10">Jetzt Termin buchen</span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 </Button>

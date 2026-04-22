@@ -19,13 +19,13 @@ const StudioLocations = () => {
           className="text-center mb-16"
         >
           <motion.span 
-            className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/10 text-[#3D1A6B] text-sm font-medium mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/10 text-[#7B2958] text-sm font-medium mb-4"
           >
             STANDORT
           </motion.span>
           <h2 className="text-3xl md:text-5xl font-bold text-[#2B2B2B] mb-4">
             Besuchen Sie unser{' '}
-            <span className="italic font-light text-[#3D1A6B]">Studio</span>
+            <span className="italic font-light text-[#7B2958]">Studio</span>
           </h2>
           <p className="text-[#666666] max-w-2xl mx-auto text-lg">
             Zentral gelegen im Herzen von Hamburg – einfach erreichbar mit öffentlichen Verkehrsmitteln.
@@ -94,8 +94,8 @@ const StudioLocations = () => {
                         transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                         className="flex items-center gap-4 group"
                       >
-                        <div className="w-10 h-10 rounded-full bg-[#3D1A6B]/10 flex items-center justify-center group-hover:bg-[#3D1A6B]/20 transition-colors">
-                          <item.icon className="h-5 w-5 text-[#3D1A6B]" />
+                        <div className="w-10 h-10 rounded-full bg-[#7B2958]/10 flex items-center justify-center group-hover:bg-[#7B2958]/20 transition-colors">
+                          <item.icon className="h-5 w-5 text-[#7B2958]" />
                         </div>
                         <p className="text-[#2B2B2B] font-medium">{item.text}</p>
                       </motion.div>
@@ -103,7 +103,7 @@ const StudioLocations = () => {
                   </div>
 
                   <a href="/buchen">
-                    <Button className="group relative overflow-hidden w-full bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#3D1A6B]/30">
+                    <Button className="group relative overflow-hidden w-full bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#7B2958]/30">
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         Jetzt Termin buchen
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

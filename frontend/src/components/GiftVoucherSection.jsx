@@ -31,7 +31,7 @@ const GiftVoucherSection = () => {
           scale: [1, 1.1, 1]
         }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#3D1A6B]/20 blur-3xl"
+        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#7B2958]/20 blur-3xl"
       />
       <motion.div
         animate={{ 
@@ -82,7 +82,7 @@ const GiftVoucherSection = () => {
             >
               <div className={`relative rounded-2xl p-6 md:p-8 border transition-all duration-500 ${
                 voucher.featured 
-                  ? 'bg-gradient-to-br from-[#3D1A6B] to-[#2D1050] border-[#C4A77D]/50 shadow-xl shadow-[#3D1A6B]/20' 
+                  ? 'bg-gradient-to-br from-[#7B2958] to-[#5C1E42] border-[#C4A77D]/50 shadow-xl shadow-[#7B2958]/20' 
                   : 'bg-white/5 backdrop-blur-sm border-white/10 hover:border-[#C4A77D]/50 hover:bg-white/10'
               }`}>
                 {/* Featured Badge */}
@@ -112,8 +112,8 @@ const GiftVoucherSection = () => {
                 {/* Button */}
                 <div className={`text-center py-2 px-4 rounded-full text-sm font-medium transition-all duration-300 ${
                   voucher.featured 
-                    ? 'bg-white text-[#3D1A6B] group-hover:bg-[#C4A77D] group-hover:text-[#1a1a1a]' 
-                    : 'bg-white/10 text-white group-hover:bg-[#3D1A6B] group-hover:text-white'
+                    ? 'bg-white text-[#7B2958] group-hover:bg-[#C4A77D] group-hover:text-[#1a1a1a]' 
+                    : 'bg-white/10 text-white group-hover:bg-[#7B2958] group-hover:text-white'
                 }`}>
                   Jetzt kaufen
                 </div>

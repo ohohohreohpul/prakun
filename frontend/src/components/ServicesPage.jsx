@@ -56,7 +56,7 @@ const ServicesPage = () => {
             animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/20 text-[#C4A77D] text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/20 text-[#C4A77D] text-sm font-medium mb-4">
               UNSERE LEISTUNGEN
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -115,7 +115,7 @@ const ServicesPage = () => {
                             
                             {/* Price Badge */}
                             <div className="absolute bottom-4 left-4">
-                              <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-sm font-bold text-[#3D1A6B]">
+                              <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-sm font-bold text-[#7B2958]">
                                 ab {service.priceFrom}€
                               </span>
                             </div>
@@ -123,7 +123,7 @@ const ServicesPage = () => {
 
                           {/* Content */}
                           <div className="p-6">
-                            <h3 className="text-lg font-bold text-[#2B2B2B] mb-2 group-hover:text-[#3D1A6B] transition-colors">
+                            <h3 className="text-lg font-bold text-[#2B2B2B] mb-2 group-hover:text-[#7B2958] transition-colors">
                               {service.title}
                             </h3>
                             <p className="text-[#666666] text-sm mb-4 line-clamp-2">
@@ -136,7 +136,7 @@ const ServicesPage = () => {
                                 <Clock className="h-4 w-4" />
                                 <span>{service.duration}</span>
                               </div>
-                              <span className="text-[#3D1A6B] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                              <span className="text-[#7B2958] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                                 Details
                                 <ArrowRight className="h-4 w-4" />
                               </span>
@@ -170,7 +170,7 @@ const ServicesPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/buchen">
-                <Button className="group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#3D1A6B]/30 hover:-translate-y-1">
+                <Button className="group relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#7B2958]/30 hover:-translate-y-1">
                   <span className="relative z-10">Jetzt Termin buchen</span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 </Button>
