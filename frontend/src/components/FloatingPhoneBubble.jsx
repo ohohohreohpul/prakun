@@ -22,10 +22,10 @@ const FloatingPhoneBubble = ({ phoneNumber = "040 22697033" }) => {
         transition={{ duration: 0.3 }}
         className="
           flex items-center gap-3 px-5 py-3
-          bg-gradient-to-r from-[#8B2F5F] to-[#6B1F4F]
+          bg-gradient-to-r from-[#3D1A6B] to-[#2D1050]
           backdrop-blur-xl
           rounded-xl
-          shadow-lg shadow-[#8B2F5F]/30
+          shadow-lg shadow-[#3D1A6B]/30
           border border-[#C4A77D]/30
           cursor-pointer
           group
@@ -48,7 +48,7 @@ const FloatingPhoneBubble = ({ phoneNumber = "040 22697033" }) => {
       </motion.a>
       
       {/* Subtle glow effect */}
-      <div className="absolute inset-0 -z-10 rounded-xl bg-[#8B2F5F]/20 blur-xl opacity-50"></div>
+      <div className="absolute inset-0 -z-10 rounded-xl bg-[#3D1A6B]/20 blur-xl opacity-50"></div>
     </div>
   );
 };

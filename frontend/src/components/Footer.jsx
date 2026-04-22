@@ -30,7 +30,7 @@ const Footer = () => {
           repeat: Infinity,
           ease: 'easeInOut'
         }}
-        className="absolute top-20 right-[10%] w-80 h-80 rounded-full bg-[#8B2F5F]/10 blur-3xl"
+        className="absolute top-20 right-[10%] w-80 h-80 rounded-full bg-[#3D1A6B]/10 blur-3xl"
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,15 +117,15 @@ const Footer = () => {
             <h3 className="text-sm font-bold mb-5 text-[#C4A77D]">Kontakt</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
-                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-[#8B2F5F]" />
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-[#3D1A6B]" />
                 <span>{studio.address}<br />{studio.city}</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
-                <Clock className="h-4 w-4 flex-shrink-0 text-[#8B2F5F]" />
+                <Clock className="h-4 w-4 flex-shrink-0 text-[#3D1A6B]" />
                 <span>{studio.hours}</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
-                <Mail className="h-4 w-4 flex-shrink-0 text-[#8B2F5F]" />
+                <Mail className="h-4 w-4 flex-shrink-0 text-[#3D1A6B]" />
                 <a href={`mailto:${studio.email}`} className="hover:text-white transition-colors">
                   {studio.email}
                 </a>
@@ -158,7 +158,7 @@ const Footer = () => {
               />
               <Button
                 type="submit"
-                className="bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white rounded-full px-6 transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30"
+                className="bg-[#3D1A6B] hover:bg-[#2D1050] text-white rounded-full px-6 transition-all duration-300 hover:shadow-lg hover:shadow-[#3D1A6B]/30"
               >
                 Anmelden
               </Button>
@@ -172,7 +172,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Prakun Thai Massage. Alle Rechte vorbehalten.
           </p>
           <p className="text-sm text-white/40 flex items-center gap-1">
-            Mit <Heart className="h-3 w-3 text-[#8B2F5F] fill-[#8B2F5F]" /> in Hamburg seit 2012
+            Mit <Heart className="h-3 w-3 text-[#3D1A6B] fill-[#3D1A6B]" /> in Hamburg seit 2012
           </p>
         </div>
       </div>

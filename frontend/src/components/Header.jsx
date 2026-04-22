@@ -70,7 +70,7 @@ const Header = () => {
               onMouseLeave={handleMegaMenuLeave}
             >
               <button
-                className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:text-[#8B2F5F] ${textColorClass}`}
+                className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:text-[#3D1A6B] ${textColorClass}`}
               >
                 Leistungen
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
@@ -84,7 +84,7 @@ const Header = () => {
               onMouseLeave={handleResourcesLeave}
             >
               <button
-                className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:text-[#8B2F5F] ${textColorClass}`}
+                className={`flex items-center gap-1 text-sm font-medium transition-all duration-300 hover:text-[#3D1A6B] ${textColorClass}`}
               >
                 Ressourcen
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isResourcesOpen ? 'rotate-180' : ''}`} />
@@ -169,7 +169,7 @@ const Header = () => {
             >
               <a href="/buchen">
                 <Button
-                  className="relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#8B2F5F]/30 hover:-translate-y-0.5"
+                  className="relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#3D1A6B]/30 hover:-translate-y-0.5"
                 >
                   <span className="relative z-10">Termin buchen</span>
                 </Button>
@@ -248,7 +248,7 @@ const Header = () => {
                             <span className="text-sm flex items-center gap-2">
                               {service.title}
                               {service.isNew && (
-                                <span className="text-[10px] bg-[#8B2F5F] text-white px-1.5 py-0.5 rounded-full">NEU</span>
+                                <span className="text-[10px] bg-[#3D1A6B] text-white px-1.5 py-0.5 rounded-full">NEU</span>
                               )}
                             </span>
                             <span className="text-xs text-white/50 group-hover:text-[#C4A77D]">
@@ -351,13 +351,13 @@ const Header = () => {
             <div className="px-4 py-6 space-y-6">
               {/* Service Categories */}
               <div>
-                <h3 className="text-xs font-bold text-[#8B2F5F] uppercase tracking-wider mb-3">Leistungen</h3>
+                <h3 className="text-xs font-bold text-[#3D1A6B] uppercase tracking-wider mb-3">Leistungen</h3>
                 <div className="space-y-2">
                   {Object.values(servicesDetailed).slice(0, 8).map((service) => (
                     <a
                       key={service.id}
                       href={`/massage/${service.slug}`}
-                      className="flex items-center justify-between py-2 text-[#2B2B2B] hover:text-[#8B2F5F] transition-colors"
+                      className="flex items-center justify-between py-2 text-[#2B2B2B] hover:text-[#3D1A6B] transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <span className="text-sm">{service.title}</span>
@@ -371,17 +371,17 @@ const Header = () => {
 
               {/* Ressourcen */}
               <div>
-                <h3 className="text-xs font-bold text-[#8B2F5F] uppercase tracking-wider mb-3">Ressourcen</h3>
+                <h3 className="text-xs font-bold text-[#3D1A6B] uppercase tracking-wider mb-3">Ressourcen</h3>
                 <a
                   href="/ueber-uns"
-                  className="block text-[#2B2B2B] font-medium py-2 hover:text-[#8B2F5F] transition-colors"
+                  className="block text-[#2B2B2B] font-medium py-2 hover:text-[#3D1A6B] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Über uns
                 </a>
                 <a
                   href="/kontakt"
-                  className="block text-[#2B2B2B] font-medium py-2 hover:text-[#8B2F5F] transition-colors"
+                  className="block text-[#2B2B2B] font-medium py-2 hover:text-[#3D1A6B] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Kontakt
@@ -404,7 +404,7 @@ const Header = () => {
                   </Button>
                 </a>
                 <a href="/buchen" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button className="w-full bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white rounded-full">
+                  <Button className="w-full bg-[#3D1A6B] hover:bg-[#2D1050] text-white rounded-full">
                     Termin buchen
                   </Button>
                 </a>

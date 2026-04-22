@@ -34,7 +34,7 @@ const ServicePage = ({ slug }) => {
       <div className="min-h-screen bg-[#F7F6F4] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-[#2B2B2B] mb-4">Service nicht gefunden</h1>
-          <a href="/" className="text-[#8B2F5F] hover:underline">Zurück zur Startseite</a>
+          <a href="/" className="text-[#3D1A6B] hover:underline">Zurück zur Startseite</a>
         </div>
       </div>
     );
@@ -162,8 +162,8 @@ const ServicePage = ({ slug }) => {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="flex items-start gap-3 p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-white/50"
                     >
-                      <div className="w-6 h-6 rounded-full bg-[#8B2F5F]/10 flex items-center justify-center flex-shrink-0">
-                        <Check className="h-4 w-4 text-[#8B2F5F]" />
+                      <div className="w-6 h-6 rounded-full bg-[#3D1A6B]/10 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-4 w-4 text-[#3D1A6B]" />
                       </div>
                       <span className="text-[#2B2B2B] font-medium">{benefit}</span>
                     </motion.div>
@@ -205,13 +205,13 @@ const ServicePage = ({ slug }) => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={isContentInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                        className="flex items-center justify-between p-4 rounded-xl bg-[#F7F6F4] hover:bg-[#8B2F5F]/5 transition-colors cursor-pointer group"
+                        className="flex items-center justify-between p-4 rounded-xl bg-[#F7F6F4] hover:bg-[#3D1A6B]/5 transition-colors cursor-pointer group"
                       >
                         <div className="flex items-center gap-3">
-                          <Clock className="h-4 w-4 text-[#8B2F5F]" />
+                          <Clock className="h-4 w-4 text-[#3D1A6B]" />
                           <span className="font-medium text-[#2B2B2B]">{option.duration}</span>
                         </div>
-                        <span className="text-lg font-bold text-[#8B2F5F] group-hover:scale-105 transition-transform">
+                        <span className="text-lg font-bold text-[#3D1A6B] group-hover:scale-105 transition-transform">
                           {option.price}€
                         </span>
                       </motion.div>
@@ -219,7 +219,7 @@ const ServicePage = ({ slug }) => {
                   </div>
 
                   <a href="/buchen">
-                    <Button className="w-full group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 mb-4">
+                    <Button className="w-full group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#3D1A6B]/30 mb-4">
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         <Calendar className="h-5 w-5" />
                         Jetzt Termin buchen
@@ -249,7 +249,7 @@ const ServicePage = ({ slug }) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isContentInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.8 }}
-                  className="mt-6 p-4 rounded-2xl bg-[#8B2F5F]/5 border border-[#8B2F5F]/10 text-center"
+                  className="mt-6 p-4 rounded-2xl bg-[#3D1A6B]/5 border border-[#3D1A6B]/10 text-center"
                 >
                   <div className="flex items-center justify-center gap-1 mb-2">
                     {[...Array(5)].map((_, i) => (
@@ -277,7 +277,7 @@ const ServicePage = ({ slug }) => {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#8B2F5F]/10 text-[#8B2F5F] text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/10 text-[#3D1A6B] text-sm font-medium mb-4">
                 WEITERE EMPFEHLUNGEN
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B]">
@@ -307,20 +307,20 @@ const ServicePage = ({ slug }) => {
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
                       {relService.isNew && (
-                        <span className="absolute top-4 right-4 bg-[#8B2F5F] text-white text-xs font-bold px-3 py-1 rounded-full">
+                        <span className="absolute top-4 right-4 bg-[#3D1A6B] text-white text-xs font-bold px-3 py-1 rounded-full">
                           NEU
                         </span>
                       )}
                     </div>
                     <div className="p-6">
-                      <h3 className="text-lg font-bold text-[#2B2B2B] mb-2 group-hover:text-[#8B2F5F] transition-colors">
+                      <h3 className="text-lg font-bold text-[#2B2B2B] mb-2 group-hover:text-[#3D1A6B] transition-colors">
                         {relService.title}
                       </h3>
                       <p className="text-sm text-[#666666] mb-4 line-clamp-2">
                         {relService.subtitle}
                       </p>
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-[#8B2F5F]">ab {relService.priceFrom}€</span>
+                        <span className="font-bold text-[#3D1A6B]">ab {relService.priceFrom}€</span>
                         <span className="text-sm text-[#666666]">{relService.duration}</span>
                       </div>
                     </div>
@@ -341,7 +341,7 @@ const ServicePage = ({ slug }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Heart className="h-12 w-12 text-[#8B2F5F] mx-auto mb-6" />
+            <Heart className="h-12 w-12 text-[#3D1A6B] mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-4">
               Bereit für Ihre Auszeit?
             </h2>
@@ -349,7 +349,7 @@ const ServicePage = ({ slug }) => {
               Buchen Sie jetzt Ihre {service.title} bei Prakun Thai Massage und gönnen Sie sich die Entspannung, die Sie verdienen.
             </p>
             <a href="/buchen">
-              <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-lg px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
+              <Button className="group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-lg px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#3D1A6B]/30 hover:-translate-y-1">
                 <span className="relative z-10 flex items-center gap-2">
                   Termin buchen
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />

@@ -15,7 +15,7 @@ const HeroSection = () => {
         transition={{ duration: 1.5, ease: 'easeOut' }}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1696841212541-449ca29397cc?w=1920&h=1080&fit=crop')`,
+          backgroundImage: `url('/hero-massage.png')`,
         }}
       />
       
@@ -102,7 +102,7 @@ const HeroSection = () => {
           >
             <a href="/buchen">
               <Button
-                className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/40 hover:-translate-y-1"
+                className="group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-[#3D1A6B]/40 hover:-translate-y-1"
               >
                 <span className="relative z-10">Termin buchen</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -158,13 +158,13 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                   className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:bg-white transition-colors"
                 >
-                  <Play className="h-6 w-6 text-[#8B2F5F] ml-1" fill="#8B2F5F" />
+                  <Play className="h-6 w-6 text-[#3D1A6B] ml-1" fill="#3D1A6B" />
                 </motion.div>
               </div>
             </div>
             
             {/* Decorative Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#8B2F5F]/20 to-[#C4A77D]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#3D1A6B]/20 to-[#C4A77D]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10" />
           </div>
         </motion.div>
       </motion.div>

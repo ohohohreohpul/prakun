@@ -71,7 +71,7 @@ img {
 
 /* Focus visible styling */
 *:focus-visible {
-  outline: 2px solid #8B2F5F;
+  outline: 2px solid #3D1A6B;
   outline-offset: 2px;
 }
 
@@ -139,7 +139,7 @@ a, button {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #8B2F5F 0%, #C4A77D 100%);
+  background: linear-gradient(135deg, #3D1A6B 0%, #C4A77D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

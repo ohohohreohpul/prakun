@@ -41,7 +41,7 @@ const GiftBestsellers = () => {
           className="text-center mb-16"
         >
           <motion.span 
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#8B2F5F]/10 text-[#8B2F5F] text-sm font-medium mb-4"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#3D1A6B]/10 text-[#3D1A6B] text-sm font-medium mb-4"
           >
             <Package className="h-4 w-4" />
             UNSERE PAKETE
@@ -115,7 +115,7 @@ const GiftBestsellers = () => {
                       <motion.span
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="absolute top-4 right-4 bg-[#8B2F5F] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
+                        className="absolute top-4 right-4 bg-[#3D1A6B] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
                       >
                         NEU
                       </motion.span>
@@ -124,11 +124,11 @@ const GiftBestsellers = () => {
                     {/* Glassmorphism Price Tag */}
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="bg-white/80 backdrop-blur-xl rounded-xl p-3 border border-white/50 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                        <p className="text-[#8B2F5F] font-bold text-lg">ab {product.price} €</p>
+                        <p className="text-[#3D1A6B] font-bold text-lg">ab {product.price} €</p>
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-base font-bold text-[#2B2B2B] mb-1 group-hover:text-[#8B2F5F] transition-colors duration-300">
+                  <h3 className="text-base font-bold text-[#2B2B2B] mb-1 group-hover:text-[#3D1A6B] transition-colors duration-300">
                     {product.title}
                   </h3>
                   <p className="text-sm text-[#666666]">
@@ -148,7 +148,7 @@ const GiftBestsellers = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-24"
         >
           <a href="/buchen">
-            <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-8 py-5 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
+            <Button className="group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base px-8 py-5 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#3D1A6B]/30 hover:-translate-y-1">
               <span className="relative z-10">Paket buchen</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </Button>

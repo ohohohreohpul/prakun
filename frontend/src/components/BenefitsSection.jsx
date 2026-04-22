@@ -32,7 +32,7 @@ const BenefitsSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-[#2B2B2B] leading-tight">
             Entspannung.
             <br />
-            <span className="text-[#8B2F5F]">Im Herzen von Hamburg.</span>
+            <span className="text-[#3D1A6B]">Im Herzen von Hamburg.</span>
           </h2>
         </motion.div>
 
@@ -105,7 +105,7 @@ const BenefitsSection = () => {
           className="mt-16 text-center"
         >
           <a href="/buchen">
-            <Button className="group relative overflow-hidden bg-[#8B2F5F] hover:bg-[#6B1F4F] text-white text-base px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#8B2F5F]/30 hover:-translate-y-1">
+            <Button className="group relative overflow-hidden bg-[#3D1A6B] hover:bg-[#2D1050] text-white text-base px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#3D1A6B]/30 hover:-translate-y-1">
               <span className="relative z-10">Jetzt Termin buchen</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </Button>

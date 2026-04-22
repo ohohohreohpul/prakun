@@ -56,7 +56,7 @@ const MonthlyOfferPopup = () => {
               />
               
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#8B2F5F]/90 via-[#6B1F4F]/85 to-[#4a1535]/95" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#3D1A6B]/90 via-[#2D1050]/85 to-[#4a1535]/95" />
 
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-[#C4A77D]/10 rounded-full blur-3xl" />
@@ -150,7 +150,7 @@ const MonthlyOfferPopup = () => {
                   className="flex flex-col sm:flex-row gap-3 justify-center"
                 >
                   <a href="/buchen" onClick={handleClose}>
-                    <Button className="w-full sm:w-auto bg-white hover:bg-white/90 text-[#8B2F5F] font-semibold px-8 py-6 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:-translate-y-0.5">
+                    <Button className="w-full sm:w-auto bg-white hover:bg-white/90 text-[#3D1A6B] font-semibold px-8 py-6 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:-translate-y-0.5">
                       <Calendar className="h-5 w-5 mr-2" />
                       Jetzt buchen
                     </Button>

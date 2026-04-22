@@ -19,7 +19,7 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <motion.span 
-            className="inline-block px-4 py-1.5 rounded-full bg-[#8B2F5F]/10 text-[#8B2F5F] text-sm font-medium mb-4"
+            className="inline-block px-4 py-1.5 rounded-full bg-[#3D1A6B]/10 text-[#3D1A6B] text-sm font-medium mb-4"
           >
             BEWERTUNGEN
           </motion.span>
@@ -63,13 +63,13 @@ const Testimonials = () => {
                     whileTap={{ scale: 0.95 }}
                     className="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:bg-white transition-all duration-300"
                   >
-                    <Play className="h-7 w-7 text-[#8B2F5F] ml-1" fill="#8B2F5F" />
+                    <Play className="h-7 w-7 text-[#3D1A6B] ml-1" fill="#3D1A6B" />
                   </motion.div>
                 </div>
 
                 {/* Video Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1.5 rounded-full bg-[#8B2F5F] text-white text-xs font-medium shadow-lg">
+                  <span className="px-3 py-1.5 rounded-full bg-[#3D1A6B] text-white text-xs font-medium shadow-lg">
                     VIDEO
                   </span>
                 </div>
@@ -86,8 +86,8 @@ const Testimonials = () => {
                   "Eine wunderbare Erfahrung"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-[#8B2F5F]/10 rounded-full flex items-center justify-center">
-                    <span className="text-[#8B2F5F] font-bold text-xs">K</span>
+                  <div className="w-8 h-8 bg-[#3D1A6B]/10 rounded-full flex items-center justify-center">
+                    <span className="text-[#3D1A6B] font-bold text-xs">K</span>
                   </div>
                   <div>
                     <p className="text-sm font-medium text-[#2B2B2B]">Kundenstimme</p>
@@ -111,8 +111,8 @@ const Testimonials = () => {
               {/* Glass Card */}
               <div className="relative h-full bg-white/70 backdrop-blur-xl rounded-3xl p-6 shadow-lg shadow-black/5 border border-white/50 transition-all duration-500 group-hover:shadow-2xl group-hover:bg-white/90 flex flex-col">
                 {/* Quote Icon */}
-                <div className="absolute -top-3 -left-2 w-10 h-10 rounded-full bg-[#8B2F5F]/10 flex items-center justify-center">
-                  <Quote className="h-4 w-4 text-[#8B2F5F]" />
+                <div className="absolute -top-3 -left-2 w-10 h-10 rounded-full bg-[#3D1A6B]/10 flex items-center justify-center">
+                  <Quote className="h-4 w-4 text-[#3D1A6B]" />
                 </div>
 
                 {/* Stars */}
@@ -129,8 +129,8 @@ const Testimonials = () => {
 
                 {/* Author */}
                 <div className="flex items-center gap-3 pt-4 border-t border-[#E5E2DD] mt-auto">
-                  <div className="w-10 h-10 bg-[#8B2F5F]/10 rounded-full flex items-center justify-center">
-                    <span className="text-[#8B2F5F] font-bold text-sm">
+                  <div className="w-10 h-10 bg-[#3D1A6B]/10 rounded-full flex items-center justify-center">
+                    <span className="text-[#3D1A6B] font-bold text-sm">
                       {testimonial.author.charAt(0)}
                     </span>
                   </div>
@@ -155,8 +155,8 @@ const Testimonials = () => {
           <div className="relative bg-white/70 backdrop-blur-xl rounded-3xl p-8 shadow-lg shadow-black/5 border border-white/50 transition-all duration-500 group-hover:shadow-2xl group-hover:bg-white/90">
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               {/* Quote Icon */}
-              <div className="w-14 h-14 rounded-full bg-[#8B2F5F]/10 flex items-center justify-center flex-shrink-0">
-                <Quote className="h-6 w-6 text-[#8B2F5F]" />
+              <div className="w-14 h-14 rounded-full bg-[#3D1A6B]/10 flex items-center justify-center flex-shrink-0">
+                <Quote className="h-6 w-6 text-[#3D1A6B]" />
               </div>
               
               <div className="flex-1">
@@ -174,8 +174,8 @@ const Testimonials = () => {
                 
                 {/* Author */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#8B2F5F]/10 rounded-full flex items-center justify-center">
-                    <span className="text-[#8B2F5F] font-bold text-sm">
+                  <div className="w-10 h-10 bg-[#3D1A6B]/10 rounded-full flex items-center justify-center">
+                    <span className="text-[#3D1A6B] font-bold text-sm">
                       {testimonials[2].author.charAt(0)}
                     </span>
                   </div>

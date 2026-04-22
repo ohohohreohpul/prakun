@@ -29,7 +29,7 @@ const MembershipSection = () => {
           repeat: Infinity,
           ease: 'easeInOut'
         }}
-        className="absolute top-20 left-[10%] w-40 h-40 rounded-full bg-[#8B2F5F]/20 blur-3xl"
+        className="absolute top-20 left-[10%] w-40 h-40 rounded-full bg-[#3D1A6B]/20 blur-3xl"
       />
       <motion.div
         animate={{ 
@@ -107,7 +107,7 @@ const MembershipSection = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-2xl border border-white/50"
               >
-                <p className="text-[#8B2F5F] font-bold text-2xl">-20%</p>
+                <p className="text-[#3D1A6B] font-bold text-2xl">-20%</p>
                 <p className="text-[#666666] text-sm">auf Pakete</p>
               </motion.div>
             </div>
