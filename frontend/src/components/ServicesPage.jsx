@@ -43,8 +43,8 @@ const ServicesPage = () => {
       <section ref={heroRef} className="relative pt-24 pb-16 bg-[#1a1a1a]">
         <div className="absolute inset-0">
           <img 
-            src="/studio-interior.png"
-            alt="Prakun Thai Massage Leistungen Hamburg"
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=600&fit=crop"
+            alt="Massage Services"
             className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/50 to-[#1a1a1a]" />
