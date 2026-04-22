@@ -43,8 +43,8 @@ const AboutPage = () => {
       <section ref={heroRef} className="relative pt-24 pb-20 bg-[#1a1a1a] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&h=800&fit=crop"
-            alt="Massage Studio"
+            src="/studio-interior.jpg"
+            alt="Prakun Thai Massage Studio Hamburg"
             className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/50 to-[#1a1a1a]" />
@@ -100,8 +100,8 @@ const AboutPage = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/10">
                 <img 
-                  src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=1000&fit=crop"
-                  alt="Thai Massage"
+                  src="/hero-massage.jpg"
+                  alt="Thai Massage Behandlung Prakun Hamburg"
                   className="w-full h-[500px] object-cover"
                 />
               </div>

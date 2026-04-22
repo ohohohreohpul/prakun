@@ -15,7 +15,7 @@ const HeroSection = () => {
         transition={{ duration: 1.5, ease: 'easeOut' }}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1696841212541-449ca29397cc?w=1920&h=1080&fit=crop')`,
+          backgroundImage: `url('/hero-massage.jpg')`,
         }}
       />
       
