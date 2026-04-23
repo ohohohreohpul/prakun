@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Eilbek",
+  slug: "eilbek",
+  distance: "10 Minuten",
+  transport: "U3 Eilbek",
+  heroImage: "/neighborhood-eilbek.jpg",
+  description: "Eilbek ist ein lebendiger und familienfreundlicher Stadtteil im Osten Hamburgs, bekannt für seine ruhigen Wohnstraßen und die Nähe zur Alster. Prakun Thai Massage liegt nur 10 Minuten von Eilbek entfernt am Winterhuder Weg und bietet authentische Thai-Massagen in einer entspannenden, hochwertigen Atmosphäre.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Eilbek?", answer: "Ja! Prakun Thai Massage befindet sich nur 10 Minuten von Eilbek entfernt, am Winterhuder Weg 24 in Hamburg. Sie erreichen uns bequem mit der U3 (Haltestelle Eilbek) oder mit dem Fahrrad in wenigen Minuten." },
+    { question: "Wie komme ich von Eilbek zu Prakun Thai Massage?", answer: "Am einfachsten mit der U3 – von der Haltestelle Eilbek sind es nur wenige Minuten zu Fuß zum Studio. Alternativ ist das Studio auch mit dem Fahrrad gut erreichbar, da Eilbek direkt an das Hamburger Radwegenetz angebunden ist." },
+    { question: "Welche Massagen sind bei Eilbek-Bewohnern besonders beliebt?", answer: "Unsere Gäste aus Eilbek schätzen besonders die Traditionelle Thai-Massage (ab 49 €) und die entspannende Aromaöl-Massage (ab 36 €). Für einen intensiven Ausgleich nach einem langen Arbeitstag empfehlen wir die Hot-Stone-Massage." },
+    { question: "Kann ich einen Massagegutschein für jemanden in Eilbek kaufen?", answer: "Selbstverständlich! Unsere Massagegutscheine können Sie bequem online bestellen und digital versenden – ideal als Geschenk für Freunde oder Familie in Eilbek. Gutscheine sind ab 49 € erhältlich und 3 Jahre gültig." },
+    { question: "Sind Abendtermine für Berufstätige aus Eilbek verfügbar?", answer: "Ja, wir sind montags bis freitags bis 20:00 Uhr geöffnet. Abendtermine sind besonders gefragt – buchen Sie bitte frühzeitig online auf prakunthaimassage.de/buchen, um Ihren Wunschtermin zu sichern." },
+  ]
+};
+
+const pageTitle = "Thai Massage Eilbek Hamburg – Prakun Thai Massage | 10 Min entfernt";
+const pageDescription = "Thai Massage nah an Eilbek Hamburg – Prakun Thai Massage, nur 10 Minuten von Eilbek! 4.9★, zertifizierte Therapeuten, ab 24 €. Mo–Fr bis 20 Uhr. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Eilbek", url: "https://prakunthaimassage.de/thai-massage-eilbek" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Eilbek, Massage Eilbek Hamburg, Thai Massage Hamburg Eilbek, Wellness Eilbek, Massage U3 Eilbek"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
