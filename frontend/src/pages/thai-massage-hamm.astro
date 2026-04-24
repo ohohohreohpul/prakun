@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Hamm",
+  slug: "hamm",
+  distance: "12 Minuten",
+  transport: "U2/U4 Hammer Kirche",
+  heroImage: "/neighborhood-hamm.jpg",
+  description: "Hamm ist ein traditionsreicher Stadtteil im Osten Hamburgs mit charmanten Gründerzeitbauten, grünen Parks und einer gut angebundenen Verkehrslage. Prakun Thai Massage liegt nur 12 Minuten von Hamm entfernt am Winterhuder Weg und bietet authentische Thai-Massagen in einer entspannenden, hochwertigen Atmosphäre.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Hamm?", answer: "Ja! Prakun Thai Massage befindet sich nur 12 Minuten von Hamm entfernt, am Winterhuder Weg 24 in Hamburg. Sie erreichen uns bequem mit der U2 oder U4 (Haltestelle Hammer Kirche) und einem kurzen Umstieg – oder direkt mit dem Auto über die Ring-Straßen." },
+    { question: "Wie komme ich von Hamm zu Prakun Thai Massage?", answer: "Am einfachsten mit der U2/U4 ab Hammer Kirche oder Rauhes Haus in Richtung Innenstadt und Umstieg zur U3 nach Mundsburg/Uhlandstraße. Mit dem Auto sind Sie in ca. 10–12 Minuten am Studio. Kostenlose Parkplätze stehen am Winterhuder Weg zur Verfügung." },
+    { question: "Welche Massagen sind bei Hamm-Bewohnern besonders beliebt?", answer: "Unsere Gäste aus Hamm schätzen besonders die Traditionelle Thai-Massage (ab 49 €) sowie die wohltuende Hot-Stone-Massage. Für Berufstätige empfehlen wir zusätzlich die Nacken-Schulter-Kopf-Massage als schnellen Ausgleich nach dem Büroalltag." },
+    { question: "Kann ich einen Massagegutschein für jemanden in Hamm kaufen?", answer: "Selbstverständlich! Unsere Massagegutscheine können Sie bequem online bestellen und digital versenden – ideal als Geschenk für Freunde oder Familie in Hamm. Gutscheine sind ab 49 € erhältlich und 3 Jahre gültig." },
+    { question: "Sind Abendtermine für Berufstätige aus Hamm verfügbar?", answer: "Ja, wir sind montags bis freitags bis 20:00 Uhr geöffnet. Abendtermine sind besonders gefragt – buchen Sie bitte frühzeitig online auf prakunthaimassage.de/buchen, um Ihren Wunschtermin nach Feierabend zu sichern." },
+  ]
+};
+
+const pageTitle = "Thai Massage Hamm Hamburg – Prakun Thai Massage | 12 Min entfernt";
+const pageDescription = "Thai Massage nah an Hamm Hamburg – Prakun Thai Massage, nur 12 Minuten von Hamm! 4.9★, zertifizierte Therapeuten, ab 24 €. Mo–Fr bis 20 Uhr. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Hamm", url: "https://prakunthaimassage.de/thai-massage-hamm" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Hamm, Massage Hamm Hamburg, Thai Massage Hamburg Hamm, Wellness Hamm, Massage U2 Hammer Kirche"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
