@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Wandsbek",
+  slug: "wandsbek",
+  distance: "13 Minuten",
+  transport: "U1 Wandsbek Markt",
+  heroImage: "/neighborhood-wandsbek.jpg",
+  description: "Wandsbek ist einer der größten und lebendigsten Bezirke im Osten Hamburgs – ein gut angebundener Knotenpunkt mit dem belebten Wandsbek Markt, dem Eichtalpark und einer modernen Einkaufsmeile. Prakun Thai Massage liegt nur 13 Minuten vom Wandsbeker Zentrum entfernt am Winterhuder Weg und bietet authentische Thai-Massagen in einer ruhigen, hochwertigen Atmosphäre als Gegenpol zum Großstadttrubel.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Wandsbek?", answer: "Ja! Prakun Thai Massage befindet sich nur 13 Minuten von Wandsbek entfernt, am Winterhuder Weg 24 in Hamburg. Sie erreichen uns bequem mit der U1 (Haltestelle Wandsbek Markt) Richtung Innenstadt und einem kurzen Umstieg – oder in 10–13 Minuten direkt mit dem Auto." },
+    { question: "Wie komme ich von Wandsbek zu Prakun Thai Massage?", answer: "Am einfachsten mit der U1 ab Wandsbek Markt Richtung Norderstedt Mitte und Umstieg an Lattenkamp/Hudtwalckerstraße – oder mit der Buslinie 25 in Richtung Eppendorf. Mit dem Auto über die Hamburger Straße sind Sie in rund 13 Minuten am Studio. Kostenlose Parkplätze finden Sie am Winterhuder Weg." },
+    { question: "Welche Massagen sind bei Wandsbek-Bewohnern besonders beliebt?", answer: "Unsere Gäste aus Wandsbek schätzen besonders die Traditionelle Thai-Massage (ab 49 €) und die wohltuende Hot-Stone-Massage. Für Berufstätige aus dem Wandsbeker Bürozentrum empfehlen wir zusätzlich die Nacken-Schulter-Kopf-Massage als idealen Ausgleich nach dem Arbeitstag." },
+    { question: "Kann ich einen Massagegutschein für jemanden in Wandsbek kaufen?", answer: "Selbstverständlich! Unsere Massagegutscheine bestellen Sie bequem online und versenden sie digital – ideal als Geschenk für Familie, Freunde oder Kolleginnen und Kollegen in Wandsbek. Gutscheine sind ab 49 € erhältlich und 3 Jahre gültig." },
+    { question: "Sind Abendtermine für Berufstätige aus Wandsbek verfügbar?", answer: "Ja, wir sind montags bis freitags bis 20:00 Uhr geöffnet. Abendtermine nach Feierabend sind besonders gefragt – buchen Sie frühzeitig online auf prakunthaimassage.de/buchen, um Ihren Wunschtermin zu sichern." },
+  ]
+};
+
+const pageTitle = "Thai Massage Wandsbek Hamburg – Prakun Thai Massage | 13 Min entfernt";
+const pageDescription = "Thai Massage nah an Wandsbek Hamburg – Prakun Thai Massage, nur 13 Minuten von Wandsbek! 4.9★, zertifizierte Therapeuten, ab 24 €. Mo–Fr bis 20 Uhr. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Wandsbek", url: "https://prakunthaimassage.de/thai-massage-wandsbek" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Wandsbek, Massage Wandsbek Hamburg, Thai Massage Hamburg Wandsbek, Wellness Wandsbek, Massage U1 Wandsbek Markt"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
