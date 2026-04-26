@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Bramfeld",
+  slug: "bramfeld",
+  distance: "15 Minuten",
+  transport: "Bus 7 / 26 ab Bramfelder Chaussee",
+  heroImage: "/neighborhood-bramfeld.jpg",
+  description: "Bramfeld ist ein lebendiger Stadtteil im Nordosten Hamburgs mit dem idyllischen Bramfelder See, viel Grün und einer entspannten Wohnatmosphäre zwischen Eigenheimen und kleinen Geschäften. Prakun Thai Massage liegt nur rund 15 Minuten vom Bramfelder Zentrum entfernt am Winterhuder Weg und bietet Bramfelder Gästen authentische Thai-Massagen in einer ruhigen, hochwertigen Atmosphäre als perfekten Ausgleich zum Alltag.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Bramfeld?", answer: "Ja! Prakun Thai Massage befindet sich nur 15 Minuten von Bramfeld entfernt, am Winterhuder Weg 24 in Hamburg. Sie erreichen uns bequem mit den Buslinien 7 oder 26 ab Bramfelder Chaussee Richtung Innenstadt – oder in 12–15 Minuten direkt mit dem Auto über die Hebebrandstraße." },
+    { question: "Wie komme ich von Bramfeld zu Prakun Thai Massage?", answer: "Am einfachsten mit der Buslinie 7 oder 26 ab Bramfelder Chaussee in Richtung Winterhude/Hudtwalckerstraße – die Fahrt dauert ca. 15 Minuten. Mit dem Auto über die Hebebrandstraße und Alsterkrugchaussee sind Sie in rund 12 Minuten am Studio. Kostenlose Parkplätze finden Sie direkt am Winterhuder Weg." },
+    { question: "Welche Massagen sind bei Bramfeld-Bewohnern besonders beliebt?", answer: "Unsere Gäste aus Bramfeld schätzen besonders die Traditionelle Thai-Massage (ab 49 €) und die wohltuende Hot-Stone-Massage. Für Familien und Berufstätige aus Bramfeld empfehlen wir zusätzlich die entspannende Aroma-Öl-Massage als idealen Ausgleich zum Alltag." },
+    { question: "Kann ich einen Massagegutschein für jemanden in Bramfeld kaufen?", answer: "Selbstverständlich! Unsere Massagegutscheine bestellen Sie bequem online und versenden sie digital – ideal als Geschenk für Familie, Freunde oder Nachbarn in Bramfeld. Gutscheine sind ab 49 € erhältlich und 3 Jahre gültig." },
+    { question: "Sind Abendtermine für Berufstätige aus Bramfeld verfügbar?", answer: "Ja, wir sind montags bis freitags bis 20:00 Uhr geöffnet. Abendtermine nach Feierabend sind besonders gefragt – buchen Sie frühzeitig online auf prakunthaimassage.de/buchen, um Ihren Wunschtermin zu sichern." },
+  ]
+};
+
+const pageTitle = "Thai Massage Bramfeld Hamburg – Prakun Thai Massage | 15 Min entfernt";
+const pageDescription = "Thai Massage nah an Bramfeld Hamburg – Prakun Thai Massage, nur 15 Minuten von Bramfeld! 4.9★, zertifizierte Therapeuten, ab 24 €. Mo–Fr bis 20 Uhr. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Bramfeld", url: "https://prakunthaimassage.de/thai-massage-bramfeld" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Bramfeld, Massage Bramfeld Hamburg, Thai Massage Hamburg Bramfeld, Wellness Bramfeld, Massage Bramfelder Chaussee"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
