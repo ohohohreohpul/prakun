@@ -622,21 +622,24 @@ export const testimonials = [
     text: "Wunderbare Erfahrung! Die Massage hat meine Migräne und Nackenschmerzen deutlich gelindert. Sehr freundliches Personal und entspannte Atmosphäre.",
     author: "Maria S.",
     source: "Google",
-    rating: 5
+    rating: 5,
+    date: "2025-11-14"
   },
   {
     id: 2,
     text: "Die 90-Minuten Thai-Massage war absolut fantastisch. Endlich fühle ich mich wieder entspannt und voller Energie. Sehr empfehlenswert!",
     author: "Thomas K.",
     source: "Google",
-    rating: 5
+    rating: 5,
+    date: "2026-01-22"
   },
   {
     id: 3,
     text: "Seit Jahren komme ich hierher und bin jedes Mal begeistert. Professionelle Behandlung, faire Preise und immer ein gutes Gefühl danach.",
     author: "Sandra M.",
     source: "Google",
-    rating: 5
+    rating: 5,
+    date: "2026-03-08"
   }
 ];
 

@@ -106,6 +106,27 @@ export const localBusinessSchema = {
   ]
 };
 
+// ---- 2a. SiteLinksSearchBox (signals Google: homepage is canonical brand page) ----
+export const siteLinksSearchBoxSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://prakunthaimassage.de/#website",
+  "url": "https://prakunthaimassage.de",
+  "name": "Prakun Thai Massage Hamburg",
+  "description": "Professionelle Thai-Massage im Herzen von Hamburg seit 2012.",
+  "publisher": {
+    "@id": "https://prakunthaimassage.de/#business"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://prakunthaimassage.de/leistungen?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
 // ---- 2. Organization schema (brand entity for AI engines) ----
 export const organizationSchema = {
   "@context": "https://schema.org",
@@ -249,7 +270,7 @@ export const reviewSchema = (reviews: Array<{
       "worstRating": 1
     },
     "reviewBody": review.text,
-    "datePublished": review.date || new Date().toISOString().split('T')[0]
+    "datePublished": review.date
   }))
 });
 

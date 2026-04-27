@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const pageTitle = "Thai Massage Hamburg – Was ist Thai Massage? Techniken & Wirkung";
+const pageDescription = "Was ist Thai Massage? Techniken, Wirkung & Ablauf erklärt – von Prakun Thai Massage Hamburg. Seit 2012, ab 35€, ★ 4,9/5. Online buchen.";
+
+const faqItems = [
+  {
+    question: "Was ist Thai Massage und woher kommt sie?",
+    answer: "Thai Massage ist eine traditionelle Heilmethode aus Thailand, die seit über 2.500 Jahren praktiziert wird. Sie kombiniert Akupressur entlang der sogenannten 'Sen-Linien' (Energiebahnen) mit passiven Dehnübungen aus dem Yoga und sanften Gelenkmobilisationen. Die Technik wurde ursprünglich im Wat Pho-Tempel in Bangkok gelehrt und überliefert."
+  },
+  {
+    question: "Wie läuft eine Thai Massage ab?",
+    answer: "Bei einer Thai Massage liegen Sie bequem auf einer Bodenmatte und tragen bequeme Kleidung – Sie müssen sich nicht ausziehen. Der Therapeut arbeitet mit Daumen, Handballen, Ellenbogen, Knien und Füßen entlang Ihrer Energiebahnen. Dabei werden Sie sanft in Dehnpositionen geführt. Eine Sitzung dauert in der Regel 60 bis 120 Minuten."
+  },
+  {
+    question: "Was sind die Vorteile von Thai Massage?",
+    answer: "Thai Massage kann Muskelverspannungen lösen, die Durchblutung fördern, Stress abbauen und die Beweglichkeit verbessern. Viele Gäste berichten nach regelmäßigen Behandlungen von weniger Rücken- und Nackenschmerzen, besserem Schlaf und mehr Energie. Die Kombination aus Akupressur und Dehnung wirkt ganzheitlich auf Körper und Geist."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Thai Massage und klassischer Massage?",
+    answer: "Bei der klassischen (schwedischen) Massage liegt man auf einer Liege, wird mit Öl massiert, und der Therapeut bearbeitet vor allem die Muskulatur. Thai Massage hingegen erfolgt auf dem Boden, ohne Öl, und beinhaltet aktive Dehnungen und Gelenkarbeit. Sie ist energetischer und aktivierender, während klassische Massage eher entspannend-sedierend wirkt."
+  },
+  {
+    question: "Wie viel kostet eine Thai Massage in Hamburg bei Prakun?",
+    answer: "Bei Prakun Thai Massage in Hamburg beginnen die Preise bei 35€ für eine 30-minütige Teilkörpermassage. Eine 60-minütige Ganzkörpermassage kostet ab 62€, eine 90-minütige Behandlung ab 89€. Wir bieten auch Wellness-Pakete und Gutscheine an."
+  },
+  {
+    question: "Für wen ist Thai Massage nicht geeignet?",
+    answer: "Thai Massage ist für die meisten Menschen sehr gut verträglich. Bitte informieren Sie uns vorab, wenn Sie schwanger sind, an akuten Entzündungen, Thrombosen, Osteoporose, offenen Wunden oder kürzlichen Operationen leiden. In diesen Fällen passen wir die Behandlung an oder empfehlen eine alternative Massage wie unsere sanfte Aromaöl-Massage."
+  }
+];
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage", url: "https://prakunthaimassage.de/thai-massage" }
+]);
+
+const faqStructuredData = faqSchema(faqItems);
+const allStructuredData = [localBusinessSchema, breadcrumb, faqStructuredData];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Hamburg, was ist Thai Massage, Thai Massage Techniken, traditionelle Thai Massage, Thai Massage Wirkung, Sen Linien, Akupressur Hamburg"
+  canonicalUrl="https://prakunthaimassage.de/thai-massage"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <main>
+
+    <!-- Hero -->
+    <section class="relative pt-24 pb-16 bg-[#1a1a1a] overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          src="/hero-massage.jpg"
+          alt="Thai Massage Hamburg – Prakun Thai Massage"
+          class="w-full h-full object-cover opacity-30"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/50 to-[#1a1a1a]" />
+      </div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/20 text-[#C4A77D] text-sm font-medium mb-4">
+          TRADITIONELLE HEILKUNST
+        </span>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+          Thai Massage Hamburg –<br />
+          <span class="italic font-light text-[#C4A77D]">Was steckt dahinter?</span>
+        </h1>
+        <p class="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed">
+          Eine 2.500 Jahre alte Heilkunst – erklärt von Prakun Thai Massage Winterhude.
+          Techniken, Wirkung, Ablauf und was Sie bei uns erwartet.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/buchen"
+            class="inline-block bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base px-8 py-4 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+          >
+            Termin buchen – ab 35€
+          </a>
+          <a
+            href="/leistungen"
+            class="inline-block border-2 border-white/30 text-white hover:bg-white hover:text-[#2B2B2B] text-base px-8 py-4 rounded-full font-medium transition-all duration-300 hover:-translate-y-1"
+          >
+            Alle Massagen ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro: What is Thai Massage -->
+    <section class="py-20 md:py-28 bg-[#F7F6F4]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/10 text-[#7B2958] text-sm font-medium mb-4">
+              URSPRUNG & TRADITION
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-6">
+              Was ist Thai Massage?
+            </h2>
+            <div class="space-y-4 text-[#666666] leading-relaxed">
+              <p>
+                Thai Massage – auf Thai <em>นวดแผนไทย</em> (Nuat Phaen Thai) – ist eine jahrtausendealte Körpertherapie, die ihren Ursprung im buddhistischen Thailand hat. Sie wurde im Wat Pho-Tempel in Bangkok systematisiert und über Generationen weitergegeben.
+              </p>
+              <p>
+                Im Kern arbeitet Thai Massage entlang der <strong>Sen-Linien</strong> – ein Netz von Energiebahnen, vergleichbar mit den Meridianen in der chinesischen Medizin. Durch gezielte Akupressur, Dehnungen und Gelenkmobilisation werden Blockaden gelöst, die Energie zum Fließen gebracht und das körperliche Gleichgewicht wiederhergestellt.
+              </p>
+              <p>
+                Was Thai Massage von anderen Massageformen unterscheidet: Sie arbeitet <strong>ohne Öl</strong>, auf einer <strong>Bodenmatte</strong> und mit dem ganzen Körper des Therapeuten – Hände, Ellenbogen, Knie, Füße. Der Gast trägt bequeme Kleidung und wird aktiv in Dehnpositionen begleitet.
+              </p>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/10">
+            <img
+              src="/service-teilkoerpermassage.jpg"
+              alt="Thai Massage Technik – Akupressur und Dehnung"
+              class="w-full h-[500px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Techniques -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-[#C4A77D]/20 text-[#C4A77D] text-sm font-medium mb-4">
+            DIE TECHNIKEN
+          </span>
+          <h2 class="text-3xl md:text-5xl font-bold text-[#2B2B2B]">
+            Wie funktioniert Thai Massage?
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Akupressur auf Sen-Linien",
+              icon: "👆",
+              description: "Mit Daumen, Handballen und Ellenbogen wird gezielter Druck auf die Energiebahnen des Körpers ausgeübt. Dies löst Verspannungen, regt die Durchblutung an und aktiviert die Selbstheilungskräfte."
+            },
+            {
+              title: "Passive Yoga-Dehnungen",
+              icon: "🧘",
+              description: "Der Therapeut führt den Körper sanft in Dehnpositionen – ähnlich wie Yoga, nur passiv. Diese Technik verbessert die Flexibilität, mobilisiert die Gelenke und fördert die Körperwahrnehmung."
+            },
+            {
+              title: "Rhythmische Kompressionen",
+              icon: "🤲",
+              description: "Durch gleichmäßigen Wechseldruck mit Handballen, Knien oder Füßen wird die Muskulatur tiefgreifend gelockert. Diese Technik ist besonders wirksam bei chronischen Verspannungen im Rücken und den Schultern."
+            }
+          ].map(item => (
+            <div class="bg-[#F7F6F4] rounded-2xl p-8 border border-[#E5E2DD]">
+              <div class="text-4xl mb-4">{item.icon}</div>
+              <h3 class="text-xl font-bold text-[#2B2B2B] mb-3">{item.title}</h3>
+              <p class="text-[#666666] leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-20 md:py-28 bg-[#1a1a1a]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/20 text-[#C4A77D] text-sm font-medium mb-4">
+            WIRKUNG & NUTZEN
+          </span>
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+            Was bewirkt Thai Massage?
+          </h2>
+          <p class="text-white/60 max-w-2xl mx-auto">
+            Regelmäßige Thai Massage wirkt auf mehreren Ebenen – körperlich, mental und energetisch.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: "Rücken- & Nackenschmerzen lindern", desc: "Gezielte Akupressur löst tiefe Muskelverspannungen, die bei langer Büroarbeit entstehen." },
+            { title: "Beweglichkeit verbessern", desc: "Die passiven Dehnungen mobilisieren Gelenke und verlängern die Muskulatur nachhaltig." },
+            { title: "Stress & Erschöpfung abbauen", desc: "Die rhythmische Arbeit auf den Energiebahnen beruhigt das Nervensystem und fördert Tiefenentspannung." },
+            { title: "Durchblutung anregen", desc: "Kompressionen und Dehnungen verbessern den Blutfluss in Muskeln und Gewebe spürbar." },
+            { title: "Kopfschmerzen & Migräne", desc: "Viele Gäste berichten von deutlicher Linderung nach regelmäßigen Behandlungen des Nacken- und Kopfbereichs." },
+            { title: "Energie & Vitalität steigern", desc: "Anders als bei sedierenden Massagen fühlen Sie sich nach Thai Massage oft frisch und energiegeladen." }
+          ].map(item => (
+            <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-[#C4A77D]/30 transition-all duration-300">
+              <h3 class="text-lg font-bold text-white mb-2">{item.title}</h3>
+              <p class="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 md:py-28 bg-[#F7F6F4]">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-[#7B2958]/10 text-[#7B2958] text-sm font-medium mb-4">
+            HÄUFIGE FRAGEN
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#2B2B2B]">
+            Thai Massage – Ihre Fragen beantwortet
+          </h2>
+        </div>
+        <div class="space-y-4">
+          {faqItems.map((item) => (
+            <details class="group bg-white rounded-2xl border border-[#E5E2DD] overflow-hidden">
+              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-[#2B2B2B] hover:text-[#7B2958] transition-colors list-none">
+                {item.question}
+                <span class="ml-4 flex-shrink-0 text-[#7B2958] text-xl font-light group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <div class="px-6 pb-5 text-[#666666] leading-relaxed">{item.answer}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-[#7B2958]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Thai Massage in Hamburg erleben – bei Prakun Winterhude
+        </h2>
+        <p class="text-white/70 mb-8 max-w-xl mx-auto">
+          Seit 2012 praktizieren wir authentische Thai Massage auf höchstem Niveau.
+          Zertifizierte Therapeuten · ab 35€ · täglich geöffnet
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/buchen" class="inline-block bg-white text-[#7B2958] hover:bg-[#F7F6F4] text-base px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            Jetzt Termin buchen
+          </a>
+          <a href="/leistungen" class="inline-block border-2 border-white/50 text-white hover:bg-white/10 text-base px-8 py-4 rounded-full font-medium transition-all duration-300 hover:-translate-y-1">
+            Alle Behandlungen
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

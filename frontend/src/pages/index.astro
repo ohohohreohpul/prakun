@@ -14,11 +14,11 @@ import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 import MonthlyOfferPopup from '../components/MonthlyOfferPopup';
 import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
-import { localBusinessSchema, faqSchema, reviewSchema } from '../lib/structuredData';
+import { localBusinessSchema, faqSchema, reviewSchema, siteLinksSearchBoxSchema } from '../lib/structuredData';
 import { faqItems, testimonials } from '../data/mockData';
 
-const pageTitle = "Prakun Thai Massage Hamburg - Authentische Wellness & Entspannung";
-const pageDescription = "Erleben Sie authentische Thai-Massage in Hamburg. Professionelle Therapeuten, entspannende Atmosphäre und individuelle Behandlungen für Ihr Wohlbefinden.";
+const pageTitle = "Thai Massage Hamburg – Prakun | ab 45€ · Seit 2012";
+const pageDescription = "Thai Massage Hamburg ab 45€ – Prakun Winterhude ★ 4,9/5 (200+ Bewertungen). Zertifizierte Therapeuten, authentische Techniken, Termine online buchbar. Jetzt reservieren!";
 
 const faqStructuredData = faqSchema(faqItems.map(faq => ({
   question: faq.question,
@@ -31,7 +31,7 @@ const reviewStructuredData = reviewSchema(testimonials.map(t => ({
   text: t.text
 })));
 
-const allStructuredData = [localBusinessSchema, faqStructuredData, reviewStructuredData];
+const allStructuredData = [localBusinessSchema, siteLinksSearchBoxSchema, faqStructuredData, reviewStructuredData];
 ---
 
 <BaseLayout
