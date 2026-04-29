@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import NeighborhoodLandingPage from '../components/NeighborhoodLandingPage';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, localBusinessSchema, faqSchema } from '../lib/structuredData';
+
+const neighborhood = {
+  name: "Steilshoop",
+  slug: "steilshoop",
+  distance: "18 Minuten",
+  transport: "Bus 173 ab Steilshoop / U3 Barmbek",
+  heroImage: "/neighborhood-steilshoop.jpg",
+  description: "Steilshoop ist ein lebhafter Stadtteil im Nordosten Hamburgs, bekannt für seine großzügigen Grünanlagen und das pulsierende Zentrum rund um das Steilshooper Einkaufszentrum. Von hier aus erreichen Sie Prakun Thai Massage am Winterhuder Weg in nur rund 18 Minuten – mit dem Bus direkt bis Barmbek und weiter nach Winterhude, oder ganz entspannt mit dem Auto über die Hebebrandstraße.",
+  faq: [
+    { question: "Gibt es eine Thai Massage in der Nähe von Steilshoop?", answer: "Ja! Prakun Thai Massage liegt nur etwa 18 Minuten von Steilshoop entfernt, am Winterhuder Weg 24 in Hamburg-Winterhude. Mit dem Bus 173 ab Steilshoop Richtung Barmbek und dann weiter mit der U3 nach Winterhude sind Sie bequem bei uns – oder in ca. 12 Minuten mit dem Auto über die Hebebrandstraße." },
+    { question: "Wie komme ich von Steilshoop zu Prakun Thai Massage?", answer: "Am bequemsten mit dem Bus 173 ab Steilshoop bis Barmbek, dann weiter mit der U3 bis Kellinghusenstraße – die Gesamtfahrt dauert ca. 18 Minuten. Mit dem Auto über die Hebebrandstraße und den Stadtring sind Sie in rund 12 Minuten am Studio. Kostenlose Parkplätze stehen direkt am Winterhuder Weg zur Verfügung." },
+    { question: "Welche Massagen sind bei Steilshoop-Bewohnern besonders beliebt?", answer: "Unsere Gäste aus Steilshoop schätzen besonders die Traditionelle Thai-Massage (ab 49 €) und die wohltuende Hot-Stone-Massage. Für Berufstätige aus dem Stadtteil ist auch die entspannende Aroma-Öl-Massage als Ausgleich nach einem langen Tag sehr beliebt." },
+    { question: "Kann ich einen Massagegutschein für jemanden in Steilshoop kaufen?", answer: "Selbstverständlich! Unsere Massagegutscheine können Sie bequem online bestellen und digital versenden – ideal als Geschenk für Familie oder Freunde in Steilshoop. Gutscheine sind ab 49 € erhältlich und 3 Jahre gültig." },
+    { question: "Sind Abendtermine für Berufstätige aus Steilshoop verfügbar?", answer: "Ja, wir sind montags bis freitags bis 20:00 Uhr geöffnet. Abendtermine sind besonders gefragt – buchen Sie frühzeitig online auf prakunthaimassage.de/buchen, um Ihren Wunschtermin zu sichern." },
+  ]
+};
+
+const pageTitle = "Thai Massage Steilshoop Hamburg – Prakun Thai Massage | 18 Min entfernt";
+const pageDescription = "Thai Massage nah an Steilshoop Hamburg – Prakun Thai Massage, nur 18 Minuten von Steilshoop! 4.9★, zertifizierte Therapeuten, ab 24 €. Mo–Fr bis 20 Uhr. Jetzt buchen!";
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Thai Massage Steilshoop", url: "https://prakunthaimassage.de/thai-massage-steilshoop" }
+]);
+
+const faqStructuredData = faqSchema(neighborhood.faq);
+const allStructuredData = [localBusinessSchema, faqStructuredData, breadcrumb];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords="Thai Massage Steilshoop, Massage Steilshoop Hamburg, Thai Massage Hamburg Steilshoop, Wellness Steilshoop, Massage Steilshooper Allee"
+  structuredData={allStructuredData}
+>
+  <Header client:load />
+  <NeighborhoodLandingPage client:load neighborhood={neighborhood} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
