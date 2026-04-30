@@ -1,6 +1,11 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "www.prakunthaimassage.de" }],
+      "destination": "https://prakunthaimassage.de/:path",
+      "permanent": true
+    }
   ],
   "buildCommand": "yarn build",
   "outputDirectory": "dist",

@@ -239,7 +239,7 @@ export const faqSchema = (faqs: Array<{ question: string; answer: string }>) => 
   }))
 });
 
-// ---- 7. AggregateRating + Review schema ----
+// ---- 7. Review schema (aggregateRating lives on localBusinessSchema only) ----
 export const reviewSchema = (reviews: Array<{
   author: string;
   rating: number;
@@ -250,13 +250,6 @@ export const reviewSchema = (reviews: Array<{
   "@type": "LocalBusiness",
   "@id": "https://prakunthaimassage.de/#business",
   "name": "Prakun Thai Massage Hamburg",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": (reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length).toFixed(1),
-    "reviewCount": reviews.length,
-    "bestRating": 5,
-    "worstRating": 1
-  },
   "review": reviews.map((review) => ({
     "@type": "Review",
     "author": {
