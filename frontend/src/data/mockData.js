@@ -274,14 +274,14 @@ Buchen Sie noch heute Ihre Bambus-Massage bei Prakun Thai Massage und erleben Si
   'lomi-lomi-massage': {
     id: 'lomi-lomi-massage',
     slug: 'lomi-lomi-massage',
-    title: 'Lomi Lomi Nui Massage',
-    titleEn: 'Lomi Lomi Nui Massage',
-    subtitle: 'Hawaiianisches Massage-Ritual',
+    title: 'Lomi Lomi Massage',
+    titleEn: 'Lomi Lomi Massage',
+    subtitle: 'Hawaiianisches Lomi Lomi Nui Ritual',
     heroImage: '/service-lomi-lomi-massage.jpg',
     cardImage: '/service-lomi-lomi-massage.jpg',
     duration: '60-120 min',
     priceFrom: 72,
-    metaDescription: 'Lomi Lomi Nui Massage Hamburg ab 72 €. Hawaiianisches Heilritual für tiefe Entspannung von Körper & Geist. Zertifiziert – ✓ Jetzt Termin buchen.',
+    metaDescription: 'Lomi Lomi Massage Hamburg ab 72 €. Traditionelles hawaiianisches Heilritual – fließende Bewegungen für tiefe Entspannung von Körper & Geist. 4,9★ Zertifiziert. ✓ Jetzt buchen.',
     category: 'wellness',
     pricing: [
       { duration: '60 min', price: 72 },
