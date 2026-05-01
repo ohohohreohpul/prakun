@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import ServicePage from '../../components/ServicePage';
+import Footer from '../../components/Footer';
+import FloatingPhoneBubble from '../../components/FloatingPhoneBubble';
+import { createServiceSchema, breadcrumbSchema, createHowToSchema } from '../../lib/structuredData';
+import { servicesDetailed } from '../../data/mockData';
+
+export function getStaticPaths() {
+  const services = Object.values(servicesDetailed);
+
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+}
+
+const { service } = Astro.props;
+
+// Use dedicated metaDescription if available (CTR-optimized), else trim long description
+const metaDescription = service.metaDescription ||
+  (service.description.length > 160
+    ? service.description.substring(0, 157).trimEnd() + '...'
+    : service.description);
+
+const pageTitle = `${service.title} Hamburg – Prakun Thai Massage | ab ${service.priceFrom}€`;
+const pageDescription = metaDescription;
+
+const serviceSchema = createServiceSchema({
+  title: service.title,
+  slug: service.slug,
+  description: service.description.substring(0, 300),
+  priceFrom: service.priceFrom,
+  duration: service.duration
+});
+
+const howToSchema = createHowToSchema({
+  title: service.title,
+  slug: service.slug
+});
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://prakunthaimassage.de" },
+  { name: "Leistungen", url: "https://prakunthaimassage.de/leistungen" },
+  { name: service.title, url: `https://prakunthaimassage.de/massage/${service.slug}` }
+]);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={`${service.title} Hamburg, ${service.title} Winterhude, ${service.title} Preis, Thai Massage Hamburg, Wellness Hamburg, Massage ${service.title}`}
+  structuredData={[serviceSchema, howToSchema, breadcrumb]}
+>
+  <Header client:load />
+  <ServicePage client:visible slug={service.slug} />
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
