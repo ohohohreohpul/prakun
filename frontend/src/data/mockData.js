@@ -318,7 +318,7 @@ Erleben Sie die heilende Kraft der Lomi Lomi Nui Massage und lassen Sie sich von
     cardImage: '/service-ayurveda-abhyanga.jpg',
     duration: '30-120 min',
     priceFrom: 42,
-    metaDescription: 'Ayurveda Abhyanga Massage Hamburg ab 42 €. Traditionelle indische Ganzkörper-Ölmassage mit Kräuterölen. Prakun Winterhude ✓ Online buchen.',
+    metaDescription: 'Abhyanga Massage Hamburg ab 42 € – Ayurveda Öl-Ganzkörpermassage. Traditionelles indisches Kräuteröl-Ritual, 4,9★ zertifiziert. Prakun Winterhude ✓ Jetzt buchen.',
     category: 'ayurveda',
     isPopular: true,
     pricing: [
