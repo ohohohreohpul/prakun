@@ -17,8 +17,8 @@ import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
 import { localBusinessSchema, faqSchema, reviewSchema, siteLinksSearchBoxSchema } from '../lib/structuredData';
 import { faqItems, testimonials } from '../data/mockData';
 
-const pageTitle = "Thai Massage Hamburg – Prakun | ab 45€ · Seit 2012";
-const pageDescription = "Thai Massage Hamburg ab 45€ – Prakun Winterhude ★ 4,9/5 (200+ Bewertungen). Zertifizierte Therapeuten, authentische Techniken, Termine online buchbar. Jetzt reservieren!";
+const pageTitle = "Thai Massage Hamburg ab 24 € | Prakun ★ 4,9/5 · 200+ Bewertungen";
+const pageDescription = "Massage Hamburg & Thai Massage ab 24 € – Prakun Winterhude ★ 4,9/5 (200+ Bewertungen). Zertifizierte Therapeuten, Gutscheine verfügbar. Täglich geöffnet. ✓ Jetzt buchen!";
 
 const faqStructuredData = faqSchema(faqItems.map(faq => ({
   question: faq.question,
@@ -37,7 +37,7 @@ const allStructuredData = [localBusinessSchema, siteLinksSearchBoxSchema, faqStr
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  keywords="Thai Massage Hamburg, Wellness Massage, Aromatherapie, Ganzkörpermassage, Hot Stone Massage, Ayurveda Hamburg, Schwangerschaftsmassage, Bamboo Massage, Kräuterstempel Massage"
+  keywords="Thai Massage Hamburg, Massage Hamburg, Lomi Lomi Massage Hamburg, Fußmassage Hamburg, Gutschein Thai Massage Hamburg, Hot Stone Massage Hamburg, Ayurveda Hamburg, Ganzkörpermassage Hamburg, Teilkörpermassage Hamburg"
   structuredData={allStructuredData}
 >
   <Header client:load />
