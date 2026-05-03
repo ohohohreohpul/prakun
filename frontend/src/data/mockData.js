@@ -167,7 +167,7 @@ Gönnen Sie sich dieses außergewöhnliche Erlebnis bei Prakun Thai Massage – 
     cardImage: '/service-hot-stone-massage.jpg',
     duration: '45-120 min',
     priceFrom: 55,
-    metaDescription: 'Hot Stone Massage Hamburg ab 55 €. Warme Basaltsteine lösen tiefe Muskelverspannungen – heilsam & entspannend. Prakun Thai Massage Winterhude ✓ Online buchen.',
+    metaDescription: 'Hot Stone Massage Hamburg ab 55 € – Vulkanstein-Tiefenwärme löst Muskelverspannungen. 4,9★ Prakun Thai Massage Winterhude. Tgl. geöffnet ✓ Jetzt online buchen.',
     category: 'wellness',
     isPopular: true,
     pricing: [
@@ -194,7 +194,29 @@ Besonders empfehlenswert ist die Hot Stone Massage bei chronischen Muskelverspan
 
 In unserem Studio am Winterhuder Weg in Hamburg kombinieren wir die traditionelle Hot Stone Technik mit unserem Wissen um Thai-Massage und westliche Massagemethoden. Das Ergebnis ist eine ganzheitliche Behandlung, die Körper und Geist in Einklang bringt.
 
-Erleben Sie die transformative Kraft der Hot Stone Massage bei Prakun Thai Massage. Lassen Sie sich von der uralten Heilkraft der Steine verwöhnen und entdecken Sie eine neue Dimension der Entspannung.`
+Erleben Sie die transformative Kraft der Hot Stone Massage bei Prakun Thai Massage. Lassen Sie sich von der uralten Heilkraft der Steine verwöhnen und entdecken Sie eine neue Dimension der Entspannung.`,
+    faq: [
+      {
+        question: 'Was ist eine Hot Stone Massage und wie wirkt sie?',
+        answer: 'Bei der Hot Stone Massage werden erhitzte Basaltvulkansteine auf Energiepunkte des Körpers gelegt und als Massagewerkzeug eingesetzt. Die Steine werden auf ca. 50\u201360\u00a0\u00b0C erhitzt. Ihre Tiefenwärme entspannt Muskeln intensiver als eine klassische Massage, fördert die Durchblutung und löst hartnäckige Verspannungen. Bei Prakun Thai Massage Hamburg ist die Hot Stone Massage ab 55\u00a0€ buchbar.'
+      },
+      {
+        question: 'Was kostet eine Hot Stone Massage in Hamburg?',
+        answer: 'Bei Prakun Thai Massage kostet die Hot Stone Massage ab 55\u00a0€ (45 min), 70\u00a0€ (60 min), 102\u00a0€ (90 min) und 132\u00a0€ (120 min). Für ein vollständiges Erlebnis empfehlen wir die 90-Minuten-Variante. Bequem online buchbar unter prakunthaimassage.de – täglich geöffnet in Hamburg Winterhude.'
+      },
+      {
+        question: 'Für wen ist eine Hot Stone Massage nicht geeignet?',
+        answer: 'Eine Hot Stone Massage sollte nicht durchgeführt werden bei: akuten Entzündungen, Fieber, starken Krampfadern, Schwangerschaft, Herzerkrankungen oder offenen Wunden. Bei Diabetes bitte vorab informieren. Als Alternative empfehlen wir die Aromaöl-Massage (ab 36\u00a0€) oder Schwangerschaftsmassage (ab 50\u00a0€).'
+      },
+      {
+        question: 'Wie lange dauert eine Hot Stone Massage bei Prakun Hamburg?',
+        answer: 'Wir bieten Hot Stone Massagen in 45, 60, 90 und 120 Minuten an. Für ein vollständiges Erlebnis empfehlen wir mindestens 90 Minuten, damit die Wärme der Steine tief in die Muskulatur eindringen kann. In dieser Zeit werden alle Körperbereiche von Rücken, Schultern und Beinen behandelt.'
+      },
+      {
+        question: 'Kann ich eine Hot Stone Massage als Gutschein kaufen?',
+        answer: 'Ja! Eine Hot Stone Massage ist eines der beliebtesten Geschenke zu Geburtstagen, Weihnachten oder Muttertag. Gutscheine sind ab 55\u00a0€ erhältlich, 3 Jahre gültig und werden digital zugesandt. Einfach online bestellen auf prakunthaimassage.de.'
+      }
+    ]
   },
   'kraeuterstempel-massage': {
     id: 'kraeuterstempel-massage',
@@ -306,7 +328,29 @@ Die Lomi Lomi ist besonders empfehlenswert für Menschen, die unter Stress stehe
 
 Bei Prakun Thai Massage am Winterhuder Weg in Hamburg bringen wir Ihnen den Aloha-Spirit Hawaiis nach Deutschland. Unsere Therapeuten wurden in der authentischen Lomi Lomi Technik ausgebildet und führen jede Behandlung mit der liebevollen Achtsamkeit durch, die diesem besonderen Ritual gebührt.
 
-Erleben Sie die heilende Kraft der Lomi Lomi Nui Massage und lassen Sie sich von den sanften Wellen der Entspannung tragen.`
+Erleben Sie die heilende Kraft der Lomi Lomi Nui Massage und lassen Sie sich von den sanften Wellen der Entspannung tragen.`,
+    faq: [
+      {
+        question: 'Was ist eine Lomi Lomi Massage?',
+        answer: 'Lomi Lomi Nui ist eine traditionelle hawaiianische Massage, die Körper, Geist und Seele gleichzeitig behandelt. Mit langen, fließenden Bewegungen – oft mit Unterarmen und Ellbogen – imitiert der Therapeut die Bewegungen des Ozeans. "Lomi" bedeutet auf Hawaiianisch "kneten", "Nui" steht für "groß". Bei Prakun Thai Massage Hamburg ist die Lomi Lomi ab 72\u00a0€ buchbar.'
+      },
+      {
+        question: 'Was kostet eine Lomi Lomi Massage Hamburg?',
+        answer: 'Bei Prakun Thai Massage ist die Lomi Lomi Massage ab 72\u00a0€ (60 min), 105\u00a0€ (90 min) und 135\u00a0€ (120 min) erhältlich. Die Lomi Lomi ist aufwendiger als eine klassische Aromamassage und erfordert speziell ausgebildete Therapeuten. Jetzt online buchen auf prakunthaimassage.de.'
+      },
+      {
+        question: 'Was ist der Unterschied zwischen Lomi Lomi und Thai Massage?',
+        answer: 'Die Thai Massage ist eine 2.500 Jahre alte asiatische Technik mit Akupressur, Dehnungen und ohne Öl – auf einer Bodenmatte. Die Lomi Lomi stammt aus Hawaii und setzt auf lange, fließende Ölstreichungen mit Unterarmen, die einen meditativen Zustand erzeugen. Beide Massagen sind ganzheitlich, unterscheiden sich aber in Technik, Ursprung und Atmosphäre.'
+      },
+      {
+        question: 'Muss man sich für eine Lomi Lomi Massage ausziehen?',
+        answer: 'Ja, wie bei einer klassischen Ölmassage. Der Körper wird diskret mit großen Tüchern abgedeckt – immer nur der gerade behandelte Bereich ist frei. Wir verwenden hochwertige, hautverträgliche Massageöle. Alle Therapeuten bei Prakun Thai Massage sind zertifiziert und arbeiten professionell und respektvoll.'
+      },
+      {
+        question: 'Für wen ist eine Lomi Lomi Massage besonders empfehlenswert?',
+        answer: 'Die Lomi Lomi Massage ist ideal für Menschen in Stressphasen, die tiefe Entspannung suchen; Personen mit Erschöpfung oder emotionalen Belastungen; alle, die eine besondere, fast meditative Erfahrung suchen. Auch als romantisches Geschenk für Paare sehr beliebt. Gutscheine ab 72\u00a0€ online erhältlich.'
+      }
+    ]
   },
   'ayurveda-abhyanga': {
     id: 'ayurveda-abhyanga',
@@ -431,7 +475,7 @@ Bei Prakun Thai Massage am Winterhuder Weg in Hamburg bieten wir Ihnen diese ent
     cardImage: '/service-fussmassage.jpg',
     duration: '30-60 min',
     priceFrom: 35,
-    metaDescription: 'Fußmassage Hamburg ab 35 €. Thai Reflexzonenmassage für müde Beine & den ganzen Körper. Wohltuend & effektiv. Prakun Winterhude ✓ Online buchbar.',
+    metaDescription: 'Fußmassage Hamburg ab 35 € – Thai Reflexzonenmassage für müde Füße & Beine. Wirkung auf den ganzen Körper. 4,9★ Prakun Winterhude ✓ Jetzt buchen.',
     category: 'thai',
     pricing: [
       { duration: '30 min', price: 35 },
@@ -456,7 +500,29 @@ Die Fußmassage ist besonders empfehlenswert für Menschen, die viel stehen oder
 
 Bei Prakun Thai Massage am Winterhuder Weg in Hamburg bieten wir Ihnen eine authentische Fußmassage in entspannter Atmosphäre. Unsere Therapeuten sind in der Kunst der Reflexzonenmassage geschult und verstehen es, die Behandlung individuell auf Ihre Bedürfnisse abzustimmen.
 
-Gönnen Sie Ihren Füßen die Aufmerksamkeit, die sie verdienen – und erleben Sie, wie die ganze Körper davon profitiert.`
+Gönnen Sie Ihren Füßen die Aufmerksamkeit, die sie verdienen – und erleben Sie, wie die ganze Körper davon profitiert.`,
+    faq: [
+      {
+        question: 'Was kostet eine Fußmassage in Hamburg?',
+        answer: 'Bei Prakun Thai Massage kostet eine Fußmassage ab 35\u00a0€ für 30 Minuten. Die 45-Minuten-Behandlung ist für 52\u00a0€ buchbar, die 60-Minuten-Fußmassage für 62\u00a0€ – inklusive einleitendem Fußbad. Bequem online buchen unter prakunthaimassage.de in Hamburg Winterhude.'
+      },
+      {
+        question: 'Was ist eine Reflexzonenmassage und wie wirkt sie?',
+        answer: 'Die Reflexzonenmassage arbeitet mit dem Prinzip, dass bestimmte Punkte an den Füßen mit inneren Organen und Körperbereichen verbunden sind. Durch gezielten Druck auf diese Punkte können Blockaden gelöst, Durchblutung angeregt und das allgemeine Wohlbefinden gesteigert werden. Bei Prakun Thai Massage in Hamburg kombinieren wir klassische Fußmassage mit Reflexzonentechnik.'
+      },
+      {
+        question: 'Wie lange dauert eine Fußmassage bei Prakun Hamburg?',
+        answer: 'Wir bieten Fußmassagen in drei Zeitformaten: 30 Minuten (35\u00a0€), 45 Minuten (52\u00a0€) und 60 Minuten (62\u00a0€). Für den ersten Besuch empfehlen wir die 45- oder 60-minütige Version, damit der Therapeut alle Reflexzonen gründlich behandeln kann.'
+      },
+      {
+        question: 'Muss ich mich für eine Fußmassage ausziehen?',
+        answer: 'Nein! Bei einer Fußmassage müssen Sie nur Schuhe und Socken ausziehen. Die Behandlung erfolgt bequem in einem Sessel. Kleidung muss nicht gewechselt werden – perfekt für die Mittagspause oder auf dem Weg nach Hause. Prakun Thai Massage liegt am Winterhuder Weg 24 in Hamburg.'
+      },
+      {
+        question: 'Hilft eine Fußmassage bei Rücken- oder Kopfschmerzen?',
+        answer: 'Ja – das ist das Prinzip der Reflexzonenmassage. Bestimmte Fußpunkte korrespondieren mit Wirbelsäule, Nacken und Kopfbereich. Viele Gäste berichten nach einer Fußmassage von Erleichterung bei Rücken- und Nackenverspannungen sowie Kopfschmerzen. Für akute Beschwerden empfehlen wir die 60-minütige Behandlung.'
+      }
+    ]
   },
   'thai-warrior-massage': {
     id: 'thai-warrior-massage',
