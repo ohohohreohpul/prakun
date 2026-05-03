@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import ServicePage from '../../components/ServicePage';
 import Footer from '../../components/Footer';
 import FloatingPhoneBubble from '../../components/FloatingPhoneBubble';
-import { createServiceSchema, breadcrumbSchema, createHowToSchema } from '../../lib/structuredData';
+import { createServiceSchema, breadcrumbSchema, createHowToSchema, faqSchema } from '../../lib/structuredData';
 import { servicesDetailed } from '../../data/mockData';
 
 export function getStaticPaths() {
@@ -45,13 +45,16 @@ const breadcrumb = breadcrumbSchema([
   { name: "Leistungen", url: "https://prakunthaimassage.de/leistungen" },
   { name: service.title, url: `https://prakunthaimassage.de/massage/${service.slug}` }
 ]);
+
+const serviceFaqSchema = service.faq && service.faq.length > 0 ? faqSchema(service.faq) : null;
+const structuredDataList = [serviceSchema, howToSchema, breadcrumb, ...(serviceFaqSchema ? [serviceFaqSchema] : [])];
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
   keywords={`${service.title} Hamburg, ${service.title} Winterhude, ${service.title} Preis, Thai Massage Hamburg, Wellness Hamburg, Massage ${service.title}`}
-  structuredData={[serviceSchema, howToSchema, breadcrumb]}
+  structuredData={structuredDataList}
 >
   <Header client:load />
   <ServicePage client:visible slug={service.slug} />
