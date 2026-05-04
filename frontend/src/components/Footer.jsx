@@ -87,6 +87,28 @@ const Footer = () => {
             </ul>
           </motion.div>
 
+          {/* Neighborhood Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <h3 className="text-sm font-bold mb-5 text-[#C4A77D]">Stadtteile</h3>
+            <ul className="space-y-3">
+              {navigationLinks.neighborhoods.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-white/60 hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>{link.label}</span>
+                    <ArrowRight className="h-3 w-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
           {/* Legal Links */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
