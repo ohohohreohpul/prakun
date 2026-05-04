@@ -50,7 +50,7 @@ Buchen Sie noch heute Ihren Termin und gönnen Sie Ihrem Körper die Aufmerksamk
     cardImage: '/service-ganzkoerpermassage.jpg',
     duration: '45-120 min',
     priceFrom: 49,
-    metaDescription: 'Ganzkörpermassage Hamburg ab 49 €. Vollständige Entspannung von Kopf bis Fuß – über 10 Jahre Erfahrung, 4,9 Sterne (200+ Bewertungen). ✓ Jetzt buchen.',
+    metaDescription: 'Ganzkörpermassage Hamburg ab 49 € – Vollentspannung von Kopf bis Fuß. 10+ Jahre Erfahrung, 4,9★ (200+ Bewertungen). Prakun Thai Massage Winterhude ✓ Buchen!',
     category: 'thai',
     isPopular: true,
     pricing: [
@@ -89,7 +89,7 @@ Gönnen Sie sich die wohlverdiente Pause und buchen Sie noch heute Ihre Ganzkör
     cardImage: '/service-aromaoel-massage.jpg',
     duration: '30-120 min',
     priceFrom: 36,
-    metaDescription: 'Aromaöl-Massage Hamburg ab 36 €. Duftende Pflegeöle für Körper und Seele. Zertifizierte Therapeuten in Winterhude. 30–120 Min. ✓ Online buchen.',
+    metaDescription: 'Aroma Massage Hamburg ab 36 € – Duftende Pflegeöle, 30–120 Min. Aromaöl-Massage bei Prakun Thai Massage Winterhude. 4,9★ Zertifiziert. ✓ Online buchen!',
     category: 'wellness',
     isPopular: true,
     pricing: [
@@ -303,7 +303,7 @@ Buchen Sie noch heute Ihre Bambus-Massage bei Prakun Thai Massage und erleben Si
     cardImage: '/service-lomi-lomi-massage.jpg',
     duration: '60-120 min',
     priceFrom: 72,
-    metaDescription: 'Lomi Lomi Massage Hamburg ab 72 €. Traditionelles hawaiianisches Heilritual – fließende Bewegungen für tiefe Entspannung von Körper & Geist. 4,9★ Zertifiziert. ✓ Jetzt buchen.',
+    metaDescription: 'Lomi Lomi Massage Hamburg ab 72 € – Hawaiianisches Heilritual. Fließende Wellen-Technik für Körper, Geist & Seele. 4,9★ Prakun Winterhude ✓ Online buchen!',
     category: 'wellness',
     pricing: [
       { duration: '60 min', price: 72 },
@@ -840,12 +840,22 @@ export const navigationLinks = {
     { label: "Kontakt", href: "/kontakt" }
   ],
   services: [
-    { label: "Wellness Massage", href: "/wellness-massage" },
-    { label: "Thailändische Massage", href: "/thai-massage" },
-    { label: "Ayurveda Massage", href: "/ayurveda-massage" },
+    { label: "Thai Massage Hamburg", href: "/massage/thai-massage" },
+    { label: "Lomi Lomi Massage", href: "/massage/lomi-lomi-massage" },
+    { label: "Ayurveda Abhyanga", href: "/massage/ayurveda-abhyanga" },
     { label: "Hot Stone Massage", href: "/massage/hot-stone-massage" },
-    { label: "Schwangerschaftsmassage", href: "/massage/schwangerschaftsmassage" },
-    { label: "Wellness Pakete", href: "/pakete" }
+    { label: "Aromaöl Massage", href: "/massage/aromaoel-massage" },
+    { label: "Fußmassage", href: "/massage/fussmassage" },
+    { label: "Schwangerschaftsmassage", href: "/massage/schwangerschaftsmassage" }
+  ],
+  neighborhoods: [
+    { label: "Thai Massage Winterhude", href: "/thai-massage-winterhude" },
+    { label: "Thai Massage Barmbek", href: "/thai-massage-barmbek" },
+    { label: "Thai Massage Eppendorf", href: "/thai-massage-eppendorf" },
+    { label: "Thai Massage Uhlenhorst", href: "/thai-massage-uhlenhorst" },
+    { label: "Thai Massage Eilbek", href: "/thai-massage-eilbek" },
+    { label: "Thai Massage Wandsbek", href: "/thai-massage-wandsbek" },
+    { label: "Thai Massage Alsterdorf", href: "/thai-massage-alsterdorf" }
   ],
   legal: [
     { label: "Impressum", href: "/impressum" },
