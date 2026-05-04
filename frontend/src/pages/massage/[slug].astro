@@ -46,7 +46,7 @@ const breadcrumb = breadcrumbSchema([
   { name: service.title, url: `https://prakunthaimassage.de/massage/${service.slug}` }
 ]);
 
-const serviceFaqSchema = service.faq && service.faq.length > 0 ? faqSchema(service.faq) : null;
+const serviceFaqSchema = (service as any).faq && (service as any).faq.length > 0 ? faqSchema((service as any).faq) : null;
 const structuredDataList = [serviceSchema, howToSchema, breadcrumb, ...(serviceFaqSchema ? [serviceFaqSchema] : [])];
 ---
 
