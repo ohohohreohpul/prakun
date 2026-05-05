@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://prakunthaimassage.de',
+  site: 'https://www.prakunthaimassage.de',
   output: 'static',
   integrations: [
     react(),
