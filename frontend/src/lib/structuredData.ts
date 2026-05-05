@@ -7,14 +7,14 @@
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
-  "@id": "https://prakunthaimassage.de/#business",
+  "@id": "https://www.prakunthaimassage.de/#business",
   "name": "Prakun Thai Massage Hamburg",
   "alternateName": "Prakun Massage Winterhude",
   "description": "Professionelle Thai-Massage im Herzen von Hamburg. Seit 2012 bieten wir authentische Thai-Massagen, Aromaöl-Massagen, Hot Stone, Ayurveda und Wellness-Pakete in Winterhude. Über 10.000 zufriedene Kunden, 4,9 Sterne bei Google.",
   "image": [
-    "https://prakunthaimassage.de/og-image.jpg"
+    "https://www.prakunthaimassage.de/og-image.jpg"
   ],
-  "url": "https://prakunthaimassage.de",
+  "url": "https://www.prakunthaimassage.de",
   "telephone": "+49-40-22697033",
   "email": "info@prakunthaimassage.de",
   "priceRange": "€€",
@@ -110,18 +110,18 @@ export const localBusinessSchema = {
 export const siteLinksSearchBoxSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://prakunthaimassage.de/#website",
-  "url": "https://prakunthaimassage.de",
+  "@id": "https://www.prakunthaimassage.de/#website",
+  "url": "https://www.prakunthaimassage.de",
   "name": "Prakun Thai Massage Hamburg",
   "description": "Professionelle Thai-Massage im Herzen von Hamburg seit 2012.",
   "publisher": {
-    "@id": "https://prakunthaimassage.de/#business"
+    "@id": "https://www.prakunthaimassage.de/#business"
   },
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://prakunthaimassage.de/leistungen?q={search_term_string}"
+      "urlTemplate": "https://www.prakunthaimassage.de/leistungen?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }
@@ -131,13 +131,13 @@ export const siteLinksSearchBoxSchema = {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://prakunthaimassage.de/#organization",
+  "@id": "https://www.prakunthaimassage.de/#organization",
   "name": "Prakun Thai Massage Hamburg",
   "alternateName": "Prakun Massage",
-  "url": "https://prakunthaimassage.de",
+  "url": "https://www.prakunthaimassage.de",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://prakunthaimassage.de/og-image.jpg",
+    "url": "https://www.prakunthaimassage.de/og-image.jpg",
     "width": 1200,
     "height": 630
   },
@@ -171,7 +171,7 @@ export const founderSchema = {
   "name": "Prakun-Gründerin",
   "jobTitle": "Gründerin & Inhaberin",
   "worksFor": {
-    "@id": "https://prakunthaimassage.de/#organization"
+    "@id": "https://www.prakunthaimassage.de/#organization"
   },
   "description": "Brachte das Wissen und die Leidenschaft für traditionelle Thai-Massage direkt aus Thailand nach Hamburg. Gründete Prakun Thai Massage im Jahr 2012 mit der Mission, authentische Heilkunst nach Winterhude zu bringen.",
   "knowsAbout": ["Thai Massage", "Traditionelle Heilkunst", "Aromatherapie", "Wellness"],
@@ -192,13 +192,13 @@ export const createServiceSchema = (service: {
 }) => ({
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": `https://prakunthaimassage.de/massage/${service.slug}#service`,
+  "@id": `https://www.prakunthaimassage.de/massage/${service.slug}#service`,
   "name": `${service.title} Hamburg`,
   "serviceType": service.title,
   "description": service.description,
-  "url": `https://prakunthaimassage.de/massage/${service.slug}`,
+  "url": `https://www.prakunthaimassage.de/massage/${service.slug}`,
   "provider": {
-    "@id": "https://prakunthaimassage.de/#business"
+    "@id": "https://www.prakunthaimassage.de/#business"
   },
   "areaServed": {
     "@type": "City",
@@ -209,7 +209,7 @@ export const createServiceSchema = (service: {
     "price": service.priceFrom,
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
-    "url": "https://prakunthaimassage.de/buchen"
+    "url": "https://www.prakunthaimassage.de/buchen"
   }
 });
 
@@ -248,7 +248,7 @@ export const reviewSchema = (reviews: Array<{
 }>) => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://prakunthaimassage.de/#business",
+  "@id": "https://www.prakunthaimassage.de/#business",
   "name": "Prakun Thai Massage Hamburg",
   "review": reviews.map((review) => ({
     "@type": "Review",
@@ -273,14 +273,14 @@ export const serviceListSchema = (services: Array<{ title: string; slug: string;
   "@type": "ItemList",
   "name": "Thai Massage Angebote Hamburg – Prakun Thai Massage",
   "description": "Alle Massage-Behandlungen bei Prakun Thai Massage Hamburg: Thai-Massage, Aromatherapie, Hot Stone, Ayurveda und mehr.",
-  "url": "https://prakunthaimassage.de/leistungen",
+  "url": "https://www.prakunthaimassage.de/leistungen",
   "numberOfItems": services.length,
   "itemListElement": services.map((service, index) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": `${service.title} Hamburg`,
     "description": service.description,
-    "url": `https://prakunthaimassage.de/massage/${service.slug}`
+    "url": `https://www.prakunthaimassage.de/massage/${service.slug}`
   }))
 });
 
