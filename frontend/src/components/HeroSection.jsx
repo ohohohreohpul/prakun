@@ -74,7 +74,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 tracking-tight"
           >
-            <span className="sr-only">Thai Massage Hamburg – </span>Weil Sie mehr
+            <span className="block text-base md:text-lg font-semibold text-[#C4A77D] tracking-wide mb-3">Thai Massage Hamburg</span>Weil Sie mehr
             <br />
             verdienen{' '}
             <span className="italic font-light text-[#C4A77D]">als nur</span>
