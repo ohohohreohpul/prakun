@@ -41,9 +41,9 @@ const howToSchema = createHowToSchema({
 });
 
 const breadcrumb = breadcrumbSchema([
-  { name: "Home", url: "https://prakunthaimassage.de" },
-  { name: "Leistungen", url: "https://prakunthaimassage.de/leistungen" },
-  { name: service.title, url: `https://prakunthaimassage.de/massage/${service.slug}` }
+  { name: "Home", url: "https://www.prakunthaimassage.de" },
+  { name: "Leistungen", url: "https://www.prakunthaimassage.de/leistungen" },
+  { name: service.title, url: `https://www.prakunthaimassage.de/massage/${service.slug}` }
 ]);
 
 const serviceFaqSchema = (service as any).faq && (service as any).faq.length > 0 ? faqSchema((service as any).faq) : null;
