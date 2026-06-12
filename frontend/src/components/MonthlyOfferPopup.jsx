@@ -111,7 +111,7 @@ const MonthlyOfferPopup = () => {
                   className="mb-6"
                 >
                   <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    60 Minuten
+                    45 Minuten
                   </h2>
                   <h3 className="text-3xl md:text-4xl font-bold text-white italic">
                     Ganzkörpermassage
@@ -127,7 +127,7 @@ const MonthlyOfferPopup = () => {
                 >
                   <p className="text-[#C4A77D] text-sm mb-1">nur</p>
                   <div className="flex items-center justify-center gap-3">
-                    <span className="text-6xl md:text-7xl font-bold text-white">57€</span>
+                    <span className="text-6xl md:text-7xl font-bold text-white">45€</span>
                   </div>
                  
                 </motion.div>
