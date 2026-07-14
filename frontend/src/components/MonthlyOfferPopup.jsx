@@ -100,7 +100,7 @@ const MonthlyOfferPopup = () => {
                   transition={{ delay: 0.3 }}
                   className="text-[#C4A77D] text-lg font-medium mb-2"
                 >
-                  Mai 2026
+                  Juli 2026
                 </motion.p>
 
                 {/* Main Offer */}
