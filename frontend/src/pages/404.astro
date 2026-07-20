@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+const pageTitle = 'Seite nicht gefunden (404) | Prakun Thai Massage Hamburg';
+const pageDescription =
+  'Diese Seite existiert leider nicht. Entdecken Sie unsere Thai-Massagen in Hamburg oder buchen Sie direkt einen Termin.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} noindex={true}>
+  <Header client:load />
+  <main class="bg-[#F7F6F4] min-h-screen">
+    <section class="pt-32 pb-24 text-center">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-7xl font-bold text-[#7B2958] mb-4">404</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-[#2B2B2B] mb-4">
+          Diese Seite gibt es leider nicht
+        </h1>
+        <p class="text-[#666666] text-lg mb-10">
+          Die gesuchte Seite wurde verschoben oder existiert nicht mehr. Vielleicht finden Sie
+          hier, wonach Sie suchen:
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/"
+            class="bg-[#7B2958] hover:bg-[#5C1E42] text-white rounded-full px-8 py-3 font-semibold transition-colors"
+            >Zur Startseite</a
+          >
+          <a
+            href="/leistungen"
+            class="bg-white border border-[#E5E2DD] hover:border-[#7B2958] text-[#2B2B2B] rounded-full px-8 py-3 font-semibold transition-colors"
+            >Alle Massagen</a
+          >
+          <a
+            href="/buchen"
+            class="bg-white border border-[#E5E2DD] hover:border-[#7B2958] text-[#2B2B2B] rounded-full px-8 py-3 font-semibold transition-colors"
+            >Termin buchen</a
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer client:visible />
+</BaseLayout>

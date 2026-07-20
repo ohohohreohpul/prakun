@@ -1,0 +1,69 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+interface Props {
+  title: string;
+  description: string;
+  heading: string;
+}
+
+const { title, description, heading } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Header client:load />
+  <main class="bg-[#F7F6F4] min-h-screen">
+    <section class="relative pt-24 pb-12 bg-[#1a1a1a]">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#7B2958]/20 to-transparent"></div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl md:text-5xl font-bold text-white">{heading}</h1>
+      </div>
+    </section>
+    <section class="py-12 md:py-16">
+      <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose-legal">
+        <slot />
+      </article>
+    </section>
+  </main>
+  <Footer client:visible />
+</BaseLayout>
+
+<style is:global>
+  .prose-legal h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin: 2rem 0 0.75rem;
+  }
+  .prose-legal h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .prose-legal p,
+  .prose-legal li {
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .prose-legal ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose-legal a {
+    color: #7b2958;
+    text-decoration: underline;
+  }
+  .prose-legal .placeholder-note {
+    background: #fff8e6;
+    border: 1px solid #f0d890;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    color: #8a6d1a;
+    font-size: 0.9rem;
+  }
+</style>

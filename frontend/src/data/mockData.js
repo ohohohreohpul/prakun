@@ -687,9 +687,9 @@ export const studio = {
   name: "Prakun Thai Massage",
   address: "Winterhuder Weg 24",
   city: "22085 Hamburg",
-  email: "info@prakunmassage.de",
+  email: "info@prakunthaimassage.de",
   phone: "040 22697033",
-  hours: "Mo-So: 10:00 - 20:00",
+  hours: "Mo–Fr 10:00–20:00 · Sa 10:00–18:00 · So 11:00–17:00",
   rating: 4.9,
   reviewCount: "200+",
   image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=750&h=500&fit=crop"
@@ -778,12 +778,12 @@ export const faqItems = [
   {
     id: 2,
     question: "Welche Massage ist die richtige für mich?",
-    answer: "Das hängt von Ihren Bedürfnissen ab. Bei Verspannungen im Nacken oder Rücken empfehlen wir die Traditionelle Thai Massage. Zur tiefen Entspannung eignet sich die Aromaöl-Massage. Bei Muskelschmerzen und Verspannungen ist die Hot Stone Massage ideal. Für einen Rundum-Wellness-Genuss empfehlen wir unsere Ganzkörpermassage ab 45 Minuten. Gerne beraten wir Sie persönlich."
+    answer: "Das hängt von Ihren Bedürfnissen ab. Bei Verspannungen in Nacken, Schultern oder Rücken empfehlen wir die traditionelle Thai Massage oder eine gezielte Teilkörpermassage ab 24 €. Zur tiefen Entspannung eignet sich die Aromaöl-Massage mit warmen, duftenden Ölen ab 36 €. Bei hartnäckigen Muskelschmerzen ist die Hot Stone Massage mit erwärmten Lavasteinen ideal (ab 55 €), da die Wärme tief in die Muskulatur eindringt. Für ein Rundum-Wellness-Erlebnis empfehlen wir unsere Ganzkörpermassage ab 45 Minuten (ab 49 €). Werdende Mütter ab dem zweiten Trimester sind mit unserer speziellen Schwangerschaftsmassage bestens aufgehoben. Wenn Sie unsicher sind, beraten wir Sie gerne persönlich – telefonisch unter 040 22697033 oder direkt vor Ort in unserem Studio am Winterhuder Weg 24 in Hamburg-Winterhude. Vor jeder Behandlung besprechen wir kurz Ihre Beschwerden und passen die Massage individuell an Ihre Bedürfnisse an."
   },
   {
     id: 3,
     question: "Was kostet eine Thai Massage in Hamburg bei Prakun?",
-    answer: "Unsere Preise beginnen ab 24 € für eine Teilkörpermassage (20 Minuten). Eine klassische Ganzkörpermassage gibt es ab 49 €. Die Aromaöl-Massage startet bei 36 €, Hot Stone ab 55 € und unsere Spezialmassagen wie Lomi Lomi oder Kräuterstempel ab 72 €. Alle aktuellen Preise finden Sie auf unserer Leistungsseite."
+    answer: "Eine Thai-Massage bei Prakun in Hamburg-Winterhude kostet ab 24 € für eine 20-minütige Teilkörpermassage und ab 49 € für eine 45-minütige Ganzkörpermassage. Wer sich für Aromaöl entscheidet, zahlt ab 36 € für 30 Minuten; eine Hot-Stone-Massage mit heißen Lavasteinen startet bei 55 € für 45 Minuten. Spezialbehandlungen wie die hawaiianische Lomi-Lomi-Massage oder die traditionelle Kräuterstempel-Massage aus Thailand beginnen bei 72 € für 60 Minuten. Alle Preise verstehen sich inklusive Beratungsgespräch vor der Behandlung und gelten für unser Studio am Winterhuder Weg 24 in Hamburg-Winterhude. Kunden, die sich unsicher sind, welche Massage zu ihren Beschwerden passt, erhalten vor Ort oder telefonisch unter 040 22697033 eine kostenlose Empfehlung. Die vollständige, aktuelle Preisliste mit allen Behandlungen finden Sie auf unserer Leistungsseite."
   },
   {
     id: 4,
@@ -824,6 +824,11 @@ export const faqItems = [
     id: 11,
     question: "Wie lange sollte ich für meine erste Massage einplanen?",
     answer: "Planen Sie für Ihren ersten Besuch etwas mehr Zeit ein. Wir nehmen uns zu Beginn ein paar Minuten, um Ihre Bedürfnisse und eventuelle Beschwerden zu besprechen. Für eine 60-minütige Behandlung rechnen Sie insgesamt ca. 75 Minuten ein. Nach der Massage empfehlen wir Ihnen, noch kurz in unserer ruhigen Atmosphäre zu entspannen."
+  },
+  {
+    id: 13,
+    question: "Wo finde ich eine gute Thaimassage in meiner Nähe in Hamburg?",
+    answer: "Wenn Sie in Hamburg nach einer Thaimassage in Ihrer Nähe suchen, finden Sie Prakun Thai Massage zentral am Winterhuder Weg 24 in Hamburg-Winterhude – direkt an der Grenze zu Uhlenhorst und Barmbek-Süd. Aus Winterhude, Uhlenhorst, Barmbek, Hohenfelde und Eilbek erreichen Sie uns in 5 bis 10 Minuten, aus Eppendorf, Alsterdorf und Wandsbek in 10 bis 15 Minuten. Die nächste U-Bahn-Station ist Mundsburg (U3), von dort sind es nur wenige Gehminuten. Mit einer Google-Bewertung von 4,9 von 5 Sternen aus über 200 Bewertungen gehören wir zu den bestbewerteten Massage-Studios in Hamburg. Termine können Sie in unter einer Minute online buchen – oft auch noch für denselben Tag. Eine Teilkörpermassage gibt es bereits ab 24 €, eine Ganzkörpermassage ab 49 €."
   },
   {
     id: 12,

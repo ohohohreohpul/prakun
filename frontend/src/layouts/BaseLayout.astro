@@ -8,6 +8,7 @@ interface Props {
   ogImage?: string;
   canonicalUrl?: string;
   structuredData?: any;
+  noindex?: boolean;
 }
 
 const {
@@ -16,7 +17,8 @@ const {
   keywords = "Thai Massage Hamburg, Wellness Massage, Aromatherapie, Ganzkörpermassage, Hot Stone Massage, Ayurveda, Schwangerschaftsmassage",
   ogImage = "https://www.prakunthaimassage.de/og-image.jpg",
   canonicalUrl,
-  structuredData
+  structuredData,
+  noindex = false
 } = Astro.props;
 
 const currentUrl = canonicalUrl || Astro.url.href;
@@ -55,7 +57,7 @@ const siteName = "Prakun Thai Massage Hamburg";
   <meta property="twitter:image" content={ogImage} />
 
   <!-- Additional SEO -->
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
   <meta name="language" content="German" />
   <meta name="revisit-after" content="7 days" />
   <meta name="author" content="Prakun Thai Massage Hamburg" />
@@ -63,8 +65,8 @@ const siteName = "Prakun Thai Massage Hamburg";
   <!-- Geo / Local SEO -->
   <meta name="geo.region" content="DE-HH" />
   <meta name="geo.placename" content="Hamburg" />
-  <meta name="geo.position" content="53.5753;10.0153" />
-  <meta name="ICBM" content="53.5753, 10.0153" />
+  <meta name="geo.position" content="53.57182;10.02554" />
+  <meta name="ICBM" content="53.57182, 10.02554" />
 
   <!-- Language / hreflang -->
   <link rel="alternate" hreflang="de-DE" href={currentUrl} />

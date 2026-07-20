@@ -1,5 +1,28 @@
 {
   "buildCommand": "yarn build",
   "outputDirectory": "dist",
-  "installCommand": "yarn install"
+  "installCommand": "yarn install",
+  "redirects": [
+    {
+      "source": "/blackhole/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/llms.txt",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    }
+  ]
 }

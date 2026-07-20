@@ -18,7 +18,7 @@ import { localBusinessSchema, faqSchema, reviewSchema, siteLinksSearchBoxSchema 
 import { faqItems, testimonials } from '../data/mockData';
 
 const pageTitle = "Thai Massage Hamburg ab 24 € | Prakun ★ 4,9/5 · 200+ Bewertungen";
-const pageDescription = "Massage Hamburg & Thai Massage ab 24 € – Prakun Winterhude ★ 4,9/5 (200+ Bewertungen). Zertifizierte Therapeuten, Gutscheine verfügbar. Täglich geöffnet. ✓ Jetzt buchen!";
+const pageDescription = "Massage Hamburg & Thaimassage ab 24 € – Prakun Winterhude ★ 4,9/5 (200+ Bewertungen). Zertifizierte Therapeuten, Gutscheine verfügbar. Täglich geöffnet. ✓ Jetzt buchen!";
 
 const faqStructuredData = faqSchema(faqItems.map(faq => ({
   question: faq.question,
@@ -37,7 +37,7 @@ const allStructuredData = [localBusinessSchema, siteLinksSearchBoxSchema, faqStr
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  keywords="Thai Massage Hamburg, Massage Hamburg, Lomi Lomi Massage Hamburg, Fußmassage Hamburg, Gutschein Thai Massage Hamburg, Hot Stone Massage Hamburg, Ayurveda Hamburg, Ganzkörpermassage Hamburg, Teilkörpermassage Hamburg"
+  keywords="Thai Massage Hamburg, Thaimassage Hamburg, Massage Hamburg, Thaimassage in der Nähe, Lomi Lomi Massage Hamburg, Fußmassage Hamburg, Gutschein Thai Massage Hamburg, Hot Stone Massage Hamburg, Ayurveda Hamburg, Ganzkörpermassage Hamburg, Teilkörpermassage Hamburg"
   structuredData={allStructuredData}
 >
   <Header client:load />
@@ -58,11 +58,58 @@ const allStructuredData = [localBusinessSchema, siteLinksSearchBoxSchema, faqStr
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl font-bold text-[#1a1a1a] mb-4">Massage Hamburg – Ihr Wohlbefinden im Zentrum</h2>
         <p class="text-gray-600 mb-4 leading-relaxed">
-          Prakun Thai Massage ist Ihre professionelle Massage-Adresse in Hamburg Winterhude. Seit 2012 bieten wir am Winterhuder Weg 24 authentische Thai-Massagen, Lomi Lomi, Ayurveda-Behandlungen, Hot Stone Massage, Aromaöl-Massagen und viele weitere Wellnessleistungen – für Körper, Geist und Seele.
+          Prakun Thai Massage ist Ihre professionelle Massage-Adresse in Hamburg. Seit 2012 bieten wir in unserem Studio am Winterhuder Weg 24 in Hamburg-Winterhude authentische Thai-Massagen, Lomi-Lomi-, Ayurveda- und Hot-Stone-Behandlungen, Aromaöl-Massagen sowie viele weitere Wellnessleistungen an – durchgeführt von 100 % zertifizierten Therapeuten, die ihre Ausbildung überwiegend in Thailand absolviert haben. Mit einer Google-Bewertung von 4,9 von 5 Sternen aus über 200 Bewertungen zählt Prakun zu den bestbewerteten Massage-Studios in Hamburg. Die Preise beginnen bei 24 € für eine 20-minütige Teilkörpermassage; eine Ganzkörpermassage gibt es ab 49 €. Termine lassen sich in unter einer Minute online buchen oder telefonisch unter 040 22697033 vereinbaren – kostenlose Stornierung bis 24 Stunden vor dem Termin inklusive.
         </p>
         <p class="text-gray-600 mb-6 leading-relaxed">
-          Als zentral gelegenes Massage-Studio in Hamburg erreichen uns Gäste aus ganz Hamburg schnell und einfach: per U-Bahn (U3, Haltestelle Mundsburg), per Fahrrad oder mit dem Auto. Wir sind täglich von 10 bis 21 Uhr geöffnet – auch am Wochenende und an Feiertagen.
+          Ob Sie nach einer klassischen <strong>Thaimassage</strong>, einer entspannenden Öl-Massage oder einer kraftvollen Hot-Stone-Behandlung suchen: Als zentral gelegenes Massage-Studio in Hamburg erreichen uns Gäste aus ganz Hamburg schnell und einfach – per U-Bahn (U3, Haltestelle Mundsburg), per Fahrrad oder mit dem Auto. Wir sind täglich geöffnet: Montag bis Freitag von 10 bis 20 Uhr, samstags von 10 bis 18 Uhr und sonntags von 11 bis 17 Uhr.
         </p>
+
+        <!-- Semantic price table: machine-extractable for search/AI parsers -->
+        <h3 class="text-lg font-semibold text-[#1a1a1a] mb-3">Massage Hamburg Preise – Übersicht</h3>
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full text-sm text-left border-collapse">
+            <caption class="sr-only">Preise für Massagen bei Prakun Thai Massage Hamburg</caption>
+            <thead>
+              <tr class="border-b border-gray-300">
+                <th scope="col" class="py-2 pr-4 font-semibold text-[#1a1a1a]">Massage</th>
+                <th scope="col" class="py-2 pr-4 font-semibold text-[#1a1a1a]">Dauer</th>
+                <th scope="col" class="py-2 font-semibold text-[#1a1a1a]">Preis</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600">
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4"><a href="/massage/teilkoerpermassage" class="text-[#7B2958] hover:underline">Teilkörpermassage</a></td>
+                <td class="py-2 pr-4">20–60 Min.</td>
+                <td class="py-2">ab 24 €</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4"><a href="/massage/aromaoel-massage" class="text-[#7B2958] hover:underline">Aromaöl-Massage</a></td>
+                <td class="py-2 pr-4">30–120 Min.</td>
+                <td class="py-2">ab 36 €</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4"><a href="/massage/ganzkoerpermassage" class="text-[#7B2958] hover:underline">Ganzkörpermassage</a></td>
+                <td class="py-2 pr-4">45–120 Min.</td>
+                <td class="py-2">ab 49 €</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4"><a href="/massage/hot-stone-massage" class="text-[#7B2958] hover:underline">Hot Stone Massage</a></td>
+                <td class="py-2 pr-4">45–120 Min.</td>
+                <td class="py-2">ab 55 €</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 pr-4"><a href="/massage/lomi-lomi-massage" class="text-[#7B2958] hover:underline">Lomi Lomi Massage</a></td>
+                <td class="py-2 pr-4">60–120 Min.</td>
+                <td class="py-2">ab 72 €</td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-4"><a href="/massage/schwangerschaftsmassage" class="text-[#7B2958] hover:underline">Schwangerschaftsmassage</a></td>
+                <td class="py-2 pr-4">45–90 Min.</td>
+                <td class="py-2">ab 50 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <!-- Neighborhood service links -->
         <h3 class="text-lg font-semibold text-[#1a1a1a] mb-3">Thai Massage in Ihrer Nähe</h3>
