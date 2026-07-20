@@ -6,10 +6,15 @@
 // ---- 1. LocalBusiness (HealthAndBeautyBusiness) ----
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+  "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "DaySpa"],
   "@id": "https://www.prakunthaimassage.de/#business",
   "name": "Prakun Thai Massage Hamburg",
-  "alternateName": "Prakun Massage Winterhude",
+  "alternateName": ["Prakun Massage Winterhude", "Prakun Thaimassage Hamburg"],
+  "founder": {
+    "@type": "Person",
+    "@id": "https://www.prakunthaimassage.de/#founder",
+    "name": "Ailadda Sonnabend"
+  },
   "description": "Professionelle Thai-Massage im Herzen von Hamburg. Seit 2012 bieten wir authentische Thai-Massagen, Aromaöl-Massagen, Hot Stone, Ayurveda und Wellness-Pakete in Winterhude. Über 10.000 zufriedene Kunden, 4,9 Sterne bei Google.",
   "image": [
     "https://www.prakunthaimassage.de/og-image.jpg"
@@ -36,10 +41,10 @@ export const localBusinessSchema = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 53.5753,
-    "longitude": 10.0153
+    "latitude": 53.57182,
+    "longitude": 10.02554
   },
-  "hasMap": "https://maps.google.com/?q=Winterhuder+Weg+24,+22085+Hamburg",
+  "hasMap": "https://maps.google.com/?cid=13843017141683311872",
   "areaServed": [
     {
       "@type": "City",
@@ -91,6 +96,7 @@ export const localBusinessSchema = {
   },
   "knowsAbout": [
     "Thai Massage",
+    "Thaimassage",
     "Wellness Massage",
     "Aromatherapie",
     "Hot Stone Massage",
@@ -99,10 +105,64 @@ export const localBusinessSchema = {
     "Lomi Lomi Massage",
     "Kräuterstempel Massage"
   ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Massage-Angebote Hamburg",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Teilkörpermassage Hamburg", "url": "https://www.prakunthaimassage.de/massage/teilkoerpermassage" },
+        "price": 24, "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Aromaöl-Massage Hamburg", "url": "https://www.prakunthaimassage.de/massage/aromaoel-massage" },
+        "price": 36, "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Ganzkörpermassage Hamburg", "url": "https://www.prakunthaimassage.de/massage/ganzkoerpermassage" },
+        "price": 49, "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Schwangerschaftsmassage Hamburg", "url": "https://www.prakunthaimassage.de/massage/schwangerschaftsmassage" },
+        "price": 50, "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Hot Stone Massage Hamburg", "url": "https://www.prakunthaimassage.de/massage/hot-stone-massage" },
+        "price": 55, "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Lomi Lomi Massage Hamburg", "url": "https://www.prakunthaimassage.de/massage/lomi-lomi-massage" },
+        "price": 72, "priceCurrency": "EUR"
+      }
+    ]
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.prakunthaimassage.de/buchen",
+      "inLanguage": "de-DE",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Massage-Termin buchen"
+    }
+  },
   "sameAs": [
     "https://www.instagram.com/prakunmassage",
     "https://www.facebook.com/prakunmassage",
-    "https://g.page/prakunthaimassage"
+    "https://g.page/prakunthaimassage",
+    "https://www.yelp.com/biz/prakun-thai-massage-hamburg",
+    "https://www.treatwell.de/ort/prakun-thai-massage/"
   ]
 };
 
@@ -114,6 +174,8 @@ export const siteLinksSearchBoxSchema = {
   "url": "https://www.prakunthaimassage.de",
   "name": "Prakun Thai Massage Hamburg",
   "description": "Professionelle Thai-Massage im Herzen von Hamburg seit 2012.",
+  "inLanguage": "de-DE",
+  "dateModified": "2026-07-20",
   "publisher": {
     "@id": "https://www.prakunthaimassage.de/#business"
   },
@@ -168,13 +230,14 @@ export const organizationSchema = {
 export const founderSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Prakun-Gründerin",
+  "@id": "https://www.prakunthaimassage.de/#founder",
+  "name": "Ailadda Sonnabend",
   "jobTitle": "Gründerin & Inhaberin",
   "worksFor": {
     "@id": "https://www.prakunthaimassage.de/#organization"
   },
-  "description": "Brachte das Wissen und die Leidenschaft für traditionelle Thai-Massage direkt aus Thailand nach Hamburg. Gründete Prakun Thai Massage im Jahr 2012 mit der Mission, authentische Heilkunst nach Winterhude zu bringen.",
-  "knowsAbout": ["Thai Massage", "Traditionelle Heilkunst", "Aromatherapie", "Wellness"],
+  "description": "Ailadda Sonnabend brachte das Wissen und die Leidenschaft für traditionelle Thai-Massage direkt aus Thailand nach Hamburg. Sie gründete Prakun Thai Massage im Jahr 2012 mit der Mission, authentische Heilkunst nach Winterhude zu bringen.",
+  "knowsAbout": ["Thai Massage", "Thaimassage", "Traditionelle Heilkunst", "Aromatherapie", "Wellness"],
   "alumniOf": {
     "@type": "Organization",
     "name": "Traditionelle Thai-Massage-Schule",
@@ -189,6 +252,7 @@ export const createServiceSchema = (service: {
   description: string;
   priceFrom: number;
   duration: string;
+  pricing?: Array<{ duration: string; price: number }>;
 }) => ({
   "@context": "https://schema.org",
   "@type": "Service",
@@ -204,13 +268,23 @@ export const createServiceSchema = (service: {
     "@type": "City",
     "name": "Hamburg"
   },
-  "offers": {
-    "@type": "Offer",
-    "price": service.priceFrom,
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock",
-    "url": "https://www.prakunthaimassage.de/buchen"
-  }
+  // Full price ladder so AI/search parsers see every duration tier, not just the cheapest
+  "offers": (service.pricing && service.pricing.length > 0)
+    ? service.pricing.map((tier) => ({
+        "@type": "Offer",
+        "name": `${service.title} ${tier.duration}`,
+        "price": tier.price,
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.prakunthaimassage.de/buchen"
+      }))
+    : {
+        "@type": "Offer",
+        "price": service.priceFrom,
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.prakunthaimassage.de/buchen"
+      }
 });
 
 // ---- 5. BreadcrumbList schema ----

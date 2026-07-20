@@ -32,7 +32,8 @@ const serviceSchema = createServiceSchema({
   slug: service.slug,
   description: service.description.substring(0, 300),
   priceFrom: service.priceFrom,
-  duration: service.duration
+  duration: service.duration,
+  pricing: service.pricing
 });
 
 const howToSchema = createHowToSchema({

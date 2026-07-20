@@ -33,7 +33,7 @@ const FAQSection = () => {
               <span className="text-[#7B2958]">Ihnen helfen?</span>
             </h2>
             <p className="text-[#666666] mb-8 leading-relaxed text-lg">
-              Bei Fragen steht Ihnen unser Team gerne zur Verfügung. Montag - Sonntag von 10:00 bis 20:00 Uhr.
+              Bei Fragen steht Ihnen unser Team gerne zur Verfügung. Mo–Fr 10:00–20:00 Uhr, Sa 10:00–18:00 Uhr, So 11:00–17:00 Uhr.
             </p>
             
             {/* Contact Card - Glassmorphism */}
@@ -45,10 +45,10 @@ const FAQSection = () => {
             >
               <p className="text-[#666666] mb-2 text-sm">Kontaktieren Sie uns per E-Mail:</p>
               <a
-                href="mailto:info@prakunmassage.de"
+                href="mailto:info@prakunthaimassage.de"
                 className="text-[#7B2958] font-bold text-xl hover:underline transition-all"
               >
-                info@prakunmassage.de
+                info@prakunthaimassage.de
               </a>
             </motion.div>
           </motion.div>

@@ -14,7 +14,7 @@ const contactInfo = [
     icon: Phone,
     title: "Telefon",
     lines: ["040 22697033"],
-    link: "tel:04022697033"
+    link: "tel:+494022697033"
   },
   {
     icon: Mail,
@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Öffnungszeiten",
-    lines: ["Mo - So: 10:00 - 20:00", "Termine nach Vereinbarung"]
+    lines: ["Mo–Fr 10:00–20:00", "Sa 10:00–18:00 · So 11:00–17:00", "Termine nach Vereinbarung"]
   }
 ];
 
@@ -136,7 +136,7 @@ const ContactPage = () => {
             >
               <div className="rounded-3xl overflow-hidden shadow-xl shadow-black/10 h-[400px] lg:h-full min-h-[400px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.5!2d10.0!3d53.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDM0JzQ4LjAiTiAxMMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sde!4v1234567890"
+                  src="https://maps.google.com/maps?q=Prakun%20Thai%20Massage%2C%20Winterhuder%20Weg%2024%2C%2022085%20Hamburg&z=16&ie=UTF8&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -125,8 +125,8 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-[#666666] leading-relaxed">
                 <p>
-                  Was 2012 als kleine Praxis begann, ist heute ein etabliertes Wellness-Studio im Herzen von Hamburg-Winterhude. 
-                  Unsere Gründerin brachte das Wissen und die Leidenschaft für traditionelle Thai-Massage direkt aus Thailand mit.
+                  Was 2012 als kleine Praxis begann, ist heute ein etabliertes Wellness-Studio im Herzen von Hamburg-Winterhude.
+                  Unsere Gründerin Ailadda Sonnabend brachte das Wissen und die Leidenschaft für traditionelle Thaimassage direkt aus Thailand mit.
                 </p>
                 <p>
                   Bei Prakun Thai Massage verbinden wir jahrhundertealte Heiltraditionen mit modernem Komfort. 
