@@ -134,7 +134,7 @@ const ServicePage = ({ slug }) => {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-[#C4A77D] text-[#C4A77D]" />
                 ))}
-                <span className="text-white/70 text-sm ml-2">4.9 ({studio.reviewCount} Bewertungen)</span>
+                <span className="text-white/70 text-sm ml-2">{studio.rating} ({studio.reviewCount} Bewertungen)</span>
               </div>
             </motion.div>
           </div>
@@ -218,7 +218,7 @@ const ServicePage = ({ slug }) => {
                     ))}
                   </div>
 
-                  <a href="/buchen">
+                  <a href="/buchen/">
                     <Button className="w-full group relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#7B2958]/30 mb-4">
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         <Calendar className="h-5 w-5" />
@@ -257,7 +257,7 @@ const ServicePage = ({ slug }) => {
                     ))}
                   </div>
                   <p className="text-sm text-[#666666]">
-                    Über <span className="font-bold text-[#2B2B2B]">{studio.reviewCount}</span> zufriedene Kunden
+                    <span className="font-bold text-[#2B2B2B]">{studio.reviewCount}</span> Bewertungen bei Google & Treatwell
                   </p>
                 </motion.div>
               </motion.div>
@@ -296,7 +296,7 @@ const ServicePage = ({ slug }) => {
                   whileHover={{ y: -10 }}
                 >
                   <a
-                    href={`/massage/${relService.slug}`}
+                    href={`/massage/${relService.slug}/`}
                     className="group block bg-white/70 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/50 shadow-lg hover:shadow-2xl transition-all duration-500"
                   >
                     <div className="relative h-48 overflow-hidden">
@@ -348,7 +348,7 @@ const ServicePage = ({ slug }) => {
             <p className="text-lg text-[#666666] mb-8 max-w-2xl mx-auto">
               Buchen Sie jetzt Ihre {service.title} bei Prakun Thai Massage und gönnen Sie sich die Entspannung, die Sie verdienen.
             </p>
-            <a href="/buchen">
+            <a href="/buchen/">
               <Button className="group relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-lg px-10 py-6 rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#7B2958]/30 hover:-translate-y-1">
                 <span className="relative z-10 flex items-center gap-2">
                   Termin buchen

@@ -63,7 +63,7 @@ const ServiceCards = () => {
           </div>
           
           <a
-            href="/leistungen"
+            href="/leistungen/"
             className="hidden md:flex items-center gap-2 text-[#C4A77D] hover:text-white transition-colors mt-4 md:mt-0 group"
           >
             <span className="text-sm font-medium">Alle ansehen</span>
@@ -109,7 +109,7 @@ const ServiceCards = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex-shrink-0 w-[280px] md:w-[320px] snap-start"
                 >
-                  <a href={`/massage/${service.slug}`} className="group block">
+                  <a href={`/massage/${service.slug}/`} className="group block">
                     <div className="relative rounded-2xl overflow-hidden bg-[#2a2a2a] border border-white/10 hover:border-[#C4A77D]/30 transition-all duration-500">
                       {/* Image */}
                       <div className="relative h-44 overflow-hidden">
@@ -166,7 +166,7 @@ const ServiceCards = () => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex-shrink-0 w-[280px] md:w-[320px] snap-start"
             >
-              <a href="/leistungen" className="group block h-full">
+              <a href="/leistungen/" className="group block h-full">
                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#7B2958] to-[#5C1E42] border border-[#7B2958]/50 h-full min-h-[320px] flex flex-col items-center justify-center p-8 text-center hover:shadow-xl hover:shadow-[#7B2958]/20 transition-all duration-500">
                   <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <ArrowRight className="h-8 w-8 text-white" />
@@ -191,7 +191,7 @@ const ServiceCards = () => {
           className="md:hidden mt-6 text-center"
         >
           <a
-            href="/leistungen"
+            href="/leistungen/"
             className="inline-flex items-center gap-2 text-[#C4A77D] hover:text-white transition-colors"
           >
             <span className="text-sm font-medium">Alle Massagen ansehen</span>

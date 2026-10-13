@@ -50,7 +50,7 @@ Buchen Sie noch heute Ihren Termin und gönnen Sie Ihrem Körper die Aufmerksamk
     cardImage: '/service-ganzkoerpermassage.jpg',
     duration: '45-120 min',
     priceFrom: 49,
-    metaDescription: 'Ganzkörpermassage Hamburg ab 49 € – Vollentspannung von Kopf bis Fuß. 10+ Jahre Erfahrung, 4,9★ (200+ Bewertungen). Prakun Thai Massage Winterhude ✓ Buchen!',
+    metaDescription: 'Ganzkörpermassage Hamburg ab 49 € – Vollentspannung von Kopf bis Fuß. 10+ Jahre Erfahrung, 4,7★ bei Google. Prakun Thai Massage Winterhude ✓ Buchen!',
     category: 'thai',
     isPopular: true,
     pricing: [
@@ -89,7 +89,7 @@ Gönnen Sie sich die wohlverdiente Pause und buchen Sie noch heute Ihre Ganzkör
     cardImage: '/service-aromaoel-massage.jpg',
     duration: '30-120 min',
     priceFrom: 36,
-    metaDescription: 'Aroma Massage Hamburg ab 36 € – Duftende Pflegeöle, 30–120 Min. Aromaöl-Massage bei Prakun Thai Massage Winterhude. 4,9★ Zertifiziert. ✓ Online buchen!',
+    metaDescription: 'Aroma Massage Hamburg ab 36 € – Duftende Pflegeöle, 30–120 Min. Aromaöl-Massage bei Prakun Thai Massage Winterhude. 4,7★ Zertifiziert. ✓ Online buchen!',
     category: 'wellness',
     isPopular: true,
     pricing: [
@@ -167,7 +167,7 @@ Gönnen Sie sich dieses außergewöhnliche Erlebnis bei Prakun Thai Massage – 
     cardImage: '/service-hot-stone-massage.jpg',
     duration: '45-120 min',
     priceFrom: 55,
-    metaDescription: 'Hot Stone Massage Hamburg ab 55 € – Vulkanstein-Tiefenwärme löst Muskelverspannungen. 4,9★ Prakun Thai Massage Winterhude. Tgl. geöffnet ✓ Jetzt online buchen.',
+    metaDescription: 'Hot Stone Massage Hamburg ab 55 € – Vulkanstein-Tiefenwärme löst Muskelverspannungen. 4,7★ Prakun Thai Massage Winterhude. Mo–Sa geöffnet ✓ Jetzt online buchen.',
     category: 'wellness',
     isPopular: true,
     pricing: [
@@ -202,7 +202,7 @@ Erleben Sie die transformative Kraft der Hot Stone Massage bei Prakun Thai Massa
       },
       {
         question: 'Was kostet eine Hot Stone Massage in Hamburg?',
-        answer: 'Bei Prakun Thai Massage kostet die Hot Stone Massage ab 55\u00a0€ (45 min), 70\u00a0€ (60 min), 102\u00a0€ (90 min) und 132\u00a0€ (120 min). Für ein vollständiges Erlebnis empfehlen wir die 90-Minuten-Variante. Bequem online buchbar unter prakunthaimassage.de – täglich geöffnet in Hamburg Winterhude.'
+        answer: 'Bei Prakun Thai Massage kostet die Hot Stone Massage ab 55\u00a0€ (45 min), 70\u00a0€ (60 min), 102\u00a0€ (90 min) und 132\u00a0€ (120 min). Für ein vollständiges Erlebnis empfehlen wir die 90-Minuten-Variante. Bequem online buchbar unter prakunthaimassage.de – Mo–Sa geöffnet in Hamburg Winterhude.'
       },
       {
         question: 'Für wen ist eine Hot Stone Massage nicht geeignet?',
@@ -303,7 +303,7 @@ Buchen Sie noch heute Ihre Bambus-Massage bei Prakun Thai Massage und erleben Si
     cardImage: '/service-lomi-lomi-massage.jpg',
     duration: '60-120 min',
     priceFrom: 72,
-    metaDescription: 'Lomi Lomi Massage Hamburg ab 72 € – Hawaiianisches Heilritual. Fließende Wellen-Technik für Körper, Geist & Seele. 4,9★ Prakun Winterhude ✓ Online buchen!',
+    metaDescription: 'Lomi Lomi Massage Hamburg ab 72 € – Hawaiianisches Heilritual. Fließende Wellen-Technik für Körper, Geist & Seele. 4,7★ Prakun Winterhude ✓ Online buchen!',
     category: 'wellness',
     pricing: [
       { duration: '60 min', price: 72 },
@@ -362,7 +362,7 @@ Erleben Sie die heilende Kraft der Lomi Lomi Nui Massage und lassen Sie sich von
     cardImage: '/service-ayurveda-abhyanga.jpg',
     duration: '30-120 min',
     priceFrom: 42,
-    metaDescription: 'Abhyanga Massage Hamburg ab 42 € – Ayurveda Öl-Ganzkörpermassage. Traditionelles indisches Kräuteröl-Ritual, 4,9★ zertifiziert. Prakun Winterhude ✓ Jetzt buchen.',
+    metaDescription: 'Abhyanga Massage Hamburg ab 42 € – Ayurveda Öl-Ganzkörpermassage. Traditionelles indisches Kräuteröl-Ritual, 4,7★ zertifiziert. Prakun Winterhude ✓ Jetzt buchen.',
     category: 'ayurveda',
     isPopular: true,
     pricing: [
@@ -475,11 +475,11 @@ Bei Prakun Thai Massage am Winterhuder Weg in Hamburg bieten wir Ihnen diese ent
     cardImage: '/service-fussmassage.jpg',
     duration: '30-60 min',
     priceFrom: 35,
-    metaDescription: 'Fußmassage Hamburg ab 35 € – Thai Reflexzonenmassage für müde Füße & Beine. Wirkung auf den ganzen Körper. 4,9★ Prakun Winterhude ✓ Jetzt buchen.',
+    metaDescription: 'Fußmassage Hamburg ab 35 € – Thai Reflexzonenmassage für müde Füße & Beine. Wirkung auf den ganzen Körper. 4,7★ Prakun Winterhude ✓ Jetzt buchen.',
     category: 'thai',
     pricing: [
       { duration: '30 min', price: 35 },
-      { duration: '45 min', price: 52 },
+      { duration: '45 min', price: 49 },
       { duration: '60 min', price: 62 }
     ],
     benefits: [
@@ -504,7 +504,7 @@ Gönnen Sie Ihren Füßen die Aufmerksamkeit, die sie verdienen – und erleben 
     faq: [
       {
         question: 'Was kostet eine Fußmassage in Hamburg?',
-        answer: 'Bei Prakun Thai Massage kostet eine Fußmassage ab 35\u00a0€ für 30 Minuten. Die 45-Minuten-Behandlung ist für 52\u00a0€ buchbar, die 60-Minuten-Fußmassage für 62\u00a0€ – inklusive einleitendem Fußbad. Bequem online buchen unter prakunthaimassage.de in Hamburg Winterhude.'
+        answer: 'Bei Prakun Thai Massage kostet eine Fußmassage ab 35\u00a0€ für 30 Minuten. Die 45-Minuten-Behandlung ist für 49\u00a0€ buchbar, die 60-Minuten-Fußmassage für 62\u00a0€ – inklusive einleitendem Fußbad. Bequem online buchen unter prakunthaimassage.de in Hamburg Winterhude.'
       },
       {
         question: 'Was ist eine Reflexzonenmassage und wie wirkt sie?',
@@ -512,7 +512,7 @@ Gönnen Sie Ihren Füßen die Aufmerksamkeit, die sie verdienen – und erleben 
       },
       {
         question: 'Wie lange dauert eine Fußmassage bei Prakun Hamburg?',
-        answer: 'Wir bieten Fußmassagen in drei Zeitformaten: 30 Minuten (35\u00a0€), 45 Minuten (52\u00a0€) und 60 Minuten (62\u00a0€). Für den ersten Besuch empfehlen wir die 45- oder 60-minütige Version, damit der Therapeut alle Reflexzonen gründlich behandeln kann.'
+        answer: 'Wir bieten Fußmassagen in drei Zeitformaten: 30 Minuten (35\u00a0€), 45 Minuten (49\u00a0€) und 60 Minuten (62\u00a0€). Für den ersten Besuch empfehlen wir die 45- oder 60-minütige Version, damit der Therapeut alle Reflexzonen gründlich behandeln kann.'
       },
       {
         question: 'Muss ich mich für eine Fußmassage ausziehen?',
@@ -644,7 +644,7 @@ export const services = Object.values(servicesDetailed).map(s => ({
   id: s.id,
   title: s.title,
   image: s.cardImage,
-  link: `/massage/${s.slug}`,
+  link: `/massage/${s.slug}/`,
   price: `ab ${s.priceFrom} €`,
   isNew: s.isNew,
   isPopular: s.isPopular
@@ -689,9 +689,9 @@ export const studio = {
   city: "22085 Hamburg",
   email: "info@prakunthaimassage.de",
   phone: "040 22697033",
-  hours: "Mo–Fr 10:00–20:00 · Sa 10:00–18:00 · So 11:00–17:00",
-  rating: 4.9,
-  reviewCount: "200+",
+  hours: "Mo–Fr 10:00–20:00 · Sa 11:00–18:00 · So geschlossen",
+  rating: 4.7,
+  reviewCount: "1.000+",
   image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=750&h=500&fit=crop"
 };
 
@@ -793,7 +793,7 @@ export const faqItems = [
   {
     id: 5,
     question: "Wann ist Prakun Thai Massage geöffnet?",
-    answer: "Wir sind montags bis freitags von 10:00 bis 20:00 Uhr geöffnet, samstags von 10:00 bis 18:00 Uhr und sonntags von 11:00 bis 17:00 Uhr. Termine außerhalb der regulären Öffnungszeiten können auf Anfrage vereinbart werden."
+    answer: "Wir sind montags bis freitags von 10:00 bis 20:00 Uhr geöffnet, samstags von 11:00 bis 18:00 Uhr. Sonntags ist das Studio geschlossen. Termine außerhalb der regulären Öffnungszeiten können auf Anfrage vereinbart werden."
   },
   {
     id: 6,
@@ -828,43 +828,43 @@ export const faqItems = [
   {
     id: 13,
     question: "Wo finde ich eine gute Thaimassage in meiner Nähe in Hamburg?",
-    answer: "Wenn Sie in Hamburg nach einer Thaimassage in Ihrer Nähe suchen, finden Sie Prakun Thai Massage zentral am Winterhuder Weg 24 in Hamburg-Winterhude – direkt an der Grenze zu Uhlenhorst und Barmbek-Süd. Aus Winterhude, Uhlenhorst, Barmbek, Hohenfelde und Eilbek erreichen Sie uns in 5 bis 10 Minuten, aus Eppendorf, Alsterdorf und Wandsbek in 10 bis 15 Minuten. Die nächste U-Bahn-Station ist Mundsburg (U3), von dort sind es nur wenige Gehminuten. Mit einer Google-Bewertung von 4,9 von 5 Sternen aus über 200 Bewertungen gehören wir zu den bestbewerteten Massage-Studios in Hamburg. Termine können Sie in unter einer Minute online buchen – oft auch noch für denselben Tag. Eine Teilkörpermassage gibt es bereits ab 24 €, eine Ganzkörpermassage ab 49 €."
+    answer: "Wenn Sie in Hamburg nach einer Thaimassage in Ihrer Nähe suchen, finden Sie Prakun Thai Massage zentral am Winterhuder Weg 24 in Hamburg-Winterhude – direkt an der Grenze zu Uhlenhorst und Barmbek-Süd. Aus Winterhude, Uhlenhorst, Barmbek, Hohenfelde und Eilbek erreichen Sie uns in 5 bis 10 Minuten, aus Eppendorf, Alsterdorf und Wandsbek in 10 bis 15 Minuten. Die nächste U-Bahn-Station ist Mundsburg (U3), von dort sind es nur wenige Gehminuten. Gäste bewerten uns mit 4,7 von 5 Sternen (über 1.000 Bewertungen bei Google und Treatwell). Termine können Sie in unter einer Minute online buchen – oft auch noch für denselben Tag. Eine Teilkörpermassage gibt es bereits ab 24 €, eine Ganzkörpermassage ab 49 €."
   },
   {
     id: 12,
     question: "Warum ist Prakun Thai Massage die beste Wahl in Hamburg?",
-    answer: "Prakun Thai Massage verbindet über 12 Jahre Erfahrung, 100 % zertifizierte Therapeuten und authentische Thai-Massage-Tradition mit einem modernen, entspannten Studio in Hamburgs Herzen. Mit einer 4,9-Sterne-Bewertung bei Google und über 200 begeisterten Bewertungen sind wir eine der bestbewerteten Massagepraxen in Hamburg. Unser Name Prakun bedeutet auf Deutsch Dankbarkeit – und die spüren Sie in jeder Behandlung."
+    answer: "Prakun Thai Massage verbindet über 12 Jahre Erfahrung, 100 % zertifizierte Therapeuten und authentische Thai-Massage-Tradition mit einem modernen, entspannten Studio in Hamburgs Herzen. Gäste bewerten uns mit 4,7 von 5 Sternen (über 1.000 Bewertungen bei Google und Treatwell). Unser Name Prakun bedeutet auf Deutsch Dankbarkeit – und die spüren Sie in jeder Behandlung."
   }
 ];
 
 export const navigationLinks = {
   main: [
-    { label: "Leistungen", href: "/leistungen" },
-    { label: "Gutscheine", href: "/gutscheine" },
-    { label: "Über uns", href: "/ueber-uns" },
-    { label: "Kontakt", href: "/kontakt" }
+    { label: "Leistungen", href: "/leistungen/" },
+    { label: "Gutscheine", href: "/gutscheine/" },
+    { label: "Über uns", href: "/ueber-uns/" },
+    { label: "Kontakt", href: "/kontakt/" }
   ],
   services: [
-    { label: "Thai Massage Hamburg", href: "/massage/thai-massage" },
-    { label: "Lomi Lomi Massage", href: "/massage/lomi-lomi-massage" },
-    { label: "Ayurveda Abhyanga", href: "/massage/ayurveda-abhyanga" },
-    { label: "Hot Stone Massage", href: "/massage/hot-stone-massage" },
-    { label: "Aromaöl Massage", href: "/massage/aromaoel-massage" },
-    { label: "Fußmassage", href: "/massage/fussmassage" },
-    { label: "Schwangerschaftsmassage", href: "/massage/schwangerschaftsmassage" }
+    { label: "Was ist Thai Massage?", href: "/thai-massage/" },
+    { label: "Lomi Lomi Massage", href: "/massage/lomi-lomi-massage/" },
+    { label: "Ayurveda Abhyanga", href: "/massage/ayurveda-abhyanga/" },
+    { label: "Hot Stone Massage", href: "/massage/hot-stone-massage/" },
+    { label: "Aromaöl Massage", href: "/massage/aromaoel-massage/" },
+    { label: "Fußmassage", href: "/massage/fussmassage/" },
+    { label: "Schwangerschaftsmassage", href: "/massage/schwangerschaftsmassage/" }
   ],
   neighborhoods: [
-    { label: "Thai Massage Winterhude", href: "/thai-massage-winterhude" },
-    { label: "Thai Massage Barmbek", href: "/thai-massage-barmbek" },
-    { label: "Thai Massage Eppendorf", href: "/thai-massage-eppendorf" },
-    { label: "Thai Massage Uhlenhorst", href: "/thai-massage-uhlenhorst" },
-    { label: "Thai Massage Eilbek", href: "/thai-massage-eilbek" },
-    { label: "Thai Massage Wandsbek", href: "/thai-massage-wandsbek" },
-    { label: "Thai Massage Alsterdorf", href: "/thai-massage-alsterdorf" }
+    { label: "Thai Massage Winterhude", href: "/thai-massage-winterhude/" },
+    { label: "Thai Massage Barmbek", href: "/thai-massage-barmbek/" },
+    { label: "Thai Massage Eppendorf", href: "/thai-massage-eppendorf/" },
+    { label: "Thai Massage Uhlenhorst", href: "/thai-massage-uhlenhorst/" },
+    { label: "Thai Massage Eilbek", href: "/thai-massage-eilbek/" },
+    { label: "Thai Massage Wandsbek", href: "/thai-massage-wandsbek/" },
+    { label: "Thai Massage Alsterdorf", href: "/thai-massage-alsterdorf/" }
   ],
   legal: [
-    { label: "Impressum", href: "/impressum" },
-    { label: "Datenschutz", href: "/datenschutz" },
-    { label: "AGB", href: "/agb" }
+    { label: "Impressum", href: "/impressum/" },
+    { label: "Datenschutz", href: "/datenschutz/" },
+    { label: "AGB", href: "/agb/" }
   ]
 };

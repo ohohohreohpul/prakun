@@ -104,14 +104,14 @@ const Header = () => {
                   >
                     <div className="py-2">
                       <a
-                        href="/ueber-uns"
+                        href="/ueber-uns/"
                         className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
                         onClick={() => setIsResourcesOpen(false)}
                       >
                         Über uns
                       </a>
                       <a
-                        href="/kontakt"
+                        href="/kontakt/"
                         className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
                         onClick={() => setIsResourcesOpen(false)}
                       >
@@ -167,7 +167,7 @@ const Header = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="hidden lg:block"
             >
-              <a href="/buchen">
+              <a href="/buchen/">
                 <Button
                   className="relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-[#7B2958]/30 hover:-translate-y-0.5"
                 >
@@ -214,7 +214,7 @@ const Header = () => {
                       return (
                         <li key={serviceId}>
                           <a
-                            href={`/massage/${service.slug}`}
+                            href={`/massage/${service.slug}/`}
                             className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
@@ -241,7 +241,7 @@ const Header = () => {
                       return (
                         <li key={serviceId}>
                           <a
-                            href={`/massage/${service.slug}`}
+                            href={`/massage/${service.slug}/`}
                             className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
@@ -273,7 +273,7 @@ const Header = () => {
                       return (
                         <li key={serviceId}>
                           <a
-                            href={`/massage/${service.slug}`}
+                            href={`/massage/${service.slug}/`}
                             className="group flex items-center justify-between py-1.5 text-white/70 hover:text-white transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
@@ -308,7 +308,7 @@ const Header = () => {
                     Tiefenwärme durch Lavasteine für maximale Entspannung.
                   </p>
                   <a
-                    href="/massage/hot-stone-massage"
+                    href="/massage/hot-stone-massage/"
                     className="inline-flex items-center gap-2 text-sm font-medium text-[#C4A77D] hover:text-white hover:gap-3 transition-all"
                     onClick={() => setIsMegaMenuOpen(false)}
                   >
@@ -320,7 +320,7 @@ const Header = () => {
               {/* Bottom Bar */}
               <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
                 <a
-                  href="/leistungen"
+                  href="/leistungen/"
                   className="text-sm font-medium text-[#C4A77D] hover:text-white transition-colors"
                   onClick={() => setIsMegaMenuOpen(false)}
                 >
@@ -356,7 +356,7 @@ const Header = () => {
                   {Object.values(servicesDetailed).slice(0, 8).map((service) => (
                     <a
                       key={service.id}
-                      href={`/massage/${service.slug}`}
+                      href={`/massage/${service.slug}/`}
                       className="flex items-center justify-between py-2 text-[#2B2B2B] hover:text-[#7B2958] transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -373,14 +373,14 @@ const Header = () => {
               <div>
                 <h3 className="text-xs font-bold text-[#7B2958] uppercase tracking-wider mb-3">Ressourcen</h3>
                 <a
-                  href="/ueber-uns"
+                  href="/ueber-uns/"
                   className="block text-[#2B2B2B] font-medium py-2 hover:text-[#7B2958] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Über uns
                 </a>
                 <a
-                  href="/kontakt"
+                  href="/kontakt/"
                   className="block text-[#2B2B2B] font-medium py-2 hover:text-[#7B2958] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -403,7 +403,7 @@ const Header = () => {
                     Gutscheine
                   </Button>
                 </a>
-                <a href="/buchen" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="/buchen/" className="flex-1" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button className="w-full bg-[#7B2958] hover:bg-[#5C1E42] text-white rounded-full">
                     Termin buchen
                   </Button>

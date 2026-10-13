@@ -15,7 +15,7 @@ const {
   title,
   description,
   keywords = "Thai Massage Hamburg, Wellness Massage, Aromatherapie, Ganzkörpermassage, Hot Stone Massage, Ayurveda, Schwangerschaftsmassage",
-  ogImage = "https://www.prakunthaimassage.de/og-image.jpg",
+  ogImage = "https://www.prakunthaimassage.de/prakun-thai-massage-hamburg-og.jpg",
   canonicalUrl,
   structuredData,
   noindex = false
@@ -46,6 +46,9 @@ const siteName = "Prakun Thai Massage Hamburg";
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Wellness-Ambiente – Prakun Thai Massage Hamburg" />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:locale" content="de_DE" />
 
@@ -55,6 +58,7 @@ const siteName = "Prakun Thai Massage Hamburg";
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={ogImage} />
+  <meta property="twitter:image:alt" content="Wellness-Ambiente – Prakun Thai Massage Hamburg" />
 
   <!-- Additional SEO -->
   <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />

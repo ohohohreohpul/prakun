@@ -4,6 +4,8 @@ import Header from '../../components/Header';
 import ServicePage from '../../components/ServicePage';
 import Footer from '../../components/Footer';
 import FloatingPhoneBubble from '../../components/FloatingPhoneBubble';
+import ServiceAnswers from '../../components/ServiceAnswers.astro';
+import { buildServiceFaq } from '../../lib/serviceFaq';
 import { createServiceSchema, breadcrumbSchema, createHowToSchema, faqSchema } from '../../lib/structuredData';
 import { servicesDetailed } from '../../data/mockData';
 
@@ -43,12 +45,13 @@ const howToSchema = createHowToSchema({
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://www.prakunthaimassage.de" },
-  { name: "Leistungen", url: "https://www.prakunthaimassage.de/leistungen" },
-  { name: service.title, url: `https://www.prakunthaimassage.de/massage/${service.slug}` }
+  { name: "Leistungen", url: "https://www.prakunthaimassage.de/leistungen/" },
+  { name: service.title, url: `https://www.prakunthaimassage.de/massage/${service.slug}/` }
 ]);
 
-const serviceFaqSchema = (service as any).faq && (service as any).faq.length > 0 ? faqSchema((service as any).faq) : null;
-const structuredDataList = [serviceSchema, howToSchema, breadcrumb, ...(serviceFaqSchema ? [serviceFaqSchema] : [])];
+// Visible FAQ and FAQPage schema come from the same list so they always match
+const serviceFaq = buildServiceFaq(service);
+const structuredDataList = [serviceSchema, howToSchema, breadcrumb, faqSchema(serviceFaq)];
 ---
 
 <BaseLayout
@@ -59,6 +62,7 @@ const structuredDataList = [serviceSchema, howToSchema, breadcrumb, ...(serviceF
 >
   <Header client:load />
   <ServicePage client:visible slug={service.slug} />
+  <ServiceAnswers title={service.title} slug={service.slug} faq={serviceFaq} />
   <Footer client:visible />
   <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
 </BaseLayout>
