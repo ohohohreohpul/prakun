@@ -102,7 +102,7 @@ const StudioLocations = () => {
                     ))}
                   </div>
 
-                  <a href="/buchen">
+                  <a href="/buchen/">
                     <Button className="group relative overflow-hidden w-full bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#7B2958]/30">
                       <span className="relative z-10 flex items-center justify-center gap-2">
                         Jetzt Termin buchen

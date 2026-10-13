@@ -7,7 +7,7 @@ const stats = [
   { icon: Clock, value: "12+", label: "Jahre Erfahrung" },
   { icon: Users, value: "10.000+", label: "Zufriedene Kunden" },
   { icon: Award, value: "100%", label: "Zertifizierte Therapeuten" },
-  { icon: Star, value: "4.9", label: "Google Bewertung" },
+  { icon: Star, value: "4,7", label: "Google Bewertung" },
 ];
 
 const values = [
@@ -43,8 +43,8 @@ const AboutPage = () => {
       <section ref={heroRef} className="relative pt-24 pb-20 bg-[#1a1a1a] overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/studio-interior.jpg"
-            alt="Prakun Thai Massage Studio Hamburg"
+            src="/prakun-thai-massage-hamburg-studio.jpg"
+            alt="Wellness-Ambiente – Prakun Thai Massage Hamburg"
             className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/50 to-[#1a1a1a]" />
@@ -100,8 +100,8 @@ const AboutPage = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/10">
                 <img 
-                  src="/hero-massage.jpg"
-                  alt="Thai Massage Behandlung Prakun Hamburg"
+                  src="/prakun-thai-massage-hamburg-behandlung.jpg"
+                  alt="Thai-Massage – Prakun Thai Massage Hamburg"
                   className="w-full h-[500px] object-cover"
                 />
               </div>
@@ -202,13 +202,13 @@ const AboutPage = () => {
               Erleben Sie die heilende Kraft der Thai-Massage. Wir freuen uns darauf, Sie bei uns begrüßen zu dürfen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/buchen">
+              <a href="/buchen/">
                 <Button className="group relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:shadow-xl hover:shadow-[#7B2958]/30 hover:-translate-y-1">
                   <span className="relative z-10">Jetzt Termin buchen</span>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 </Button>
               </a>
-              <a href="/kontakt">
+              <a href="/kontakt/">
                 <Button variant="outline" className="border-2 border-[#2B2B2B] text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white text-base px-8 py-6 rounded-full transition-all duration-500 hover:-translate-y-1">
                   Kontakt aufnehmen
                 </Button>

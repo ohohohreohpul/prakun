@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Öffnungszeiten",
-    lines: ["Mo–Fr 10:00–20:00", "Sa 10:00–18:00 · So 11:00–17:00", "Termine nach Vereinbarung"]
+    lines: ["Mo–Fr 10:00–20:00", "Sa 11:00–18:00 · So geschlossen", "Termine nach Vereinbarung"]
   }
 ];
 
@@ -287,7 +287,7 @@ const ContactPage = () => {
             <p className="text-white/60 mb-8">
               Nutzen Sie unser Online-Buchungssystem für eine schnelle und unkomplizierte Terminvereinbarung.
             </p>
-            <a href="/buchen">
+            <a href="/buchen/">
               <Button className="group bg-[#C4A77D] hover:bg-[#B39A6E] text-[#1a1a1a] text-base px-8 py-6 rounded-full font-semibold transition-all duration-500 hover:shadow-xl hover:shadow-[#C4A77D]/30 hover:-translate-y-1">
                 <span>Online Termin buchen</span>
               </Button>

@@ -82,7 +82,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
                 <Star key={i} className="h-3.5 w-3.5 fill-[#C4A77D] text-[#C4A77D]" />
               ))}
               <span className="text-white/60">|</span>
-              <span className="text-sm text-white font-medium">4.9/5 · 200+ Bewertungen</span>
+              <span className="text-sm text-white font-medium">4,7/5 · 1.000+ Bewertungen</span>
             </motion.div>
 
             {/* H1 */}
@@ -111,7 +111,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
                 asChild
                 className="bg-[#7B2958] hover:bg-[#7a2852] text-white px-8 py-6 text-base font-semibold rounded-xl"
               >
-                <a href="/buchen">Termin buchen</a>
+                <a href="/buchen/">Termin buchen</a>
               </Button>
               <Button
                 variant="outline"
@@ -157,10 +157,10 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
               <ul className="space-y-3">
                 {[
                   `Nur ${distance} von ${name} (${transport})`,
-                  '4.9 ★ Google-Bewertung – über 200 Gäste',
+                  '4,7 ★ – über 1.000 Bewertungen',
                   '100 % zertifizierte Therapeuten',
                   'Buchung online & telefonisch möglich',
-                  'Täglich 10–20 Uhr geöffnet',
+                  'Mo–Fr 10–20 Uhr, Sa 11–18 Uhr',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check className="h-5 w-5 text-[#7B2958] mt-0.5 shrink-0" />
@@ -177,7 +177,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             >
               {[
                 { value: '12+', label: 'Jahre Erfahrung', sub: 'Seit 2012 in Hamburg' },
-                { value: '4.9★', label: 'Google-Bewertung', sub: 'Über 200 Rezensionen' },
+                { value: '4,7★', label: 'Google & Treatwell', sub: '1.000+ Bewertungen' },
                 { value: '10.000+', label: 'Zufriedene Gäste', sub: 'In ganz Hamburg' },
                 { value: '100%', label: 'Zertifiziert', sub: 'Alle Therapeuten' },
               ].map((stat) => (
@@ -215,7 +215,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             {services.map((svc, i) => (
               <motion.a
                 key={svc.slug}
-                href={`/massage/${svc.slug}`}
+                href={`/massage/${svc.slug}/`}
                 variants={fadeUp} initial="hidden" whileInView="visible" custom={i * 0.05} viewport={{ once: true }}
                 className="group bg-white rounded-2xl p-6 border border-[#E8E4DF] hover:border-[#7B2958]/40 hover:shadow-lg transition-all duration-300"
               >
@@ -240,7 +240,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             className="text-center mt-10"
           >
             <Button asChild className="bg-[#7B2958] hover:bg-[#7a2852] text-white px-10 py-6 text-base font-semibold rounded-xl">
-              <a href="/buchen">Jetzt Termin buchen</a>
+              <a href="/buchen/">Jetzt Termin buchen</a>
             </Button>
           </motion.div>
         </div>
@@ -258,7 +258,7 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={1} viewport={{ once: true }}>
               <Clock className="h-8 w-8 text-[#C4A77D] mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">Öffnungszeiten</h3>
-              <p className="text-white/70">Mo–Fr: 10–20 Uhr<br />Sa: 10–18 Uhr · So: 11–17 Uhr</p>
+              <p className="text-white/70">Mo–Fr: 10–20 Uhr<br />Sa: 11–18 Uhr · So: geschlossen</p>
             </motion.div>
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={2} viewport={{ once: true }}>
               <Phone className="h-8 w-8 text-[#C4A77D] mx-auto mb-4" />
@@ -336,10 +336,10 @@ const NeighborhoodLandingPage = ({ neighborhood }) => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button asChild className="bg-white text-[#7B2958] hover:bg-white/90 px-10 py-6 text-base font-semibold rounded-xl">
-              <a href="/buchen">Jetzt buchen</a>
+              <a href="/buchen/">Jetzt buchen</a>
             </Button>
             <Button asChild variant="outline" className="border-white/40 text-white hover:bg-white/10 px-10 py-6 text-base rounded-xl">
-              <a href="/leistungen">Alle Massagen ansehen</a>
+              <a href="/leistungen/">Alle Massagen ansehen</a>
             </Button>
           </motion.div>
         </div>

@@ -100,7 +100,7 @@ const MonthlyOfferPopup = () => {
                   transition={{ delay: 0.3 }}
                   className="text-[#C4A77D] text-lg font-medium mb-2"
                 >
-                  September 2026
+                  Oktober 2026
                 </motion.p>
 
                 {/* Main Offer */}
@@ -150,7 +150,7 @@ const MonthlyOfferPopup = () => {
                   transition={{ delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-3 justify-center"
                 >
-                  <a href="/buchen" onClick={handleClose}>
+                  <a href="/buchen/" onClick={handleClose}>
                     <Button className="w-full sm:w-auto bg-white hover:bg-white/90 text-[#7B2958] font-semibold px-8 py-6 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-white/20 hover:-translate-y-0.5">
                       <Calendar className="h-5 w-5 mr-2" />
                       Jetzt buchen

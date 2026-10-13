@@ -33,7 +33,7 @@ const FAQSection = () => {
               <span className="text-[#7B2958]">Ihnen helfen?</span>
             </h2>
             <p className="text-[#666666] mb-8 leading-relaxed text-lg">
-              Bei Fragen steht Ihnen unser Team gerne zur Verfügung. Mo–Fr 10:00–20:00 Uhr, Sa 10:00–18:00 Uhr, So 11:00–17:00 Uhr.
+              Bei Fragen steht Ihnen unser Team gerne zur Verfügung. Mo–Fr 10:00–20:00 Uhr, Sa 11:00–18:00 Uhr, So geschlossen.
             </p>
             
             {/* Contact Card - Glassmorphism */}

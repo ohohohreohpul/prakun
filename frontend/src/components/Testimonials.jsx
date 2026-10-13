@@ -27,8 +27,8 @@ const Testimonials = () => {
             Was unsere Kunden sagen
           </h2>
           <p className="text-[#666666] text-lg">
-            Wir sind stolz auf über 200 zufriedene Kunden und eine durchschnittliche Bewertung von{' '}
-            <span className="font-bold text-[#2B2B2B]">4.9 von 5</span> Sternen.
+            Gäste bewerten uns im Durchschnitt mit{' '}
+            <span className="font-bold text-[#2B2B2B]">4,7 von 5</span> Sternen (über 1.000 Bewertungen bei Google und Treatwell).
           </p>
         </motion.div>
 

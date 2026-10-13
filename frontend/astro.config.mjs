@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.prakunthaimassage.de',
   output: 'static',
+  trailingSlash: 'always',
   integrations: [
     react(),
     tailwind({

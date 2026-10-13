@@ -9,14 +9,16 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image with Parallax Effect */}
-      <motion.div
+      <motion.img
+        src="/prakun-thai-massage-hamburg-behandlung.jpg"
+        alt="Thai-Massage – Prakun Thai Massage Hamburg"
+        width={2048}
+        height={2048}
+        fetchPriority="high"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/hero-massage.jpg')`,
-        }}
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
       
       {/* Animated Gradient Overlay */}
@@ -64,7 +66,7 @@ const HeroSection = () => {
               ))}
             </div>
             <span className="text-white/60">|</span>
-            <span className="text-sm text-white font-medium">4.9/5 · 200+ Bewertungen</span>
+            <span className="text-sm text-white font-medium">4,7/5 · 1.000+ Bewertungen</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -100,7 +102,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <a href="/buchen">
+            <a href="/buchen/">
               <Button
                 className="group relative overflow-hidden bg-[#7B2958] hover:bg-[#5C1E42] text-white text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-[#7B2958]/40 hover:-translate-y-1"
               >

@@ -83,7 +83,7 @@ const LymphaticSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <a href="/buchen">
+          <a href="/buchen/">
             <Button className="group relative overflow-hidden bg-white hover:bg-white/90 text-[#2B2B2B] text-base px-10 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1">
               <span className="relative z-10">Jetzt buchen</span>
             </Button>

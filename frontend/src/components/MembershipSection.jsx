@@ -73,7 +73,7 @@ const MembershipSection = () => {
             <p className="text-white/70 text-base md:text-lg mb-8">
               Zeit zu Zweit: Genießen Sie gemeinsame Auszeiten mit Ihren Liebsten in entspannter Atmosphäre.
             </p>
-            <a href="/buchen">
+            <a href="/buchen/">
               <Button className="group relative overflow-hidden bg-white hover:bg-white/90 text-[#2B2B2B] text-base px-8 py-6 rounded-full font-medium transition-all duration-500 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1">
                 <span className="relative z-10">Pakete entdecken</span>
               </Button>
