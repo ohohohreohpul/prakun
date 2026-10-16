@@ -1,5 +1,6 @@
 ---
 import '../index.css';
+import ConsentAndTracking from '../components/ConsentAndTracking.astro';
 
 interface Props {
   title: string;
@@ -99,18 +100,9 @@ const siteName = "Prakun Thai Massage Hamburg";
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://images.unsplash.com" />
 
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEN418G80N"></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JEN418G80N', {
-      cookie_flags: 'SameSite=None;Secure'
-    });
-  </script>
 </head>
 <body class="bg-[#F7F6F4] min-h-screen">
   <slot />
+  <ConsentAndTracking />
 </body>
 </html>
