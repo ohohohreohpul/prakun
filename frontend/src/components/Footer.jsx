@@ -127,6 +127,15 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <button
+                  type="button"
+                  data-cookie-settings
+                  className="text-sm text-white/60 hover:text-white transition-colors"
+                >
+                  Cookie-Einstellungen
+                </button>
+              </li>
             </ul>
           </motion.div>
 

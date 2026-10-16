@@ -1,0 +1,229 @@
+---
+// Cookie consent (Google Consent Mode v2, "basic" mode) + GA4 conversion tracking.
+// GA4 is only loaded after the visitor clicks "Akzeptieren". Without consent no
+// Google script is requested and no cookie is set.
+const GA_ID = 'G-JEN418G80N';
+---
+
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-modal="false"
+  aria-labelledby="cookie-banner-title"
+  aria-describedby="cookie-banner-text"
+  hidden
+>
+  <div class="cookie-banner__inner">
+    <div>
+      <p id="cookie-banner-title" class="cookie-banner__title">Cookies &amp; Statistik</p>
+      <p id="cookie-banner-text" class="cookie-banner__text">
+        Wir möchten mit Google Analytics messen, wie unsere Website genutzt wird, um sie
+        zu verbessern. Das passiert nur mit Ihrer Einwilligung, die Sie jederzeit über
+        „Cookie-Einstellungen“ im Footer widerrufen können.
+        <a href="/datenschutz/">Datenschutzerklärung</a>
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button type="button" class="cookie-banner__btn" data-consent="denied">Ablehnen</button>
+      <button type="button" class="cookie-banner__btn" data-consent="granted">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  #cookie-banner {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 9999;
+    padding: 16px;
+    pointer-events: none;
+  }
+  #cookie-banner[hidden] { display: none; }
+  .cookie-banner__inner {
+    pointer-events: auto;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 24px;
+    padding: 20px 24px;
+    background: #1a1a1a;
+    color: #f7f6f4;
+    border: 1px solid rgba(196, 167, 125, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .cookie-banner__inner > div:first-child { flex: 1 1 420px; }
+  .cookie-banner__title { font-weight: 600; margin: 0 0 4px; color: #fff; }
+  .cookie-banner__text { margin: 0; color: rgba(247, 246, 244, 0.8); }
+  .cookie-banner__text a { color: #c4a77d; text-decoration: underline; }
+  .cookie-banner__actions { display: flex; gap: 12px; flex: 1 1 220px; }
+  /* Equal prominence for both choices (no nudging towards "accept") */
+  .cookie-banner__btn {
+    flex: 1;
+    min-height: 44px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid #c4a77d;
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+  .cookie-banner__btn:hover { background: #c4a77d; color: #1a1a1a; }
+  .cookie-banner__btn:focus-visible { outline: 2px solid #c4a77d; outline-offset: 2px; }
+</style>
+
+<script is:inline define:vars={{ GA_ID }}>
+  (function () {
+    var STORAGE_KEY = 'prakun-consent-v1';
+    var gaLoaded = false;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    function readConsent() {
+      try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+    }
+    function writeConsent(value) {
+      try { localStorage.setItem(STORAGE_KEY, value); } catch (e) { /* storage blocked: ask again next visit */ }
+    }
+    function hasConsent() { return readConsent() === 'granted'; }
+
+    function loadGa() {
+      if (gaLoaded) return;
+      gaLoaded = true;
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID, { cookie_flags: 'SameSite=None;Secure' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+    }
+
+    function removeGaCookies() {
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (/^_ga/.test(name)) {
+          ['', '.' + location.hostname.replace(/^www\./, ''), location.hostname].forEach(function (d) {
+            document.cookie = name + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : '');
+          });
+        }
+      });
+    }
+
+    // Public helper: events are only sent with consent
+    window.prakunTrack = function (eventName, params) {
+      if (!hasConsent()) return;
+      loadGa();
+      window.gtag('event', eventName, params || {});
+    };
+
+    function showBanner(show) {
+      var el = document.getElementById('cookie-banner');
+      if (el) el.hidden = !show;
+    }
+
+    function setConsent(value) {
+      writeConsent(value);
+      showBanner(false);
+      if (value === 'granted') {
+        loadGa();
+      } else {
+        window.gtag('consent', 'update', { analytics_storage: 'denied' });
+        removeGaCookies();
+      }
+    }
+
+    function linkLocation(el) {
+      var tagged = el.closest('[data-track-location]');
+      if (tagged) return tagged.getAttribute('data-track-location');
+      var section = el.closest('header, footer, nav, section, main');
+      if (!section) return 'page';
+      return section.tagName.toLowerCase() + (section.id ? '#' + section.id : '');
+    }
+
+    function onLinkClick(a) {
+      var href = a.getAttribute('href') || '';
+      var params = { link_location: linkLocation(a), link_text: (a.innerText || '').trim().slice(0, 80) };
+      var value = parseFloat(a.getAttribute('data-track-value') || '');
+      if (!isNaN(value)) { params.value = value; params.currency = 'EUR'; }
+      if (href.indexOf('tel:') === 0) return window.prakunTrack('phone_click', params);
+      if (href.indexOf('mailto:') === 0) return window.prakunTrack('email_click', params);
+      if (/shop\.prakunthaimassage\.de/.test(href)) return window.prakunTrack('voucher_click', params);
+      if (/^\/buchen\/?($|[?#])/.test(href) || /prakunthaimassage\.de\/buchen/.test(href)) {
+        return window.prakunTrack('booking_cta_click', params);
+      }
+    }
+
+    // Planity widget funnel (widget renders inline in #planitywl)
+    var bookingCompleted = false;
+    var CONFIRMATION_PATTERN = /(Termin|Buchung|Reservierung)\s+(wurde\s+)?(erfolgreich\s+)?(bestätigt|gebucht|reserviert)|Vielen Dank für Ihre (Buchung|Reservierung)/i;
+
+    function serviceFromButton(btn) {
+      var item = btn.closest('.planity_ui_item-list-element') || btn.parentElement;
+      var lines = (item ? item.innerText : '').split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
+      var priceLine = lines.find(function (l) { return /\d+\s?€/.test(l); }) || '';
+      var price = parseFloat(((priceLine.match(/(\d+(?:[.,]\d+)?)\s?€/) || [])[1] || '0').replace(',', '.'));
+      return { name: lines[0] || 'unbekannt', price: price };
+    }
+
+    function onPlanityClick(target) {
+      var choose = target.closest('.planity_bookappointment-button-choose');
+      if (choose) {
+        var svc = serviceFromButton(choose);
+        return window.prakunTrack('select_service', { service_name: svc.name, value: svc.price, currency: 'EUR' });
+      }
+      if (target.closest('.planity_appointment_days_slider_hour_availability')) {
+        return window.prakunTrack('select_time', {});
+      }
+      var button = target.closest('button');
+      if (button && /bestätigen|jetzt buchen|termin buchen|reservieren/i.test(button.innerText || '')) {
+        return window.prakunTrack('booking_confirm_click', {});
+      }
+    }
+
+    function watchForConfirmation(root) {
+      new MutationObserver(function () {
+        if (bookingCompleted) return;
+        if (CONFIRMATION_PATTERN.test(root.innerText || '')) {
+          bookingCompleted = true;
+          window.prakunTrack('booking_complete', {});
+        }
+      }).observe(root, { childList: true, subtree: true, characterData: true });
+    }
+
+    document.addEventListener('click', function (e) {
+      var target = e.target instanceof Element ? e.target : null;
+      if (!target) return;
+      var choice = target.closest('[data-consent]');
+      if (choice) return setConsent(choice.getAttribute('data-consent'));
+      if (target.closest('[data-cookie-settings]')) { e.preventDefault(); return showBanner(true); }
+      if (target.closest('#planitywl')) onPlanityClick(target);
+      var a = target.closest('a[href]');
+      if (a) onLinkClick(a);
+    }, true);
+
+    function init() {
+      var consent = readConsent();
+      if (consent === 'granted') loadGa();
+      if (!consent) showBanner(true);
+      var planityRoot = document.getElementById('planity-container');
+      if (planityRoot) watchForConfirmation(planityRoot);
+    }
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })();
+</script>
