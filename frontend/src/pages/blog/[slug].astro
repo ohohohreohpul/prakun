@@ -1,0 +1,165 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import FloatingPhoneBubble from '../../components/FloatingPhoneBubble';
+import { blogPostingSchema, breadcrumbSchema, faqSchema } from '../../lib/structuredData';
+import { formatGermanDate, readingMinutes } from '../../lib/blog';
+import { servicesDetailed } from '../../data/mockData';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, pubDate, updatedDate, heroImage, heroAlt, keywords, relatedServices, faq } = post.data;
+
+const PAGE_URL = `https://www.prakunthaimassage.de/blog/${post.id}/`;
+const lastChanged = updatedDate ?? pubDate;
+const related = relatedServices.map((slug) => servicesDetailed[slug]).filter(Boolean);
+
+const structuredData = [
+  blogPostingSchema({ url: PAGE_URL, title, description, datePublished: pubDate, dateModified: updatedDate, image: heroImage, keywords }),
+  breadcrumbSchema([
+    { name: "Home", url: "https://www.prakunthaimassage.de" },
+    { name: "Ratgeber", url: "https://www.prakunthaimassage.de/blog/" },
+    { name: title, url: PAGE_URL }
+  ]),
+  ...(faq.length ? [faqSchema(faq)] : []),
+];
+---
+
+<BaseLayout
+  title={`${title} | Prakun Hamburg`}
+  description={description}
+  canonicalUrl={PAGE_URL}
+  keywords={keywords.join(', ')}
+  structuredData={structuredData}
+  dateModified={lastChanged.toISOString().slice(0, 10)}
+  ogType="article"
+>
+  <Header client:load />
+  <main class="bg-[#F7F6F4]">
+    <header class="relative overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-[#2a1a24] text-white pt-32 pb-16">
+      <div aria-hidden="true" class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#7B2958]/30 blur-3xl"></div>
+      <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Brotkrumen" class="text-sm text-white/50 mb-8">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span class="mx-2">/</span>
+          <a href="/blog/" class="hover:text-white transition-colors">Ratgeber</a>
+        </nav>
+        <p class="text-[#C4A77D] text-xs font-semibold uppercase tracking-[0.2em] mb-4">Massage-Ratgeber</p>
+        <h1 class="text-3xl md:text-5xl font-bold leading-[1.1] mb-6 [text-wrap:balance]">{title}</h1>
+        <p class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/60">
+          <span>Prakun Thai Massage Hamburg</span>
+          <span aria-hidden="true" class="h-1 w-1 rounded-full bg-[#C4A77D]"></span>
+          {updatedDate
+            ? <span>Aktualisiert am <time datetime={updatedDate.toISOString().slice(0, 10)}>{formatGermanDate(updatedDate)}</time></span>
+            : <time datetime={pubDate.toISOString().slice(0, 10)}>{formatGermanDate(pubDate)}</time>}
+          <span aria-hidden="true" class="h-1 w-1 rounded-full bg-[#C4A77D]"></span>
+          <span>{readingMinutes(post.body)} Min. Lesezeit</span>
+        </p>
+      </div>
+    </header>
+
+    <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      {heroImage && (
+        <img src={heroImage} alt={heroAlt ?? title} width="1200" height="800" class="w-full rounded-2xl mb-12 shadow-lg" loading="eager" fetchpriority="high" />
+      )}
+
+      <div class="article-body">
+        <Content />
+      </div>
+
+      {faq.length > 0 && (
+        <section class="mt-16" aria-labelledby="faq-heading">
+          <p class="text-[#7B2958] text-xs font-semibold uppercase tracking-[0.2em] mb-2">Kurz beantwortet</p>
+          <h2 id="faq-heading" class="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-6">Häufige Fragen</h2>
+          <div class="space-y-3">
+            {faq.map((item, index) => (
+              <details class="faq-item group rounded-xl bg-white border border-[#E5E2DD] open:shadow-md transition-shadow" open={index === 0}>
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-semibold text-[#1a1a1a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#7B2958] rounded-xl">
+                  <h3 class="text-base md:text-lg">{item.question}</h3>
+                  <span aria-hidden="true" class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#F7F6F4] text-[#7B2958] transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p class="px-5 pb-5 text-gray-600 leading-relaxed">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {related.length > 0 && (
+        <aside class="mt-16 overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a1a1a] to-[#2a1a24] p-8 text-white">
+          <p class="text-[#C4A77D] text-xs font-semibold uppercase tracking-[0.2em] mb-2">Im Studio in Hamburg-Uhlenhorst</p>
+          <h2 class="text-2xl font-bold mb-6">Passende Behandlungen</h2>
+          <ul class="divide-y divide-white/10 mb-8">
+            {related.map((service) => (
+              <li>
+                <a href={`/massage/${service.slug}/`} class="group flex items-center justify-between gap-4 py-3">
+                  <span class="font-semibold group-hover:text-[#C4A77D] transition-colors">{service.title} Hamburg</span>
+                  <span class="text-white/60 tabular-nums whitespace-nowrap">ab {service.priceFrom} €</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <a href="/buchen/" class="bg-[#7B2958] hover:bg-[#5C1E42] text-white font-semibold px-6 py-3 rounded-full transition-colors">Termin buchen</a>
+            <a href="tel:+494022697033" class="border border-white/30 hover:bg-white hover:text-[#1a1a1a] text-white font-semibold px-6 py-3 rounded-full transition-colors">040 22697033</a>
+          </div>
+        </aside>
+      )}
+
+      <p class="mt-12"><a href="/blog/" class="text-[#7B2958] font-semibold hover:underline">← Alle Ratgeber-Artikel</a></p>
+    </article>
+  </main>
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>
+
+<style is:global>
+  .article-body { color: #3f3a40; font-size: 1.0625rem; line-height: 1.8; }
+  .article-body > * + * { margin-top: 1.25em; }
+  /* Opening answer paragraph: the "Kurzantwort" card AI engines and skimmers read first */
+  .article-body > p:first-child {
+    background: #fff; border: 1px solid #E5E2DD; border-radius: 1rem;
+    padding: 1.5rem 1.75rem; font-size: 1.125rem; color: #2B2B2B;
+    box-shadow: 0 10px 30px -18px rgba(123, 41, 88, 0.35);
+  }
+  .article-body > p:first-child::before {
+    content: "Kurz gesagt"; display: block; margin-bottom: 0.5rem;
+    color: #7B2958; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  }
+  .article-body h2 { color: #1a1a1a; font-size: clamp(1.4rem, 1.1rem + 1vw, 1.85rem); font-weight: 700; line-height: 1.25; margin-top: 2.6em; text-wrap: balance; }
+  .article-body h2::before { content: ""; display: block; width: 2.5rem; height: 3px; border-radius: 99px; background: #C4A77D; margin-bottom: 0.9rem; }
+  .article-body h3 { color: #1a1a1a; font-size: 1.2rem; font-weight: 600; margin-top: 2em; }
+  .article-body a { color: #7B2958; font-weight: 500; text-decoration: underline; text-decoration-color: rgba(123, 41, 88, 0.3); text-underline-offset: 3px; transition: text-decoration-color .2s; }
+  .article-body a:hover { text-decoration-color: #7B2958; }
+  .article-body ul, .article-body ol { padding-left: 1.4em; }
+  .article-body ul { list-style: none; padding-left: 0; }
+  .article-body ul > li { position: relative; padding-left: 1.5em; }
+  .article-body ul > li::before { content: ""; position: absolute; left: 0.2em; top: 0.72em; width: 0.45em; height: 0.45em; border-radius: 99px; background: #C4A77D; }
+  .article-body ol { list-style: decimal; }
+  .article-body ol > li::marker { color: #7B2958; font-weight: 700; }
+  .article-body li + li { margin-top: 0.55em; }
+  .article-body strong { color: #1a1a1a; font-weight: 650; }
+  .article-body em { color: #6b6470; }
+  .article-body table {
+    width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.95rem;
+    display: block; overflow-x: auto; background: #fff; border: 1px solid #E5E2DD; border-radius: 1rem;
+    font-variant-numeric: tabular-nums; margin-top: 1.75em;
+  }
+  .article-body thead th { background: #2a1a24; color: #fff; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+  .article-body thead th:first-child { border-top-left-radius: 1rem; }
+  .article-body thead th:last-child { border-top-right-radius: 1rem; }
+  .article-body th, .article-body td { text-align: left; padding: 0.85rem 1.1rem; }
+  .article-body td { border-top: 1px solid #F0ECE8; white-space: nowrap; }
+  .article-body td:first-child { white-space: normal; min-width: 11rem; color: #1a1a1a; font-weight: 500; }
+  .article-body tbody tr:hover td { background: #FBF8F5; }
+  .article-body td a { text-decoration: none; }
+  .article-body blockquote { border-left: 3px solid #C4A77D; padding-left: 1rem; color: #4b5563; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+</style>

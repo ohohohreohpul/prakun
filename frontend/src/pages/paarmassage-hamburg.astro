@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
+import { breadcrumbSchema, faqSchema } from '../lib/structuredData';
+import { servicesDetailed } from '../data/mockData';
+
+const PAGE_URL = "https://www.prakunthaimassage.de/paarmassage-hamburg/";
+const pageTitle = "Paarmassage Hamburg – Massage für Paare zu zweit | Prakun";
+const pageDescription = "Paarmassage in Hamburg: zwei Massagen zur gleichen Zeit, jede:r wählt die eigene Behandlung. Z. B. 2 × 60 Min. Ganzkörpermassage für 124 €. Nahe U3 Mundsburg.";
+
+// Example combinations, priced from the live price list (2 × the 60-minute tier)
+const COUPLE_EXAMPLES = ['ganzkoerpermassage', 'aromaoel-massage', 'hot-stone-massage', 'lomi-lomi-massage'];
+const SIXTY_MIN = '60 min';
+const coupleRows = COUPLE_EXAMPLES
+  .map((slug) => servicesDetailed[slug])
+  .filter(Boolean)
+  .map((service) => {
+    const tier = service.pricing.find((p) => p.duration === SIXTY_MIN);
+    return tier ? { title: service.title, slug: service.slug, single: tier.price, couple: tier.price * 2 } : null;
+  })
+  .filter(Boolean);
+const cheapestCouple = Math.min(...coupleRows.map((row) => row.couple));
+
+const faqItems = [
+  {
+    question: "Was ist eine Paarmassage?",
+    answer: `Eine Paarmassage ist eine Massage zu zweit: Zwei Therapeutinnen massieren zwei Personen zur gleichen Zeit. Bei Prakun Thai Massage in Hamburg wählt jede Person ihre eigene Behandlung und Dauer – etwa eine kräftige Ganzkörpermassage mit Thai-Techniken und eine sanfte Aromaöl-Massage. Zwei Massagen à 60 Minuten gibt es ab ${cheapestCouple} €.`
+  },
+  {
+    question: "Was passiert bei einer Paarmassage?",
+    answer: "Sie kommen gemeinsam an, besprechen kurz Wünsche und Druckstärke, und dann beginnen beide Massagen zur gleichen Zeit. Jede Person wird von einer eigenen Therapeutin behandelt. Danach können Sie noch gemeinsam bei Wasser oder Kräutertee entspannen. Planen Sie für 60 Minuten Massage etwa 75 Minuten Aufenthalt ein."
+  },
+  {
+    question: "Was kostet eine Paarmassage in Hamburg?",
+    answer: `Bei Prakun zahlen Sie für eine Paarmassage einfach die zwei gewählten Behandlungen: 2 × 60 Minuten Ganzkörpermassage kosten ${2 * servicesDetailed['ganzkoerpermassage'].pricing.find((p) => p.duration === SIXTY_MIN).price} €, 2 × 60 Minuten Hot Stone ${2 * servicesDetailed['hot-stone-massage'].pricing.find((p) => p.duration === SIXTY_MIN).price} €. Es gibt keinen Aufpreis für den gemeinsamen Termin.`
+  },
+  {
+    question: "Wie buche ich eine Paarmassage bei Prakun?",
+    answer: "Paarmassagen buchen Sie am besten telefonisch unter 040 22697033, damit wir zwei Therapeutinnen zur gleichen Zeit für Sie einplanen. Geöffnet ist Montag bis Freitag 10–20 Uhr und Samstag 11–18 Uhr. Für Freitagabend und Samstag empfehlen wir, einige Tage im Voraus anzurufen."
+  },
+  {
+    question: "Kann ich eine Paarmassage verschenken?",
+    answer: "Ja. Ein Massage-Gutschein von Prakun ist für alle Behandlungen einlösbar, also auch für eine Paarmassage, 3 Jahre gültig und kommt sofort per E-Mail. Für 2 × 60 Minuten wählen Sie einfach den passenden Betrag – ein beliebtes Geschenk zum Jahrestag, Valentinstag oder zur Hochzeit."
+  },
+  {
+    question: "Wo ist das Studio?",
+    answer: "Prakun Thai Massage liegt am Winterhuder Weg 24, 22085 Hamburg – in Uhlenhorst an der Grenze zu Winterhude, etwa 5 Gehminuten von der U3-Haltestelle Mundsburg."
+  }
+];
+
+const breadcrumb = breadcrumbSchema([
+  { name: "Home", url: "https://www.prakunthaimassage.de" },
+  { name: "Paarmassage Hamburg", url: PAGE_URL }
+]);
+
+const coupleService = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${PAGE_URL}#service`,
+  "name": "Paarmassage Hamburg",
+  "serviceType": "Paarmassage",
+  "description": "Zwei Massagen zur gleichen Zeit für zwei Personen, jede Person wählt Behandlung und Dauer selbst.",
+  "url": PAGE_URL,
+  "provider": { "@id": "https://www.prakunthaimassage.de/#business" },
+  "areaServed": { "@type": "City", "name": "Hamburg" },
+  "offers": coupleRows.map((row) => ({
+    "@type": "Offer",
+    "name": `Paarmassage: 2 × 60 Min. ${row.title}`,
+    "price": row.couple,
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": PAGE_URL
+  }))
+};
+
+const allStructuredData = [coupleService, breadcrumb, faqSchema(faqItems)];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalUrl={PAGE_URL}
+  keywords="Paarmassage Hamburg, Massage für Paare Hamburg, Paar Massage Hamburg, Thai Massage für Paare, Massage zu zweit Hamburg"
+  structuredData={allStructuredData}
+  dateModified="2026-10-19"
+>
+  <Header client:load />
+  <main>
+    <section class="relative pt-24 pb-12 bg-gradient-to-b from-[#1a1a1a] to-[#2a1a24] text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-[#c9a96e] text-sm font-semibold uppercase tracking-widest mb-4">Prakun Thai Massage Hamburg</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Paarmassage Hamburg</h1>
+        <p class="text-xl text-white/75 max-w-2xl mx-auto mb-8">
+          Zwei Massagen zur gleichen Zeit – jede:r wählt die eigene Behandlung. Ab {cheapestCouple} € für 2 × 60 Minuten.
+        </p>
+        <a href="tel:+494022697033" class="inline-block bg-[#7B2958] hover:bg-[#5e1f43] text-white font-semibold px-8 py-3 rounded-full transition-colors">
+          Paarmassage anfragen: 040 22697033
+        </a>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-4">Was ist eine Paarmassage?</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <strong>Eine Paarmassage ist eine Massage zu zweit: Zwei Therapeutinnen massieren zwei Personen zur gleichen Zeit.</strong>
+          Bei Prakun Thai Massage in Hamburg ist sie kein starres Paket. Jede Person wählt ihre eigene Massage und Dauer – wer feste Griffe mag, nimmt die Ganzkörpermassage mit Thai-Techniken, wer es sanft möchte, die Aromaöl-Massage. Sie beginnen und enden gemeinsam.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-10">
+          Paare buchen sie zum Jahrestag, als Überraschung oder einfach als gemeinsame Auszeit. Genauso gut passt sie für Freundinnen, Mutter und Tochter oder Geschwister.
+        </p>
+
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-4">Was kostet eine Paarmassage?</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">Sie zahlen die zwei gewählten Behandlungen, ohne Aufpreis für den gemeinsamen Termin. Beliebte Kombinationen für 2 × 60 Minuten:</p>
+        <div class="overflow-x-auto mb-10">
+          <table class="w-full text-sm text-left border-collapse">
+            <caption class="sr-only">Preise für Paarmassagen bei Prakun Thai Massage Hamburg</caption>
+            <thead>
+              <tr class="border-b border-gray-300">
+                <th scope="col" class="py-2 pr-4 font-semibold text-[#1a1a1a]">Massage (je 60 Min.)</th>
+                <th scope="col" class="py-2 pr-4 font-semibold text-[#1a1a1a]">Pro Person</th>
+                <th scope="col" class="py-2 font-semibold text-[#1a1a1a]">Für zwei</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600">
+              {coupleRows.map((row) => (
+                <tr class="border-b border-gray-200">
+                  <td class="py-2 pr-4"><a href={`/massage/${row.slug}/`} class="text-[#7B2958] hover:underline">{row.title}</a></td>
+                  <td class="py-2 pr-4">{row.single} €</td>
+                  <td class="py-2 font-semibold">{row.couple} €</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">Häufige Fragen zur Paarmassage in Hamburg</h2>
+        <div class="space-y-6">
+          {faqItems.map((item) => (
+            <div class="border-b border-gray-100 pb-6">
+              <h3 class="font-semibold text-[#1a1a1a] mb-2">{item.question}</h3>
+              <p class="text-gray-600 leading-relaxed">{item.answer}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-3 text-sm">
+          <a href="/gutscheine/" class="text-[#7B2958] hover:underline">Massage Gutschein Hamburg</a>
+          <a href="/massage/ganzkoerpermassage/" class="text-[#7B2958] hover:underline">Ganzkörpermassage Hamburg</a>
+          <a href="/massage/lomi-lomi-massage/" class="text-[#7B2958] hover:underline">Lomi Lomi Massage Hamburg</a>
+          <a href="/thai-massage/" class="text-[#7B2958] hover:underline">Was ist Thai Massage?</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer client:visible />
+  <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
+</BaseLayout>

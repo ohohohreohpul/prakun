@@ -1,6 +1,7 @@
 ---
 import '../index.css';
 import ConsentAndTracking from '../components/ConsentAndTracking.astro';
+import { buildPageGraph } from '../lib/structuredData';
 
 interface Props {
   title: string;
@@ -8,8 +9,13 @@ interface Props {
   keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
   noindex?: boolean;
+  /** schema.org type of the page node, e.g. "WebPage", "AboutPage", "ContactPage", "CollectionPage" */
+  pageType?: string;
+  /** ISO date (YYYY-MM-DD) the page content last changed */
+  dateModified?: string;
+  ogType?: "website" | "article";
 }
 
 const {
@@ -19,11 +25,24 @@ const {
   ogImage = "https://www.prakunthaimassage.de/prakun-thai-massage-hamburg-og.jpg",
   canonicalUrl,
   structuredData,
-  noindex = false
+  noindex = false,
+  pageType,
+  dateModified,
+  ogType = "website"
 } = Astro.props;
 
 const currentUrl = canonicalUrl || Astro.url.href;
 const siteName = "Prakun Thai Massage Hamburg";
+const schemaNodes = structuredData ? (Array.isArray(structuredData) ? structuredData : [structuredData]) : [];
+const pageGraph = noindex ? null : buildPageGraph({
+  url: currentUrl,
+  title,
+  description,
+  image: ogImage,
+  nodes: schemaNodes,
+  pageType,
+  dateModified,
+});
 ---
 
 <!DOCTYPE html>
@@ -46,7 +65,7 @@ const siteName = "Prakun Thai Massage Hamburg";
   <link rel="canonical" href={currentUrl} />
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:url" content={currentUrl} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -85,16 +104,8 @@ const siteName = "Prakun Thai Massage Hamburg";
   <meta name="contact" content="info@prakunthaimassage.de" />
   <meta name="reply-to" content="info@prakunthaimassage.de" />
 
-  <!-- Structured Data -->
-  {structuredData && (
-    Array.isArray(structuredData) ? (
-      structuredData.map((data) => (
-        <script type="application/ld+json" set:html={JSON.stringify(data)} />
-      ))
-    ) : (
-      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-    )
-  )}
+  <!-- Structured Data: one connected @graph per page -->
+  {pageGraph && <script type="application/ld+json" set:html={JSON.stringify(pageGraph)} />}
 
   <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
