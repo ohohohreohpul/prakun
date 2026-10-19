@@ -1,4 +1,5 @@
 import { serviceAnswers, STUDIO_LOCATION_ANSWER } from '../data/serviceAnswers';
+import { promptFaqs } from '../data/promptFaqs';
 
 const formatPriceList = (pricing) =>
   pricing.map(({ duration, price }) => `${duration.replace(' min', ' Min.')} ${price} €`).join(', ');
@@ -22,6 +23,8 @@ export const buildServiceFaq = (service) => {
   const suitableFaq = suitable
     ? [{ question: `Für wen eignet sich eine ${service.title}?`, answer: suitable }]
     : [];
+  const knownQuestions = new Set(existing.map((f) => f.question.toLowerCase()));
+  const researchedFaq = (promptFaqs[service.slug] ?? []).filter((f) => !knownQuestions.has(f.question.toLowerCase()));
   const locationFaq = [{ question: `Wo kann ich eine ${service.title} in Hamburg buchen?`, answer: STUDIO_LOCATION_ANSWER }];
-  return [...priceFaq, ...suitableFaq, ...existing, ...locationFaq];
+  return [...priceFaq, ...suitableFaq, ...existing, ...researchedFaq, ...locationFaq];
 };

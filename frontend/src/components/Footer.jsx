@@ -73,7 +73,7 @@ const Footer = () => {
           >
             <h3 className="text-sm font-bold mb-5 text-[#C4A77D]">Leistungen</h3>
             <ul className="space-y-3">
-              {navigationLinks.services.slice(0, 6).map((link) => (
+              {navigationLinks.services.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}

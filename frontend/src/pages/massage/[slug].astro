@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import FloatingPhoneBubble from '../../components/FloatingPhoneBubble';
 import ServiceAnswers from '../../components/ServiceAnswers.astro';
 import { buildServiceFaq } from '../../lib/serviceFaq';
-import { createServiceSchema, breadcrumbSchema, createHowToSchema, faqSchema } from '../../lib/structuredData';
+import { createServiceSchema, breadcrumbSchema, faqSchema } from '../../lib/structuredData';
 import { servicesDetailed } from '../../data/mockData';
 
 export function getStaticPaths() {
@@ -35,12 +35,8 @@ const serviceSchema = createServiceSchema({
   description: service.description.substring(0, 300),
   priceFrom: service.priceFrom,
   duration: service.duration,
+  image: service.heroImage,
   pricing: service.pricing
-});
-
-const howToSchema = createHowToSchema({
-  title: service.title,
-  slug: service.slug
 });
 
 const breadcrumb = breadcrumbSchema([
@@ -51,7 +47,7 @@ const breadcrumb = breadcrumbSchema([
 
 // Visible FAQ and FAQPage schema come from the same list so they always match
 const serviceFaq = buildServiceFaq(service);
-const structuredDataList = [serviceSchema, howToSchema, breadcrumb, faqSchema(serviceFaq)];
+const structuredDataList = [serviceSchema, breadcrumb, faqSchema(serviceFaq)];
 ---
 
 <BaseLayout

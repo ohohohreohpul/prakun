@@ -3,7 +3,17 @@
 // Hamburg – optimised for SEO, GEO (AI Search) and AEO
 // ============================================================
 
-// ---- 1. LocalBusiness (HealthAndBeautyBusiness) ----
+import { servicesDetailed } from '../data/mockData';
+
+export const SITE_URL = "https://www.prakunthaimassage.de";
+export const BUSINESS_ID = `${SITE_URL}/#business`;
+export const WEBSITE_ID = `${SITE_URL}/#website`;
+
+const DEFAULT_IMAGE = "/prakun-thai-massage-hamburg-og.jpg";
+
+const toAbsolute = (path: string): string => (path.startsWith("http") ? path : `${SITE_URL}${path}`);
+
+// ---- 1. LocalBusiness (HealthAndBeautyBusiness) – the single brand entity every page points to ----
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HealthAndBeautyBusiness", "DaySpa"],
@@ -15,7 +25,13 @@ export const localBusinessSchema = {
     "@id": "https://www.prakunthaimassage.de/#founder",
     "name": "Ailadda Sonnabend"
   },
-  "description": "Professionelle Thai-Massage im Herzen von Hamburg. Seit 2012 bieten wir authentische Thai-Massagen, Aromaöl-Massagen, Hot Stone, Ayurveda und Wellness-Pakete in Winterhude.",
+  "description": "Thai-Massage-Studio in Hamburg-Uhlenhorst an der Grenze zu Winterhude, 5 Gehminuten von der U3 Mundsburg. Seit 2012 traditionelle Thai-Massage, Ganzkörper- und Teilkörpermassage, Aromaöl, Hot Stone, Kräuterstempel, Ayurveda Abhyanga, Lomi Lomi, Fuß- und Schwangerschaftsmassage – auf Wunsch ohne Öl.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.prakunthaimassage.de/icon-512.png",
+    "width": 512,
+    "height": 512
+  },
   "image": [
     {
       "@type": "ImageObject",
@@ -79,6 +95,14 @@ export const localBusinessSchema = {
     {
       "@type": "Place",
       "name": "Eppendorf"
+    },
+    {
+      "@type": "Place",
+      "name": "Hohenfelde"
+    },
+    {
+      "@type": "Place",
+      "name": "Eilbek"
     }
   ],
   "openingHoursSpecification": [
@@ -109,38 +133,26 @@ export const localBusinessSchema = {
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Massage-Angebote Hamburg",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Teilkörpermassage Hamburg", "url": "https://www.prakunthaimassage.de/massage/teilkoerpermassage/" },
-        "price": 24, "priceCurrency": "EUR"
+    "itemListElement": Object.values(servicesDetailed).map((service) => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": `${service.title} Hamburg`,
+        "url": `https://www.prakunthaimassage.de/massage/${service.slug}/`
       },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Aromaöl-Massage Hamburg", "url": "https://www.prakunthaimassage.de/massage/aromaoel-massage/" },
-        "price": 36, "priceCurrency": "EUR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Ganzkörpermassage Hamburg", "url": "https://www.prakunthaimassage.de/massage/ganzkoerpermassage/" },
-        "price": 49, "priceCurrency": "EUR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Schwangerschaftsmassage Hamburg", "url": "https://www.prakunthaimassage.de/massage/schwangerschaftsmassage/" },
-        "price": 50, "priceCurrency": "EUR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Hot Stone Massage Hamburg", "url": "https://www.prakunthaimassage.de/massage/hot-stone-massage/" },
-        "price": 55, "priceCurrency": "EUR"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Lomi Lomi Massage Hamburg", "url": "https://www.prakunthaimassage.de/massage/lomi-lomi-massage/" },
-        "price": 72, "priceCurrency": "EUR"
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": service.priceFrom,
+        "priceCurrency": "EUR"
       }
-    ]
+    }))
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+49-40-22697033",
+    "contactType": "customer service",
+    "availableLanguage": ["German", "English", "Thai"],
+    "areaServed": "DE"
   },
   "potentialAction": {
     "@type": "ReserveAction",
@@ -176,48 +188,13 @@ export const siteLinksSearchBoxSchema = {
   "name": "Prakun Thai Massage Hamburg",
   "description": "Professionelle Thai-Massage im Herzen von Hamburg seit 2012.",
   "inLanguage": "de-DE",
-  "dateModified": "2026-07-20",
   "publisher": {
     "@id": "https://www.prakunthaimassage.de/#business"
   }
 };
 
-// ---- 2. Organization schema (brand entity for AI engines) ----
-export const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.prakunthaimassage.de/#organization",
-  "name": "Prakun Thai Massage Hamburg",
-  "alternateName": "Prakun Massage",
-  "url": "https://www.prakunthaimassage.de",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://www.prakunthaimassage.de/prakun-thai-massage-hamburg-og.jpg",
-    "width": 1200,
-    "height": 630
-  },
-  "description": "Prakun – das Thai-Wort für Dankbarkeit – steht für authentische Thai-Massage in Hamburg seit 2012. Gegründet mit der Vision, traditionelle Heilkunst aus Thailand nach Hamburg zu bringen.",
-  "foundingDate": "2012",
-  "foundingLocation": {
-    "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Hamburg",
-      "addressCountry": "DE"
-    }
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+49-40-22697033",
-    "contactType": "customer service",
-    "availableLanguage": ["German", "English", "Thai"],
-    "areaServed": "DE"
-  },
-  "sameAs": [
-    "https://www.instagram.com/prakunmassage",
-    "https://www.facebook.com/prakunmassage"
-  ]
-};
+// ---- 2. Organization – same entity as the LocalBusiness (one @id, so AI engines see one brand) ----
+export const organizationSchema = localBusinessSchema;
 
 // ---- 3. Founder / Person schema ----
 export const founderSchema = {
@@ -227,7 +204,7 @@ export const founderSchema = {
   "name": "Ailadda Sonnabend",
   "jobTitle": "Gründerin & Inhaberin",
   "worksFor": {
-    "@id": "https://www.prakunthaimassage.de/#organization"
+    "@id": "https://www.prakunthaimassage.de/#business"
   },
   "description": "Ailadda Sonnabend brachte das Wissen und die Leidenschaft für traditionelle Thai-Massage direkt aus Thailand nach Hamburg. Sie gründete Prakun Thai Massage im Jahr 2012 mit der Mission, authentische Heilkunst nach Winterhude zu bringen.",
   "knowsAbout": ["Thai Massage", "Thaimassage", "Traditionelle Heilkunst", "Aromatherapie", "Wellness"],
@@ -245,6 +222,7 @@ export const createServiceSchema = (service: {
   description: string;
   priceFrom: number;
   duration: string;
+  image?: string;
   pricing?: Array<{ duration: string; price: number }>;
 }) => ({
   "@context": "https://schema.org",
@@ -254,6 +232,7 @@ export const createServiceSchema = (service: {
   "serviceType": service.title,
   "description": service.description,
   "url": `https://www.prakunthaimassage.de/massage/${service.slug}/`,
+  ...(service.image ? { "image": toAbsolute(service.image) } : {}),
   "provider": {
     "@id": "https://www.prakunthaimassage.de/#business"
   },
@@ -306,34 +285,6 @@ export const faqSchema = (faqs: Array<{ question: string; answer: string }>) => 
   }))
 });
 
-// ---- 7. Review schema – only for third-party reviews; Google ignores self-serving LocalBusiness reviews ----
-export const reviewSchema = (reviews: Array<{
-  author: string;
-  rating: number;
-  text: string;
-  date?: string;
-}>) => ({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.prakunthaimassage.de/#business",
-  "name": "Prakun Thai Massage Hamburg",
-  "review": reviews.map((review) => ({
-    "@type": "Review",
-    "author": {
-      "@type": "Person",
-      "name": review.author
-    },
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": review.rating,
-      "bestRating": 5,
-      "worstRating": 1
-    },
-    "reviewBody": review.text,
-    "datePublished": review.date
-  }))
-});
-
 // ---- 8. ItemList schema (services index) ----
 export const serviceListSchema = (services: Array<{ title: string; slug: string; description: string }>) => ({
   "@context": "https://schema.org",
@@ -351,37 +302,104 @@ export const serviceListSchema = (services: Array<{ title: string; slug: string;
   }))
 });
 
-// ---- 9. HowTo schema (for service pages) ----
-export const createHowToSchema = (service: {
+// ---- 9. BlogPosting (blog articles) ----
+export const blogPostingSchema = (post: {
+  url: string;
   title: string;
-  slug: string;
-  steps?: string[];
+  description: string;
+  datePublished: Date;
+  dateModified?: Date;
+  image?: string;
+  keywords?: string[];
 }) => ({
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": `${service.title} buchen in Hamburg`,
-  "description": `So buchen Sie Ihre ${service.title} bei Prakun Thai Massage Hamburg in Winterhude.`,
-  "step": (service.steps || [
-    "Wählen Sie Ihre gewünschte Behandlungsdauer auf unserer Website aus.",
-    "Klicken Sie auf 'Termin buchen' und wählen Sie Ihr bevorzugtes Datum und Uhrzeit.",
-    "Bestätigen Sie Ihre Buchung – die Bestätigung erhalten Sie sofort per E-Mail.",
-    "Kommen Sie entspannt zu uns: Winterhuder Weg 24, 22085 Hamburg.",
-    "Genießen Sie Ihre Behandlung – unser zertifiziertes Team kümmert sich um alles."
-  ]).map((stepText, index) => ({
-    "@type": "HowToStep",
-    "position": index + 1,
-    "name": stepText
-  })),
-  "tool": [
-    {
-      "@type": "HowToTool",
-      "name": "Online-Buchungssystem unter prakunthaimassage.de/buchen"
-    }
-  ],
-  "supply": [
-    {
-      "@type": "HowToSupply",
-      "name": "Komfortable Kleidung oder Massagekleidung wird gestellt"
-    }
-  ]
+  "@type": "BlogPosting",
+  "@id": `${post.url}#article`,
+  "headline": post.title,
+  "description": post.description,
+  "url": post.url,
+  "mainEntityOfPage": { "@id": `${post.url}#webpage` },
+  "datePublished": post.datePublished.toISOString().slice(0, 10),
+  "dateModified": (post.dateModified ?? post.datePublished).toISOString().slice(0, 10),
+  "inLanguage": "de-DE",
+  "image": toAbsolute(post.image ?? DEFAULT_IMAGE),
+  ...(post.keywords?.length ? { "keywords": post.keywords.join(", ") } : {}),
+  "author": { "@id": BUSINESS_ID },
+  "publisher": { "@id": BUSINESS_ID },
+  "about": { "@id": BUSINESS_ID }
 });
+
+// ---- 10. @graph builder – one connected entity graph per page ----
+type SchemaNode = Record<string, unknown>;
+
+interface PageGraphInput {
+  url: string;
+  title: string;
+  description: string;
+  image: string;
+  nodes: SchemaNode[];
+  pageType?: string;
+  dateModified?: string;
+}
+
+const NODE_ID_SUFFIX: Record<string, string> = {
+  BreadcrumbList: "#breadcrumb",
+  FAQPage: "#faq",
+  ItemList: "#itemlist",
+  Service: "#service",
+};
+
+const withoutContext = ({ "@context": _context, ...rest }: SchemaNode): SchemaNode => rest;
+
+const assignId = (node: SchemaNode, url: string): SchemaNode => {
+  if (node["@id"]) return node;
+  const suffix = NODE_ID_SUFFIX[String(node["@type"])];
+  return suffix ? { ...node, "@id": `${url}${suffix}` } : node;
+};
+
+const dedupeById = (nodes: SchemaNode[]): SchemaNode[] => {
+  const seen = new Set<unknown>();
+  return nodes.filter((node) => {
+    const id = node["@id"];
+    if (!id) return true;
+    if (seen.has(id)) return false;
+    seen.add(id);
+    return true;
+  });
+};
+
+/**
+ * Wraps a page's schema nodes in a single @graph together with the site-wide
+ * WebSite + LocalBusiness entities and a WebPage node that links them all.
+ * AI search engines resolve the whole page as one connected entity this way.
+ */
+export const buildPageGraph = ({ url, title, description, image, nodes, pageType = "WebPage", dateModified }: PageGraphInput) => {
+  const pageNodes = nodes.map((node) => assignId(withoutContext(node), url));
+  const breadcrumb = pageNodes.find((node) => node["@type"] === "BreadcrumbList");
+  const faq = pageNodes.find((node) => node["@type"] === "FAQPage");
+  const linkedFaq = faq ? { ...faq, "isPartOf": { "@id": `${url}#webpage` } } : undefined;
+
+  const webPage: SchemaNode = {
+    "@type": pageType,
+    "@id": `${url}#webpage`,
+    "url": url,
+    "name": title,
+    "description": description,
+    "inLanguage": "de-DE",
+    "isPartOf": { "@id": WEBSITE_ID },
+    "about": { "@id": BUSINESS_ID },
+    "primaryImageOfPage": { "@type": "ImageObject", "url": toAbsolute(image) },
+    ...(dateModified ? { "dateModified": dateModified } : {}),
+    ...(breadcrumb ? { "breadcrumb": { "@id": breadcrumb["@id"] } } : {}),
+  };
+
+  const graph = dedupeById([
+    withoutContext(siteLinksSearchBoxSchema),
+    withoutContext(localBusinessSchema),
+    webPage,
+    ...pageNodes.map((node) => (node === faq && linkedFaq ? linkedFaq : node)),
+  ]);
+
+  return { "@context": "https://schema.org", "@graph": graph };
+};
+

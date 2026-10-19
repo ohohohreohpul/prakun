@@ -846,12 +846,14 @@ export const navigationLinks = {
   ],
   services: [
     { label: "Was ist Thai Massage?", href: "/thai-massage/" },
-    { label: "Lomi Lomi Massage", href: "/massage/lomi-lomi-massage/" },
-    { label: "Ayurveda Abhyanga", href: "/massage/ayurveda-abhyanga/" },
-    { label: "Hot Stone Massage", href: "/massage/hot-stone-massage/" },
-    { label: "Aromaöl Massage", href: "/massage/aromaoel-massage/" },
-    { label: "Fußmassage", href: "/massage/fussmassage/" },
-    { label: "Schwangerschaftsmassage", href: "/massage/schwangerschaftsmassage/" }
+    { label: "Ganzkörpermassage Hamburg", href: "/massage/ganzkoerpermassage/" },
+    { label: "Paarmassage Hamburg", href: "/paarmassage-hamburg/" },
+    { label: "Lomi Lomi Massage Hamburg", href: "/massage/lomi-lomi-massage/" },
+    { label: "Ayurveda Massage Hamburg", href: "/massage/ayurveda-abhyanga/" },
+    { label: "Hot Stone Massage Hamburg", href: "/massage/hot-stone-massage/" },
+    { label: "Fußmassage Hamburg", href: "/massage/fussmassage/" },
+    { label: "Schwangerschaftsmassage Hamburg", href: "/massage/schwangerschaftsmassage/" },
+    { label: "Massage-Ratgeber", href: "/blog/" }
   ],
   neighborhoods: [
     { label: "Thai Massage Winterhude", href: "/thai-massage-winterhude/" },

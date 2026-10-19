@@ -111,6 +111,13 @@ const Header = () => {
                         Über uns
                       </a>
                       <a
+                        href="/blog/"
+                        className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
+                        onClick={() => setIsResourcesOpen(false)}
+                      >
+                        Ratgeber
+                      </a>
+                      <a
                         href="/kontakt/"
                         className="flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white transition-colors"
                         onClick={() => setIsResourcesOpen(false)}
@@ -378,6 +385,13 @@ const Header = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Über uns
+                </a>
+                <a
+                  href="/blog/"
+                  className="block text-[#2B2B2B] font-medium py-2 hover:text-[#7B2958] transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Ratgeber
                 </a>
                 <a
                   href="/kontakt/"
