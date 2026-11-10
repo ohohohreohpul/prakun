@@ -16,6 +16,10 @@ export const promptFaqs = {
   ],
   'hot-stone-massage': [
     {
+      question: 'Wie läuft eine Hot-Stone-Massage ab und für wen ist sie geeignet?',
+      answer: 'Bei einer Hot-Stone-Massage liegen Sie auf der Liege, während erwärmte Basaltsteine auf Rücken, Hände oder Füße gelegt und anschließend mit Öl über die Muskulatur geführt werden. Sie eignet sich für Menschen mit Muskelverspannungen, für alle, die schnell frieren, und bei Stress. Nicht geeignet ist sie in der Schwangerschaft, bei Venenleiden, Herz-Kreislauf-Problemen, Diabetes oder akuten Entzündungen.',
+    },
+    {
       question: 'Wie läuft eine Hot Stone Massage ab?',
       answer: 'Bei einer Hot Stone Massage werden erwärmte, glatte Basaltsteine zuerst entlang der Wirbelsäule und auf Handflächen oder Füße gelegt, damit die Wärme die Muskulatur lockert. Danach massiert die Therapeutin mit den warmen Steinen und Öl in langen Zügen. Bei Prakun in Hamburg dauert sie 45 bis 120 Minuten; empfohlen sind 90 Minuten.',
     },
@@ -25,6 +29,14 @@ export const promptFaqs = {
     },
   ],
   'lomi-lomi-massage': [
+    {
+      question: 'Was ist eine Lomi-Lomi-Massage und was unterscheidet sie von anderen Ölmassagen?',
+      answer: 'Lomi Lomi Nui ist eine traditionelle hawaiianische Ganzkörper-Ölmassage. Anders als bei klassischen Ölmassagen, die Körperzone für Zone behandeln, massiert die Therapeutin bei Lomi Lomi vor allem mit den Unterarmen in langen, wellenartigen Bewegungen, die oft über mehrere Körperbereiche gleichzeitig laufen – vom Fuß bis zur Schulter. Dazu kommt deutlich mehr warmes Öl. Das Ergebnis wird meist als besonders fließend und tief entspannend beschrieben.',
+    },
+    {
+      question: 'Ist Lomi Lomi oder Ayurveda besser zur Entspannung?',
+      answer: 'Beide entspannen tief. Lomi Lomi wirkt durch die fließenden Unterarm-Bewegungen eher „wie Wellen“ und passt, wenn Sie komplett abschalten möchten. Die ayurvedische Abhyanga arbeitet mit rhythmischen, gleichmäßigen Streichungen und viel warmem Öl und passt bei innerer Unruhe, Schlafproblemen und trockener Haut. Bei Prakun in Hamburg kosten beide 75 € für 60 Minuten.',
+    },
     {
       question: 'Wie läuft eine Lomi Lomi Massage ab?',
       answer: 'Eine Lomi Lomi Massage beginnt mit einem kurzen Ankommen auf der Liege, oft mit einer ruhigen Berührung zur Einstimmung. Danach massiert die Therapeutin mit viel warmem Öl in langen, fließenden Bewegungen mit Händen und Unterarmen, oft über mehrere Körperbereiche gleichzeitig. Bei Prakun in Hamburg dauert sie 60, 90 oder 120 Minuten.',
@@ -60,6 +72,16 @@ export const promptFaqs = {
     {
       question: 'Übernimmt die Krankenkasse eine Schwangerschaftsmassage?',
       answer: 'In der Regel nicht. Eine Schwangerschaftsmassage im Wellness-Studio ist keine ärztlich verordnete Heilbehandlung und wird von gesetzlichen Krankenkassen normalerweise nicht erstattet. Manche Kassen bezuschussen Gesundheitsangebote im Bonusprogramm – fragen Sie am besten direkt bei Ihrer Kasse nach.',
+    },
+  ],
+  'kraeuterstempel-massage': [
+    {
+      question: 'Was bringt eine Kräuterstempelmassage und für wen ist sie geeignet?',
+      answer: 'Eine Kräuterstempelmassage verbindet Wärme, Druck und den Duft thailändischer Kräuter. Die gedämpften Stempel wärmen die Muskulatur, fördern die Durchblutung und helfen beim Lösen von Verspannungen; viele Gäste empfinden sie als tief beruhigend. Sie eignet sich für Menschen mit Verspannungen, für alle, die Wärme mögen, und in der kalten Jahreszeit. Nicht geeignet ist sie in der Schwangerschaft, bei Hautreizungen, Kräuterallergien, Fieber oder Venenleiden.',
+    },
+    {
+      question: 'Wie lange dauert eine Kräuterstempelmassage?',
+      answer: 'Bei Prakun Thai Massage in Hamburg dauert die Kräuterstempelmassage 60, 90 oder 120 Minuten. Kürzer bieten wir sie nicht an, weil die Wärme der Stempel Zeit braucht, um in die Muskulatur einzudringen. Planen Sie etwa 15 Minuten zusätzlich für Vorgespräch und Umziehen ein.',
     },
   ],
   'fussmassage': [

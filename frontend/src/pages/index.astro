@@ -16,6 +16,9 @@ import MonthlyOfferPopup from '../components/MonthlyOfferPopup';
 import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
 import { localBusinessSchema, faqSchema, siteLinksSearchBoxSchema } from '../lib/structuredData';
 import { faqItems } from '../data/mockData';
+import { getReviews } from '../lib/reviews';
+
+const reviewData = await getReviews();
 
 const pageTitle = "Thai Massage Hamburg ab 24 € | Prakun ★ 4,7/5 bei Google";
 const pageDescription = "Massage Hamburg & Thaimassage ab 24 € – Prakun Winterhude ★ 4,7/5 bei Google. Zertifizierte Therapeuten, Gutscheine verfügbar. Mo–Sa geöffnet. ✓ Jetzt buchen!";
@@ -43,7 +46,13 @@ const allStructuredData = [localBusinessSchema, siteLinksSearchBoxSchema, faqStr
     <MembershipSection client:visible />
     <StudioLocations client:visible />
     <LymphaticSection client:visible />
-    <Testimonials client:visible />
+    <Testimonials
+      client:visible
+      reviews={reviewData.reviews}
+      rating={reviewData.rating}
+      ratingCount={reviewData.ratingCount}
+      mapsUrl={reviewData.mapsUrl}
+    />
     <GiftVoucherSection client:visible />
     <GiftBestsellers client:visible />
     <FAQSection client:visible />
@@ -95,7 +104,7 @@ const allStructuredData = [localBusinessSchema, siteLinksSearchBoxSchema, faqStr
               <tr class="border-b border-gray-200">
                 <td class="py-2 pr-4"><a href="/massage/lomi-lomi-massage/" class="text-[#7B2958] hover:underline">Lomi Lomi Massage</a></td>
                 <td class="py-2 pr-4">60–120 Min.</td>
-                <td class="py-2">ab 72 €</td>
+                <td class="py-2">ab 75 €</td>
               </tr>
               <tr>
                 <td class="py-2 pr-4"><a href="/massage/schwangerschaftsmassage/" class="text-[#7B2958] hover:underline">Schwangerschaftsmassage</a></td>

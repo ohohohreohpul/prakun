@@ -19,7 +19,9 @@ const { title, description, pubDate, updatedDate, heroImage, heroAlt, keywords, 
 
 const PAGE_URL = `https://www.prakunthaimassage.de/blog/${post.id}/`;
 const lastChanged = updatedDate ?? pubDate;
-const related = relatedServices.map((slug) => servicesDetailed[slug]).filter(Boolean);
+type Service = (typeof servicesDetailed)[keyof typeof servicesDetailed];
+const SERVICES: Record<string, Service | undefined> = servicesDetailed;
+const related = relatedServices.flatMap((slug) => SERVICES[slug] ?? []);
 
 const structuredData = [
   blogPostingSchema({ url: PAGE_URL, title, description, datePublished: pubDate, dateModified: updatedDate, image: heroImage, keywords }),

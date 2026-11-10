@@ -9,7 +9,7 @@ const services = [
   { name: 'Aromaöl-Massage', price: 'ab 36 €', duration: '30–120 min', slug: 'aromaoel-massage' },
   { name: 'Hot Stone Massage', price: 'ab 55 €', duration: '60–90 min', slug: 'hot-stone-massage' },
   { name: 'Kräuterstempel', price: 'ab 75 €', duration: '60–90 min', slug: 'kraeuterstempel-massage' },
-  { name: 'Lomi Lomi Nui', price: 'ab 72 €', duration: '60–90 min', slug: 'lomi-lomi-massage' },
+  { name: 'Lomi Lomi Nui', price: 'ab 75 €', duration: '60–90 min', slug: 'lomi-lomi-massage' },
 ];
 
 const fadeUp = {

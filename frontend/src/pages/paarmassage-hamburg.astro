@@ -8,20 +8,25 @@ import { servicesDetailed } from '../data/mockData';
 
 const PAGE_URL = "https://www.prakunthaimassage.de/paarmassage-hamburg/";
 const pageTitle = "Paarmassage Hamburg – Massage für Paare zu zweit | Prakun";
-const pageDescription = "Paarmassage in Hamburg: zwei Massagen zur gleichen Zeit, jede:r wählt die eigene Behandlung. Z. B. 2 × 60 Min. Ganzkörpermassage für 124 €. Nahe U3 Mundsburg.";
+const pageDescription = "Paarmassage in Hamburg: zwei Massagen zur gleichen Zeit, jede:r wählt die eigene Behandlung. Z. B. 2 × 60 Min. Ganzkörpermassage für 116 € statt 124 €. Auch samstags buchbar.";
 
-// Example combinations, priced from the live price list (2 × the 60-minute tier)
-const COUPLE_EXAMPLES = ['ganzkoerpermassage', 'aromaoel-massage', 'hot-stone-massage', 'lomi-lomi-massage'];
+// Couple prices for 2 × 60 minutes from the studio price list (cheaper than two single bookings)
+const COUPLE_PRICES_60: Record<string, number> = {
+  'ganzkoerpermassage': 116,
+  'aromaoel-massage': 120,
+  'hot-stone-massage': 140,
+  'lomi-lomi-massage': 140,
+};
 const SIXTY_MIN = '60 min';
-const coupleRows = COUPLE_EXAMPLES
-  .map((slug) => servicesDetailed[slug])
-  .filter(Boolean)
-  .map((service) => {
-    const tier = service.pricing.find((p) => p.duration === SIXTY_MIN);
-    return tier ? { title: service.title, slug: service.slug, single: tier.price, couple: tier.price * 2 } : null;
-  })
-  .filter(Boolean);
+type Service = (typeof servicesDetailed)[keyof typeof servicesDetailed];
+const SERVICES: Record<string, Service | undefined> = servicesDetailed;
+const coupleRows = Object.entries(COUPLE_PRICES_60).flatMap(([slug, couple]) => {
+  const service = SERVICES[slug];
+  const single = service?.pricing.find((p) => p.duration === SIXTY_MIN)?.price;
+  return service && single ? [{ title: service.title, slug: service.slug, single, couple }] : [];
+});
 const cheapestCouple = Math.min(...coupleRows.map((row) => row.couple));
+const couplePriceFor = (slug: string) => coupleRows.find((row) => row.slug === slug)?.couple;
 
 const faqItems = [
   {
@@ -34,11 +39,19 @@ const faqItems = [
   },
   {
     question: "Was kostet eine Paarmassage in Hamburg?",
-    answer: `Bei Prakun zahlen Sie für eine Paarmassage einfach die zwei gewählten Behandlungen: 2 × 60 Minuten Ganzkörpermassage kosten ${2 * servicesDetailed['ganzkoerpermassage'].pricing.find((p) => p.duration === SIXTY_MIN).price} €, 2 × 60 Minuten Hot Stone ${2 * servicesDetailed['hot-stone-massage'].pricing.find((p) => p.duration === SIXTY_MIN).price} €. Es gibt keinen Aufpreis für den gemeinsamen Termin.`
+    answer: `Bei Prakun ist die Paarmassage günstiger als zwei einzelne Termine: 2 × 60 Minuten Ganzkörpermassage kosten ${couplePriceFor('ganzkoerpermassage')} €, 2 × 60 Minuten Hot Stone ${couplePriceFor('hot-stone-massage')} €. Gegenüber zwei Einzelbuchungen sparen Sie je nach Massage 8 bis 10 €.`
   },
   {
     question: "Wie buche ich eine Paarmassage bei Prakun?",
     answer: "Paarmassagen buchen Sie am besten telefonisch unter 040 22697033, damit wir zwei Therapeutinnen zur gleichen Zeit für Sie einplanen. Geöffnet ist Montag bis Freitag 10–20 Uhr und Samstag 11–18 Uhr. Für Freitagabend und Samstag empfehlen wir, einige Tage im Voraus anzurufen."
+  },
+  {
+    question: "Gibt es in Hamburg Paarmassagen mit Terminbuchung am Wochenende?",
+    answer: "Ja. Bei Prakun Thai Massage am Winterhuder Weg 24 in Hamburg können Sie eine Paarmassage auch am Samstag von 11 bis 18 Uhr buchen. Rufen Sie dafür am besten unter 040 22697033 an, damit wir zwei Therapeutinnen parallel einplanen. Weil Samstage schnell voll sind, empfehlen wir, drei bis sieben Tage im Voraus zu buchen. Sonntags ist geschlossen."
+  },
+  {
+    question: "Kann ich eine Paarmassage online buchen?",
+    answer: "In der Online-Buchung sehen Sie, wann Termine frei sind. Für den gemeinsamen Termin mit zwei Therapeutinnen zur gleichen Zeit rufen Sie bitte kurz unter 040 22697033 an – so stellen wir sicher, dass beide Massagen parallel stattfinden."
   },
   {
     question: "Kann ich eine Paarmassage verschenken?",
@@ -84,7 +97,7 @@ const allStructuredData = [coupleService, breadcrumb, faqSchema(faqItems)];
   canonicalUrl={PAGE_URL}
   keywords="Paarmassage Hamburg, Massage für Paare Hamburg, Paar Massage Hamburg, Thai Massage für Paare, Massage zu zweit Hamburg"
   structuredData={allStructuredData}
-  dateModified="2026-10-19"
+  dateModified="2026-11-10"
 >
   <Header client:load />
   <main>
@@ -112,16 +125,28 @@ const allStructuredData = [coupleService, breadcrumb, faqSchema(faqItems)];
           Paare buchen sie zum Jahrestag, als Überraschung oder einfach als gemeinsame Auszeit. Genauso gut passt sie für Freundinnen, Mutter und Tochter oder Geschwister.
         </p>
 
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-4">Paarmassage am Wochenende buchen</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <strong>Eine Paarmassage am Wochenende buchen Sie bei Prakun für Samstag zwischen 11 und 18 Uhr – am einfachsten telefonisch unter 040 22697033.</strong>
+          Unter der Woche sind Paartermine Montag bis Freitag von 10 bis 20 Uhr möglich, auch abends nach der Arbeit.
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-10">
+          <li><strong>Samstag:</strong> 3–7 Tage im Voraus buchen, besonders für den Nachmittag.</li>
+          <li><strong>Freitagabend:</strong> beliebt als Start ins Wochenende – mindestens 2–3 Tage vorher buchen.</li>
+          <li><strong>Spontan:</strong> unter der Woche klappt ein Paartermin oft noch am selben oder nächsten Tag. <a href="/buchen/" class="text-[#7B2958] hover:underline">Freie Termine online ansehen</a>.</li>
+          <li><strong>Sonntag:</strong> geschlossen – als Alternative eignet sich ein <a href="/gutscheine/" class="text-[#7B2958] hover:underline">Gutschein</a>, den Sie am Sonntag verschenken.</li>
+        </ul>
+
         <h2 class="text-2xl font-bold text-[#1a1a1a] mb-4">Was kostet eine Paarmassage?</h2>
-        <p class="text-gray-700 leading-relaxed mb-4">Sie zahlen die zwei gewählten Behandlungen, ohne Aufpreis für den gemeinsamen Termin. Beliebte Kombinationen für 2 × 60 Minuten:</p>
+        <p class="text-gray-700 leading-relaxed mb-4">Als Paar zahlen Sie weniger als für zwei einzelne Termine. Beliebte Kombinationen für 2 × 60 Minuten:</p>
         <div class="overflow-x-auto mb-10">
           <table class="w-full text-sm text-left border-collapse">
             <caption class="sr-only">Preise für Paarmassagen bei Prakun Thai Massage Hamburg</caption>
             <thead>
               <tr class="border-b border-gray-300">
                 <th scope="col" class="py-2 pr-4 font-semibold text-[#1a1a1a]">Massage (je 60 Min.)</th>
-                <th scope="col" class="py-2 pr-4 font-semibold text-[#1a1a1a]">Pro Person</th>
-                <th scope="col" class="py-2 font-semibold text-[#1a1a1a]">Für zwei</th>
+                <th scope="col" class="py-2 pr-4 font-semibold text-[#1a1a1a]">Einzeln (1 Person)</th>
+                <th scope="col" class="py-2 font-semibold text-[#1a1a1a]">Paarpreis (2 Personen)</th>
               </tr>
             </thead>
             <tbody class="text-gray-600">

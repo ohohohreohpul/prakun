@@ -38,7 +38,7 @@ Für die **traditionelle Thai-Massage ohne Öl** behalten Sie Kleidung an. Bei P
 Die Thai-Massage verbindet zwei Techniken:
 
 - **Druck** mit Daumen, Handballen, Ellbogen und manchmal Knien oder Füßen, entlang der sogenannten Sen-Linien. Das sind die Energielinien, mit denen die traditionelle thailändische Massagelehre arbeitet.
-- **Passive Dehnungen.** Die Masseurin bewegt Arme, Beine und Rücken in Dehnpositionen, Sie selbst müssen nichts tun. Deshalb wird die Thai-Massage auch „Yoga für Faule" genannt.
+- **Passive Dehnungen.** Die Masseurin bewegt Arme, Beine und Rücken in Dehnpositionen, Sie selbst müssen nichts tun. Deshalb wird die Thai-Massage auch „Yoga für Faule“ genannt.
 
 Meist beginnt die Behandlung an den Füßen und arbeitet sich über Beine, Hüfte und Rücken zu Armen, Schultern, Nacken und Kopf hoch. Bauch und Intimbereich werden nicht massiert.
 

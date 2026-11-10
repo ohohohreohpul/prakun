@@ -18,6 +18,446 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/ueber-uns/",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/ueber-uns/",
+      "permanent": true
+    },
+    {
+      "source": "/team",
+      "destination": "/ueber-uns/",
+      "permanent": true
+    },
+    {
+      "source": "/team/",
+      "destination": "/ueber-uns/",
+      "permanent": true
+    },
+    {
+      "source": "/galerie",
+      "destination": "/ueber-uns/",
+      "permanent": true
+    },
+    {
+      "source": "/galerie/",
+      "destination": "/ueber-uns/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:slug*",
+      "destination": "/ueber-uns/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/kontakt/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/kontakt/",
+      "permanent": true
+    },
+    {
+      "source": "/stellenanzeige",
+      "destination": "/kontakt/",
+      "permanent": true
+    },
+    {
+      "source": "/stellenanzeige/",
+      "destination": "/kontakt/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/datenschutz/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/datenschutz/",
+      "permanent": true
+    },
+    {
+      "source": "/termin-buchen",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/termin-buchen/",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/termin-buchen-2",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/termin-buchen-2/",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/customer-cabinet",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/customer-cabinet/",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/success",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/success/",
+      "destination": "/buchen/",
+      "permanent": true
+    },
+    {
+      "source": "/ayurveda-massage",
+      "destination": "/massage/ayurveda-abhyanga/",
+      "permanent": true
+    },
+    {
+      "source": "/ayurveda-massage/",
+      "destination": "/massage/ayurveda-abhyanga/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/aromaoelmassage",
+      "destination": "/massage/aromaoel-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/aromaoelmassage/",
+      "destination": "/massage/aromaoel-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/kopfmassage",
+      "destination": "/massage/teilkoerpermassage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/kopfmassage/",
+      "destination": "/massage/teilkoerpermassage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/rueckenmassage",
+      "destination": "/massage/teilkoerpermassage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/rueckenmassage/",
+      "destination": "/massage/teilkoerpermassage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/paarmassage",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/paarmassage/",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/wellness-party",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/wellness-party/",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-party-und-zeit-zu-zweit",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-party-und-zeit-zu-zweit/",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-von-paarmassagen-in-hamburg",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-von-paarmassagen-in-hamburg/",
+      "destination": "/paarmassage-hamburg/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/thai-massage",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/thai-massage/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/traditionelle-thai-massage",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/massage/traditionelle-thai-massage/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/traditionelle-massage",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/traditionelle-massage/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/thailandische-massage",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/thailandische-massage/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/die-heilende-kraft-der-thailandischen-massage",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/die-heilende-kraft-der-thailandischen-massage/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-der-traditionellen-thai-massage",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-der-traditionellen-thai-massage/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannung-pur-die-thai-relax-massage",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannung-pur-die-thai-relax-massage/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannung-pur-traditionelle-thai-massage-in-hamburg",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannung-pur-traditionelle-thai-massage-in-hamburg/",
+      "destination": "/thai-massage/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-der-massage-mit-eppendorf",
+      "destination": "/thai-massage-eppendorf/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-der-massage-mit-eppendorf/",
+      "destination": "/thai-massage-eppendorf/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannung-pur-massage-winterhude",
+      "destination": "/thai-massage-winterhude/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannung-pur-massage-winterhude/",
+      "destination": "/thai-massage-winterhude/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-einer-hamburg-ganzkorpermassage",
+      "destination": "/massage/ganzkoerpermassage/",
+      "permanent": true
+    },
+    {
+      "source": "/die-vorteile-einer-hamburg-ganzkorpermassage/",
+      "destination": "/massage/ganzkoerpermassage/",
+      "permanent": true
+    },
+    {
+      "source": "/unsere-leistungen",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/unsere-leistungen/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/unsere-leistungen/medizinische-massage",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/unsere-leistungen/medizinische-massage/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/medizinische-massage",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/medizinische-massage/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-massage",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-massage/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-pakete",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-pakete/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/pakete",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/pakete/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/membership",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/membership/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/massagen",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/massagen/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/medizinische-massagen",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/medizinische-massagen/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/wellness-massage",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/wellness-massage/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/wellness-pakete",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/preise-leistungen/wellness-pakete/",
+      "destination": "/leistungen/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannende-massage-in-hamburg-geniesen-sie-pure-erholung",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/entspannende-massage-in-hamburg-geniesen-sie-pure-erholung/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-in-hamburg-entspannung-in-den-besten-spas",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wellness-in-hamburg-entspannung-in-den-besten-spas/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/thai-massage-in-der-nahe-entspannung-und-wohlbefinden-finden",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/thai-massage-in-der-nahe-entspannung-und-wohlbefinden-finden/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug*",
+      "destination": "/blog/",
+      "permanent": true
     }
   ],
   "headers": [
