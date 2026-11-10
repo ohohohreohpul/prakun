@@ -127,7 +127,7 @@ Erleben Sie die transformative Kraft der Aromaöl-Massage bei Prakun Thai Massag
     subtitle: 'Luxuriöse Wärme aus geschmolzenem Kerzenöl',
     heroImage: '/service-aromakerzen-massage.jpg',
     cardImage: '/service-aromakerzen-massage.jpg',
-    duration: '30-90 min',
+    duration: '30-120 min',
     priceFrom: 37,
     metaDescription: 'Aromakerzen-Massage Hamburg ab 37 €. Luxuriöse Wärme aus geschmolzenem Kerzenöl – einzigartiges Wellness-Erlebnis. Prakun Winterhude ✓ Jetzt buchen.',
     category: 'wellness',
@@ -135,7 +135,8 @@ Erleben Sie die transformative Kraft der Aromaöl-Massage bei Prakun Thai Massag
       { duration: '30 min', price: 37 },
       { duration: '45 min', price: 54 },
       { duration: '60 min', price: 68 },
-      { duration: '90 min', price: 96 }
+      { duration: '90 min', price: 96 },
+      { duration: '120 min', price: 122 }
     ],
     benefits: [
       'Warmes, pflegendes Kerzenöl',
@@ -172,9 +173,9 @@ Gönnen Sie sich dieses außergewöhnliche Erlebnis bei Prakun Thai Massage – 
     isPopular: true,
     pricing: [
       { duration: '45 min', price: 55 },
-      { duration: '60 min', price: 70 },
-      { duration: '90 min', price: 102 },
-      { duration: '120 min', price: 132 }
+      { duration: '60 min', price: 75 },
+      { duration: '90 min', price: 105 },
+      { duration: '120 min', price: 135 }
     ],
     benefits: [
       'Tiefenwärme durch Lavasteine',
@@ -202,7 +203,7 @@ Erleben Sie die transformative Kraft der Hot Stone Massage bei Prakun Thai Massa
       },
       {
         question: 'Was kostet eine Hot Stone Massage in Hamburg?',
-        answer: 'Bei Prakun Thai Massage kostet die Hot Stone Massage ab 55\u00a0€ (45 min), 70\u00a0€ (60 min), 102\u00a0€ (90 min) und 132\u00a0€ (120 min). Für ein vollständiges Erlebnis empfehlen wir die 90-Minuten-Variante. Bequem online buchbar unter prakunthaimassage.de – Mo–Sa geöffnet in Hamburg Winterhude.'
+        answer: 'Bei Prakun Thai Massage kostet die Hot Stone Massage ab 55\u00a0€ (45 min), 75\u00a0€ (60 min), 105\u00a0€ (90 min) und 135\u00a0€ (120 min). Für ein vollständiges Erlebnis empfehlen wir die 90-Minuten-Variante. Bequem online buchbar unter prakunthaimassage.de – Mo–Sa geöffnet in Hamburg Winterhude.'
       },
       {
         question: 'Für wen ist eine Hot Stone Massage nicht geeignet?',
@@ -232,8 +233,8 @@ Erleben Sie die transformative Kraft der Hot Stone Massage bei Prakun Thai Massa
     category: 'thai',
     pricing: [
       { duration: '60 min', price: 75 },
-      { duration: '90 min', price: 107 },
-      { duration: '120 min', price: 137 }
+      { duration: '90 min', price: 105 },
+      { duration: '120 min', price: 135 }
     ],
     benefits: [
       'Traditionelle Thai-Kräuter',
@@ -269,9 +270,9 @@ Entdecken Sie die wohltuende Wirkung der Kräuterstempel-Massage und erleben Sie
     category: 'wellness',
     pricing: [
       { duration: '45 min', price: 55 },
-      { duration: '60 min', price: 70 },
-      { duration: '90 min', price: 102 },
-      { duration: '120 min', price: 132 }
+      { duration: '60 min', price: 75 },
+      { duration: '90 min', price: 105 },
+      { duration: '120 min', price: 135 }
     ],
     benefits: [
       'Intensive Tiefenmassage',
@@ -302,11 +303,11 @@ Buchen Sie noch heute Ihre Bambus-Massage bei Prakun Thai Massage und erleben Si
     heroImage: '/service-lomi-lomi-massage.jpg',
     cardImage: '/service-lomi-lomi-massage.jpg',
     duration: '60-120 min',
-    priceFrom: 72,
-    metaDescription: 'Lomi Lomi Massage Hamburg ab 72 € – Hawaiianisches Heilritual. Fließende Wellen-Technik für Körper, Geist & Seele. 4,7★ Prakun Winterhude ✓ Online buchen!',
+    priceFrom: 75,
+    metaDescription: 'Lomi Lomi Massage Hamburg ab 75 € – Hawaiianisches Heilritual. Fließende Wellen-Technik für Körper, Geist & Seele. 4,7★ Prakun Winterhude ✓ Online buchen!',
     category: 'wellness',
     pricing: [
-      { duration: '60 min', price: 72 },
+      { duration: '60 min', price: 75 },
       { duration: '90 min', price: 105 },
       { duration: '120 min', price: 135 }
     ],
@@ -332,11 +333,11 @@ Erleben Sie die heilende Kraft der Lomi Lomi Nui Massage und lassen Sie sich von
     faq: [
       {
         question: 'Was ist eine Lomi Lomi Massage?',
-        answer: 'Lomi Lomi Nui ist eine traditionelle hawaiianische Massage, die Körper, Geist und Seele gleichzeitig behandelt. Mit langen, fließenden Bewegungen – oft mit Unterarmen und Ellbogen – imitiert der Therapeut die Bewegungen des Ozeans. "Lomi" bedeutet auf Hawaiianisch "kneten", "Nui" steht für "groß". Bei Prakun Thai Massage Hamburg ist die Lomi Lomi ab 72\u00a0€ buchbar.'
+        answer: 'Lomi Lomi Nui ist eine traditionelle hawaiianische Massage, die Körper, Geist und Seele gleichzeitig behandelt. Mit langen, fließenden Bewegungen – oft mit Unterarmen und Ellbogen – imitiert der Therapeut die Bewegungen des Ozeans. "Lomi" bedeutet auf Hawaiianisch "kneten", "Nui" steht für "groß". Bei Prakun Thai Massage Hamburg ist die Lomi Lomi ab 75\u00a0€ buchbar.'
       },
       {
         question: 'Was kostet eine Lomi Lomi Massage Hamburg?',
-        answer: 'Bei Prakun Thai Massage ist die Lomi Lomi Massage ab 72\u00a0€ (60 min), 105\u00a0€ (90 min) und 135\u00a0€ (120 min) erhältlich. Die Lomi Lomi ist aufwendiger als eine klassische Aromamassage und erfordert speziell ausgebildete Therapeuten. Jetzt online buchen auf prakunthaimassage.de.'
+        answer: 'Bei Prakun Thai Massage ist die Lomi Lomi Massage ab 75\u00a0€ (60 min), 105\u00a0€ (90 min) und 135\u00a0€ (120 min) erhältlich. Die Lomi Lomi ist aufwendiger als eine klassische Aromamassage und erfordert speziell ausgebildete Therapeuten. Jetzt online buchen auf prakunthaimassage.de.'
       },
       {
         question: 'Was ist der Unterschied zwischen Lomi Lomi und Thai Massage?',
@@ -348,7 +349,7 @@ Erleben Sie die heilende Kraft der Lomi Lomi Nui Massage und lassen Sie sich von
       },
       {
         question: 'Für wen ist eine Lomi Lomi Massage besonders empfehlenswert?',
-        answer: 'Die Lomi Lomi Massage ist ideal für Menschen in Stressphasen, die tiefe Entspannung suchen; Personen mit Erschöpfung oder emotionalen Belastungen; alle, die eine besondere, fast meditative Erfahrung suchen. Auch als romantisches Geschenk für Paare sehr beliebt. Gutscheine ab 72\u00a0€ online erhältlich.'
+        answer: 'Die Lomi Lomi Massage ist ideal für Menschen in Stressphasen, die tiefe Entspannung suchen; Personen mit Erschöpfung oder emotionalen Belastungen; alle, die eine besondere, fast meditative Erfahrung suchen. Auch als romantisches Geschenk für Paare sehr beliebt. Gutscheine ab 75\u00a0€ online erhältlich.'
       }
     ]
   },
@@ -368,7 +369,7 @@ Erleben Sie die heilende Kraft der Lomi Lomi Nui Massage und lassen Sie sich von
     pricing: [
       { duration: '30 min', price: 42 },
       { duration: '45 min', price: 55 },
-      { duration: '60 min', price: 72 },
+      { duration: '60 min', price: 75 },
       { duration: '90 min', price: 105 },
       { duration: '120 min', price: 135 }
     ],
@@ -533,14 +534,14 @@ Gönnen Sie Ihren Füßen die Aufmerksamkeit, die sie verdienen – und erleben 
     heroImage: '/service-thai-warrior-massage.jpg',
     cardImage: '/service-thai-warrior-massage.jpg',
     duration: '60-120 min',
-    priceFrom: 85,
-    metaDescription: 'Thai Warrior Massage Hamburg ab 85 €. Intensive Tiefenmuskelbehandlung für Sportler & Aktive. Zertifizierte Thai-Therapeuten. Prakun Winterhude ✓ Buchen.',
+    priceFrom: 90,
+    metaDescription: 'Thai Warrior Massage Hamburg ab 90 €. Intensive Tiefenmuskelbehandlung für Sportler & Aktive. Zertifizierte Thai-Therapeuten. Prakun Winterhude ✓ Buchen.',
     category: 'thai',
     isNew: true,
     pricing: [
-      { duration: '60 min', price: 85 },
+      { duration: '60 min', price: 90 },
       { duration: '90 min', price: 129 },
-      { duration: '120 min', price: 165 }
+      { duration: '120 min', price: 169 }
     ],
     benefits: [
       'Intensive Tiefenmuskelbehandlung',
@@ -783,7 +784,7 @@ export const faqItems = [
   {
     id: 3,
     question: "Was kostet eine Thai Massage in Hamburg bei Prakun?",
-    answer: "Eine Thai-Massage bei Prakun in Hamburg-Winterhude kostet ab 24 € für eine 20-minütige Teilkörpermassage und ab 49 € für eine 45-minütige Ganzkörpermassage. Wer sich für Aromaöl entscheidet, zahlt ab 36 € für 30 Minuten; eine Hot-Stone-Massage mit heißen Lavasteinen startet bei 55 € für 45 Minuten. Spezialbehandlungen wie die hawaiianische Lomi-Lomi-Massage oder die traditionelle Kräuterstempel-Massage aus Thailand beginnen bei 72 € für 60 Minuten. Alle Preise verstehen sich inklusive Beratungsgespräch vor der Behandlung und gelten für unser Studio am Winterhuder Weg 24 in Hamburg-Winterhude. Kunden, die sich unsicher sind, welche Massage zu ihren Beschwerden passt, erhalten vor Ort oder telefonisch unter 040 22697033 eine kostenlose Empfehlung. Die vollständige, aktuelle Preisliste mit allen Behandlungen finden Sie auf unserer Leistungsseite."
+    answer: "Eine Thai-Massage bei Prakun in Hamburg-Winterhude kostet ab 24 € für eine 20-minütige Teilkörpermassage und ab 49 € für eine 45-minütige Ganzkörpermassage. Wer sich für Aromaöl entscheidet, zahlt ab 36 € für 30 Minuten; eine Hot-Stone-Massage mit heißen Lavasteinen startet bei 55 € für 45 Minuten. Spezialbehandlungen wie die hawaiianische Lomi-Lomi-Massage oder die traditionelle Kräuterstempel-Massage aus Thailand beginnen bei 75 € für 60 Minuten. Alle Preise verstehen sich inklusive Beratungsgespräch vor der Behandlung und gelten für unser Studio am Winterhuder Weg 24 in Hamburg-Winterhude. Kunden, die sich unsicher sind, welche Massage zu ihren Beschwerden passt, erhalten vor Ort oder telefonisch unter 040 22697033 eine kostenlose Empfehlung. Die vollständige, aktuelle Preisliste mit allen Behandlungen finden Sie auf unserer Leistungsseite."
   },
   {
     id: 4,
@@ -853,6 +854,7 @@ export const navigationLinks = {
     { label: "Hot Stone Massage Hamburg", href: "/massage/hot-stone-massage/" },
     { label: "Fußmassage Hamburg", href: "/massage/fussmassage/" },
     { label: "Schwangerschaftsmassage Hamburg", href: "/massage/schwangerschaftsmassage/" },
+    { label: "Erfahrungen & Bewertungen", href: "/erfahrungen/" },
     { label: "Massage-Ratgeber", href: "/blog/" }
   ],
   neighborhoods: [

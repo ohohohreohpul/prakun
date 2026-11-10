@@ -4,24 +4,97 @@ import Header from '../components/Header';
 import BookingPage from '../components/BookingPage';
 import Footer from '../components/Footer';
 import FloatingPhoneBubble from '../components/FloatingPhoneBubble';
-import { breadcrumbSchema } from '../lib/structuredData';
+import { breadcrumbSchema, faqSchema } from '../lib/structuredData';
 
-const pageTitle = "Termin buchen - Prakun Thai Massage Hamburg | Online Buchung";
-const pageDescription = "Buchen Sie jetzt Ihren Termin bei Prakun Thai Massage Hamburg. Einfache Online-Buchung für Thai-Massage, Aromatherapie, Hot Stone und mehr.";
+const pageTitle = "Massage Hamburg kurzfristig online buchen – auch heute | Prakun";
+const pageDescription = "Massagetermin in Hamburg kurzfristig online buchen: freie Termine heute und morgen in Echtzeit, Bestätigung sofort per E-Mail, kostenlos stornierbar bis 24 h vorher.";
+
+const faqItems = [
+  {
+    question: "Wo kann ich in Hamburg kurzfristig online einen Massagetermin buchen?",
+    answer: "Bei Prakun Thai Massage am Winterhuder Weg 24 in Hamburg (U3 Mundsburg) buchen Sie Massagen online auf dieser Seite. Der Kalender zeigt freie Termine in Echtzeit – auch für heute und morgen. Die Buchung dauert unter einer Minute und Sie bekommen sofort eine Bestätigung per E-Mail."
+  },
+  {
+    question: "Kann ich heute noch eine Massage bekommen?",
+    answer: "Oft ja. Unter der Woche sind am selben Tag häufig noch Termine frei – der Online-Kalender zeigt Ihnen sofort, welche. Ist online nichts mehr frei, rufen Sie kurz unter 040 22697033 an – manchmal wird kurzfristig ein Termin durch eine Absage frei."
+  },
+  {
+    question: "Wann ist es für eine spontane Massage am einfachsten?",
+    answer: "Am einfachsten sind spontane Termine unter der Woche tagsüber. Freitagabend und Samstag (11–18 Uhr) sind am stärksten gebucht; dafür empfehlen wir, zwei bis drei Tage vorher zu buchen. Sonntags ist das Studio geschlossen."
+  },
+  {
+    question: "Kann ich einen online gebuchten Termin stornieren?",
+    answer: "Ja. Bis 24 Stunden vor dem Termin können Sie kostenlos stornieren oder verschieben – telefonisch unter 040 22697033 oder über Ihre Buchungsbestätigung. Bei Absagen innerhalb von 24 Stunden kann eine Ausfallgebühr anfallen."
+  },
+  {
+    question: "Kann ich einen Gutschein bei der Online-Buchung einlösen?",
+    answer: "Ja, indirekt: Buchen Sie Ihren Termin ganz normal online und bringen Sie den Gutschein (ausgedruckt oder auf dem Handy) mit. Der Gutscheinwert wird beim Bezahlen im Studio verrechnet."
+  },
+  {
+    question: "Kann ich zwei Massagen gleichzeitig buchen, zum Beispiel als Paar?",
+    answer: "Ja. Für eine Paarmassage mit zwei Therapeutinnen zur gleichen Zeit rufen Sie am besten unter 040 22697033 an, damit wir beide Termine parallel einplanen. Mehr dazu auf unserer Seite zur Paarmassage in Hamburg."
+  }
+];
 
 const breadcrumb = breadcrumbSchema([
   { name: "Home", url: "https://www.prakunthaimassage.de" },
   { name: "Termin buchen", url: "https://www.prakunthaimassage.de/buchen/" }
 ]);
+
+const STEPS = [
+  "Massage und Dauer im Kalender oben wählen",
+  "Freien Termin auswählen – heute, morgen oder später",
+  "Name, E-Mail und Telefonnummer eingeben",
+  "Bestätigung sofort per E-Mail erhalten"
+];
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
-  structuredData={breadcrumb}
+  keywords="Massage Hamburg online buchen, Massage kurzfristig Hamburg, Massage heute Hamburg, Thai Massage Termin Hamburg, Massage spontan Hamburg"
+  structuredData={[breadcrumb, faqSchema(faqItems)]}
+  dateModified="2026-11-10"
 >
   <Header client:load />
   <BookingPage client:visible />
+
+  <section class="py-16 bg-white" aria-labelledby="kurzfristig-heading">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="kurzfristig-heading" class="text-2xl font-bold text-[#1a1a1a] mb-4">Kurzfristig eine Massage in Hamburg buchen</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        <strong>Bei Prakun Thai Massage in Hamburg buchen Sie Ihre Massage online in unter einer Minute – mit freien Terminen in Echtzeit, auch für heute und morgen.</strong>
+        Das Studio liegt am Winterhuder Weg 24 in Uhlenhorst, an der Grenze zu Winterhude, etwa 5 Gehminuten von der U3-Haltestelle Mundsburg.
+        Geöffnet ist Montag bis Freitag von 10 bis 20 Uhr und Samstag von 11 bis 18 Uhr.
+      </p>
+      <h3 class="text-lg font-semibold text-[#1a1a1a] mb-3">So funktioniert die Online-Buchung</h3>
+      <ol class="list-decimal pl-6 text-gray-700 space-y-1 mb-6">
+        {STEPS.map((step) => <li>{step}</li>)}
+      </ol>
+      <p class="text-gray-700 leading-relaxed mb-10">
+        Keine Zeit für eine lange Massage? Eine <a href="/massage/teilkoerpermassage/" class="text-[#7B2958] hover:underline">Teilkörpermassage</a> für Nacken und Rücken gibt es schon ab 20 Minuten (24 €) –
+        passend für die Mittagspause. Alle Preise finden Sie in unserer <a href="/blog/thai-massage-preise-hamburg/" class="text-[#7B2958] hover:underline">Preisübersicht</a>.
+      </p>
+
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">Häufige Fragen zur Terminbuchung</h2>
+      <div class="space-y-6">
+        {faqItems.map((item) => (
+          <div class="border-b border-gray-100 pb-6">
+            <h3 class="font-semibold text-[#1a1a1a] mb-2">{item.question}</h3>
+            <p class="text-gray-600 leading-relaxed">{item.answer}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-3 text-sm">
+        <a href="/paarmassage-hamburg/" class="text-[#7B2958] hover:underline">Paarmassage Hamburg</a>
+        <a href="/gutscheine/" class="text-[#7B2958] hover:underline">Massage Gutschein Hamburg</a>
+        <a href="/leistungen/" class="text-[#7B2958] hover:underline">Alle Massagen</a>
+        <a href="/kontakt/" class="text-[#7B2958] hover:underline">Kontakt & Anfahrt</a>
+      </div>
+    </div>
+  </section>
+
   <Footer client:visible />
   <FloatingPhoneBubble client:load phoneNumber="040 22697033" />
 </BaseLayout>
